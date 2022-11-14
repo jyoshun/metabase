@@ -19,7 +19,7 @@ for (const { component } of COMPONENTS) {
   context[component.displayName || component.name] = component;
 }
 
-// Metabase's entities, capitalized
+// DataMan's entities, capitalized
 for (const [name, entity] of Object.entries(entities)) {
   context[capitalize(name)] = entity;
 }

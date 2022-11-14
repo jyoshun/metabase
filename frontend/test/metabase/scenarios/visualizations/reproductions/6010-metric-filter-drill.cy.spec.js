@@ -10,7 +10,7 @@ describe("issue 6010", () => {
     cy.intercept("POST", "/api/dataset").as("dataset");
   });
 
-  it("should apply the filter from a metric when drilling through (metabase#6010)", () => {
+  it("should apply the filter from a metric when drilling through (dataman#6010)", () => {
     createMetric()
       .then(({ body: { id } }) => createQuestion(id))
       .then(({ body: { id } }) => visitQuestion(id));

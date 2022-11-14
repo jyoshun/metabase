@@ -3,7 +3,7 @@ import { USER_GROUPS, SAMPLE_DB_ID } from "__support__/e2e/cypress_data";
 
 const { ALL_USERS_GROUP, COLLECTION_GROUP } = USER_GROUPS;
 
-describe("UI elements that make no sense for users without data permissions (metabase#22447, metabase##22449, metabase#22450)", () => {
+describe("UI elements that make no sense for users without data permissions (dataman#22447, dataman##22449, dataman#22450)", () => {
   beforeEach(() => {
     restore();
   });

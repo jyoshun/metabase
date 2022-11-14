@@ -20,19 +20,7 @@ const HomeGreeting = ({
 }: HomeGreetingProps): JSX.Element => {
   const message = useMemo(() => getMessage(first_name), [first_name]);
 
-  return (
-    <GreetingRoot>
-      {showLogo && (
-        <Tooltip
-          tooltip={t`Don't tell anyone, but you're my favorite.`}
-          placement="bottom"
-        >
-          <GreetingLogo />
-        </Tooltip>
-      )}
-      <GreetingMessage showLogo={showLogo}>{message}</GreetingMessage>
-    </GreetingRoot>
-  );
+  return <div />;
 };
 
 const getMessage = (name: string | null): string => {

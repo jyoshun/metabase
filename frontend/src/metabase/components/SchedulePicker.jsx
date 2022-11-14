@@ -64,7 +64,7 @@ export default class SchedulePicker extends Component {
     scheduleOptions: PropTypes.array.isRequired,
     // text before Daily/Weekly/Monthly... option
     textBeforeInterval: PropTypes.string,
-    // text prepended to "12:00 PM PST, your Metabase timezone"
+    // text prepended to "12:00 PM PST, your DataMan timezone"
     textBeforeSendTime: PropTypes.string,
     onScheduleChange: PropTypes.func.isRequired,
     minutesOnHourPicker: PropTypes.bool,
@@ -254,7 +254,7 @@ export default class SchedulePicker extends Component {
         {textBeforeSendTime && (
           <div className="mt1 text-medium pt2">
             {textBeforeSendTime} {hour === 0 ? 12 : hour}:00{" "}
-            {amPm ? "PM" : "AM"} {timezone}, {t`your Metabase timezone`}.
+            {amPm ? "PM" : "AM"} {timezone}, {t`your DataMan timezone`}.
           </div>
         )}
       </div>

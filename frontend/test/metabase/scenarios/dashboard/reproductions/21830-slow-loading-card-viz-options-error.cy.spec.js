@@ -11,7 +11,7 @@ describe("issue 21830", () => {
     cy.signInAsAdmin();
   });
 
-  it("slow loading card visualization options click shouldn't lead to error (metabase#21830)", () => {
+  it("slow loading card visualization options click shouldn't lead to error (dataman#21830)", () => {
     cy.intercept("GET", "/api/dashboard/*").as("getDashboard");
     cy.intercept(
       {

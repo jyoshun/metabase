@@ -28,7 +28,7 @@ describe("issue 22482", () => {
     cy.findByText("Relative dates...").click();
   });
 
-  it("should round relative date range (metabase#22482)", () => {
+  it("should round relative date range (dataman#22482)", () => {
     cy.findByTestId("relative-datetime-value").clear().type(15);
     cy.findByTestId("relative-datetime-unit").click();
     cy.findByText("months").click();

@@ -16,7 +16,7 @@ describe("scenarios > admin > localization", () => {
     setFirstWeekDayTo("monday");
   });
 
-  it("should correctly apply start of the week to a bar chart (metabase#13516)", () => {
+  it("should correctly apply start of the week to a bar chart (dataman#13516)", () => {
     // programatically create and save a question based on Orders table
     // filter: created before June 1st, 2016
     // summarize: Count by CreatedAt: Week
@@ -42,7 +42,7 @@ describe("scenarios > admin > localization", () => {
     cy.get(".axis.x").contains("April 25, 2016");
   });
 
-  it("should display days on X-axis correctly when grouped by 'Day of the Week' (metabase#13604)", () => {
+  it("should display days on X-axis correctly when grouped by 'Day of the Week' (dataman#13604)", () => {
     cy.createQuestion({
       name: "13604",
       query: {
@@ -84,7 +84,7 @@ describe("scenarios > admin > localization", () => {
 
   // TODO:
   //  - Keep an eye on this test in CI and update the week range as needed.
-  it("should respect start of the week in SQL questions with filters (metabase#14294)", () => {
+  it("should respect start of the week in SQL questions with filters (dataman#14294)", () => {
     cy.createNativeQuestion(
       {
         name: "14294",
@@ -116,7 +116,7 @@ describe("scenarios > admin > localization", () => {
     });
   });
 
-  it("should not display excessive options in localization tab (metabase#14426)", () => {
+  it("should not display excessive options in localization tab (dataman#14426)", () => {
     cy.visit("/admin/settings/localization");
     cy.findByText(/Instance language/i);
     cy.findByText(/Report timezone/i);
@@ -125,7 +125,7 @@ describe("scenarios > admin > localization", () => {
     cy.contains(/Column title/i).should("not.exist");
   });
 
-  it("should use currency settings for number columns with style set to currency (metabase#10787)", () => {
+  it("should use currency settings for number columns with style set to currency (dataman#10787)", () => {
     cy.visit("/admin/settings/localization");
 
     cy.findByText("Unit of currency");
@@ -155,7 +155,7 @@ describe("scenarios > admin > localization", () => {
     cy.findByText("€10.00");
   });
 
-  it("should use fix up clj unit testsdate and time styling settings in the date filter widget (metabase#9151, metabase#12472)", () => {
+  it("should use fix up clj unit testsdate and time styling settings in the date filter widget (dataman#9151, dataman#12472)", () => {
     cy.intercept("POST", "/api/dataset").as("dataset");
     cy.intercept("PUT", "/api/setting/custom-formatting").as(
       "updateFormatting",

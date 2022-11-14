@@ -7,7 +7,7 @@ describe("issue 5276", () => {
     cy.intercept("PUT", "/api/field/*").as("updateField");
   });
 
-  it("should allow removing the field type (metabase#5276)", () => {
+  it("should allow removing the field type (dataman#5276)", () => {
     cy.visit("/reference/databases");
 
     cy.findByText("Sample Database").click();

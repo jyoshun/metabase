@@ -38,7 +38,7 @@ describe("issue 25990", () => {
     cy.intercept("POST", `/api/dataset`).as("dataset");
   });
 
-  it("should allow to filter by a column in a joined table (metabase#25990)", () => {
+  it("should allow to filter by a column in a joined table (dataman#25990)", () => {
     visitQuestionAdhoc(questionDetails);
 
     cy.findByText("Filter").click();

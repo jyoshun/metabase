@@ -45,7 +45,7 @@ describe.skip("issue 13347", { tags: "@external" }, () => {
   });
 
   ["QB", "Native"].forEach(test => {
-    it(`${test.toUpperCase()} version:\n should be able to select question (from "Saved Questions") which belongs to the database user doesn't have data-permissions for (metabase#13347)`, () => {
+    it(`${test.toUpperCase()} version:\n should be able to select question (from "Saved Questions") which belongs to the database user doesn't have data-permissions for (dataman#13347)`, () => {
       cy.signIn("none");
 
       startNewQuestion();

@@ -26,7 +26,7 @@ const HelpModal = ({ onClose }) => {
       onClose={handleClose}
     >
       <ModalMessage>
-        {t`It’s possible you may also receive emails from Metabase if you’re a member of an email distribution list, like “team@mycompany.com” and that list is used as the recipient for an alert or dashboard subscription instead of your individual email.`}
+        {t`It’s possible you may also receive emails from DataMan if you’re a member of an email distribution list, like “team@mycompany.com” and that list is used as the recipient for an alert or dashboard subscription instead of your individual email.`}
       </ModalMessage>
       <ModalMessage>
         {getAdminMessage(email)}
@@ -44,7 +44,7 @@ const getAdminLink = (email, text) => {
 
 const getAdminMessage = email => {
   const adminLink = getAdminLink(email, t`your instance administrator`);
-  return jt`Metabase doesn’t manage those lists, so we’d recommend contacting ${adminLink}. `;
+  return jt`DataMan doesn’t manage those lists, so we’d recommend contacting ${adminLink}. `;
 };
 
 export default HelpModal;

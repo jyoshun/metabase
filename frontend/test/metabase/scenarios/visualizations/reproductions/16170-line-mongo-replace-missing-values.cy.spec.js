@@ -29,7 +29,7 @@ describe("issue 16170", { tags: "@external" }, () => {
   });
 
   ["Zero", "Nothing"].forEach(replacementValue => {
-    it(`replace missing values with "${replacementValue}" should work on Mongo (metabase#16170)`, () => {
+    it(`replace missing values with "${replacementValue}" should work on Mongo (dataman#16170)`, () => {
       cy.findByTestId("viz-settings-button").click();
 
       openSeriesSettings("Count");

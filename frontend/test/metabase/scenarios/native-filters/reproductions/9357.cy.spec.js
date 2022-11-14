@@ -7,7 +7,7 @@ describe("issue 9357", () => {
     cy.signInAsAdmin();
   });
 
-  it("should reorder template tags by drag and drop (metabase#9357)", () => {
+  it("should reorder template tags by drag and drop (dataman#9357)", () => {
     openNativeEditor();
     SQLFilter.enterParameterizedQuery(
       "{{firstparameter}} {{nextparameter}} {{lastparameter}}",

@@ -29,7 +29,7 @@ describe("issue 18454", () => {
     );
   });
 
-  it("should show card descriptions (metabase#18454)", () => {
+  it("should show card descriptions (dataman#18454)", () => {
     cy.get(".DashCard").realHover();
     cy.get(".DashCard").within(() => {
       cy.icon("info").trigger("mouseenter", { force: true });

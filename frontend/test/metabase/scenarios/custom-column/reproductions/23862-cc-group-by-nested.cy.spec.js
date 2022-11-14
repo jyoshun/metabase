@@ -28,7 +28,7 @@ describe("issue 23862", () => {
     cy.signInAsAdmin();
   });
 
-  it("should group by a custom column and work in a nested question (metabase#23862)", () => {
+  it("should group by a custom column and work in a nested question (dataman#23862)", () => {
     cy.createQuestion(questionDetails).then(({ body: { id } }) => {
       visitQuestionAdhoc(
         {

@@ -27,7 +27,7 @@ describe("issue 22726", () => {
     cy.signIn("nocollection");
   });
 
-  it("should offer to duplicate a question in a view-only collection (metabase#22726)", () => {
+  it("should offer to duplicate a question in a view-only collection (dataman#22726)", () => {
     visitQuestion(1);
 
     openQuestionActions();

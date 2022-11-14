@@ -29,7 +29,7 @@ describe("scenarios > alert > email_alert", { tags: "@external" }, () => {
     });
   });
 
-  it("should respect email alerts toggled off (metabase#12349)", () => {
+  it("should respect email alerts toggled off (dataman#12349)", () => {
     openAlertForQuestion();
 
     // Turn off email

@@ -40,7 +40,7 @@ describe.skip("issue 23024", () => {
     addModelToDashboardAndVisit();
   });
 
-  it("should be possible to apply the dashboard filter to the native model (metabase#23024)", () => {
+  it("should be possible to apply the dashboard filter to the native model (dataman#23024)", () => {
     editDashboard();
 
     cy.icon("filter").click();

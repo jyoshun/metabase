@@ -75,7 +75,7 @@ describe("scenarios > auth > signin", () => {
     cy.signOut();
     cy.reload();
 
-    cy.contains("Sign in to Metabase");
+    cy.contains("Sign in to DataMan");
     cy.findByLabelText("Email address").type(admin.email);
     cy.findByLabelText("Password").type(admin.password);
     cy.findByText("Sign in").click();
@@ -86,7 +86,7 @@ describe("scenarios > auth > signin", () => {
   });
 
   sizes.forEach(size => {
-    it(`should redirect from /auth/forgot_password back to /auth/login (viewport: ${size}) (metabase#12658)`, () => {
+    it(`should redirect from /auth/forgot_password back to /auth/login (viewport: ${size}) (dataman#12658)`, () => {
       if (Array.isArray(size)) {
         cy.viewport(size[0], size[1]);
       } else {

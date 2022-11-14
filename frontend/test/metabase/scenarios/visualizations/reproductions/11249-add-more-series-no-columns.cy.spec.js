@@ -27,7 +27,7 @@ describe("issue 11249", () => {
     cy.signInAsAdmin();
   });
 
-  it("should not allow adding more series when all columns are used (metabase#11249)", () => {
+  it("should not allow adding more series when all columns are used (dataman#11249)", () => {
     visitQuestionAdhoc(questionDetails);
 
     cy.findByText("Settings").click();

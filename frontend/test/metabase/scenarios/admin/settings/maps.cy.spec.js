@@ -15,7 +15,7 @@ describe("scenarios > admin > settings > map settings", () => {
     cy.findByPlaceholderText(
       "Like https://my-mb-server.com/maps/my-map.json",
     ).type(
-      "https://raw.githubusercontent.com/metabase/metabase/master/resources/frontend_client/app/assets/geojson/world.json",
+      "https://raw.githubusercontent.com/dataman/dataman/master/resources/frontend_client/app/assets/geojson/world.json",
     );
     cy.findByText("Load").click();
     cy.wait(2000).findAllByText("Select…").first().click();
@@ -34,7 +34,7 @@ describe("scenarios > admin > settings > map settings", () => {
     cy.findByPlaceholderText(
       "Like https://my-mb-server.com/maps/my-map.json",
     ).type(
-      "https://raw.githubusercontent.com/metabase/metabase/master/resources/frontend_client/app/assets/geojson/world.json",
+      "https://raw.githubusercontent.com/dataman/dataman/master/resources/frontend_client/app/assets/geojson/world.json",
     );
     cy.findByText("Load").click();
     cy.wait("@load").then(interception => {
@@ -62,7 +62,7 @@ describe("scenarios > admin > settings > map settings", () => {
     // Not GeoJSON
     cy.findByPlaceholderText(
       "Like https://my-mb-server.com/maps/my-map.json",
-    ).type("https://metabase.com");
+    ).type("https://dataman.com");
     cy.findByText("Load").click();
     cy.findByText("Invalid custom GeoJSON: does not contain features");
 
@@ -70,7 +70,7 @@ describe("scenarios > admin > settings > map settings", () => {
     cy.findByPlaceholderText("Like https://my-mb-server.com/maps/my-map.json")
       .clear()
       .type(
-        "https://raw.githubusercontent.com/metabase/metabase/master/test_resources/test.geojson",
+        "https://raw.githubusercontent.com/dataman/dataman/master/test_resources/test.geojson",
       );
     cy.findByText("Load").click();
     cy.findByText("Invalid custom GeoJSON: does not contain features");

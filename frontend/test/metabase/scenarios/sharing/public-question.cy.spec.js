@@ -49,7 +49,7 @@ describe("scenarios > question > public", () => {
     cy.request("PUT", "/api/setting/enable-public-sharing", { value: true });
   });
 
-  it("adds filters to url as get params and renders the results correctly (metabase#7120, metabase#17033)", () => {
+  it("adds filters to url as get params and renders the results correctly (dataman#7120, dataman#17033)", () => {
     cy.createNativeQuestion(questionData).then(({ body: { id } }) => {
       enableSharingQuestion(id);
 
@@ -74,7 +74,7 @@ describe("scenarios > question > public", () => {
     cy.findByText("Winner");
   });
 
-  it("allows downloading publicly shared questions (metabase#21993)", () => {
+  it("allows downloading publicly shared questions (dataman#21993)", () => {
     const questionData = {
       name: "21993",
       native: {

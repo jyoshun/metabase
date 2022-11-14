@@ -41,7 +41,7 @@ describe("issue 23076", () => {
     cy.createQuestion(questionDetails, { visitQuestion: true });
   });
 
-  it("should correctly translate dates (metabase#23076)", () => {
+  it("should correctly translate dates (dataman#23076)", () => {
     cy.findAllByText(/^Summen für/)
       .should("be.visible")
       .eq(1)

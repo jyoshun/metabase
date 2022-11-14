@@ -10,7 +10,7 @@ describe("issue 19737", () => {
     cy.request("PUT", "/api/card/1", { name: modelName, dataset: true });
   });
 
-  it("should show moved model in the data picker without refreshing (metabase#19737)", () => {
+  it("should show moved model in the data picker without refreshing (dataman#19737)", () => {
     cy.visit("/collection/root");
 
     moveModel(modelName, "My personal collection");
@@ -27,7 +27,7 @@ describe("issue 19737", () => {
     });
   });
 
-  it("should not show duplicate models in the data picker after it's moved from a custom collection without refreshing (metabase#19737)", () => {
+  it("should not show duplicate models in the data picker after it's moved from a custom collection without refreshing (dataman#19737)", () => {
     // move "Orders Model" to "First collection"
     cy.visit("/collection/root");
 

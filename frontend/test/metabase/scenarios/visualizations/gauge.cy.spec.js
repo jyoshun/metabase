@@ -9,7 +9,7 @@ describe("scenarios > visualizations > gauge chart", () => {
     cy.signInAsAdmin();
   });
 
-  it("should not rerender on gauge arc hover (metabase#15980)", () => {
+  it("should not rerender on gauge arc hover (dataman#15980)", () => {
     const questionDetails = {
       name: "15980",
       query: { "source-table": ORDERS_ID, aggregation: [["count"]] },

@@ -18,7 +18,7 @@ describe("scenarios > question > saved", () => {
     cy.signInAsNormalUser();
   });
 
-  it("should should correctly display 'Save' modal (metabase#13817)", () => {
+  it("should should correctly display 'Save' modal (dataman#13817)", () => {
     openOrdersTable();
     cy.icon("notebook").click();
     summarize({ mode: "notebook" });
@@ -186,7 +186,7 @@ describe("scenarios > question > saved", () => {
     });
   });
 
-  it("'read-only' user should be able to resize column width (metabase#9772)", () => {
+  it("'read-only' user should be able to resize column width (dataman#9772)", () => {
     cy.signIn("readonly");
     visitQuestion(1);
 
@@ -197,7 +197,7 @@ describe("scenarios > question > saved", () => {
         const originalWidth = $cell[0].getBoundingClientRect().width;
 
         // Retries the assertion a few times to ensure it waits for DOM changes
-        // More context: https://github.com/metabase/metabase/pull/21823#discussion_r855302036
+        // More context: https://github.com/dataman/dataman/pull/21823#discussion_r855302036
         function assertColumnResized(attempt = 0) {
           cy.get("@headerCell").then($newCell => {
             const newWidth = $newCell[0].getBoundingClientRect().width;

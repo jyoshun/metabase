@@ -19,7 +19,7 @@ const { ORDERS_ID } = SAMPLE_DATABASE;
 const TEST_USER = {
   first_name: "Testy",
   last_name: "McTestface",
-  email: `testy${Math.round(Math.random() * 100000)}@metabase.test`,
+  email: `testy${Math.round(Math.random() * 100000)}@dataman.test`,
   password: "12341234",
 };
 
@@ -34,7 +34,7 @@ describe("scenarios > admin > people", () => {
   });
 
   describe("user management", () => {
-    it("should be possible to switch beteween 'People' and 'Groups' tabs and to add/remove users to groups (metabase-enterprise#210, metabase#12693, metabase#21521)", () => {
+    it("should be possible to switch beteween 'People' and 'Groups' tabs and to add/remove users to groups (dataman-enterprise#210, dataman#12693, dataman#21521)", () => {
       cy.visit("/admin/people");
 
       assertTableRowsCount(TOTAL_USERS);
@@ -115,7 +115,7 @@ describe("scenarios > admin > people", () => {
       cy.findByText(FULL_NAME);
     });
 
-    it("should allow admin to create new users without first name or last name (metabase#22754)", () => {
+    it("should allow admin to create new users without first name or last name (dataman#22754)", () => {
       const { email } = TEST_USER;
       cy.visit("/admin/people");
       clickButton("Invite someone");
@@ -143,7 +143,7 @@ describe("scenarios > admin > people", () => {
       cy.contains("Email address already in use.");
     });
 
-    it("'Invite someone' button shouldn't be covered/blocked on smaller screen sizes (metabase#16350)", () => {
+    it("'Invite someone' button shouldn't be covered/blocked on smaller screen sizes (dataman#16350)", () => {
       cy.viewport(1000, 600);
 
       cy.visit("/admin/people");
@@ -243,7 +243,7 @@ describe("scenarios > admin > people", () => {
       assertTableRowsCount(TOTAL_USERS);
     });
 
-    it("should display more than 50 groups (metabase#17200)", () => {
+    it("should display more than 50 groups (dataman#17200)", () => {
       generateGroups(51);
 
       cy.visit("/admin/people/groups");
@@ -259,7 +259,7 @@ describe("scenarios > admin > people", () => {
         // Setup Google authentication
         cy.request("PUT", "/api/setting", {
           "google-auth-client-id": "fake-id.apps.googleusercontent.com",
-          "google-auth-auto-create-accounts-domain": "metabase.com",
+          "google-auth-auto-create-accounts-domain": "dataman.com",
           "google-auth-enabled": true,
         });
       });
@@ -287,7 +287,7 @@ describe("scenarios > admin > people", () => {
         cy.findByText(FULL_NAME);
       });
 
-      it("invite member when SSO is configured metabase#23630", () => {
+      it("invite member when SSO is configured dataman#23630", () => {
         // Setup Google authentication
         cy.request("PUT", "/api/setting", {
           "enable-password-login": false,
@@ -466,7 +466,7 @@ function generateUsers(count, groupIds) {
   const users = _.range(count).map(index => ({
     first_name: `FirstName ${index}`,
     last_name: `LastName ${index}`,
-    email: `user_${index}@metabase.com`,
+    email: `user_${index}@dataman.com`,
     password: `secure password ${index}`,
     groupIds,
   }));

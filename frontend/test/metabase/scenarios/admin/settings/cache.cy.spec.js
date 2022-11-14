@@ -44,7 +44,7 @@ describe.skip(
         saveQuestion("18458");
       });
 
-      it("should respect previously set cache duration (metabase#18458)", () => {
+      it("should respect previously set cache duration (dataman#18458)", () => {
         refreshUntilCached();
 
         cy.get("@cachedResult").then(cachedValue => {

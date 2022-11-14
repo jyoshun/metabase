@@ -28,7 +28,7 @@ describe("issue 14302", () => {
     cy.createNativeQuestion(nativeQuery, { visitQuestion: true });
   });
 
-  it("should not make the question dirty when there are no changes (metabase#14302)", () => {
+  it("should not make the question dirty when there are no changes (dataman#14302)", () => {
     cy.log("Reported on v0.37.5 - Regression since v0.37.0");
 
     cy.findByText("Save").should("not.exist");

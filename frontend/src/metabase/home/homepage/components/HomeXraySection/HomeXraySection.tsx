@@ -34,42 +34,7 @@ const HomeXraySection = ({
   const tableMessages = useMemo(() => getMessages(tableCount), [tableCount]);
   const canSelectSchema = schemas.length > 1;
 
-  return (
-    <div>
-      {isSample ? (
-        <HomeCaption primary>
-          {t`Try out these sample x-rays to see what Metabase can do.`}
-        </HomeCaption>
-      ) : canSelectSchema ? (
-        <HomeCaption primary>
-          {t`Here are some explorations of the`}
-          <SchemaSelect
-            schema={schema}
-            schemas={schemas}
-            onChange={setSchema}
-          />
-          {t`schema in`}
-          <DatabaseInfo database={database} />
-        </HomeCaption>
-      ) : (
-        <HomeCaption primary>
-          {t`Here are some explorations of`}
-          <DatabaseInfo database={database} />
-        </HomeCaption>
-      )}
-      <SectionBody>
-        {candidate?.tables.map((table, index) => (
-          <HomeXrayCard
-            key={table.url}
-            title={table.title}
-            url={table.url}
-            message={tableMessages[index]}
-          />
-        ))}
-        <HomeHelpCard />
-      </SectionBody>
-    </div>
-  );
+  return <div />;
 };
 
 interface SchemaSelectProps {

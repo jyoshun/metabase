@@ -21,7 +21,7 @@ describe("scenarios > visualizations > pie chart", () => {
     cy.signInAsNormalUser();
   });
 
-  it("should render a pie chart (metabase#12506)", () => {
+  it("should render a pie chart (dataman#12506)", () => {
     visitQuestionAdhoc({
       dataset_query: testQuery,
       display: "pie",

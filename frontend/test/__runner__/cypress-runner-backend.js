@@ -55,7 +55,7 @@ const CypressBackend = {
           user: {
             first_name: "Testy",
             last_name: "McTestface",
-            email: "testy@metabase.test",
+            email: "testy@dataman.test",
             site_name: "Epic Team",
           },
         }),

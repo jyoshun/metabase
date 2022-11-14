@@ -20,7 +20,7 @@ describe("issue 18502", () => {
     cy.signInAsAdmin();
   });
 
-  it("should be able to join two saved questions based on the same table (metabase#18502)", () => {
+  it("should be able to join two saved questions based on the same table (dataman#18502)", () => {
     cy.intercept(`/api/database/${SAMPLE_DB_ID}/schema/PUBLIC`).as("schema");
 
     cy.createQuestion(question1);

@@ -8,7 +8,7 @@ describe("issue 23510", () => {
     cy.signInAsAdmin();
   });
 
-  it("loads metadata when it is not cached (metabase#23510)", () => {
+  it("loads metadata when it is not cached (dataman#23510)", () => {
     cy.createNativeQuestion(
       {
         database: 1,

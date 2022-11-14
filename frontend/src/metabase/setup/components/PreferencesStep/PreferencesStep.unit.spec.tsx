@@ -21,7 +21,7 @@ describe("PreferencesStep", () => {
     });
 
     render(<PreferencesStep {...props} />);
-    userEvent.click(screen.getByLabelText(/Allow Metabase/));
+    userEvent.click(screen.getByLabelText(/Allow DataMan/));
 
     expect(props.onTrackingChange).toHaveBeenCalledWith(true);
   });

@@ -22,7 +22,7 @@ describe("issue 20656", () => {
     cy.signInAsAdmin();
   });
 
-  it("should allow a user to visit a dashboard even without a permission to see the dashboard card (metabase#20656, metabase#24536)", () => {
+  it("should allow a user to visit a dashboard even without a permission to see the dashboard card (dataman#20656, dataman#24536)", () => {
     cy.createQuestionAndDashboard({
       questionDetails: {
         query: { "source-table": PRODUCTS_ID, limit: 2 },
@@ -61,7 +61,7 @@ describe("issue 20656", () => {
     filterWidget();
     cy.findByText("Sorry, you don't have permission to see this card.");
 
-    // Trying to edit the filter should not show mapping fields and shouldn't break frontend (metabase#24536)
+    // Trying to edit the filter should not show mapping fields and shouldn't break frontend (dataman#24536)
     editDashboard();
 
     cy.findByTestId("edit-dashboard-parameters-widget-container")

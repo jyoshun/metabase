@@ -14,7 +14,7 @@ import {
   mapGUIDashboardParameters,
 } from "./embedding-linked-filters";
 
-describe("scenarios > embedding > dashboard > linked filters (metabase#13639, metabase#13868)", () => {
+describe("scenarios > embedding > dashboard > linked filters (dataman#13639, dataman#13868)", () => {
   beforeEach(() => {
     restore();
     cy.signInAsAdmin();

@@ -48,9 +48,9 @@ export function collection(collection?: Collection) {
     return `/collection/${id}`;
   }
 
-  // Data app is another kind of Metabase entity build on top of a collection
+  // Data app is another kind of DataMan entity build on top of a collection
   // Each app has a 1:1 relation with a collection
-  // (this collection isn't shown in Metabase though, the app serves as a "wrapper")
+  // (this collection isn't shown in DataMan though, the app serves as a "wrapper")
   // When building collection URLs we should take `app_id` into account
   if (typeof collection.app_id === "number") {
     return dataApp(

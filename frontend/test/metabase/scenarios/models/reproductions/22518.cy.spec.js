@@ -21,7 +21,7 @@ describe("issue 22518", () => {
     );
   });
 
-  it("UI should immediately reflect model query changes upon saving (metabase#22518)", () => {
+  it("UI should immediately reflect model query changes upon saving (dataman#22518)", () => {
     openQuestionActions();
     cy.findByText("Edit query definition").click();
 

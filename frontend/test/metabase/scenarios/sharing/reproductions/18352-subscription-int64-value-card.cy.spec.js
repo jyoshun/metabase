@@ -34,7 +34,7 @@ describe("issue 18352", { tags: "@external" }, () => {
     );
   });
 
-  it("should send the card with the INT64 values (metabase#18352)", () => {
+  it("should send the card with the INT64 values (dataman#18352)", () => {
     cy.icon("subscription").click();
 
     cy.findByText("Email it").click();

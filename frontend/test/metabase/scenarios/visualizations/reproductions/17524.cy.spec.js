@@ -53,7 +53,7 @@ describe("issue 17524", () => {
       cy.createNativeQuestion(nativeQuestionDetails, { visitQuestion: true });
     });
 
-    it("should not alter visualization type when applying filter on a native question (metabase#17524-1)", () => {
+    it("should not alter visualization type when applying filter on a native question (dataman#17524-1)", () => {
       filterWidget().type("1");
 
       cy.get("polygon");
@@ -70,7 +70,7 @@ describe("issue 17524", () => {
       cy.createQuestion(questionDetails, { visitQuestion: true });
     });
 
-    it("should not alter visualization type when applying filter on a QB question (metabase#17524-2)", () => {
+    it("should not alter visualization type when applying filter on a QB question (dataman#17524-2)", () => {
       cy.get("polygon");
 
       filter();

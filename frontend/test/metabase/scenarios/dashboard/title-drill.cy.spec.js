@@ -32,7 +32,7 @@ describe("scenarios > dashboard > title drill", () => {
     });
 
     describe("as a user with access to underlying data", () => {
-      it("should let you click through the title to the query builder (metabase#13042)", () => {
+      it("should let you click through the title to the query builder (dataman#13042)", () => {
         // wait for qustion to load
         cy.findByText("foo");
 
@@ -53,7 +53,7 @@ describe("scenarios > dashboard > title drill", () => {
         cy.reload();
       });
 
-      it("should let you click through the title to the query builder (metabase#13042)", () => {
+      it("should let you click through the title to the query builder (dataman#13042)", () => {
         // wait for qustion to load
         cy.findByText("foo");
 
@@ -133,7 +133,7 @@ describe("scenarios > dashboard > title drill", () => {
     });
 
     describe("as a user with access to underlying data", () => {
-      it("'contains' filter should still work after title drill through IF the native question field filter's type matches exactly (metabase#16181)", () => {
+      it("'contains' filter should still work after title drill through IF the native question field filter's type matches exactly (dataman#16181)", () => {
         checkScalarResult("200");
 
         cy.findByText("Text contains").click();
@@ -157,7 +157,7 @@ describe("scenarios > dashboard > title drill", () => {
         cy.reload();
       });
 
-      it("'contains' filter should still work after title drill through IF the native question field filter's type matches exactly (metabase#16181)", () => {
+      it("'contains' filter should still work after title drill through IF the native question field filter's type matches exactly (dataman#16181)", () => {
         checkScalarResult("200");
 
         cy.findByText("Text contains").click();

@@ -14,7 +14,7 @@ describe("issue 17512", () => {
     cy.signInAsAdmin();
   });
 
-  it("custom expression should work with `case` in nested queries (metabase#17512)", () => {
+  it("custom expression should work with `case` in nested queries (dataman#17512)", () => {
     openOrdersTable({ mode: "notebook" });
 
     addSummarizeCustomExpression(

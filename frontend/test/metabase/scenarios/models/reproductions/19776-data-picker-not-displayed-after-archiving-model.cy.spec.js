@@ -10,7 +10,7 @@ describe("issue 19776", () => {
     cy.request("PUT", "/api/card/1", { name: modelName, dataset: true });
   });
 
-  it("should show moved model in the data picker without refreshing (metabase#19776)", () => {
+  it("should show moved model in the data picker without refreshing (dataman#19776)", () => {
     cy.visit("/collection/root");
 
     openEllipsisMenuFor(modelName);

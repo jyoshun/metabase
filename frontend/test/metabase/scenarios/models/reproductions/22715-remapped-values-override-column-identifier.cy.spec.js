@@ -5,7 +5,7 @@ import {
   filter,
 } from "__support__/e2e/helpers";
 
-describe("filtering based on the remapped column name should result in a correct query (metabase#22715)", () => {
+describe("filtering based on the remapped column name should result in a correct query (dataman#22715)", () => {
   beforeEach(() => {
     cy.intercept("POST", "/api/dataset").as("dataset");
     cy.intercept("PUT", "/api/card/*").as("updateModel");
@@ -52,7 +52,7 @@ describe("filtering based on the remapped column name should result in a correct
     });
   });
 
-  it("when done through the column header action (metabase#22715-1)", () => {
+  it("when done through the column header action (dataman#22715-1)", () => {
     cy.findByText("Created At").click();
     cy.findByText("Filter by this column").click();
     cy.findByText("Today").click();
@@ -63,7 +63,7 @@ describe("filtering based on the remapped column name should result in a correct
     cy.get(".cellData").should("have.length", 4).and("contain", "Created At");
   });
 
-  it("when done through the filter trigger (metabase#22715-2)", () => {
+  it("when done through the filter trigger (dataman#22715-2)", () => {
     filter();
 
     cy.get(".Modal").within(() => {

@@ -22,7 +22,7 @@ describe.skip("issue 20624", () => {
     cy.createNativeQuestion(questionDetails, { visitQuestion: true });
   });
 
-  it("models metadata should override previously defined column settings (metabase#20624)", () => {
+  it("models metadata should override previously defined column settings (dataman#20624)", () => {
     openDetailsSidebar();
     cy.findByText("Customize metadata").click();
 

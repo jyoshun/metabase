@@ -7,15 +7,15 @@ describe.skip("Cloud settings section", () => {
     cy.signInAsAdmin();
   });
 
-  it("should be visible when running Metabase Cloud", () => {
+  it("should be visible when running DataMan Cloud", () => {
     setupMetabaseCloud();
     cy.visit("/admin");
     cy.get(".AdminList-items").findByText("Cloud").click();
     cy.findByText(/Cloud Settings/i);
-    cy.findByText("Go to the Metabase Store").should(
+    cy.findByText("Go to the DataMan Store").should(
       "have.attr",
       "href",
-      "https://store.metabase.com/",
+      "https://store.dataman.com/",
     );
   });
 

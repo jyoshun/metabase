@@ -26,7 +26,7 @@ describe("MetabaseSettings.docsUrl", () => {
     it("handles version " + v[0] + " by pointing it to " + v[1], () => {
       withTempSetting("version", { tag: v[0] }, () => {
         expect(MetabaseSettings.docsUrl()).toBe(
-          "https://www.metabase.com/docs/" + v[1] + "/",
+          "https://www.dataman.com/docs/" + v[1] + "/",
         );
       });
     });

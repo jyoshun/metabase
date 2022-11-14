@@ -135,7 +135,7 @@ describe("scenarios > visualizations > pivot tables", () => {
     });
   });
 
-  it("should be able to use binned numeric dimension as a grouping (metabase#14136)", () => {
+  it("should be able to use binned numeric dimension as a grouping (dataman#14136)", () => {
     // Sample database Orders > Count by Subtotal: Auto binned
     visitQuestionAdhoc({
       dataset_query: {
@@ -378,7 +378,7 @@ describe("scenarios > visualizations > pivot tables", () => {
     cy.findByText("Pivot tables can only be used with aggregated queries.");
   });
 
-  describe("custom columns (metabase#14604)", () => {
+  describe("custom columns (dataman#14604)", () => {
     it("should work with custom columns as values", () => {
       visitQuestionAdhoc({
         dataset_query: {
@@ -478,11 +478,11 @@ describe("scenarios > visualizations > pivot tables", () => {
       });
     });
 
-    it("should display a pivot table on a dashboard (metabase#14465)", () => {
+    it("should display a pivot table on a dashboard (dataman#14465)", () => {
       assertOnPivotFields();
     });
 
-    it("should allow filtering drill through (metabase#14632)", () => {
+    it("should allow filtering drill through (dataman#14632)", () => {
       assertOnPivotFields();
       cy.findByText("Google").click(); // open actions menu
       popover().within(() => cy.findByText("=").click()); // drill with additional filter
@@ -493,7 +493,7 @@ describe("scenarios > visualizations > pivot tables", () => {
     });
   });
 
-  describe("sharing (metabase#14447)", () => {
+  describe("sharing (dataman#14447)", () => {
     beforeEach(() => {
       cy.viewport(1400, 800); // Row totals on embed preview was getting cut off at the normal width
       cy.log("Create a question");
@@ -589,13 +589,13 @@ describe("scenarios > visualizations > pivot tables", () => {
     });
   });
 
-  it("should open the download popover (metabase#14750)", () => {
+  it("should open the download popover (dataman#14750)", () => {
     createAndVisitTestQuestion();
     cy.icon("download").click();
     popover().within(() => cy.findByText("Download full results"));
   });
 
-  it.skip("should work for user without data permissions (metabase#14989)", () => {
+  it.skip("should work for user without data permissions (dataman#14989)", () => {
     cy.request("POST", "/api/card", {
       name: "14989",
       dataset_query: {
@@ -622,7 +622,7 @@ describe("scenarios > visualizations > pivot tables", () => {
     cy.findByText("200");
   });
 
-  it("should work with custom mapping of display values (metabase#14985)", () => {
+  it("should work with custom mapping of display values (dataman#14985)", () => {
     cy.intercept("POST", "/api/dataset/pivot").as("datasetPivot");
 
     cy.log("Remap 'Reviews Rating' display values to custom values");
@@ -675,7 +675,7 @@ describe("scenarios > visualizations > pivot tables", () => {
     });
   });
 
-  it("should show stand-alone row values in grouping when rows are collapsed (metabase#15211)", () => {
+  it("should show stand-alone row values in grouping when rows are collapsed (dataman#15211)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "query",
@@ -829,7 +829,7 @@ describe("scenarios > visualizations > pivot tables", () => {
     );
   });
 
-  it.skip("should sort by metric (metabase#22872)", () => {
+  it.skip("should sort by metric (dataman#22872)", () => {
     const questionDetails = {
       dataset_query: {
         database: SAMPLE_DB_ID,

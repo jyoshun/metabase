@@ -13,7 +13,7 @@ describe("issue 20683", { tags: "@external" }, () => {
     cy.findByText("Orders").click();
   });
 
-  it("should filter postgres with the 'current quarter' filter (metabase#20683)", () => {
+  it("should filter postgres with the 'current quarter' filter (dataman#20683)", () => {
     cy.findByText("Add filters to narrow your answer").click();
 
     cy.findByText("Created At").click();

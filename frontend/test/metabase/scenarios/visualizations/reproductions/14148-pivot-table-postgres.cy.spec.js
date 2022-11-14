@@ -12,7 +12,7 @@ describe("issue 14148", { tags: "@external" }, () => {
     cy.signInAsAdmin();
   });
 
-  it("postgres should display pivot tables (metabase#14148)", () => {
+  it("postgres should display pivot tables (dataman#14148)", () => {
     withDatabase(PG_DB_ID, ({ PEOPLE, PEOPLE_ID }) =>
       visitQuestionAdhoc(
         {

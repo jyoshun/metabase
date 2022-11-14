@@ -97,7 +97,7 @@ export const PremiumEmbeddingLicensePage = ({
         </PremiumEmbeddingDescription>
         {!tokenStatus?.isValid && (
           <LicenseInputTitle>
-            {t`Enter the token you bought from the Metabase Store below.`}
+            {t`Enter the token you bought from the DataMan Store below.`}
           </LicenseInputTitle>
         )}
         <LicenseInput

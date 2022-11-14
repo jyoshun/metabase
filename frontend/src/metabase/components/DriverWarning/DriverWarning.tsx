@@ -114,7 +114,7 @@ const CommunityDriverWarning = () => (
   <WarningRoot hasBorder>
     <Icon name="info" className="pr2" />
     <p>
-      {t`This is a community-developed driver and not supported by Metabase. `}
+      {t`This is a community-developed driver and not supported by DataMan. `}
     </p>
   </WarningRoot>
 );
@@ -142,7 +142,7 @@ const PartnerDriverWarning = ({
     <WarningRoot hasBorder>
       <Icon name="info" className="pr2" />
       <p>
-        {t`This is a partner-developed driver. Though Metabase can’t provide support for it, if you need help you can contact the fine folks at `}
+        {t`This is a partner-developed driver. Though DataMan can’t provide support for it, if you need help you can contact the fine folks at `}
         {contactLink}
         {!contactLink && (sourceName || "our partner")}.
       </p>

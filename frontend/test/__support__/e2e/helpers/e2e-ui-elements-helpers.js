@@ -1,4 +1,4 @@
-// various Metabase-specific "scoping" functions like inside popover/modal/navbar/main/sidebar content area
+// various DataMan-specific "scoping" functions like inside popover/modal/navbar/main/sidebar content area
 export const POPOVER_ELEMENT = ".popover[data-state~='visible']";
 
 export function popover() {

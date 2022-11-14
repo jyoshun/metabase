@@ -6,7 +6,7 @@ describe("issue 20393", () => {
     cy.signInAsAdmin();
   });
 
-  it("should show public dashboards with nested cards mapped to parameters (metabase#20393)", () => {
+  it("should show public dashboards with nested cards mapped to parameters (dataman#20393)", () => {
     createDashboardWithNestedCard();
 
     // add a date parameter to the dashboard

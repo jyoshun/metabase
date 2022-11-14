@@ -65,7 +65,7 @@ describe.skip("issue 22788", () => {
     );
   });
 
-  it("should not drop filter connected to a custom column on a second dashboard edit (metabase#22788)", () => {
+  it("should not drop filter connected to a custom column on a second dashboard edit (dataman#22788)", () => {
     addFilterAndAssert();
 
     editDashboard();

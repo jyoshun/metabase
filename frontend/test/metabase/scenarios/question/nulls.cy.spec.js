@@ -17,7 +17,7 @@ describe("scenarios > question > null", () => {
     cy.signInAsAdmin();
   });
 
-  it("should display rows whose value is `null` (metabase#13571)", () => {
+  it("should display rows whose value is `null` (dataman#13571)", () => {
     cy.createQuestion({
       name: "13571",
       query: {
@@ -42,9 +42,9 @@ describe("scenarios > question > null", () => {
 
   // [quarantine]
   //  - possible app corruption and new issue with rendering discovered
-  //  - see: https://github.com/metabase/metabase/pull/13721#issuecomment-724931075
+  //  - see: https://github.com/dataman/dataman/pull/13721#issuecomment-724931075
   //  - test was intermittently failing
-  it.skip("pie chart should handle `0`/`null` values (metabase#13626)", () => {
+  it.skip("pie chart should handle `0`/`null` values (dataman#13626)", () => {
     // Preparation for the test: "Arrange and Act phase" - see repro steps in #13626
 
     cy.createQuestion({
@@ -123,7 +123,7 @@ describe("scenarios > question > null", () => {
     });
   });
 
-  it("dashboard should handle cards with null values (metabase#13801)", () => {
+  it("dashboard should handle cards with null values (dataman#13801)", () => {
     cy.createNativeQuestion({
       name: "13801_Q1",
       native: { query: "SELECT null", "template-tags": {} },
@@ -170,7 +170,7 @@ describe("scenarios > question > null", () => {
     });
   });
 
-  it("should filter by clicking on the row with `null` value (metabase#18386)", () => {
+  it("should filter by clicking on the row with `null` value (dataman#18386)", () => {
     openOrdersTable();
 
     // Total of "39.72", and the next cell is the `discount` (which is empty)
@@ -190,7 +190,7 @@ describe("scenarios > question > null", () => {
   });
 
   describe("aggregations with null values", () => {
-    it("summarize with null values (metabase#12585)", () => {
+    it("summarize with null values (dataman#12585)", () => {
       openOrdersTable();
 
       summarize();

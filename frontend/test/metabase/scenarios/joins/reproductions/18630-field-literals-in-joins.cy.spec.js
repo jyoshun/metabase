@@ -50,7 +50,7 @@ describe("issue 18630", () => {
     ],
   };
 
-  it("should normally open queries with field literals in joins (metabase#18630)", () => {
+  it("should normally open queries with field literals in joins (dataman#18630)", () => {
     cy.createQuestion(
       { query: QUERY_WITH_FIELD_CLAUSE },
       { visitQuestion: true },

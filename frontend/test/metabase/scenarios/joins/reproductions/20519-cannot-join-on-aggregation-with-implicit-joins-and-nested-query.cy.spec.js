@@ -44,8 +44,8 @@ describe("issue 20519", () => {
     switchToNotebookView();
   });
 
-  // Tightly related issue: metabase#17767
-  it("should allow subsequent joins and nested query after summarizing on the implicit joins (metabase#20519)", () => {
+  // Tightly related issue: dataman#17767
+  it("should allow subsequent joins and nested query after summarizing on the implicit joins (dataman#20519)", () => {
     cy.icon("add_data").last().click();
 
     enterCustomColumnDetails({

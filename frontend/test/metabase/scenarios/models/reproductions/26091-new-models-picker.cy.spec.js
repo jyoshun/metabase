@@ -18,7 +18,7 @@ describe("issue 26091", () => {
     cy.intercept("POST", "/api/card").as("saveQuestion");
   });
 
-  it("should allow to choose a newly created model in the data picker (metabase#26091)", () => {
+  it("should allow to choose a newly created model in the data picker (dataman#26091)", () => {
     cy.createQuestion(modelDetails);
     cy.visit("/");
 

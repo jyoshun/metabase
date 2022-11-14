@@ -30,7 +30,7 @@ describe("issue 17768", () => {
     });
   });
 
-  it("should not show binning options for an entity key, regardless of its underlying type (metabase#17768)", () => {
+  it("should not show binning options for an entity key, regardless of its underlying type (dataman#17768)", () => {
     openReviewsTable({ mode: "notebook" });
 
     summarize({ mode: "notebook" });

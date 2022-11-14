@@ -45,7 +45,7 @@ describe("issue 19494", () => {
     });
   });
 
-  it("should correctly apply different filters with default values to all cards of the same question (metabase#19494)", () => {
+  it("should correctly apply different filters with default values to all cards of the same question (dataman#19494)", () => {
     // Instead of using the API to connect filters to the cards,
     // let's use UI to replicate user experience as closely as possible
     visitDashboard(1);

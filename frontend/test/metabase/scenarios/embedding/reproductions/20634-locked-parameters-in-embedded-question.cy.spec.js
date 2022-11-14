@@ -1,6 +1,6 @@
 import { restore, visitIframe } from "__support__/e2e/helpers";
 
-describe("locked parameters in embedded question (metabase#20634)", () => {
+describe("locked parameters in embedded question (dataman#20634)", () => {
   beforeEach(() => {
     restore();
     cy.signInAsAdmin();

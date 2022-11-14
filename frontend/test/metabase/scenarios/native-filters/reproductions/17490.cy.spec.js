@@ -10,7 +10,7 @@ describe("issue 17490", () => {
     cy.signInAsAdmin();
   });
 
-  it.skip("nav bar shouldn't cut off the popover with the tables for field filter selection (metabase#17490)", () => {
+  it.skip("nav bar shouldn't cut off the popover with the tables for field filter selection (dataman#17490)", () => {
     openNativeEditor();
     SQLFilter.enterParameterizedQuery("{{f}}");
 

@@ -413,7 +413,7 @@ describe("QuestionDataSource", () => {
       const { question, questionType } = testCase;
 
       describe(questionType, () => {
-        it("displays 2 joined tables (metabase#17961)", () => {
+        it("displays 2 joined tables (dataman#17961)", () => {
           setup({ question, subHead: true });
 
           const orders = screen.queryByText(/Orders/);
@@ -440,7 +440,7 @@ describe("QuestionDataSource", () => {
       const { question, questionType } = testCase;
 
       describe(questionType, () => {
-        it("displays > 2 joined tables (metabase#17961)", () => {
+        it("displays > 2 joined tables (dataman#17961)", () => {
           setup({ question, subHead: true });
 
           const orders = screen.queryByText(/Orders/);
@@ -473,7 +473,7 @@ describe("QuestionDataSource", () => {
       const { question, questionType } = testCase;
 
       describe(questionType, () => {
-        it("displays source question (metabase#12616)", () => {
+        it("displays source question (dataman#12616)", () => {
           setup({ question, subHead: true });
           const node = screen.queryByText(SOURCE_QUESTION_NAME);
           expect(node).toBeInTheDocument();
@@ -486,7 +486,7 @@ describe("QuestionDataSource", () => {
           );
         });
 
-        it("does not display virtual schema (metabase#12616)", () => {
+        it("does not display virtual schema (dataman#12616)", () => {
           setup({ question, subHead: true });
           const node = screen.queryByText(
             SOURCE_QUESTION_COLLECTION_SCHEMA_NAME,

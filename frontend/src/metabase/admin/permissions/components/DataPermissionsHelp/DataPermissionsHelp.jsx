@@ -48,7 +48,7 @@ export const DataPermissionsHelp = () => (
       </h3>
       <p>{t`Ensure users can’t ever see the data from this database regardless of their permissions at the Collection level. Keep in mind that if a user belongs to another group that does have data access, that setting will take precedence, and the user's access will not be blocked.`}</p>
 
-      <p>{t`Only available in certain Metabase plans.`}</p>
+      <p>{t`Only available in certain DataMan plans.`}</p>
     </DataPermissionsHelpContent>
 
     <DataPermissionsHelpFooter>

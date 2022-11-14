@@ -58,7 +58,7 @@ describe("scenarios > admin > datamodel > field > field type", () => {
     getFKTargetField("Products → ID");
   });
 
-  it("should not let you change the type to 'Number' (metabase#16781)", () => {
+  it("should not let you change the type to 'Number' (dataman#16781)", () => {
     visitAlias("@ORDERS_PRODUCT_ID_URL");
     cy.wait(["@metadata", "@metadata", "@metadata"]);
 

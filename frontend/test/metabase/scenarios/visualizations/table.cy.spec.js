@@ -38,7 +38,7 @@ describe("scenarios > visualizations > table", () => {
       .blur();
 
     cy.findByTestId("link_url")
-      .type("http://metabase.com/people/{{ID}}", {
+      .type("http://dataman.com/people/{{ID}}", {
         parseSpecialCharSequences: false,
       })
       .blur();
@@ -46,7 +46,7 @@ describe("scenarios > visualizations > table", () => {
     cy.findByText("Wood River 1 fixed text").should(
       "have.attr",
       "href",
-      "http://metabase.com/people/1",
+      "http://dataman.com/people/1",
     );
   });
 
@@ -170,7 +170,7 @@ describe("scenarios > visualizations > table", () => {
     });
   });
 
-  it("should show the field metadata popover for a foreign key field (metabase#19577)", () => {
+  it("should show the field metadata popover for a foreign key field (dataman#19577)", () => {
     openOrdersTable({ limit: 2 });
 
     cy.findByText("Product ID").trigger("mouseenter");
@@ -192,7 +192,7 @@ describe("scenarios > visualizations > table", () => {
     });
   });
 
-  it.skip("should close the colum popover on subsequent click (metabase#16789)", () => {
+  it.skip("should close the colum popover on subsequent click (dataman#16789)", () => {
     openPeopleTable({ limit: 2 });
 
     cy.findByText("City").click();

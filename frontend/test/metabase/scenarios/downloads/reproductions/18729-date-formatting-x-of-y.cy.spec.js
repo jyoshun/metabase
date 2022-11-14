@@ -33,7 +33,7 @@ describe("issue 18729", () => {
   });
 
   ["csv", "xlsx"].forEach(fileType => {
-    it(`should properly format the 'X of Y'dates in ${fileType} exports (metabase#18729)`, () => {
+    it(`should properly format the 'X of Y'dates in ${fileType} exports (dataman#18729)`, () => {
       visitQuestionAdhoc(questionDetails);
 
       downloadAndAssert({ fileType }, assertion);

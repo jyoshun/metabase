@@ -34,7 +34,7 @@ describe("issue 18996", () => {
     cy.signInAsAdmin();
   });
 
-  it("should navigate between pages in a table with images in a dashboard (metabase#18996)", () => {
+  it("should navigate between pages in a table with images in a dashboard (dataman#18996)", () => {
     cy.createNativeQuestionAndDashboard({
       questionDetails,
     }).then(({ body: { dashboard_id } }) => {

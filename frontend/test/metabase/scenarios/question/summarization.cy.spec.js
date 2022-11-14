@@ -111,7 +111,7 @@ describe("scenarios > question > summarize sidebar", () => {
     );
   });
 
-  it("should be able to do subsequent aggregation on a custom expression (metabase#14649)", () => {
+  it("should be able to do subsequent aggregation on a custom expression (dataman#14649)", () => {
     cy.createQuestion(
       {
         name: "14649_min",
@@ -142,7 +142,7 @@ describe("scenarios > question > summarize sidebar", () => {
     cy.findByText("49.54");
   });
 
-  it("breakout binning popover should have normal height even when it's rendered lower on the screen (metabase#15445)", () => {
+  it("breakout binning popover should have normal height even when it's rendered lower on the screen (dataman#15445)", () => {
     cy.visit("/question/1/notebook");
     summarize({ mode: "notebook" });
     cy.findByText("Count of rows").click();
@@ -153,13 +153,13 @@ describe("scenarios > question > summarize sidebar", () => {
       .click({ force: true });
     // First a reality check - "Minute" is the only string visible in UI and this should pass
     cy.findAllByText("Minute")
-      .first() // TODO: cy.findAllByText(string).first() is necessary workaround that will be needed ONLY until (metabase#15570) gets fixed
+      .first() // TODO: cy.findAllByText(string).first() is necessary workaround that will be needed ONLY until (dataman#15570) gets fixed
       .isVisibleInPopover();
     // The actual check that will fail until this issue gets fixed
     cy.findAllByText("Week").first().isVisibleInPopover();
   });
 
-  it("should allow using `Custom Expression` in orders metrics (metabase#12899)", () => {
+  it("should allow using `Custom Expression` in orders metrics (dataman#12899)", () => {
     openOrdersTable({ mode: "notebook" });
     summarize({ mode: "notebook" });
     popover().contains("Custom Expression").click();
@@ -174,7 +174,7 @@ describe("scenarios > question > summarize sidebar", () => {
     cy.findByText("318.7");
   });
 
-  it.skip("should keep manually entered parenthesis intact (metabase#13306)", () => {
+  it.skip("should keep manually entered parenthesis intact (dataman#13306)", () => {
     const FORMULA =
       "Sum([Total]) / (Sum([Product → Price]) * Average([Quantity]))";
 
@@ -190,7 +190,7 @@ describe("scenarios > question > summarize sidebar", () => {
     });
   });
 
-  it("distinct inside custom expression should suggest non-numeric types (metabase#13469)", () => {
+  it("distinct inside custom expression should suggest non-numeric types (dataman#13469)", () => {
     openReviewsTable({ mode: "notebook" });
     summarize({ mode: "notebook" });
     popover().contains("Custom Expression").click();
@@ -206,7 +206,7 @@ describe("scenarios > question > summarize sidebar", () => {
     });
   });
 
-  it("summarizing by distinct datetime should allow granular selection (metabase#13098)", () => {
+  it("summarizing by distinct datetime should allow granular selection (dataman#13098)", () => {
     // Go straight to orders table in custom questions
     openOrdersTable({ mode: "notebook" });
 
@@ -225,7 +225,7 @@ describe("scenarios > question > summarize sidebar", () => {
     cy.findByText("Hour of Day").click();
   });
 
-  it.skip("should handle (removing) multiple metrics when one is sorted (metabase#12625)", () => {
+  it.skip("should handle (removing) multiple metrics when one is sorted (dataman#12625)", () => {
     cy.intercept("POST", `/api/dataset`).as("dataset");
 
     cy.createQuestion(

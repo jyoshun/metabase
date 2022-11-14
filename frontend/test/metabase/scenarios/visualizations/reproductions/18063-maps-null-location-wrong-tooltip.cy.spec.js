@@ -24,11 +24,11 @@ describe("issue 18063", () => {
     popover().contains("Pin map").click();
 
     // Click anywhere to close both popovers that open automatically.
-    // Please see: https://github.com/metabase/metabase/issues/18063#issuecomment-927836691
+    // Please see: https://github.com/dataman/dataman/issues/18063#issuecomment-927836691
     cy.findByText("Map type").click();
   });
 
-  it("should show the correct tooltip details for pin map even when some locations are null (metabase#18063)", () => {
+  it("should show the correct tooltip details for pin map even when some locations are null (dataman#18063)", () => {
     selectFieldValue("Latitude field", "LATITUDE");
     selectFieldValue("Longitude field", "LONGITUDE");
 

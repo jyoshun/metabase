@@ -243,13 +243,13 @@ describe("formatting", () => {
     it("should return a component for links in jsx + rich mode", () => {
       expect(
         isElementOfType(
-          formatValue("http://metabase.com/", { jsx: true, rich: true }),
+          formatValue("http://dataman.com/", { jsx: true, rich: true }),
           ExternalLink,
         ),
       ).toEqual(true);
     });
     it("should not return an ExternalLink for links in jsx + rich mode if there's click behavior", () => {
-      const formatted = formatValue("http://metabase.com/", {
+      const formatted = formatValue("http://dataman.com/", {
         jsx: true,
         rich: true,
         click_behavior: {
@@ -266,17 +266,17 @@ describe("formatting", () => {
       expect(formatted.props.className).toEqual("link link--wrappable");
     });
     it("should render image", () => {
-      const formatted = formatValue("http://metabase.com/logo.png", {
+      const formatted = formatValue("http://dataman.com/logo.png", {
         jsx: true,
         rich: true,
         view_as: "image",
         column: { semantic_type: "type/ImageURL" },
       });
       expect(formatted.type).toEqual("img");
-      expect(formatted.props.src).toEqual("http://metabase.com/logo.png");
+      expect(formatted.props.src).toEqual("http://dataman.com/logo.png");
     });
-    it("should render image with a click behavior in jsx + rich mode (metabase#17161)", () => {
-      const formatted = formatValue("http://metabase.com/logo.png", {
+    it("should render image with a click behavior in jsx + rich mode (dataman#17161)", () => {
+      const formatted = formatValue("http://dataman.com/logo.png", {
         jsx: true,
         rich: true,
         view_as: "image",
@@ -288,12 +288,12 @@ describe("formatting", () => {
         clicked: {},
       });
       expect(formatted.type).toEqual("img");
-      expect(formatted.props.src).toEqual("http://metabase.com/logo.png");
+      expect(formatted.props.src).toEqual("http://dataman.com/logo.png");
     });
     it("should return a component for email addresses in jsx + rich mode", () => {
       expect(
         isElementOfType(
-          formatValue("tom@metabase.test", { jsx: true, rich: true }),
+          formatValue("tom@dataman.test", { jsx: true, rich: true }),
           ExternalLink,
         ),
       ).toEqual(true);
@@ -333,7 +333,7 @@ describe("formatting", () => {
         }),
       ).toEqual("00:00");
     });
-    it("should not include time for type/Date type (metabase#7494)", () => {
+    it("should not include time for type/Date type (dataman#7494)", () => {
       expect(
         formatValue("2019-07-07T00:00:00.000Z", {
           date_style: "M/D/YYYY",
@@ -350,24 +350,24 @@ describe("formatting", () => {
 
   describe("formatUrl", () => {
     it("should return a string when not in jsx mode", () => {
-      expect(formatUrl("http://metabase.com/")).toEqual("http://metabase.com/");
+      expect(formatUrl("http://dataman.com/")).toEqual("http://dataman.com/");
     });
     it("should return a component for http:, https:, and mailto: links in jsx mode", () => {
       expect(
         isElementOfType(
-          formatUrl("http://metabase.com/", { jsx: true, rich: true }),
+          formatUrl("http://dataman.com/", { jsx: true, rich: true }),
           ExternalLink,
         ),
       ).toEqual(true);
       expect(
         isElementOfType(
-          formatUrl("https://metabase.com/", { jsx: true, rich: true }),
+          formatUrl("https://dataman.com/", { jsx: true, rich: true }),
           ExternalLink,
         ),
       ).toEqual(true);
       expect(
         isElementOfType(
-          formatUrl("mailto:tom@metabase.test", { jsx: true, rich: true }),
+          formatUrl("mailto:tom@dataman.test", { jsx: true, rich: true }),
           ExternalLink,
         ),
       ).toEqual(true);
@@ -401,7 +401,7 @@ describe("formatting", () => {
     it("should not return a link component for unrecognized links in jsx mode", () => {
       expect(
         isElementOfType(
-          formatUrl("metabase.com", { jsx: true, rich: true }),
+          formatUrl("dataman.com", { jsx: true, rich: true }),
           ExternalLink,
         ),
       ).toEqual(false);
@@ -430,52 +430,52 @@ describe("formatting", () => {
       });
 
       it("should return link component using link_url and link_text when specified", () => {
-        const formatted = formatUrl("http://not.metabase.com", {
+        const formatted = formatUrl("http://not.dataman.com", {
           jsx: true,
           rich: true,
-          link_text: "metabase link",
-          link_url: "http://metabase.com",
+          link_text: "dataman link",
+          link_url: "http://dataman.com",
           view_as: "link",
           clicked: {},
         });
 
         expect(isElementOfType(formatted, ExternalLink)).toEqual(true);
-        expect(formatted.props.children).toEqual("metabase link");
-        expect(formatted.props.href).toEqual("http://metabase.com");
+        expect(formatted.props.children).toEqual("dataman link");
+        expect(formatted.props.href).toEqual("http://dataman.com");
       });
 
       it("should return link component using link_text and the value as url when link_url is empty", () => {
-        const formatted = formatUrl("http://metabase.com", {
+        const formatted = formatUrl("http://dataman.com", {
           jsx: true,
           rich: true,
-          link_text: "metabase link",
+          link_text: "dataman link",
           link_url: "",
           view_as: "link",
           clicked: {},
         });
 
         expect(isElementOfType(formatted, ExternalLink)).toEqual(true);
-        expect(formatted.props.children).toEqual("metabase link");
-        expect(formatted.props.href).toEqual("http://metabase.com");
+        expect(formatted.props.children).toEqual("dataman link");
+        expect(formatted.props.href).toEqual("http://dataman.com");
       });
 
       it("should return link component using link_url and the value as text when link_text is empty", () => {
-        const formatted = formatUrl("metabase link", {
+        const formatted = formatUrl("dataman link", {
           jsx: true,
           rich: true,
           link_text: "",
-          link_url: "http://metabase.com",
+          link_url: "http://dataman.com",
           view_as: "link",
           clicked: {},
         });
 
         expect(isElementOfType(formatted, ExternalLink)).toEqual(true);
-        expect(formatted.props.children).toEqual("metabase link");
-        expect(formatted.props.href).toEqual("http://metabase.com");
+        expect(formatted.props.children).toEqual("dataman link");
+        expect(formatted.props.href).toEqual("http://dataman.com");
       });
 
       it("should not return an ExternalLink in jsx + rich mode if there's click behavior", () => {
-        const formatted = formatValue("http://metabase.com/", {
+        const formatted = formatValue("http://dataman.com/", {
           jsx: true,
           rich: true,
           click_behavior: {
@@ -484,8 +484,8 @@ describe("formatting", () => {
             linkType: "url",
             type: "link",
           },
-          link_text: "metabase link",
-          link_url: "http://metabase.com",
+          link_text: "dataman link",
+          link_url: "http://dataman.com",
           view_as: "link",
           clicked: {},
         });

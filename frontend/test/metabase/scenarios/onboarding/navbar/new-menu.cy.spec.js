@@ -1,6 +1,6 @@
 import { restore, popover, modal } from "__support__/e2e/helpers";
 
-describe("metabase > scenarios > navbar > new menu", () => {
+describe("dataman > scenarios > navbar > new menu", () => {
   beforeEach(() => {
     restore();
     cy.signInAsAdmin();

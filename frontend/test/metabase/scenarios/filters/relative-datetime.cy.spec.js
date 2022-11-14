@@ -120,7 +120,7 @@ describe("scenarios > question > relative-datetime", () => {
       });
     });
 
-    it("current filters should work (metabase#21977)", () => {
+    it("current filters should work (dataman#21977)", () => {
       openOrdersTable();
 
       cy.findByTextEnsureVisible("Created At").click();
@@ -138,7 +138,7 @@ describe("scenarios > question > relative-datetime", () => {
       cy.findByText("No results!").should("exist");
     });
 
-    it("Relative dates should default to past filter (metabase#22027)", () => {
+    it("Relative dates should default to past filter (dataman#22027)", () => {
       openOrdersTable();
 
       cy.findByTextEnsureVisible("Created At").click();
@@ -153,7 +153,7 @@ describe("scenarios > question > relative-datetime", () => {
       });
     });
 
-    it("should change the starting from units to match (metabase#22222)", () => {
+    it("should change the starting from units to match (dataman#22222)", () => {
       openOrdersTable();
 
       openCreatedAt("Past");
@@ -165,7 +165,7 @@ describe("scenarios > question > relative-datetime", () => {
       });
     });
 
-    it("should show correct datetime preview (metabase#22225)", () => {
+    it("should show correct datetime preview (dataman#22225)", () => {
       openOrdersTable();
 
       openCreatedAt("Past");
@@ -182,7 +182,7 @@ describe("scenarios > question > relative-datetime", () => {
       });
     });
 
-    it("should allow changing values with starting from (metabase#22227)", () => {
+    it("should allow changing values with starting from (dataman#22227)", () => {
       openOrdersTable();
 
       openCreatedAt("Past");
@@ -217,7 +217,7 @@ describe("scenarios > question > relative-datetime", () => {
       );
     });
 
-    it("starting from option should set correct sign (metabase#22228)", () => {
+    it("starting from option should set correct sign (dataman#22228)", () => {
       openOrdersTable();
 
       openCreatedAt("Next");

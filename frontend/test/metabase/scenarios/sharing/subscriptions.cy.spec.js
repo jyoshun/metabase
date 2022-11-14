@@ -34,7 +34,7 @@ describe("scenarios > dashboard > subscriptions", () => {
     cy.findByText(/Share this dashboard with people *./i).should("not.exist");
   });
 
-  it("should allow sharing if dashboard contains only text cards (metabase#15077)", () => {
+  it("should allow sharing if dashboard contains only text cards (dataman#15077)", () => {
     cy.createDashboard().then(({ body: { id: DASHBOARD_ID } }) => {
       visitDashboard(DASHBOARD_ID);
     });
@@ -72,7 +72,7 @@ describe("scenarios > dashboard > subscriptions", () => {
     });
 
     describe("with no existing subscriptions", () => {
-      it("should not enable subscriptions without the recipient (metabase#17657)", () => {
+      it("should not enable subscriptions without the recipient (dataman#17657)", () => {
         openDashboardSubscriptions();
 
         cy.findByText("Email it").click();
@@ -94,7 +94,7 @@ describe("scenarios > dashboard > subscriptions", () => {
         cy.findByText("Emailed hourly");
       });
 
-      it("should not render people dropdown outside of the borders of the screen (metabase#17186)", () => {
+      it("should not render people dropdown outside of the borders of the screen (dataman#17186)", () => {
         openDashboardSubscriptions();
 
         cy.findByText("Email it").click();
@@ -112,10 +112,10 @@ describe("scenarios > dashboard > subscriptions", () => {
       });
     });
 
-    it("should persist attachments for dashboard subscriptions (metabase#14117)", () => {
+    it("should persist attachments for dashboard subscriptions (dataman#14117)", () => {
       assignRecipient();
       // This is extremely fragile
-      // TODO: update test once changes from `https://github.com/metabase/metabase/pull/14121` are merged into `master`
+      // TODO: update test once changes from `https://github.com/dataman/dataman/pull/14121` are merged into `master`
       cy.findByText("Attach results")
         .parent()
         .parent()
@@ -135,7 +135,7 @@ describe("scenarios > dashboard > subscriptions", () => {
         });
     });
 
-    it("should not display 'null' day of the week (metabase#14405)", () => {
+    it("should not display 'null' day of the week (dataman#14405)", () => {
       assignRecipient();
       cy.findByText("To:").click();
       cy.findAllByTestId("select-button").contains("Hourly").click();
@@ -149,7 +149,7 @@ describe("scenarios > dashboard > subscriptions", () => {
       cy.findByText(/^Emailed monthly on the first (?!null)/);
     });
 
-    it("should work when using dashboard default filter value on native query with required parameter (metabase#15705)", () => {
+    it("should work when using dashboard default filter value on native query with required parameter (dataman#15705)", () => {
       cy.createNativeQuestion({
         name: "15705",
         native: {
@@ -221,7 +221,7 @@ describe("scenarios > dashboard > subscriptions", () => {
       });
     });
 
-    it("should include text cards (metabase#15744)", () => {
+    it("should include text cards (dataman#15744)", () => {
       const TEXT_CARD = "FooBar";
 
       visitDashboard(1);
@@ -250,14 +250,14 @@ describe("scenarios > dashboard > subscriptions", () => {
       cy.findByText("Send this dashboard to Slack");
     });
 
-    it("should not enable 'Done' button before channel is selected (metabase#14494)", () => {
+    it("should not enable 'Done' button before channel is selected (dataman#14494)", () => {
       cy.findAllByRole("button", { name: "Done" }).should("be.disabled");
       cy.findByPlaceholderText("Pick a user or channel...").click();
       cy.findByText("#work").click();
       cy.findAllByRole("button", { name: "Done" }).should("not.be.disabled");
     });
 
-    it("should have 'Send to Slack now' button (metabase#14515)", () => {
+    it("should have 'Send to Slack now' button (dataman#14515)", () => {
       cy.findAllByRole("button", { name: "Send to Slack now" }).should(
         "be.disabled",
       );

@@ -46,7 +46,7 @@ function mockSettings({ cachingEnabled = false }) {
       return "http://localhost:3333";
     }
     if (key === "application-name") {
-      return "Metabase Test";
+      return "DataMan Test";
     }
     if (key === "is-hosted?") {
       return false;

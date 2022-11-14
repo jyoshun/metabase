@@ -26,7 +26,7 @@ describe("issue 23449", () => {
     });
   });
 
-  it("should work with the remapped custom values from data model (metabase#23449)", () => {
+  it("should work with the remapped custom values from data model (dataman#23449)", () => {
     cy.createQuestion(questionDetails, { visitQuestion: true });
     cy.findByTextEnsureVisible("Perfecto");
 

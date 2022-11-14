@@ -12,7 +12,7 @@ describe("issue 17710", () => {
     cy.signInAsAdmin();
   });
 
-  it("should remove only invalid join clauses (metabase#17710)", () => {
+  it("should remove only invalid join clauses (dataman#17710)", () => {
     openOrdersTable({ mode: "notebook" });
 
     cy.findByText("Join data").click();

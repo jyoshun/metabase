@@ -8,7 +8,7 @@ describe("scenarios > admin > databases > list", () => {
   });
 
   describe("OSS", { tags: "@OSS" }, () => {
-    it("should not display error messages upon a failed `GET` (metabase#20471)", () => {
+    it("should not display error messages upon a failed `GET` (dataman#20471)", () => {
       cy.onlyOn(isOSS);
 
       const errorMessage = "Lorem ipsum dolor sit amet, consectetur adip";
@@ -35,7 +35,7 @@ describe("scenarios > admin > databases > list", () => {
   });
 
   describeEE("EE", () => {
-    it("should not display error messages upon a failed `GET` (metabase#20471)", () => {
+    it("should not display error messages upon a failed `GET` (dataman#20471)", () => {
       const errorMessage = "Lorem ipsum dolor sit amet, consectetur adip";
 
       cy.intercept(

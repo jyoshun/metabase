@@ -76,7 +76,7 @@ describeEE("search > recently viewed > enterprise features", () => {
     cy.findByTestId("qb-header-left-side").find(".Icon-verified");
   });
 
-  it("should show verified badge in the 'Recently viewed' list (metabase#18021)", () => {
+  it("should show verified badge in the 'Recently viewed' list (dataman#18021)", () => {
     cy.findByPlaceholderText("Search…").click();
 
     cy.findByText("Recently viewed")

@@ -17,7 +17,7 @@ describe("issue 18418", () => {
     cy.signInAsAdmin();
   });
 
-  it("should not show saved questions DB in native question's DB picker (metabase#18418)", () => {
+  it("should not show saved questions DB in native question's DB picker (dataman#18418)", () => {
     cy.createNativeQuestion(questionDetails, { visitQuestion: true });
 
     cy.findByText("Explore results").click();

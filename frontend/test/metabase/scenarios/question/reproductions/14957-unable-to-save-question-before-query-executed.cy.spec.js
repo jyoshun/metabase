@@ -8,7 +8,7 @@ describe.skip("issue 14957", { tags: "@external" }, () => {
     cy.signInAsAdmin();
   });
 
-  it("should save a question before query has been executed (metabase#14957)", () => {
+  it("should save a question before query has been executed (dataman#14957)", () => {
     openNativeEditor({ databaseName: PG_DB_NAME }).type("select pg_sleep(60)");
 
     cy.findByText("Save").click();

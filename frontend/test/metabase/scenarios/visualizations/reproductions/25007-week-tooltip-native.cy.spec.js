@@ -21,7 +21,7 @@ describe("issue 25007", () => {
     cy.signInAsAdmin();
   });
 
-  it("should display weeks correctly in tooltips for native questions (metabase#25007)", () => {
+  it("should display weeks correctly in tooltips for native questions (dataman#25007)", () => {
     cy.createNativeQuestion(questionDetails, { visitQuestion: true });
     clickLineDot({ index: 1 });
     popover().findByTextEnsureVisible("May 1 – 7, 2016");

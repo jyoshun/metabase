@@ -102,7 +102,7 @@ describeEE("issue 24966", () => {
     });
   });
 
-  it("should correctly fetch field values for a filter when native question is used for sandboxing (metabase#24966)", () => {
+  it("should correctly fetch field values for a filter when native question is used for sandboxing (dataman#24966)", () => {
     cy.get("@dashboardId").then(id => {
       cy.signIn("nodata");
       visitDashboard(id);

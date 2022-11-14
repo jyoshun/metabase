@@ -16,7 +16,7 @@ describe.skip("issue 24660", () => {
     createParentCollectionAndMoveQuestionToIt(2);
   });
 
-  it("should properly show contents of different collections with the same name (metabase#24660)", () => {
+  it("should properly show contents of different collections with the same name (dataman#24660)", () => {
     startNewQuestion();
     cy.findByText("Saved Questions").click();
     cy.findAllByTestId("tree-item-name")

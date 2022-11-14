@@ -49,7 +49,7 @@ describe("HomeRecentSection", () => {
 
     render(<HomeRecentSection {...props} />);
 
-    expect(screen.getByText("Metabase tips")).toBeInTheDocument();
+    expect(screen.getByText("DataMan tips")).toBeInTheDocument();
   });
 
   it("should not show a help link for regular users", () => {
@@ -70,7 +70,7 @@ describe("HomeRecentSection", () => {
 
     render(<HomeRecentSection {...props} />);
 
-    expect(screen.queryByText("Metabase tips")).not.toBeInTheDocument();
+    expect(screen.queryByText("DataMan tips")).not.toBeInTheDocument();
   });
 });
 

@@ -35,7 +35,7 @@ describe("managing question from the question's details sidebar", () => {
               visitQuestion(1);
             });
 
-            it("should be able to edit question details (metabase#11719-1)", () => {
+            it("should be able to edit question details (dataman#11719-1)", () => {
               cy.findByTestId("saved-question-header-title")
                 .click()
                 .type("1")
@@ -57,7 +57,7 @@ describe("managing question from the question's details sidebar", () => {
             });
 
             describe("move", () => {
-              it("should be able to move the question (metabase#11719-2)", () => {
+              it("should be able to move the question (dataman#11719-2)", () => {
                 openNavigationSidebar();
                 navigationSidebar().within(() => {
                   // Highlight "Our analytics"
@@ -131,7 +131,7 @@ describe("managing question from the question's details sidebar", () => {
               });
             });
 
-            it("should be able to archive the question (metabase#11719-3, metabase#16512, metabase#20133)", () => {
+            it("should be able to archive the question (dataman#11719-3, dataman#16512, dataman#20133)", () => {
               cy.intercept("GET", "/api/collection/root/items**").as(
                 "getItems",
               );

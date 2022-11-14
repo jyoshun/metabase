@@ -20,7 +20,7 @@ describe("issue 17658", { tags: "@external" }, () => {
     moveDashboardToCollection("First collection");
   });
 
-  it("should delete dashboard subscription from any collection (metabase#17658)", () => {
+  it("should delete dashboard subscription from any collection (dataman#17658)", () => {
     visitDashboard(1);
 
     cy.icon("subscription").click();

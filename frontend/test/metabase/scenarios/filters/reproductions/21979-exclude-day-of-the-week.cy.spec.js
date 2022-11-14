@@ -8,7 +8,7 @@ describe("issue 21979", () => {
     cy.intercept("POST", "/api/dataset").as("dataset");
   });
 
-  it("exclude 'day of the week' should show the correct day reference in the UI (metabase#21979)", () => {
+  it("exclude 'day of the week' should show the correct day reference in the UI (dataman#21979)", () => {
     cy.findByText("Filter").click();
     cy.findByText("Created At").click();
 

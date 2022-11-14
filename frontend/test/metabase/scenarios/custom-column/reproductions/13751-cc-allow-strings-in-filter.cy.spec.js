@@ -19,7 +19,7 @@ describe("issue 13751", { tags: "@external" }, () => {
     cy.findByTextEnsureVisible("People").click();
   });
 
-  it("should allow using strings in filter based on a custom column (metabase#13751)", () => {
+  it("should allow using strings in filter based on a custom column (dataman#13751)", () => {
     cy.log("Create custom column using `regexextract()`");
 
     cy.icon("add_data").click();

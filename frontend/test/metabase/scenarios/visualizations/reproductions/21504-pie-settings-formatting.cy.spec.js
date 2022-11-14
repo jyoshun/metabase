@@ -10,7 +10,7 @@ describe("issue 21504", () => {
     cy.signInAsNormalUser();
   });
 
-  it("should format pie chart settings (metabase#21504)", () => {
+  it("should format pie chart settings (dataman#21504)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "query",

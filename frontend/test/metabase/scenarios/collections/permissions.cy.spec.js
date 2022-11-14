@@ -50,7 +50,7 @@ describe("collection permissions", () => {
                 });
 
                 onlyOn(user === "admin", () => {
-                  it("should offer to save dashboard to root collection from a dashboard page (metabase#16832)", () => {
+                  it("should offer to save dashboard to root collection from a dashboard page (dataman#16832)", () => {
                     cy.visit("/collection/root");
                     cy.findByText("Orders in a dashboard").click();
                     appBar().within(() => {
@@ -130,11 +130,11 @@ describe("collection permissions", () => {
               });
 
               describe("duplicate", () => {
-                it("should be able to duplicate the dashboard without obstructions from the modal (metabase#15256)", () => {
+                it("should be able to duplicate the dashboard without obstructions from the modal (dataman#15256)", () => {
                   duplicate("Orders in a dashboard");
                 });
 
-                it.skip("should be able to duplicate the question (metabase#15255)", () => {
+                it.skip("should be able to duplicate the question (dataman#15255)", () => {
                   duplicate("Orders");
                 });
 
@@ -154,7 +154,7 @@ describe("collection permissions", () => {
               });
 
               describe("archive", () => {
-                it("should be able to archive/unarchive question (metabase#15253)", () => {
+                it("should be able to archive/unarchive question (dataman#15253)", () => {
                   archiveUnarchive("Orders", "question");
                 });
 
@@ -175,7 +175,7 @@ describe("collection permissions", () => {
                 });
 
                 describe("archive page", () => {
-                  it("should show archived items (metabase#15080, metabase#16617)", () => {
+                  it("should show archived items (dataman#15080, dataman#16617)", () => {
                     cy.visit("collection/root");
                     openEllipsisMenuFor("Orders");
                     popover().within(() => {
@@ -252,7 +252,7 @@ describe("collection permissions", () => {
                     });
                   });
 
-                  it("visiting already archived collection by its ID shouldn't let you edit it (metabase#12489)", () => {
+                  it("visiting already archived collection by its ID shouldn't let you edit it (dataman#12489)", () => {
                     cy.request("GET", "/api/collection").then(xhr => {
                       const { id: THIRD_COLLECTION_ID } = xhr.body.find(
                         collection => collection.slug === "third_collection",
@@ -300,7 +300,7 @@ describe("collection permissions", () => {
                     // });
                   });
 
-                  it("abandoning archive process should keep you in the same collection (metabase#15289)", () => {
+                  it("abandoning archive process should keep you in the same collection (dataman#15289)", () => {
                     cy.request("GET", "/api/collection").then(xhr => {
                       const { id: THIRD_COLLECTION_ID } = xhr.body.find(
                         collection => collection.slug === "third_collection",
@@ -343,7 +343,7 @@ describe("collection permissions", () => {
               cy.signIn(user);
             });
 
-            it("should not show pins or a helper text (metabase#20043)", () => {
+            it("should not show pins or a helper text (dataman#20043)", () => {
               cy.visit("/collection/root");
 
               cy.findByText("Orders in a dashboard");
@@ -360,7 +360,7 @@ describe("collection permissions", () => {
               );
             });
 
-            it("should not be able to use bulk actions on collection items (metabase#16490)", () => {
+            it("should not be able to use bulk actions on collection items (dataman#16490)", () => {
               cy.visit("/collection/root");
 
               cy.findByText("Orders")
@@ -379,7 +379,7 @@ describe("collection permissions", () => {
             });
 
             ["/", "/collection/root"].forEach(route => {
-              it("should not be offered to save dashboard in collections they have `read` access to (metabase#15281)", () => {
+              it("should not be offered to save dashboard in collections they have `read` access to (dataman#15281)", () => {
                 const { first_name, last_name } = USERS[user];
                 cy.visit(route);
                 cy.icon("add").click();

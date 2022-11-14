@@ -66,7 +66,7 @@ describe.skip("issue 17775", () => {
     saveDashboard();
   });
 
-  it("should be able to apply dashboard filter to a custom column (metabase#17775)", () => {
+  it("should be able to apply dashboard filter to a custom column (dataman#17775)", () => {
     filterWidget().click();
 
     setQuarterAndYear({ quarter: "Q1", year: "2019" });

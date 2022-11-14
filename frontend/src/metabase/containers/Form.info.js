@@ -6,7 +6,7 @@ const FORM = {
   fields: [
     {
       name: "email",
-      placeholder: "bob@metabase.com",
+      placeholder: "bob@dataman.com",
       validate: validate.required().email(),
     },
     {
@@ -28,7 +28,7 @@ export const examples = {
     <Form onSubmit={values => alert(JSON.stringify(values))}>
       <FormField
         name="email"
-        placeholder="bob@metabase.com"
+        placeholder="bob@dataman.com"
         validate={validate.required()}
       />
       <FormField

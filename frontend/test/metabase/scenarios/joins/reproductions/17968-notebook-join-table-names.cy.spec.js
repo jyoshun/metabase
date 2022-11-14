@@ -7,7 +7,7 @@ describe("issue 17968", () => {
     cy.signInAsAdmin();
   });
 
-  it("shows correct table names when joining many tables (metabase#17968)", () => {
+  it("shows correct table names when joining many tables (dataman#17968)", () => {
     openOrdersTable({ mode: "notebook" });
 
     cy.findByText("Join data").click();

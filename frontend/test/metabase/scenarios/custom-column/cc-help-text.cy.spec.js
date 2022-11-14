@@ -28,7 +28,7 @@ describe("scenarios > question > custom column > help text", () => {
     cy.findByText("lower(text)").should("not.exist");
   });
 
-  it("should not appear when formula field is not in focus (metabase#15891)", () => {
+  it("should not appear when formula field is not in focus (dataman#15891)", () => {
     enterCustomColumnDetails({ formula: "rou{enter}1.5" });
 
     cy.findByText("round([Temperature])");
@@ -45,7 +45,7 @@ describe("scenarios > question > custom column > help text", () => {
     cy.findByText("round([Temperature])").should("not.exist");
   });
 
-  it("should not disappear when clicked on (metabase#17548)", () => {
+  it("should not disappear when clicked on (dataman#17548)", () => {
     enterCustomColumnDetails({ formula: "rou{enter}" });
 
     // Shouldn't hide on click

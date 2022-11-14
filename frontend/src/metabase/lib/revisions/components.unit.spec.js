@@ -52,7 +52,7 @@ describe("RevisionBatchedDescription", () => {
     expect(screen.queryByText("Renamed this and moved to Our analytics"));
   });
 
-  it("should handle nested messages (metabase#20414)", () => {
+  it("should handle nested messages (dataman#20414)", () => {
     renderWithProviders(
       <RevisionBatchedDescription
         changes={[getCollectionChangeDescription(1, 2), "edited metadata"]}

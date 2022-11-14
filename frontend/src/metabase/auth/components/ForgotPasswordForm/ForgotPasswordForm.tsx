@@ -50,7 +50,7 @@ const ForgotPasswordForm = ({
           <FormInput
             name="email"
             title={t`Email address`}
-            placeholder={t`The email you use for your Metabase account`}
+            placeholder={t`The email you use for your DataMan account`}
             autoFocus
           />
           <FormSubmitButton

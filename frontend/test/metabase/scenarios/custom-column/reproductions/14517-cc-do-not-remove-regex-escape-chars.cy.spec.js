@@ -19,7 +19,7 @@ describe.skip(
       cy.findByTextEnsureVisible("People").click();
     });
 
-    it("should not remove regex escape characters (metabase#14517)", () => {
+    it("should not remove regex escape characters (dataman#14517)", () => {
       cy.log("Create custom column using `regexextract()`");
       cy.icon("add_data").click();
       popover().within(() => {

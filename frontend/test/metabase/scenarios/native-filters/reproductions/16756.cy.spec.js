@@ -39,7 +39,7 @@ describe("issue 16756", () => {
     });
   });
 
-  it("should allow switching between date filter types (metabase#16756)", () => {
+  it("should allow switching between date filter types (dataman#16756)", () => {
     cy.findByText(/Open editor/i).click();
     cy.icon("variable").click();
 

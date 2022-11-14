@@ -14,7 +14,7 @@ describe("time-series filter widget", () => {
     openProductsTable();
   });
 
-  it("should properly display All Time as the initial filtering (metabase#22247)", () => {
+  it("should properly display All Time as the initial filtering (dataman#22247)", () => {
     summarize();
 
     sidebar().contains("Created At").click();
@@ -32,7 +32,7 @@ describe("time-series filter widget", () => {
     });
   });
 
-  // Skip the rest of the tests until https://github.com/metabase/metabase/issues/22973 gets resolved
+  // Skip the rest of the tests until https://github.com/dataman/dataman/issues/22973 gets resolved
   it.skip("should allow switching from All Time filter", () => {
     cy.findAllByText("Summarize").first().click();
     cy.findAllByText("Created At").last().click();

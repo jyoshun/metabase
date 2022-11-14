@@ -16,26 +16,26 @@ describe("recipientIsValid", () => {
     MetabaseSettings.set("subscription-allowed-domains", originalDomains);
   });
 
-  it("should be valid for every metabase user", () => {
-    const recipient = { id: 1, email: "user@metabase.example" };
-    MetabaseSettings.set("subscription-allowed-domains", "metabase.test");
+  it("should be valid for every dataman user", () => {
+    const recipient = { id: 1, email: "user@dataman.example" };
+    MetabaseSettings.set("subscription-allowed-domains", "dataman.test");
     expect(recipientIsValid(recipient)).toBeTruthy();
   });
 
   it("should be valid when approved domains are not set", () => {
-    const recipient = { email: "user@metabase.example" };
+    const recipient = { email: "user@dataman.example" };
     expect(recipientIsValid(recipient)).toBeTruthy();
   });
 
   it("should not be valid for a recipient with another domain", () => {
-    const recipient = { email: "user@metabase.example" };
-    MetabaseSettings.set("subscription-allowed-domains", "metabase.test");
+    const recipient = { email: "user@dataman.example" };
+    MetabaseSettings.set("subscription-allowed-domains", "dataman.test");
     expect(recipientIsValid(recipient)).toBeFalsy();
   });
 
   it("should be valid for a recipient with the specified domain", () => {
-    const recipient = { email: "user@metabase.test" };
-    MetabaseSettings.set("subscription-allowed-domains", "metabase.test");
+    const recipient = { email: "user@dataman.test" };
+    MetabaseSettings.set("subscription-allowed-domains", "dataman.test");
     expect(recipientIsValid(recipient)).toBeTruthy();
   });
 });

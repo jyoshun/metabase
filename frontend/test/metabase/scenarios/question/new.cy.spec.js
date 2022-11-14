@@ -22,7 +22,7 @@ describe("scenarios > question > new", () => {
   });
 
   describe("data picker", () => {
-    it("data selector popover should not be too small (metabase#15591)", () => {
+    it("data selector popover should not be too small (dataman#15591)", () => {
       // Add 10 more databases
       for (let i = 0; i < 10; i++) {
         cy.addH2SampleDatabase({ name: "Sample" + i });
@@ -111,7 +111,7 @@ describe("scenarios > question > new", () => {
       cy.findByText("Rustic Paper Wallet");
     });
 
-    it("should suggest questions saved in collections with colon in their name (metabase#14287)", () => {
+    it("should suggest questions saved in collections with colon in their name (dataman#14287)", () => {
       cy.request("POST", "/api/collection", {
         name: "foo:bar",
         color: "#509EE3",
@@ -135,7 +135,7 @@ describe("scenarios > question > new", () => {
       });
     });
 
-    it("'Saved Questions' prompt should respect nested collections structure (metabase#14178)", () => {
+    it("'Saved Questions' prompt should respect nested collections structure (dataman#14178)", () => {
       getCollectionIdFromSlug("second_collection", id => {
         // Move first question in a DB snapshot ("Orders") to a "Second collection"
         cy.request("PUT", "/api/card/1", {
@@ -153,7 +153,7 @@ describe("scenarios > question > new", () => {
     });
   });
 
-  it("should remove `/notebook` from URL when converting question to SQL/Native (metabase#12651)", () => {
+  it("should remove `/notebook` from URL when converting question to SQL/Native (dataman#12651)", () => {
     openOrdersTable();
 
     cy.url().should("include", "question#");
@@ -165,7 +165,7 @@ describe("scenarios > question > new", () => {
     cy.url().should("include", "question#");
   });
 
-  it("composite keys should act as filters on click (metabase#13717)", () => {
+  it("composite keys should act as filters on click (dataman#13717)", () => {
     cy.request("PUT", `/api/field/${ORDERS.QUANTITY}`, {
       semantic_type: "type/PK",
     });
@@ -204,7 +204,7 @@ describe("scenarios > question > new", () => {
     );
   });
 
-  it("should handle ad-hoc question with old syntax (metabase#15372)", () => {
+  it("should handle ad-hoc question with old syntax (dataman#15372)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "query",

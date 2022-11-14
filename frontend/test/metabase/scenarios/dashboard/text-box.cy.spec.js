@@ -29,7 +29,7 @@ describe("scenarios > dashboard > text-box", () => {
       cy.icon("edit_document");
     });
 
-    it("should render visualization options (metabase#22061)", () => {
+    it("should render visualization options (dataman#22061)", () => {
       showDashboardCardActions(1);
 
       // edit mode
@@ -64,8 +64,8 @@ describe("scenarios > dashboard > text-box", () => {
       });
     });
 
-    // fixed in metabase#11358
-    it("should load after save/refresh (metabase#12873)", () => {
+    // fixed in dataman#11358
+    it("should load after save/refresh (dataman#12873)", () => {
       cy.findByText("Test Dashboard");
       cy.findByText("This dashboard is looking empty.");
 
@@ -88,7 +88,7 @@ describe("scenarios > dashboard > text-box", () => {
       cy.findByText("Dashboard testing text");
     });
 
-    it("should have a scroll bar for long text (metabase#8333)", () => {
+    it("should have a scroll bar for long text (dataman#8333)", () => {
       addTextBox(
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut fermentum erat, nec sagittis justo. Vivamus vitae ipsum semper, consectetur odio at, rutrum nisi. Fusce maximus consequat porta. Mauris libero mi, viverra ac hendrerit quis, rhoncus quis ante. Pellentesque molestie ut felis non congue. Vivamus finibus ligula id fringilla rutrum. Donec quis dignissim ligula, vitae tempor urna.\n\nDonec quis enim porta, porta lacus vel, maximus lacus. Sed iaculis leo tortor, vel tempor velit tempus vitae. Nulla facilisi. Vivamus quis sagittis magna. Aenean eu eros augue. Sed euismod pulvinar laoreet. Morbi commodo, sem sed dictum faucibus, sem ante ultrices libero, nec ornare risus lacus eget velit. Etiam sagittis lectus non erat tristique tempor. Sed in ipsum urna. Sed venenatis turpis at orci feugiat, ut gravida lectus luctus.",
       );
@@ -103,9 +103,9 @@ describe("scenarios > dashboard > text-box", () => {
         .scrollTo("bottom");
     });
 
-    it("should render html links, and not just the markdown flavor of them (metabase#18114)", () => {
+    it("should render html links, and not just the markdown flavor of them (dataman#18114)", () => {
       addTextBox(
-        "- Visit https://www.metabase.com{enter}- Or go to [Metabase](https://www.metabase.com)",
+        "- Visit https://www.dataman.com{enter}- Or go to [DataMan](https://www.dataman.com)",
       );
 
       cy.findByText("Save").click();
@@ -118,7 +118,7 @@ describe("scenarios > dashboard > text-box", () => {
     });
   });
 
-  it("should let you add a parameter to a dashboard with a text box (metabase#11927)", () => {
+  it("should let you add a parameter to a dashboard with a text box (dataman#11927)", () => {
     visitDashboard(1);
     // click pencil icon to edit
     cy.icon("pencil").click();

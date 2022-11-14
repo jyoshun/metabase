@@ -110,7 +110,7 @@ describeEE("audit > auditing", () => {
         .should("contain", year);
     });
 
-    it.skip("audit log should display views of dashboards (metabase-enterprise#287)", () => {
+    it.skip("audit log should display views of dashboards (dataman-enterprise#287)", () => {
       cy.visit("/admin/audit/members/log");
 
       cy.findAllByText("Orders, Count").should("have.length", 1);

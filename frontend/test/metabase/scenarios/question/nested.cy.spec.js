@@ -39,7 +39,7 @@ describe("scenarios > question > nested", () => {
     cy.signInAsAdmin();
   });
 
-  it("should allow 'Distribution' and 'Sum over time' on nested questions (metabase#12568)", () => {
+  it("should allow 'Distribution' and 'Sum over time' on nested questions (dataman#12568)", () => {
     cy.intercept("POST", "/api/dataset").as("dataset");
 
     // Make sure it works for a GUI question
@@ -108,7 +108,7 @@ describe("scenarios > question > nested", () => {
     cy.findByText("744");
   });
 
-  it("should handle duplicate column names in nested queries (metabase#10511)", () => {
+  it("should handle duplicate column names in nested queries (dataman#10511)", () => {
     cy.createQuestion(
       {
         name: "10511",
@@ -136,7 +136,7 @@ describe("scenarios > question > nested", () => {
     cy.findAllByText("13");
   });
 
-  it.skip("should display granularity for aggregated fields in nested questions (metabase#13764)", () => {
+  it.skip("should display granularity for aggregated fields in nested questions (dataman#13764)", () => {
     openOrdersTable({ mode: "notebook" });
 
     // add initial aggregation ("Average of Total by Order ID")
@@ -157,7 +157,7 @@ describe("scenarios > question > nested", () => {
       .contains("Auto binned");
   });
 
-  it("should apply metrics including filter to the nested question (metabase#12507)", () => {
+  it("should apply metrics including filter to the nested question (dataman#12507)", () => {
     const metric = {
       name: "Sum of discounts",
       description: "Discounted orders.",
@@ -199,9 +199,9 @@ describe("scenarios > question > nested", () => {
     );
   });
 
-  it("should handle remapped display values in a base QB question (metabase#10474)", () => {
+  it("should handle remapped display values in a base QB question (dataman#10474)", () => {
     cy.log(
-      "Related issue [#14629](https://github.com/metabase/metabase/issues/14629)",
+      "Related issue [#14629](https://github.com/dataman/dataman/issues/14629)",
     );
 
     cy.log("Remap Product ID's display value to `title`");
@@ -221,7 +221,7 @@ describe("scenarios > question > nested", () => {
     cy.findAllByText("Awesome Concrete Shoes");
   });
 
-  it("nested questions based on a saved question with joins should work (metabase#14724)", () => {
+  it("nested questions based on a saved question with joins should work (dataman#14724)", () => {
     const baseQuestionDetails = {
       name: "14724",
       query: ordersJoinProductsQuery,
@@ -250,7 +250,7 @@ describe("scenarios > question > nested", () => {
     });
   });
 
-  it("'distribution' should work on a joined table from a saved question (metabase#14787)", () => {
+  it("'distribution' should work on a joined table from a saved question (dataman#14787)", () => {
     // Set the display really wide and really tall to avoid any scrolling
     cy.viewport(1600, 1200);
     cy.intercept("POST", "/api/dataset").as("dataset");
@@ -300,7 +300,7 @@ describe("scenarios > question > nested", () => {
     }
   });
 
-  it("should be able to use aggregation functions on saved native question (metabase#15397)", () => {
+  it("should be able to use aggregation functions on saved native question (dataman#15397)", () => {
     cy.createNativeQuestion({
       name: `15397`,
       native: {
@@ -330,8 +330,8 @@ describe("scenarios > question > nested", () => {
     });
   });
 
-  describe("should use the same query for date filter in both base and nested questions (metabase#15352)", () => {
-    it("should work with 'between' date filter (metabase#15352-1)", () => {
+  describe("should use the same query for date filter in both base and nested questions (dataman#15352)", () => {
+    it("should work with 'between' date filter (dataman#15352-1)", () => {
       assertOnFilter({
         name: "15352-1",
         filter: [
@@ -344,7 +344,7 @@ describe("scenarios > question > nested", () => {
       });
     });
 
-    it("should work with 'after/before' date filter (metabase#15352-2)", () => {
+    it("should work with 'after/before' date filter (dataman#15352-2)", () => {
       assertOnFilter({
         name: "15352-2",
         filter: [
@@ -356,7 +356,7 @@ describe("scenarios > question > nested", () => {
       });
     });
 
-    it("should work with 'on' date filter (metabase#15352-3)", () => {
+    it("should work with 'on' date filter (dataman#15352-3)", () => {
       assertOnFilter({
         name: "15352-3",
         filter: ["=", ["field-id", ORDERS.CREATED_AT], "2020-02-01"],
@@ -384,7 +384,7 @@ describe("scenarios > question > nested", () => {
     }
   });
 
-  describe("should not remove user defined metric when summarizing based on saved question (metabase#15725)", () => {
+  describe("should not remove user defined metric when summarizing based on saved question (dataman#15725)", () => {
     beforeEach(() => {
       cy.intercept("POST", "/api/dataset").as("dataset");
       cy.createNativeQuestion({
@@ -406,7 +406,7 @@ describe("scenarios > question > nested", () => {
       cy.findByText("Count of rows").click();
     });
 
-    it("Count of rows AND Sum of VAL by CAT (metabase#15725-1)", () => {
+    it("Count of rows AND Sum of VAL by CAT (dataman#15725-1)", () => {
       cy.icon("add").last().click();
       cy.findByText(/^Sum of/).click();
       cy.findByText("VAL").click();
@@ -423,7 +423,7 @@ describe("scenarios > question > nested", () => {
       cy.findByText("Sum of VAL");
     });
 
-    it("Count of rows by CAT + add sum of VAL later from the sidebar (metabase#15725-2)", () => {
+    it("Count of rows by CAT + add sum of VAL later from the sidebar (dataman#15725-2)", () => {
       cy.findByText("Pick a column to group by").click();
       cy.findByText("CAT").click();
 
@@ -443,7 +443,7 @@ describe("scenarios > question > nested", () => {
     });
   });
 
-  it("should properly work with native questions (metabsae#15808, metabase#16938, metabase#18364)", () => {
+  it("should properly work with native questions (metabsae#15808, dataman#16938, dataman#18364)", () => {
     const questionDetails = {
       name: "15808",
       native: { query: "select * from products limit 5" },
@@ -456,7 +456,7 @@ describe("scenarios > question > nested", () => {
     cy.findByText("Explore results").click();
     cy.wait("@dataset");
 
-    // should allow to browse object details when exploring native query results (metabase#16938)
+    // should allow to browse object details when exploring native query results (dataman#16938)
     cy.get(".Table-ID")
       .as("primaryKeys")
       .should("have.length", 5)
@@ -471,10 +471,10 @@ describe("scenarios > question > nested", () => {
     cy.get("body").click("bottomRight");
     cy.get(".Modal").should("not.exist");
 
-    // should be able to save a nested question (metabase#18364)
+    // should be able to save a nested question (dataman#18364)
     saveQuestion();
 
-    // should be able to use integer filter on a nested query based on a saved native question (metabase#15808)
+    // should be able to use integer filter on a nested query based on a saved native question (dataman#15808)
     filter();
     filterField("RATING", {
       operator: "Equal to",
@@ -500,7 +500,7 @@ describe("scenarios > question > nested", () => {
     }
   });
 
-  it("should create a nested question with post-aggregation filter (metabase#11561)", () => {
+  it("should create a nested question with post-aggregation filter (dataman#11561)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         database: SAMPLE_DB_ID,

@@ -112,7 +112,7 @@ describe("scenarios > embedding > full app", () => {
       cy.findByText("Our analytics").should("not.exist");
     });
 
-    it("should preserve embedding options with click behavior (metabase#24756)", () => {
+    it("should preserve embedding options with click behavior (dataman#24756)", () => {
       addLinkClickBehavior({
         dashboardId: 1,
         linkTemplate: "/question/1",

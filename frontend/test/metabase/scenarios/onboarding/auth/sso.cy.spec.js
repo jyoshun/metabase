@@ -19,7 +19,7 @@ describe("scenarios > auth > signin > SSO", () => {
   });
 
   ["ldap_auth", "google_auth"].forEach(auth => {
-    it(`login history tab should be available with ${auth} enabled (metabase#15558)`, () => {
+    it(`login history tab should be available with ${auth} enabled (dataman#15558)`, () => {
       mockCurrentUserProperty(auth, true);
       cy.visit("/account/profile");
       cy.findByText("Login History");
@@ -47,7 +47,7 @@ describe("scenarios > auth > signin > SSO", () => {
       cy.findByText("Sign in with Google");
     });
 
-    it("should surface login errors with Google sign in enabled (metabase#16122)", () => {
+    it("should surface login errors with Google sign in enabled (dataman#16122)", () => {
       cy.findByText("Sign in with email").click();
       cy.findByLabelText("Email address").type("foo@bar.test");
       cy.findByLabelText("Password").type("123");
@@ -55,7 +55,7 @@ describe("scenarios > auth > signin > SSO", () => {
       cy.contains("Password: did not match stored password");
     });
 
-    it("should pass `redirect` search params from Google button screen to email/password screen (metabase#16216)", () => {
+    it("should pass `redirect` search params from Google button screen to email/password screen (dataman#16216)", () => {
       const loginProtectedURL = "/admin/permissions/data";
 
       cy.visit(loginProtectedURL);

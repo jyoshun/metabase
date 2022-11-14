@@ -195,14 +195,14 @@ const SECTIONS = updateSectionsWithPlugins({
       {
         key: "email-from-name",
         display_name: t`From Name`,
-        placeholder: "Metabase",
+        placeholder: "DataMan",
         type: "string",
         required: false,
       },
       {
         key: "email-from-address",
         display_name: t`From Address`,
-        placeholder: "metabase@yourcompany.com",
+        placeholder: "dataman@yourcompany.com",
         type: "string",
         required: true,
         validations: [["email", t`That's not a valid email address`]],
@@ -210,7 +210,7 @@ const SECTIONS = updateSectionsWithPlugins({
       {
         key: "email-reply-to",
         display_name: t`Reply-To Address`,
-        placeholder: "metabase-replies@yourcompany.com",
+        placeholder: "dataman-replies@yourcompany.com",
         type: "string",
         required: false,
         widget: SettingCommaDelimitedInput,
@@ -236,7 +236,7 @@ const SECTIONS = updateSectionsWithPlugins({
       {
         key: "map-tile-server-url",
         display_name: t`Map tile server URL`,
-        note: t`Metabase uses OpenStreetMaps by default.`,
+        note: t`DataMan uses OpenStreetMaps by default.`,
         type: "string",
       },
       {
@@ -359,7 +359,7 @@ const SECTIONS = updateSectionsWithPlugins({
         description: jt`Allow questions, dashboards, and more to be embedded. ${(
           <ExternalLink
             key="learn-embedding-link"
-            href="https://www.metabase.com/learn/embedding/embedding-charts-and-dashboards.html"
+            href="https://www.dataman.com/learn/embedding/embedding-charts-and-dashboards.html"
           >
             {t`Learn more.`}
           </ExternalLink>
@@ -388,7 +388,7 @@ const SECTIONS = updateSectionsWithPlugins({
         widget: EmbeddingOption,
         getHidden: (_, derivedSettings) => !derivedSettings["enable-embedding"],
         embedName: t`Full-app embedding`,
-        embedDescription: t`With this Pro/Enterprise feature you can embed the full Metabase app. Enable your users to drill-through to charts, browse collections, and use the graphical query builder.`,
+        embedDescription: t`With this Pro/Enterprise feature you can embed the full DataMan app. Enable your users to drill-through to charts, browse collections, and use the graphical query builder.`,
         embedType: "full-app",
       },
     ],
@@ -518,7 +518,7 @@ const SECTIONS = updateSectionsWithPlugins({
       {
         key: "persisted-models-enabled",
         display_name: t`Models`,
-        description: jt`Enabling cache will create tables for your models in a dedicated schema and Metabase will refresh them on a schedule. Questions based on your models will query these tables. ${(
+        description: jt`Enabling cache will create tables for your models in a dedicated schema and DataMan will refresh them on a schedule. Questions based on your models will query these tables. ${(
           <ExternalLink
             key="model-caching-link"
             href={MetabaseSettings.docsUrl("data-modeling/models")}

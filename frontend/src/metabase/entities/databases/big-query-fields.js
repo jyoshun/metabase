@@ -27,7 +27,7 @@ function BigQueryServiceAccountToggle({
 
   return (!value && hasNoOldStyleData) || value === true ? (
     <div>
-      <p>{jt`Metabase connects to Big Query via ${saLink}.`}</p>
+      <p>{jt`DataMan connects to Big Query via ${saLink}.`}</p>
       {value === true && (
         <Link className="link" onClick={() => onChange(false)}>
           {t`Continue using an OAuth application to connect`}
@@ -90,7 +90,7 @@ export default function getFieldsForBigQuery(details) {
             {
               name: "service-account-json",
               "display-name": t`Service account JSON file`,
-              "helper-text": t`This JSON file contains the credentials Metabase needs to read and query your dataset.`,
+              "helper-text": t`This JSON file contains the credentials DataMan needs to read and query your dataset.`,
               type: "textFile",
               required: true,
             },
@@ -147,7 +147,7 @@ export default function getFieldsForBigQuery(details) {
         name: "let-user-control-scheduling",
         type: "boolean",
         "display-name": t`Choose when syncs and scans happen`,
-        description: t`By default, Metabase does a lightweight hourly sync and an intensive daily scan of field values. If you have a large database, turn this on to make changes.`,
+        description: t`By default, DataMan does a lightweight hourly sync and an intensive daily scan of field values. If you have a large database, turn this on to make changes.`,
         "visible-if": { "advanced-options": true },
       },
       {
@@ -162,16 +162,16 @@ export default function getFieldsForBigQuery(details) {
         "display-name": t`Scanning for Filter Values`,
         type: CacheFieldValuesScheduleWidget,
         description:
-          t`Metabase can scan the values present in each field in this database to enable checkbox filters in dashboards and questions. This can be a somewhat resource-intensive process, particularly if you have a very large database.` +
+          t`DataMan can scan the values present in each field in this database to enable checkbox filters in dashboards and questions. This can be a somewhat resource-intensive process, particularly if you have a very large database.` +
           " " +
-          t`When should Metabase automatically scan and cache field values?`,
+          t`When should DataMan automatically scan and cache field values?`,
         "visible-if": { "let-user-control-scheduling": true },
       },
       {
         name: "refingerprint",
         type: "boolean",
         "display-name": t`Periodically refingerprint tables`,
-        description: t`This enables Metabase to scan for additional field values during syncs allowing smarter behavior, like improved auto-binning on your bar charts.`,
+        description: t`This enables DataMan to scan for additional field values during syncs allowing smarter behavior, like improved auto-binning on your bar charts.`,
         "visible-if": { "advanced-options": true },
       },
     ],

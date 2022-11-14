@@ -29,7 +29,7 @@ describe.skip("issue 20548", () => {
     summarize();
   });
 
-  it("should not display duplicate Y-axis after modifying/reordering metrics (metabase#20548)", () => {
+  it("should not display duplicate Y-axis after modifying/reordering metrics (dataman#20548)", () => {
     removeAggregationItem("Count");
     cy.get(".bar").should("have.length", 4);
 

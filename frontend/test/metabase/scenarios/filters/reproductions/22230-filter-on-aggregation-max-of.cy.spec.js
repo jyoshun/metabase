@@ -31,7 +31,7 @@ describe.skip("issue 22230", () => {
     visitQuestionAdhoc(questionDetails, { mode: "notebook" });
   });
 
-  it("should be able to filter on an aggregation (metabase#22230)", () => {
+  it("should be able to filter on an aggregation (dataman#22230)", () => {
     cy.findByText("Filter").click();
     popover().contains("Max of Name").click();
 

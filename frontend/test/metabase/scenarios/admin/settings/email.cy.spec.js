@@ -6,17 +6,15 @@ describe("scenarios > admin > settings > email settings", () => {
     cy.signInAsAdmin();
   });
 
-  it("should be able to save email settings (metabase#17615)", () => {
+  it("should be able to save email settings (dataman#17615)", () => {
     cy.visit("/admin/settings/email");
     cy.findByLabelText("SMTP Host").type("localhost").blur();
     cy.findByLabelText("SMTP Port").type("25").blur();
     cy.findByLabelText("SMTP Username").type("admin").blur();
     cy.findByLabelText("SMTP Password").type("admin").blur();
-    cy.findByLabelText("From Address").type("mailer@metabase.test").blur();
+    cy.findByLabelText("From Address").type("mailer@dataman.test").blur();
     cy.findByLabelText("From Name").type("Sender Name").blur();
-    cy.findByLabelText("Reply-To Address")
-      .type("reply-to@metabase.test")
-      .blur();
+    cy.findByLabelText("Reply-To Address").type("reply-to@dataman.test").blur();
     cy.findByText("Save changes").click();
 
     cy.findByText("Changes saved!", { timeout: 10000 });
@@ -25,17 +23,17 @@ describe("scenarios > admin > settings > email settings", () => {
     cy.findByDisplayValue("localhost");
     cy.findByDisplayValue("25");
     cy.findAllByDisplayValue("admin");
-    cy.findByDisplayValue("mailer@metabase.test");
+    cy.findByDisplayValue("mailer@dataman.test");
     cy.findByDisplayValue("Sender Name");
-    cy.findByDisplayValue("reply-to@metabase.test");
+    cy.findByDisplayValue("reply-to@dataman.test");
   });
 
   it("should show an error if test email fails", () => {
     // Reuse Email setup without relying on the previous test
     cy.request("PUT", "/api/setting", {
-      "email-from-address": "admin@metabase.test",
-      "email-from-name": "Metabase Admin",
-      "email-reply-to": ["reply-to@metabase.test"],
+      "email-from-address": "admin@dataman.test",
+      "email-from-name": "DataMan Admin",
+      "email-reply-to": ["reply-to@dataman.test"],
       "email-smtp-host": "localhost",
       "email-smtp-password": null,
       "email-smtp-port": "1234",
@@ -58,7 +56,7 @@ describe("scenarios > admin > settings > email settings", () => {
       cy.findByText("Sent!");
       cy.request("GET", "http://localhost:80/email").then(({ body }) => {
         const emailBody = body[0].text;
-        expect(emailBody).to.include("Your Metabase emails are working");
+        expect(emailBody).to.include("Your DataMan emails are working");
       });
     },
   );
@@ -74,7 +72,7 @@ describe("scenarios > admin > settings > email settings", () => {
   });
 
   it(
-    "should not offer to save email changes when there aren't any (metabase#14749)",
+    "should not offer to save email changes when there aren't any (dataman#14749)",
     { tags: "@external" },
     () => {
       // Make sure some settings are already there
@@ -87,7 +85,7 @@ describe("scenarios > admin > settings > email settings", () => {
     },
   );
 
-  it("should not reset previously populated fields when validation fails for just one of them (metabase#16226)", () => {
+  it("should not reset previously populated fields when validation fails for just one of them (dataman#16226)", () => {
     cy.intercept("PUT", "/api/email").as("updateSettings");
 
     cy.visit("/admin/settings/email");
@@ -99,7 +97,7 @@ describe("scenarios > admin > settings > email settings", () => {
     cy.findByLabelText("SMTP Port").type("25").blur();
     cy.findByLabelText("SMTP Username").type("admin").blur();
     cy.findByLabelText("SMTP Password").type("admin").blur();
-    cy.findByLabelText("From Address").type("mailer@metabase.test").blur();
+    cy.findByLabelText("From Address").type("mailer@dataman.test").blur();
 
     // Trying to save will trigger the error (as it should)
     cy.button("Save changes").click();
@@ -108,6 +106,6 @@ describe("scenarios > admin > settings > email settings", () => {
     cy.contains("Wrong host or port");
 
     // But it shouldn't delete field values
-    cy.findByDisplayValue("mailer@metabase.test");
+    cy.findByDisplayValue("mailer@dataman.test");
   });
 });

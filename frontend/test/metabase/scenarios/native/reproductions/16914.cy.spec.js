@@ -11,7 +11,7 @@ describe("issue 16914", () => {
     cy.signInAsAdmin();
   });
 
-  it("should recover visualization settings after a failed query (metabase#16914)", () => {
+  it("should recover visualization settings after a failed query (dataman#16914)", () => {
     const FAILING_PIECE = " foo";
     const highlightSelectedText = "{shift}{leftarrow}".repeat(
       FAILING_PIECE.length,

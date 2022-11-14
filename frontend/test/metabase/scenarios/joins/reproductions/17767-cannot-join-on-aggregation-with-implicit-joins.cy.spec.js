@@ -20,7 +20,7 @@ describe("issue 17767", () => {
     cy.signInAsAdmin();
   });
 
-  it("should be able to do subsequent joins on question with the aggregation that uses implicit joins (metabase#17767)", () => {
+  it("should be able to do subsequent joins on question with the aggregation that uses implicit joins (dataman#17767)", () => {
     cy.createQuestion(questionDetails, { visitQuestion: true });
 
     cy.icon("notebook").click();

@@ -25,7 +25,7 @@ describe("issue 21160", () => {
     cy.createNativeQuestion(questionDetails, { visitQuestion: true });
   });
 
-  it("number filter should work with values separated by comma (metabase#21160)", () => {
+  it("number filter should work with values separated by comma (dataman#21160)", () => {
     getInput().type("1,2,3{enter}", { delay: 0 });
 
     runQuery();

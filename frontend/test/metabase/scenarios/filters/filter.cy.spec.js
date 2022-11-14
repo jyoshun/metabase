@@ -27,7 +27,7 @@ describe("scenarios > question > filter", () => {
     cy.signInAsAdmin();
   });
 
-  it("should filter a joined table by 'Is not' filter (metabase#13534)", () => {
+  it("should filter a joined table by 'Is not' filter (dataman#13534)", () => {
     // NOTE: the original issue mentions "Is not" and "Does not contain" filters
     // we're testing for one filter only to keep things simple
 
@@ -59,7 +59,7 @@ describe("scenarios > question > filter", () => {
     cy.findByText("3621077291879").should("not.exist"); // one of the "Gizmo" EANs
   });
 
-  it("'Between Dates' filter should behave consistently (metabase#12872)", () => {
+  it("'Between Dates' filter should behave consistently (dataman#12872)", () => {
     cy.createQuestion(
       {
         name: "12872",
@@ -104,7 +104,7 @@ describe("scenarios > question > filter", () => {
     cy.get(".ScalarValue").contains("1");
   });
 
-  it("should filter based on remapped values (metabase#13235)", () => {
+  it("should filter based on remapped values (dataman#13235)", () => {
     // set "Filtering on this field" = "A list of all values"
     cy.request("PUT", `/api/field/${ORDERS.PRODUCT_ID}`, {
       has_field_values: "list",
@@ -130,7 +130,7 @@ describe("scenarios > question > filter", () => {
     cy.findAllByText("Fantastic Wool Shirt").should("not.exist");
   });
 
-  it("should filter using Custom Expression from aggregated results (metabase#12839)", () => {
+  it("should filter using Custom Expression from aggregated results (dataman#12839)", () => {
     const CE_NAME = "Simple Math";
 
     cy.createQuestion(
@@ -159,7 +159,7 @@ describe("scenarios > question > filter", () => {
     cy.findAllByText("Gizmo");
   });
 
-  it("should not drop aggregated filters (metabase#11957)", () => {
+  it("should not drop aggregated filters (dataman#11957)", () => {
     const AGGREGATED_FILTER = "Count is less than or equal to 20";
 
     cy.createQuestion(
@@ -200,7 +200,7 @@ describe("scenarios > question > filter", () => {
     cy.findByText(AGGREGATED_FILTER);
   });
 
-  it("should be able to add date filter with calendar collapsed (metabase#14327)", () => {
+  it("should be able to add date filter with calendar collapsed (dataman#14327)", () => {
     openOrdersTable({ mode: "notebook" });
     filter({ mode: "notebook" });
     cy.findByText("Created At").click({ force: true });
@@ -215,7 +215,7 @@ describe("scenarios > question > filter", () => {
     cy.findByText(/^Created At is before/i);
   });
 
-  it("should display original custom expression filter with dates on subsequent click (metabase#12492)", () => {
+  it("should display original custom expression filter with dates on subsequent click (dataman#12492)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "query",
@@ -241,7 +241,7 @@ describe("scenarios > question > filter", () => {
     cy.contains(/\[Created At\] > \[Products? → Created At\]/);
   });
 
-  it("should handle post-aggregation filter on questions with joined table (metabase#14811)", () => {
+  it("should handle post-aggregation filter on questions with joined table (dataman#14811)", () => {
     cy.createQuestion(
       {
         name: "14811",
@@ -303,7 +303,7 @@ describe("scenarios > question > filter", () => {
     popover().contains(/case/i);
   });
 
-  it("should enable highlighting suggestions with keyboard up and down arrows (metabase#16210)", () => {
+  it("should enable highlighting suggestions with keyboard up and down arrows (dataman#16210)", () => {
     const transparent = "rgba(0, 0, 0, 0)";
 
     openExpressionEditorFromFreshlyLoadedPage();
@@ -341,7 +341,7 @@ describe("scenarios > question > filter", () => {
     popover().get("span.text-dark").contains("Pr").should("not.exist");
   });
 
-  it("should provide accurate auto-complete custom-expression suggestions based on the aggregated column name (metabase#14776)", () => {
+  it("should provide accurate auto-complete custom-expression suggestions based on the aggregated column name (dataman#14776)", () => {
     cy.viewport(1400, 1000); // We need a bit taller window for this repro to see all custom filter options in the popover
     cy.createQuestion({
       name: "14776",
@@ -431,7 +431,7 @@ describe("scenarios > question > filter", () => {
     cy.contains("Showing 1,112 rows");
   });
 
-  it("should convert negative filter to custom expression (metabase#14880)", () => {
+  it("should convert negative filter to custom expression (dataman#14880)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "query",
@@ -455,7 +455,7 @@ describe("scenarios > question > filter", () => {
     cy.contains('NOT contains([Title], "Wallet", "case-insensitive")');
   });
 
-  it.skip("shuld convert negative filter to custom expression (metabase#14880)", () => {
+  it.skip("shuld convert negative filter to custom expression (dataman#14880)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "query",
@@ -480,7 +480,7 @@ describe("scenarios > question > filter", () => {
     cy.get(".ace_text-input");
   });
 
-  it("should be able to convert time interval filter to custom expression (metabase#12457)", () => {
+  it("should be able to convert time interval filter to custom expression (dataman#12457)", () => {
     openOrdersTable({ mode: "notebook" });
 
     // Via the GUI, create a filter with "include-current" option
@@ -519,7 +519,7 @@ describe("scenarios > question > filter", () => {
       });
   });
 
-  it("should be able to convert case-insensitive filter to custom expression (metabase#14959)", () => {
+  it("should be able to convert case-insensitive filter to custom expression (dataman#14959)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "query",
@@ -569,7 +569,7 @@ describe("scenarios > question > filter", () => {
     cy.findByText('Expecting boolean but found "TheAnswer"');
   });
 
-  it.skip("column filters should work for metrics (metabase#15333)", () => {
+  it.skip("column filters should work for metrics (dataman#15333)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "query",
@@ -591,7 +591,7 @@ describe("scenarios > question > filter", () => {
     cy.findByText("Gizmo").should("not.exist");
   });
 
-  it("custom expression filter should reference fields by their name, not by their id (metabase#15748)", () => {
+  it("custom expression filter should reference fields by their name, not by their id (dataman#15748)", () => {
     openOrdersTable({ mode: "notebook" });
     filter({ mode: "notebook" });
     cy.findByText("Custom Expression").click();
@@ -602,7 +602,7 @@ describe("scenarios > question > filter", () => {
     cy.findByText("Total < Subtotal");
   });
 
-  it("custom expression filter should allow the use of parentheses in combination with logical operators (metabase#15754)", () => {
+  it("custom expression filter should allow the use of parentheses in combination with logical operators (dataman#15754)", () => {
     openOrdersTable({ mode: "notebook" });
     filter({ mode: "notebook" });
     cy.findByText("Custom Expression").click();
@@ -615,7 +615,7 @@ describe("scenarios > question > filter", () => {
     cy.button("Done").should("not.be.disabled");
   });
 
-  it("custom expression filter should refuse to work with numeric value before an operator (metabase#15893)", () => {
+  it("custom expression filter should refuse to work with numeric value before an operator (dataman#15893)", () => {
     cy.intercept("POST", "/api/dataset").as("dataset");
 
     openOrdersTable({ mode: "notebook" });
@@ -672,7 +672,7 @@ describe("scenarios > question > filter", () => {
     cy.findByText("Tax").should("not.exist");
   });
 
-  it.skip("should work on twice summarized questions and preserve both summaries (metabase#15620)", () => {
+  it.skip("should work on twice summarized questions and preserve both summaries (dataman#15620)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         database: SAMPLE_DB_ID,
@@ -703,7 +703,7 @@ describe("scenarios > question > filter", () => {
     cy.findByText("Average of Count").should("exist"); // summary 2
   });
 
-  it("user shouldn't need to scroll to add filter (metabase#14307)", () => {
+  it("user shouldn't need to scroll to add filter (dataman#14307)", () => {
     cy.viewport(1280, 720);
     openPeopleTable({ mode: "notebook" });
     filter({ mode: "notebook" });
@@ -712,7 +712,7 @@ describe("scenarios > question > filter", () => {
     cy.button("Add filter").isVisibleInPopover();
   });
 
-  it("shoud retain all data series after saving a question where custom expression formula is the first metric (metabase#15882)", () => {
+  it("shoud retain all data series after saving a question where custom expression formula is the first metric (dataman#15882)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         database: SAMPLE_DB_ID,
@@ -787,8 +787,8 @@ describe("scenarios > question > filter", () => {
     });
   });
 
-  describe("specific combination of filters can cause frontend reload or blank screen (metabase#16198)", () => {
-    it("shouldn't display chosen category in a breadcrumb (metabase#16198-1)", () => {
+  describe("specific combination of filters can cause frontend reload or blank screen (dataman#16198)", () => {
+    it("shouldn't display chosen category in a breadcrumb (dataman#16198-1)", () => {
       visitQuestionAdhoc({
         dataset_query: {
           database: SAMPLE_DB_ID,
@@ -805,14 +805,14 @@ describe("scenarios > question > filter", () => {
       });
     });
 
-    it("adding an ID filter shouldn't cause page error and page reload (metabase#16198-2)", () => {
+    it("adding an ID filter shouldn't cause page error and page reload (dataman#16198-2)", () => {
       openOrdersTable({ mode: "notebook" });
       filter({ mode: "notebook" });
       cy.findByText("Custom Expression").click();
       cy.get(".ace_text-input").type("[Total] < [Product → Price]").blur();
       cy.button("Done").click();
-      // Filter currently says "Total is less than..." but it can change in https://github.com/metabase/metabase/pull/16174 to "Total < Price"
-      // See: https://github.com/metabase/metabase/pull/16209#discussion_r638129099
+      // Filter currently says "Total is less than..." but it can change in https://github.com/dataman/dataman/pull/16174 to "Total < Price"
+      // See: https://github.com/dataman/dataman/pull/16209#discussion_r638129099
       cy.findByText(/^Total/);
       cy.icon("add").last().click();
       popover().findByText(/^ID$/i).click();
@@ -822,7 +822,7 @@ describe("scenarios > question > filter", () => {
       cy.findByText("Something went wrong").should("not.exist");
     });
 
-    it("removing first filter in a sequence shouldn't result in an empty page (metabase#16198-3)", () => {
+    it("removing first filter in a sequence shouldn't result in an empty page (dataman#16198-3)", () => {
       openOrdersTable({ mode: "notebook" });
       filter({ mode: "notebook" });
       popover().findByText("Total").click({ force: true });
@@ -851,10 +851,10 @@ describe("scenarios > question > filter", () => {
     // We must use and return strings instead of boolean and numbers
     const integerAssociatedWithCondition = condition === "True" ? "0" : "1";
 
-    describe(`should be able to filter on the boolean column ${condition.toUpperCase()} (metabase#16386)`, () => {
+    describe(`should be able to filter on the boolean column ${condition.toUpperCase()} (dataman#16386)`, () => {
       beforeEach(setupBooleanQuery);
 
-      it("from the column popover (metabase#16386-1)", () => {
+      it("from the column popover (dataman#16386-1)", () => {
         cy.findAllByTestId("header-cell")
           .contains("boolean")
           .should("be.visible")
@@ -876,7 +876,7 @@ describe("scenarios > question > filter", () => {
         assertOnTheResult();
       });
 
-      it("from the custom question (metabase#16386-3)", () => {
+      it("from the custom question (dataman#16386-3)", () => {
         cy.icon("notebook").click();
 
         filter({ mode: "notebook" });

@@ -58,7 +58,7 @@ describe("scenarios > reference > databases", () => {
       });
     });
 
-    it.skip("should sort data reference database list (metabase#15598)", () => {
+    it.skip("should sort data reference database list (dataman#15598)", () => {
       cy.visit("/browse");
       checkReferenceDatabasesOrder();
 

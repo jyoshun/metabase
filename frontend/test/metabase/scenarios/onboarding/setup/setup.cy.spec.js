@@ -30,7 +30,7 @@ describe("scenarios > setup", () => {
         },
       });
       cy.location("pathname").should("eq", "/setup");
-      cy.findByText("Welcome to Metabase");
+      cy.findByText("Welcome to DataMan");
       cy.findByTextEnsureVisible("Let's get started").click();
 
       // ========
@@ -52,7 +52,7 @@ describe("scenarios > setup", () => {
 
       cy.findByLabelText("First name").type("Testy");
       cy.findByLabelText("Last name").type("McTestface");
-      cy.findByLabelText("Email").type("testy@metabase.test");
+      cy.findByLabelText("Email").type("testy@dataman.test");
       cy.findByLabelText("Company or team name").type("Epic Team");
 
       // test first with a weak password
@@ -97,7 +97,7 @@ describe("scenarios > setup", () => {
 
       // test that you can return to user settings if you want
       cy.findByText("Hi, Testy. Nice to meet you!").click();
-      cy.findByLabelText("Email").should("have.value", "testy@metabase.test");
+      cy.findByLabelText("Email").should("have.value", "testy@dataman.test");
 
       // test database setup help card is NOT displayed on other steps
       cy.findByText("Need help connecting?").should("not.be.visible");
@@ -118,7 +118,7 @@ describe("scenarios > setup", () => {
       cy.findByLabelText("Remove database").click();
       cy.findByText("Show more options").click();
       cy.findByText("H2").click();
-      cy.findByLabelText("Display name").type("Metabase H2");
+      cy.findByLabelText("Display name").type("DataMan H2");
       cy.findByText("Connect database").closest("button").should("be.disabled");
 
       const dbFilename = "frontend/test/__runner__/empty.db";
@@ -140,7 +140,7 @@ describe("scenarios > setup", () => {
       cy.findByText("All collection is completely anonymous.");
       // turn collection off, which hides data collection description
       cy.findByLabelText(
-        "Allow Metabase to anonymously collect usage events",
+        "Allow DataMan to anonymously collect usage events",
       ).click();
       cy.findByText("All collection is completely anonymous.").should(
         "not.exist",
@@ -154,15 +154,15 @@ describe("scenarios > setup", () => {
       cy.findByText(
         "Get infrequent emails about new releases and feature updates.",
       );
-      cy.findByText("Take me to Metabase").click();
+      cy.findByText("Take me to DataMan").click();
       cy.location("pathname").should("eq", "/");
     });
   });
 
-  it("should set up Metabase without first name and last name (metabase#22754)", () => {
+  it("should set up DataMan without first name and last name (dataman#22754)", () => {
     // This is a simplified version of the "scenarios > setup" test
     cy.visit("/");
-    cy.findByText("Welcome to Metabase");
+    cy.findByText("Welcome to DataMan");
     cy.location("pathname").should("eq", "/setup");
     cy.findByTextEnsureVisible("Let's get started").click();
 
@@ -189,7 +189,7 @@ describe("scenarios > setup", () => {
 
     cy.findByText("Show more options").click();
     cy.findByText("H2").click();
-    cy.findByLabelText("Display name").type("Metabase H2");
+    cy.findByLabelText("Display name").type("DataMan H2");
 
     const dbFilename = "frontend/test/__runner__/empty.db";
     const dbPath = Cypress.config("fileServerFolder") + "/" + dbFilename;
@@ -198,7 +198,7 @@ describe("scenarios > setup", () => {
 
     // Turns off anonymous data collection
     cy.findByLabelText(
-      "Allow Metabase to anonymously collect usage events",
+      "Allow DataMan to anonymously collect usage events",
     ).click();
     cy.findByText("All collection is completely anonymous.").should(
       "not.exist",
@@ -207,16 +207,16 @@ describe("scenarios > setup", () => {
 
     // Finish & Subscribe
 
-    cy.findByText("Take me to Metabase").click();
+    cy.findByText("Take me to DataMan").click();
     cy.location("pathname").should("eq", "/");
   });
 
   // Values in this test are set through MB_USER_DEFAULTS environment variable!
-  // Please see https://github.com/metabase/metabase/pull/18763 for details
+  // Please see https://github.com/dataman/dataman/pull/18763 for details
   it("should allow pre-filling user details", () => {
     cy.visit(`/setup#123456`);
 
-    cy.findByText("Welcome to Metabase");
+    cy.findByText("Welcome to DataMan");
     cy.findByTextEnsureVisible("Let's get started").click();
 
     cy.findByText("What's your preferred language?");
@@ -225,7 +225,7 @@ describe("scenarios > setup", () => {
 
     cy.findByLabelText("First name").should("have.value", "Testy");
     cy.findByLabelText("Last name").should("have.value", "McTestface");
-    cy.findByLabelText("Email").should("have.value", "testy@metabase.test");
+    cy.findByLabelText("Email").should("have.value", "testy@dataman.test");
     cy.findByLabelText("Company or team name").should(
       "have.value",
       "Epic Team",
@@ -248,7 +248,7 @@ describeWithSnowplow("scenarios > setup", () => {
     cy.visit(`/setup`);
 
     // 2 - setup/step_seen
-    cy.findByText("Welcome to Metabase");
+    cy.findByText("Welcome to DataMan");
     cy.button("Let's get started").click();
 
     // 3 - setup/step_seen
@@ -261,7 +261,7 @@ describeWithSnowplow("scenarios > setup", () => {
     blockSnowplow();
     cy.visit(`/setup`);
 
-    cy.findByText("Welcome to Metabase");
+    cy.findByText("Welcome to DataMan");
     cy.button("Let's get started").click();
 
     expectGoodSnowplowEvents(0);

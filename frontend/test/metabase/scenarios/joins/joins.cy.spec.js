@@ -31,7 +31,7 @@ describe("scenarios > question > joined questions", () => {
     cy.signInAsAdmin();
   });
 
-  it("should allow joins on tables (metabase#11452, metabase#12221, metabase#13468, metabase#15570)", () => {
+  it("should allow joins on tables (dataman#11452, dataman#12221, dataman#13468, dataman#15570)", () => {
     // Pluralization isn't reliable so we have to guard against it
     const joinedTable = new RegExp(/Reviews? - Products?/);
 
@@ -52,7 +52,7 @@ describe("scenarios > question > joined questions", () => {
       cy.findByText("Reviews");
     });
 
-    // Post-join filters on the joined table (metabase#12221, metabase#15570)
+    // Post-join filters on the joined table (dataman#12221, dataman#15570)
     filter();
 
     cy.get(".Modal").within(() => {
@@ -64,7 +64,7 @@ describe("scenarios > question > joined questions", () => {
 
     cy.findByText("Rating is equal to 2");
 
-    // Post-join aggregation (metabase#11452):
+    // Post-join aggregation (dataman#11452):
     cy.icon("notebook").click();
     summarize({ mode: "notebook" });
 
@@ -81,7 +81,7 @@ describe("scenarios > question > joined questions", () => {
     cy.findByText("Rating is equal to 2");
     cy.findByText("Showing 89 rows");
 
-    // Make sure UI overlay doesn't obstruct viewing results after we save this question (metabase#13468)
+    // Make sure UI overlay doesn't obstruct viewing results after we save this question (dataman#13468)
     saveQuestion();
 
     cy.findByText("Rating is equal to 2");
@@ -139,13 +139,13 @@ describe("scenarios > question > joined questions", () => {
     cy.findByText("Showing 1 row");
   });
 
-  it("should allow joins based on saved questions (metabase#13000, metabase#13649, metabase#13744)", () => {
+  it("should allow joins based on saved questions (dataman#13000, dataman#13649, dataman#13744)", () => {
     cy.createQuestion({
       name: "Q1",
       query: {
         aggregation: ["sum", ["field", ORDERS.TOTAL, null]],
         breakout: [["field", ORDERS.PRODUCT_ID, null]],
-        // Make sure it works if a question has sorted metric (metabase#13744)
+        // Make sure it works if a question has sorted metric (dataman#13744)
         "order-by": [["asc", ["aggregation", 0]]],
         "source-table": ORDERS_ID,
       },
@@ -182,7 +182,7 @@ describe("scenarios > question > joined questions", () => {
     cy.icon("notebook").click();
     cy.url().should("contain", "/notebook");
 
-    // cy.log("joined questions should create custom column (metabase#13649)");
+    // cy.log("joined questions should create custom column (dataman#13649)");
     // add a custom column on top of the steps from the #13000 repro which was simply asserting
     // that a question could be made by joining two previously saved questions
     cy.icon("add_data").click();
@@ -199,7 +199,7 @@ describe("scenarios > question > joined questions", () => {
     cy.findByText("Sum Divide");
   });
 
-  it("should join saved questions that themselves contain joins (metabase#12928)", () => {
+  it("should join saved questions that themselves contain joins (dataman#12928)", () => {
     cy.intercept("GET", "/api/table/card__*/query_metadata").as(
       "cardQueryMetadata",
     );
@@ -296,7 +296,7 @@ describe("scenarios > question > joined questions", () => {
     cy.findAllByText(/Products? → Category/).should("have.length", 2);
   });
 
-  it("x-rays should work on explicit joins when metric is for the joined table (metabase#14793)", () => {
+  it("x-rays should work on explicit joins when metric is for the joined table (dataman#14793)", () => {
     const XRAY_DATASETS = 11; // enough to load most questions
 
     cy.intercept("GET", "/api/automagic-dashboards/adhoc/**").as("xray");
@@ -352,7 +352,7 @@ describe("scenarios > question > joined questions", () => {
     cy.get(".DashCard");
   });
 
-  it("joining on a question with remapped values should work (metabase#15578)", () => {
+  it("joining on a question with remapped values should work (dataman#15578)", () => {
     cy.intercept("POST", "/api/dataset").as("dataset");
     // Remap display value
     cy.request("POST", `/api/field/${ORDERS.PRODUCT_ID}/dimension`, {
@@ -443,7 +443,7 @@ describe("scenarios > question > joined questions", () => {
     cy.get(".ScalarValue").contains("2,087");
   });
 
-  it("should show 'Previous results' instead of a table name for non-field dimensions (metabase#17968)", () => {
+  it("should show 'Previous results' instead of a table name for non-field dimensions (dataman#17968)", () => {
     openOrdersTable({ mode: "notebook" });
 
     summarize({ mode: "notebook" });

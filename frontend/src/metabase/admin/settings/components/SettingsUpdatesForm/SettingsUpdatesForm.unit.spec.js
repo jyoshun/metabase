@@ -21,7 +21,7 @@ describe("SettingsUpdatesForm", () => {
     isHostedSpy.mockImplementation(() => true);
 
     render();
-    screen.getByText(/Metabase Cloud keeps your instance up-to-date/);
+    screen.getByText(/DataMan Cloud keeps your instance up-to-date/);
 
     isHostedSpy.mockRestore();
   });
@@ -46,7 +46,7 @@ describe("SettingsUpdatesForm", () => {
     versionIsLatestSpy.mockImplementation(() => true);
 
     render();
-    screen.getByText("Migrate to Metabase Cloud.");
+    screen.getByText("Migrate to DataMan Cloud.");
 
     versionIsLatestSpy.mockRestore();
   });
@@ -56,7 +56,7 @@ describe("SettingsUpdatesForm", () => {
     versionIsLatestSpy.mockImplementation(() => false);
 
     render();
-    expect(screen.queryByText("Migrate to Metabase Cloud.")).toBeNull();
+    expect(screen.queryByText("Migrate to DataMan Cloud.")).toBeNull();
 
     versionIsLatestSpy.mockRestore();
   });

@@ -12,7 +12,7 @@ describe("issue 20042", () => {
     cy.signIn("nodata");
   });
 
-  it("nodata user should not see the blank screen when visiting model (metabase#20042)", () => {
+  it("nodata user should not see the blank screen when visiting model (dataman#20042)", () => {
     cy.visit("/model/1");
 
     cy.wait("@query");

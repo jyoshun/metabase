@@ -28,7 +28,7 @@ describe("issue 9027", () => {
     saveQuestion(QUESTION_NAME);
   });
 
-  it("should display newly saved question in the 'Saved Questions' list immediately (metabase#9027)", () => {
+  it("should display newly saved question in the 'Saved Questions' list immediately (dataman#9027)", () => {
     goToSavedQuestionPickerAndAssertQuestion(QUESTION_NAME);
     openNavigationSidebar();
     archiveQuestion(QUESTION_NAME);

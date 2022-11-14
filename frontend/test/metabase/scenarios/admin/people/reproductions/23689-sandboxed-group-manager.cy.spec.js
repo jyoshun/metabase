@@ -46,7 +46,7 @@ describeEE("issue 23689", () => {
     cy.signInAsSandboxedUser();
   });
 
-  it("sandboxed group manager should see all other members (metabase#23689)", () => {
+  it("sandboxed group manager should see all other members (dataman#23689)", () => {
     visitGroupPermissionsPage(COLLECTION_GROUP);
 
     cy.findByText("3 members");

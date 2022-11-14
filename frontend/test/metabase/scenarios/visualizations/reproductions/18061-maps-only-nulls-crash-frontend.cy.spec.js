@@ -93,7 +93,7 @@ describe("issue 18061", () => {
   });
 
   context("scenario 1: question with a filter", () => {
-    it("should handle data sets that contain only null values for longitude/latitude (metabase#18061-1)", () => {
+    it("should handle data sets that contain only null values for longitude/latitude (dataman#18061-1)", () => {
       visitAlias("@questionUrl");
 
       cy.wait("@getCard");
@@ -118,7 +118,7 @@ describe("issue 18061", () => {
   });
 
   context("scenario 2: dashboard with a filter", () => {
-    it("should handle data sets that contain only null values for longitude/latitude (metabase#18061-2)", () => {
+    it("should handle data sets that contain only null values for longitude/latitude (dataman#18061-2)", () => {
       visitAlias("@dashboardUrl");
 
       cy.wait("@dashCardQuery");
@@ -133,7 +133,7 @@ describe("issue 18061", () => {
   });
 
   context("scenario 3: publicly shared dashboard with a filter", () => {
-    it("should handle data sets that contain only null values for longitude/latitude (metabase#18061-3)", () => {
+    it("should handle data sets that contain only null values for longitude/latitude (dataman#18061-3)", () => {
       visitAlias("@publicLink");
 
       cy.findByText("18061D");

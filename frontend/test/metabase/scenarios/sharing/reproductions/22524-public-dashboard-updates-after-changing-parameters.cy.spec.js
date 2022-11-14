@@ -28,7 +28,7 @@ describe("issue 22524", () => {
     cy.signInAsAdmin();
   });
 
-  it("update dashboard cards when changing parameters on publicly shared dashboards (metabase#22524)", () => {
+  it("update dashboard cards when changing parameters on publicly shared dashboards (dataman#22524)", () => {
     cy.createNativeQuestionAndDashboard({ questionDetails }).then(
       ({ body: { dashboard_id } }) => {
         visitDashboard(dashboard_id);

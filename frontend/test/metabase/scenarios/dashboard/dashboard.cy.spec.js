@@ -29,7 +29,7 @@ describe("scenarios > dashboard", () => {
     cy.signInAsAdmin();
   });
 
-  it("should create new dashboard and navigate to it from the nav bar and from the root collection (metabase#20638)", () => {
+  it("should create new dashboard and navigate to it from the nav bar and from the root collection (dataman#20638)", () => {
     cy.visit("/");
     cy.findByText("New").click();
     cy.findByText("Dashboard").click();
@@ -45,7 +45,7 @@ describe("scenarios > dashboard", () => {
     cy.findByText("Dash A");
 
     cy.log(
-      "should create new dashboard and navigate to it from the root collection (metabase#20638)",
+      "should create new dashboard and navigate to it from the root collection (dataman#20638)",
     );
 
     openNewCollectionItemFlowFor("dashboard");
@@ -122,7 +122,7 @@ describe("scenarios > dashboard", () => {
     cy.findByDisplayValue("Orders in a dashboard");
   });
 
-  it("should allow empty card title (metabase#12013)", () => {
+  it("should allow empty card title (dataman#12013)", () => {
     visitDashboard(1);
 
     cy.findByTextEnsureVisible("Orders");
@@ -133,7 +133,7 @@ describe("scenarios > dashboard", () => {
     cy.icon("palette").click();
 
     cy.findByDisplayValue("Orders").click().clear();
-    cy.get("[data-metabase-event='Chart Settings;Done']").click();
+    cy.get("[data-dataman-event='Chart Settings;Done']").click();
 
     cy.findByTestId("legend-caption").should("not.exist");
   });
@@ -171,7 +171,7 @@ describe("scenarios > dashboard", () => {
     cy.findByText("Orders, Count");
   });
 
-  it("should link filters to custom question with filtered aggregate data (metabase#11007)", () => {
+  it("should link filters to custom question with filtered aggregate data (dataman#11007)", () => {
     // programatically create and save a question as per repro instructions in #11007
     cy.request("POST", "/api/card", {
       name: "11007",
@@ -235,7 +235,7 @@ describe("scenarios > dashboard", () => {
     cy.findByText("You're editing this dashboard.").should("not.exist");
   });
 
-  it("should update a dashboard filter by clicking on a map pin (metabase#13597)", () => {
+  it("should update a dashboard filter by clicking on a map pin (dataman#13597)", () => {
     cy.createQuestion({
       name: "13597",
       query: {
@@ -310,7 +310,7 @@ describe("scenarios > dashboard", () => {
     });
   });
 
-  it("should display column options for cross-filter (metabase#14473)", () => {
+  it("should display column options for cross-filter (dataman#14473)", () => {
     const questionDetails = {
       name: "14473",
       native: { query: "SELECT COUNT(*) FROM PRODUCTS", "template-tags": {} },
@@ -422,7 +422,7 @@ describe("scenarios > dashboard", () => {
     cy.get("@fetchFieldValues").should("not.have.been.called");
   });
 
-  it("should be possible to visit a dashboard with click-behavior linked to the dashboard without permissions (metabase#15368)", () => {
+  it("should be possible to visit a dashboard with click-behavior linked to the dashboard without permissions (dataman#15368)", () => {
     cy.request("GET", "/api/user/current").then(
       ({ body: { personal_collection_id } }) => {
         // Save new dashboard in admin's personal collection
@@ -473,7 +473,7 @@ describe("scenarios > dashboard", () => {
     cy.contains("37.65");
   });
 
-  it("should be possible to scroll vertically after fullscreen layer is closed (metabase#15596)", () => {
+  it("should be possible to scroll vertically after fullscreen layer is closed (dataman#15596)", () => {
     // Make this dashboard card extremely tall so that it spans outside of visible viewport
     cy.request("PUT", "/api/dashboard/1/cards", {
       cards: [
@@ -502,7 +502,7 @@ describe("scenarios > dashboard", () => {
     assertScrollBarExists();
   });
 
-  it("should show values of added dashboard card via search immediately (metabase#15959)", () => {
+  it("should show values of added dashboard card via search immediately (dataman#15959)", () => {
     cy.intercept("GET", "/api/search*").as("search");
     visitDashboard(1);
     cy.icon("pencil").click();

@@ -26,7 +26,7 @@ describe("issue 22517", () => {
     cy.wait("@updateMetadata");
   });
 
-  it("adding or removging a column should not drop previously edited metadata (metabase#22517)", () => {
+  it("adding or removging a column should not drop previously edited metadata (dataman#22517)", () => {
     openQuestionActions();
     cy.findByText("Edit query definition").click();
 

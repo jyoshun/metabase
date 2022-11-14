@@ -20,8 +20,8 @@ type DataAppUrlMode = "preview" | "internal" | "app-url";
  *
  * Data apps can have three kinds of paths:
  *
- * * preview (e.g. /apps/1) — allows to preview data app contents inside Metabase
- * * launched app (e.g. /a/1) — launched app, i.e. it takes over Metabase navigation
+ * * preview (e.g. /apps/1) — allows to preview data app contents inside DataMan
+ * * launched app (e.g. /a/1) — launched app, i.e. it takes over DataMan navigation
  * * launched app, custom URL (defined by user) — same as above, but with a custom user-defined URL
  *
  * @param app — data app instance

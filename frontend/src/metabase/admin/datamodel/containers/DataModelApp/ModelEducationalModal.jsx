@@ -17,7 +17,7 @@ ModelEducationalModal.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
 
-const EDUCATION_URL = "https://metabase.com/learn/getting-started/models";
+const EDUCATION_URL = "https://dataman.com/learn/getting-started/models";
 
 export function ModelEducationalModal({ isOpen, onClose }) {
   return (

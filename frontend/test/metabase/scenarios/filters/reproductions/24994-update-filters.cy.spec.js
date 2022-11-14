@@ -43,7 +43,7 @@ describe("issue 24994", () => {
     cy.signInAsAdmin();
   });
 
-  it("should allow updating filters (metabase#24994)", () => {
+  it("should allow updating filters (dataman#24994)", () => {
     cy.createQuestion(questionDetails, { visitQuestion: true });
 
     // Three filters

@@ -16,7 +16,7 @@ describe("postgres > question > custom columns", { tags: "@external" }, () => {
     cy.findByTextEnsureVisible("Orders").click();
   });
 
-  it("`Percentile` custom expression function should accept two parameters (metabase#15714)", () => {
+  it("`Percentile` custom expression function should accept two parameters (dataman#15714)", () => {
     cy.findByText("Pick the metric you want to see").click();
     cy.findByText("Custom Expression").click();
     enterCustomColumnDetails({ formula: "Percentile([Subtotal], 0.1)" });

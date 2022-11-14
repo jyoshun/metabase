@@ -9,7 +9,7 @@ describe("issue 21615", () => {
     cy.signInAsAdmin();
   });
 
-  it("should not throw an error when converting a table question to sql (metabase#21615)", () => {
+  it("should not throw an error when converting a table question to sql (dataman#21615)", () => {
     visitQuestionAdhoc({
       display: "table",
       dataset_query: {

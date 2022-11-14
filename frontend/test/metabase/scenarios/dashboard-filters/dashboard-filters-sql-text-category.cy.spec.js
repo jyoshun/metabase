@@ -57,7 +57,7 @@ describe("scenarios > dashboard > filters > SQL > text/category", () => {
     );
   });
 
-  it(`should work when set as the default filter and when that filter is removed (metabase#20493)`, () => {
+  it(`should work when set as the default filter and when that filter is removed (dataman#20493)`, () => {
     setFilter("Text or Category", "Dropdown");
 
     cy.findByText("Select…").click();

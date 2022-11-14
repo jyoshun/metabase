@@ -15,7 +15,7 @@ describe("LastEditInfoLabel", () => {
     id: 2,
     first_name: "John",
     last_name: "Doe",
-    email: "john@metabase.test",
+    email: "john@dataman.test",
   };
 
   function setup({ isLastEditedByCurrentUser = false } = {}) {

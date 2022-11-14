@@ -28,7 +28,7 @@ describeEE("issue 18669", { tags: "@external" }, () => {
     );
   });
 
-  it("should send a test email with non-default parameters (metabase#18669)", () => {
+  it("should send a test email with non-default parameters (dataman#18669)", () => {
     cy.icon("subscription").click();
     cy.findByText("Email it").click();
 

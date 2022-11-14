@@ -29,7 +29,7 @@ describe.skip("issue 22519", () => {
     cy.wait("@updateField");
   });
 
-  it("model query should not fail when data model is using casting (metabase#22519)", () => {
+  it("model query should not fail when data model is using casting (dataman#22519)", () => {
     cy.createQuestion(questionDetails, { visitQuestion: true });
 
     cy.findByText("xavier");

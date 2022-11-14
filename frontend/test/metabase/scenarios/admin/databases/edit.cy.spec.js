@@ -16,7 +16,7 @@ describe("scenarios > admin > databases > edit", () => {
   });
 
   describe("Database type", () => {
-    it("should be disabled for the Sample Dataset (metabase#16382)", () => {
+    it("should be disabled for the Sample Dataset (dataman#16382)", () => {
       cy.visit(`/admin/databases/${SAMPLE_DB_ID}`);
       cy.findByText("H2").parentsUntil("a").should("be.disabled");
     });
@@ -61,7 +61,7 @@ describe("scenarios > admin > databases > edit", () => {
       );
     });
 
-    it("should respect the settings for automatic query running (metabase#13187)", () => {
+    it("should respect the settings for automatic query running (dataman#13187)", () => {
       cy.log("Turn off `auto run queries`");
       cy.request("PUT", `/api/database/${SAMPLE_DB_ID}`, {
         auto_run_queries: false,

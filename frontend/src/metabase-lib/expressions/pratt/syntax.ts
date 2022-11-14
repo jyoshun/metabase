@@ -1,7 +1,7 @@
 import { assert, NodeType, Node } from "./types";
 
 /*
- * This file specifies most of the syntax for the Metabase handwritten custom
+ * This file specifies most of the syntax for the DataMan handwritten custom
  * expression parser. The rest is contained in the parser special cases
  *
  * The structure of this file:

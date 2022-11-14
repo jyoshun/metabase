@@ -5,9 +5,9 @@ describe(`smoke test the migration to the version ${version}`, () => {
     cy.intercept("POST", "/api/card/*/query").as("cardQuery");
 
     cy.visit("/");
-    cy.findByText("Sign in to Metabase");
+    cy.findByText("Sign in to DataMan");
 
-    cy.findByLabelText("Email address").type("admin@metabase.test");
+    cy.findByLabelText("Email address").type("admin@dataman.test");
     cy.findByLabelText("Password").type("12341234");
     cy.button("Sign in").click();
 

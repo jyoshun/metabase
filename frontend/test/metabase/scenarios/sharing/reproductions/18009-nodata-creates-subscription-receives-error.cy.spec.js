@@ -16,7 +16,7 @@ describe.skip("issue 18009", { tags: "@external" }, () => {
     cy.signIn("nodata");
   });
 
-  it("nodata user should be able to create and receive an email subscription without errors (metabase#18009)", () => {
+  it("nodata user should be able to create and receive an email subscription without errors (dataman#18009)", () => {
     visitDashboard(1);
 
     cy.icon("subscription").click();

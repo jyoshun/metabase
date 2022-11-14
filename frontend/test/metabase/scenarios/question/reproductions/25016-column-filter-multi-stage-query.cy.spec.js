@@ -35,7 +35,7 @@ describe("issue 25016", () => {
     cy.intercept("POST", "/api/dataset").as("dataset");
   });
 
-  it("should be possible to filter by a column in a multi-stage query (metabase#25016)", () => {
+  it("should be possible to filter by a column in a multi-stage query (dataman#25016)", () => {
     visitQuestionAdhoc(questionDetails);
     cy.findByText("Category").click();
 

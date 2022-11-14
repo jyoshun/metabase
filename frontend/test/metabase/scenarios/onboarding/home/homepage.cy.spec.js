@@ -21,7 +21,7 @@ describe("scenarios > home > homepage", () => {
 
       cy.visit("/");
       cy.wait("@getXrayCandidates");
-      cy.findByText("Try out these sample x-rays to see what Metabase can do.");
+      cy.findByText("Try out these sample x-rays to see what DataMan can do.");
       cy.findByText("Orders").click();
 
       cy.wait("@getXrayDashboard");

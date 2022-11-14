@@ -39,7 +39,7 @@ describe.skip("issue 14145", () => {
     cy.createNativeQuestion(nativeQuery, { visitQuestion: true });
   });
 
-  it("`field-id` should update when database source is changed (metabase#14145)", () => {
+  it("`field-id` should update when database source is changed (dataman#14145)", () => {
     // Change the source from "Sample Database" to the other database
     cy.findByText(/Open Editor/i).click();
 

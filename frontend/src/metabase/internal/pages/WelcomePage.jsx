@@ -18,16 +18,16 @@ const WelcomePage = () => {
   return (
     <div className="wrapper wrapper--trim">
       <PageHeader>
-        <Heading>Metabase Style Guide</Heading>
+        <Heading>DataMan Style Guide</Heading>
         <Text>
-          Reference and samples for how to make things the Metabase way.
+          Reference and samples for how to make things the DataMan way.
         </Text>
       </PageHeader>
 
       <Subhead>Documentation progress</Subhead>
       <Text>
         Documenting our component library is an ongoing process. Here&apos;s
-        what percentage of the code in <code>metabase/components</code> has some
+        what percentage of the code in <code>dataman/components</code> has some
         form of documentation so far.
       </Text>
 

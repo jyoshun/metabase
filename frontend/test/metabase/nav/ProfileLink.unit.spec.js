@@ -9,7 +9,7 @@ const REGULAR_ITEMS = [
   "Account settings",
   "Activity",
   "Help",
-  "About Metabase",
+  "About DataMan",
   "Sign out",
 ];
 const ADMIN_ITEMS = [...REGULAR_ITEMS, "Admin settings"];

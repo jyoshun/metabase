@@ -9,7 +9,7 @@ describe("scenarios > visualizations > scalar", () => {
     cy.signInAsAdmin();
   });
 
-  it("trend visualization should work regardless of column order (metabase#13710)", () => {
+  it("trend visualization should work regardless of column order (dataman#13710)", () => {
     cy.createQuestion(
       {
         name: "13710",
@@ -32,7 +32,7 @@ describe("scenarios > visualizations > scalar", () => {
     cy.findByText("Nothing to compare for the previous month.");
   });
 
-  it.skip("should display correct trend percentage (metabase#20488)", () => {
+  it.skip("should display correct trend percentage (dataman#20488)", () => {
     const questionDetails = {
       native: {
         query:

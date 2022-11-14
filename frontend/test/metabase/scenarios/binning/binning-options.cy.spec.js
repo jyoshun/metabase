@@ -179,7 +179,7 @@ describe("scenarios > binning > binning options", () => {
     });
   });
 
-  context("via time series footer (metabase#11183)", () => {
+  context("via time series footer (dataman#11183)", () => {
     it("should render time series binning options correctly", () => {
       openTable({ table: ORDERS_ID });
 
@@ -194,7 +194,7 @@ describe("scenarios > binning > binning options", () => {
     });
   });
 
-  context.skip("implicit joins (metabase#16674)", () => {
+  context.skip("implicit joins (dataman#16674)", () => {
     it("should work for time series", () => {
       chooseInitialBinningOption({
         table: ORDERS_ID,
@@ -226,7 +226,7 @@ describe("scenarios > binning > binning options", () => {
     });
   });
 
-  context.skip("explicit joins (metabase#16675)", () => {
+  context.skip("explicit joins (dataman#16675)", () => {
     beforeEach(() => {
       cy.intercept("POST", "/api/dataset").as("dataset");
     });

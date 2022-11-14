@@ -18,7 +18,7 @@ describe("scenarios > dashboard > filters > nested questions", () => {
     cy.signInAsAdmin();
   });
 
-  it("dashboard filters should work on nested question (metabase#12614, metabase#13186, metabase#18113)", () => {
+  it("dashboard filters should work on nested question (dataman#12614, dataman#13186, dataman#18113)", () => {
     const filter = {
       name: "Text Filter",
       slug: "text",
@@ -58,7 +58,7 @@ describe("scenarios > dashboard > filters > nested questions", () => {
     cy.findByText(filter.name).find(".Icon-gear").click();
     cy.findByText("Select…").click();
 
-    // This part reproduces metabase#13186
+    // This part reproduces dataman#13186
     cy.log("Reported failing in v0.36.4 (`Category` is missing)");
     popover().within(() => {
       cy.findByText(/Ean/i);
@@ -69,7 +69,7 @@ describe("scenarios > dashboard > filters > nested questions", () => {
 
     saveDashboard();
 
-    // Add multiple values (metabase#18113)
+    // Add multiple values (dataman#18113)
     filterWidget().click();
     cy.findByPlaceholderText("Enter some text").type(
       "Gizmo{enter}Gadget{enter}",
@@ -95,7 +95,7 @@ describe("scenarios > dashboard > filters > nested questions", () => {
       .contains(/Category/i)
       .click();
 
-    // This part reproduces metabase#12614
+    // This part reproduces dataman#12614
     popover().within(() => {
       cy.findByText(/Ean/i);
       cy.findByText(/Title/i);
@@ -104,7 +104,7 @@ describe("scenarios > dashboard > filters > nested questions", () => {
     });
   });
 
-  it("should be possible to use ID filter on a nested question (metabase#17212)", () => {
+  it("should be possible to use ID filter on a nested question (dataman#17212)", () => {
     const baseQuestion = {
       query: { "source-table": PRODUCTS_ID },
     };

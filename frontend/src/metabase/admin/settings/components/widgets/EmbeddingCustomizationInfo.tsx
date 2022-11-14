@@ -6,7 +6,7 @@ import SettingHeader from "../SettingHeader";
 
 export const EmbeddingCustomizationInfo = () => {
   const setting = {
-    description: jt`In order to remove the Metabase logo from embeds, you can always upgrade to ${(
+    description: jt`In order to remove the DataMan logo from embeds, you can always upgrade to ${(
       <ExternalLink key="upgrade-link" href={MetabaseSettings.upgradeUrl()}>
         {t`one of our paid plans.`}
       </ExternalLink>

@@ -60,7 +60,7 @@ describe("issue 20809", () => {
     });
   });
 
-  it("nesting should work on a saved question with a filter to implicit/explicit table (metabase#20809)", () => {
+  it("nesting should work on a saved question with a filter to implicit/explicit table (dataman#20809)", () => {
     cy.findByTextEnsureVisible("Custom column").click();
 
     enterCustomColumnDetails({

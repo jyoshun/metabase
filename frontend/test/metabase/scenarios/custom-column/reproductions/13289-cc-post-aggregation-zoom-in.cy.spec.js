@@ -24,7 +24,7 @@ describe("issue 13289", () => {
     cy.button("Done").click();
   });
 
-  it("should allow 'zoom in' drill-through when grouped by custom column (metabase#13289) (metabase#13289)", () => {
+  it("should allow 'zoom in' drill-through when grouped by custom column (dataman#13289) (dataman#13289)", () => {
     summarize({ mode: "notebook" });
     cy.findByText("Count of rows").click();
 

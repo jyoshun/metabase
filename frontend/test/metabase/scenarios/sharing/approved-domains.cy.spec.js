@@ -7,8 +7,8 @@ import {
   visitDashboard,
 } from "__support__/e2e/helpers";
 
-const allowedDomain = "metabase.test";
-const deniedDomain = "metabase.example";
+const allowedDomain = "dataman.test";
+const deniedDomain = "dataman.example";
 const deniedEmail = `mailer@${deniedDomain}`;
 const subscriptionError = `You're only allowed to email subscriptions to addresses ending in ${allowedDomain}`;
 const alertError = `You're only allowed to email alerts to addresses ending in ${allowedDomain}`;
@@ -39,7 +39,7 @@ describeEE(
     });
 
     // Adding test on Quarantine to understand a bit better some H2 Lock issue.
-    it.skip("should validate approved email domains for a dashboard subscription (metabase#17977)", () => {
+    it.skip("should validate approved email domains for a dashboard subscription (dataman#17977)", () => {
       visitDashboard(1);
       cy.icon("subscription").click();
       cy.findByText("Email it").click();
@@ -47,7 +47,7 @@ describeEE(
       sidebar().within(() => {
         addEmailRecipient(deniedEmail);
 
-        // Reproduces metabase#17977
+        // Reproduces dataman#17977
         cy.button("Send email now").should("be.disabled");
         cy.button("Done").should("be.disabled");
         cy.findByText(subscriptionError);

@@ -8,8 +8,8 @@ import {
   visitDashboard,
 } from "__support__/e2e/helpers";
 
-const allowedDomain = "metabase.test";
-const deniedDomain = "metabase.example";
+const allowedDomain = "dataman.test";
+const deniedDomain = "dataman.example";
 const allowedEmail = `mailer@${allowedDomain}`;
 const deniedEmail = `mailer@${deniedDomain}`;
 const subscriptionError = `You're only allowed to email subscriptions to addresses ending in ${allowedDomain}`;

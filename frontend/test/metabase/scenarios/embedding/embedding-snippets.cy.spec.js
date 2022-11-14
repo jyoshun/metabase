@@ -30,14 +30,14 @@ describe("scenarios > embedding > code snippets", () => {
       .invoke("text")
       .should("match", JS_CODE({ type: "dashboard" }));
 
-    // set transparent background metabase#23477
+    // set transparent background dataman#23477
     cy.findByText("Transparent").click();
     cy.get(".ace_content")
       .first()
       .invoke("text")
       .should("match", JS_CODE({ type: "dashboard", theme: "transparent" }));
 
-    // No download button for dashboards even for pro/enterprise users metabase#23477
+    // No download button for dashboards even for pro/enterprise users dataman#23477
     cy.findByLabelText("Enable users to download data from this embed?").should(
       "not.exist",
     );
@@ -81,14 +81,14 @@ describe("scenarios > embedding > code snippets", () => {
       .invoke("text")
       .should("match", JS_CODE({ type: "question" }));
 
-    // set transparent background metabase#23477
+    // set transparent background dataman#23477
     cy.findByText("Transparent").click();
     cy.get(".ace_content")
       .first()
       .invoke("text")
       .should("match", JS_CODE({ type: "question", theme: "transparent" }));
 
-    // hide download button for pro/enterprise users metabase#23477
+    // hide download button for pro/enterprise users dataman#23477
     if (isEE) {
       cy.findByLabelText(
         "Enable users to download data from this embed?",

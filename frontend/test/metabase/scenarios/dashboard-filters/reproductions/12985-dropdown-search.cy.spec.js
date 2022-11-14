@@ -24,7 +24,7 @@ describe("issue 12985 > dashboard filter dropdown/search", () => {
     cy.signInAsAdmin();
   });
 
-  it("should work for saved nested questions (metabase#12985-1)", () => {
+  it("should work for saved nested questions (dataman#12985-1)", () => {
     cy.createQuestion({
       name: "Q1",
       query: { "source-table": PRODUCTS_ID },
@@ -83,7 +83,7 @@ describe("issue 12985 > dashboard filter dropdown/search", () => {
     cy.findByText("Ergonomic Silk Coat");
   });
 
-  it.skip("should work for aggregated questions (metabase#12985-2)", () => {
+  it.skip("should work for aggregated questions (dataman#12985-2)", () => {
     const questionDetails = {
       name: "12985-v2",
       query: {

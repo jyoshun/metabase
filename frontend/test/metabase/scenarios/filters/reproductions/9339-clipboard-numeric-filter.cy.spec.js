@@ -6,7 +6,7 @@ describe("issue 9339", () => {
     cy.signInAsAdmin();
   });
 
-  it("should not paste non-numeric values into single-value numeric filters (metabase#9339)", () => {
+  it("should not paste non-numeric values into single-value numeric filters (dataman#9339)", () => {
     openOrdersTable();
 
     cy.findByText("Total").click();

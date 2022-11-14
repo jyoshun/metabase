@@ -129,7 +129,7 @@ describe("scenarios > dashboard > chained filter", () => {
     });
   }
 
-  it.skip("should work for all field types (metabase#15170)", () => {
+  it.skip("should work for all field types (dataman#15170)", () => {
     // Change Field Types for the following fields
     cy.request("PUT", `/api/field/${PRODUCTS.ID}`, {
       special_type: null,

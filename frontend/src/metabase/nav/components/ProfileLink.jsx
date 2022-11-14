@@ -68,14 +68,14 @@ function ProfileLink({ user, adminItems, onLogout }) {
         icon: null,
         link:
           isAdmin && MetabaseSettings.isPaidPlan()
-            ? `https://www.metabase.com/help-premium?utm_source=in-product&utm_medium=menu&utm_campaign=help&instance_version=${tag}&diag=${compactBugReportDetailsForUrl}`
-            : `https://www.metabase.com/help?utm_source=in-product&utm_medium=menu&utm_campaign=help&instance_version=${tag}`,
+            ? `https://www.dataman.com/help-premium?utm_source=in-product&utm_medium=menu&utm_campaign=help&instance_version=${tag}&diag=${compactBugReportDetailsForUrl}`
+            : `https://www.dataman.com/help?utm_source=in-product&utm_medium=menu&utm_campaign=help&instance_version=${tag}`,
 
         externalLink: true,
         event: `Navbar;Profile Dropdown;About ${tag}`,
       },
       {
-        title: t`About Metabase`,
+        title: t`About DataMan`,
         icon: null,
         action: () => openModal("about"),
         event: `Navbar;Profile Dropdown;About ${tag}`,
@@ -98,7 +98,7 @@ function ProfileLink({ user, adminItems, onLogout }) {
 
   const { tag, date, ...versionExtra } = MetabaseSettings.get("version");
   // don't show trademark if application name is whitelabeled
-  const showTrademark = t`Metabase` === "Metabase";
+  const showTrademark = t`DataMan` === "DataMan";
   return (
     <div>
       <EntityMenu
@@ -122,7 +122,7 @@ function ProfileLink({ user, adminItems, onLogout }) {
             <h2
               style={{ fontSize: "1.75em" }}
               className="text-dark"
-            >{t`Thanks for using Metabase!`}</h2>
+            >{t`Thanks for using DataMan!`}</h2>
             <div className="pt2">
               <h3 className="text-dark mb1">
                 {t`You're on version`} {tag}
@@ -147,8 +147,8 @@ function ProfileLink({ user, adminItems, onLogout }) {
               className="p2 h5 text-centered text-medium border-top"
             >
               <span className="block">
-                <span className="text-bold">Metabase</span>{" "}
-                {t`is a Trademark of`} Metabase, Inc
+                <span className="text-bold">DataMan</span>{" "}
+                {t`is a Trademark of`} DataMan, Inc
               </span>
               <span>{t`and is built with care by a team from all across this pale blue dot.`}</span>
             </div>

@@ -15,7 +15,7 @@ describe("issue 20963", () => {
     cy.signInAsAdmin();
   });
 
-  it("should allow converting questions with static snippets to models (metabase#20963)", () => {
+  it("should allow converting questions with static snippets to models (dataman#20963)", () => {
     cy.visit("/");
 
     openNativeEditor();

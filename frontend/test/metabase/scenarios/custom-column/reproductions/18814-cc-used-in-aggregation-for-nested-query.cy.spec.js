@@ -27,7 +27,7 @@ describe("issue 18814", () => {
     cy.createQuestion(questionDetails, { visitQuestion: true });
   });
 
-  it("should be able to use a custom column in aggregation for a nested query (metabase#18814)", () => {
+  it("should be able to use a custom column in aggregation for a nested query (dataman#18814)", () => {
     cy.icon("notebook").click();
 
     cy.icon("sum").click();

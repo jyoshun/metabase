@@ -16,7 +16,7 @@ Default.args = {
   user: {
     first_name: "Testy",
     last_name: "Tableton",
-    email: "user@metabase.test",
+    email: "user@dataman.test",
     common_name: "Testy Tableton",
   },
 };
@@ -26,7 +26,7 @@ SingleName.args = {
   user: {
     first_name: "Testy",
     last_name: null,
-    email: "user@metabase.test",
+    email: "user@dataman.test",
     common_name: "Testy",
   },
 };
@@ -36,8 +36,8 @@ OnlyEmail.args = {
   user: {
     first_name: null,
     last_name: null,
-    email: "user@metabase.test",
-    common_name: "user@metabase.test",
+    email: "user@dataman.test",
+    common_name: "user@dataman.test",
   },
 };
 
@@ -46,7 +46,7 @@ ShortEmail.args = {
   user: {
     first_name: null,
     last_name: null,
-    email: "u@metabase.test",
-    common_name: "u@metabase.test",
+    email: "u@dataman.test",
+    common_name: "u@dataman.test",
   },
 };

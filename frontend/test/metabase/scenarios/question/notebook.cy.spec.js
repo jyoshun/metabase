@@ -25,7 +25,7 @@ describe("scenarios > question > notebook", () => {
     cy.signInAsAdmin();
   });
 
-  it("shouldn't offer to save the question when there were no changes (metabase#13470)", () => {
+  it("shouldn't offer to save the question when there were no changes (dataman#13470)", () => {
     openOrdersTable();
     // save question initially
     cy.findByText("Save").click();
@@ -68,7 +68,7 @@ describe("scenarios > question > notebook", () => {
     cy.contains("Showing 1 row"); // ensure only one user was returned
   });
 
-  it("shouldn't show sub-dimensions for FK (metabase#16787)", () => {
+  it("shouldn't show sub-dimensions for FK (dataman#16787)", () => {
     openOrdersTable({ mode: "notebook" });
     summarize({ mode: "notebook" });
     cy.findByText("Pick a column to group by").click();
@@ -78,7 +78,7 @@ describe("scenarios > question > notebook", () => {
       .should("not.have.descendants", "*");
   });
 
-  it("should show the original custom expression filter field on subsequent click (metabase#14726)", () => {
+  it("should show the original custom expression filter field on subsequent click (dataman#14726)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         database: SAMPLE_DB_ID,
@@ -100,7 +100,7 @@ describe("scenarios > question > notebook", () => {
     });
   });
 
-  it("should append indexes to duplicate custom expression names (metabase#12104)", () => {
+  it("should append indexes to duplicate custom expression names (dataman#12104)", () => {
     cy.viewport(1920, 800); // we're looking for a column name beyond the right of the default viewport
     cy.intercept("POST", "/api/dataset").as("dataset");
     openProductsTable({ mode: "notebook" });
@@ -149,7 +149,7 @@ describe("scenarios > question > notebook", () => {
     cy.contains(/^Price is less than 5/i);
   });
 
-  it("should show the real number of rows instead of HARD_ROW_LIMIT when loading (metabase#17397)", () => {
+  it("should show the real number of rows instead of HARD_ROW_LIMIT when loading (dataman#17397)", () => {
     cy.intercept(
       {
         method: "POST",
@@ -210,7 +210,7 @@ describe("scenarios > question > notebook", () => {
     popover().contains("80.36");
   });
 
-  describe.skip("popover rendering issues (metabase#15502)", () => {
+  describe.skip("popover rendering issues (dataman#15502)", () => {
     beforeEach(() => {
       restore();
       cy.signInAsAdmin();
@@ -220,7 +220,7 @@ describe("scenarios > question > notebook", () => {
       cy.findByTextEnsureVisible("Orders").click();
     });
 
-    it("popover should not render outside of viewport regardless of the screen resolution (metabase#15502-1)", () => {
+    it("popover should not render outside of viewport regardless of the screen resolution (dataman#15502-1)", () => {
       // Initial filter popover usually renders correctly within the viewport
       cy.findByText("Add filters to narrow your answer").as("filter").click();
       popover().isRenderedWithinViewport();
@@ -230,7 +230,7 @@ describe("scenarios > question > notebook", () => {
       popover().isRenderedWithinViewport();
     });
 
-    it("popover should not cover the button that invoked it (metabase#15502-2)", () => {
+    it("popover should not cover the button that invoked it (dataman#15502-2)", () => {
       // Initial summarize/metric popover usually renders initially without blocking the button
       cy.findByText("Pick the metric you want to see").as("metric").click();
       // Click outside to close this popover
@@ -241,7 +241,7 @@ describe("scenarios > question > notebook", () => {
     });
   });
 
-  describe("arithmetic (metabase#13175)", () => {
+  describe("arithmetic (dataman#13175)", () => {
     beforeEach(() => {
       openOrdersTable({ mode: "notebook" });
     });
@@ -333,7 +333,7 @@ describe("scenarios > question > notebook", () => {
     cy.findByText("ID").should("not.exist");
   });
 
-  it("should treat max/min on a name as a string filter (metabase#21973)", () => {
+  it("should treat max/min on a name as a string filter (dataman#21973)", () => {
     const questionDetails = {
       name: "21973",
       query: {
@@ -354,7 +354,7 @@ describe("scenarios > question > notebook", () => {
     });
   });
 
-  it("should treat max/min on a category as a string filter (metabase#22154)", () => {
+  it("should treat max/min on a category as a string filter (dataman#22154)", () => {
     const questionDetails = {
       name: "22154",
       query: {

@@ -38,7 +38,7 @@ describeEE("formatting > whitelabel", () => {
       cy.log("New company should show up on activity page");
       cy.visit("/activity");
       cy.findByText(`${COMPANY_NAME} is up and running.`);
-      cy.findByText("Metabase is up and running.").should("not.exist");
+      cy.findByText("DataMan is up and running.").should("not.exist");
 
       cy.log("New company should show up when logged out");
       cy.signOut();
@@ -49,10 +49,10 @@ describeEE("formatting > whitelabel", () => {
       cy.signInAsNormalUser();
       cy.visit("/activity");
       cy.findByText(`${COMPANY_NAME} is up and running.`);
-      cy.findByText("Metabase is up and running.").should("not.exist");
+      cy.findByText("DataMan is up and running.").should("not.exist");
     });
 
-    it.skip("should not show the old name in the admin panel (metabase#17043)", () => {
+    it.skip("should not show the old name in the admin panel (dataman#17043)", () => {
       cy.reload();
 
       cy.findByDisplayValue(COMPANY_NAME);

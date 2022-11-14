@@ -11,7 +11,7 @@ describe("issue 15444", () => {
     cy.intercept("POST", "/api/dataset").as("dataset");
   });
 
-  it("should run with the default field filter set (metabase#15444)", () => {
+  it("should run with the default field filter set (dataman#15444)", () => {
     openNativeEditor();
     SQLFilter.enterParameterizedQuery(
       "select * from products where {{category}}",

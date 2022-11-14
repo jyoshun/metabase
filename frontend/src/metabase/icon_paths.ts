@@ -1,8 +1,8 @@
 /*
-    Metabase Icon Paths
+    DataMan Icon Paths
     -----
 
-    These paths represent the current canonical icon set for Metabase.
+    These paths represent the current canonical icon set for DataMan.
 */
 export const ICON_PATHS: Record<string, any> = {
   add: "M12.4285714,12.4285714 L12.4285714,0 L19.5714286,0 L19.5714286,12.4285714 L32,12.4285714 L32,19.5714286 L19.5714286,19.5714286 L19.5714286,32 L12.4285714,32 L12.4285714,19.5714286 L0,19.5714286 L0,12.4285714 L12.4285714,12.4285714 Z",

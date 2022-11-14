@@ -21,7 +21,7 @@ describe("scenarios > question > settings", () => {
 
   describe("column settings", () => {
     it("should allow you to remove a column and add two foreign columns", () => {
-      // oddly specific test inspired by https://github.com/metabase/metabase/issues/11499
+      // oddly specific test inspired by https://github.com/dataman/dataman/issues/11499
 
       // get a really wide window, so we don't need to mess with scrolling the table horizontally
       cy.viewport(1600, 800);
@@ -68,7 +68,7 @@ describe("scenarios > question > settings", () => {
       cy.get("@table").contains("Total").should("not.exist");
     });
 
-    it.skip("should preserve correct order of columns after column removal via sidebar (metabase#13455)", () => {
+    it.skip("should preserve correct order of columns after column removal via sidebar (dataman#13455)", () => {
       cy.viewport(2000, 1200);
       // Orders join Products
       visitQuestionAdhoc({
@@ -130,13 +130,13 @@ describe("scenarios > question > settings", () => {
       findColumnAtIndex("Products → Category", 5);
 
       // We need to do some additional checks. Please see:
-      // https://github.com/metabase/metabase/pull/21338#pullrequestreview-928807257
+      // https://github.com/dataman/dataman/pull/21338#pullrequestreview-928807257
 
       // Add "Address"
       cy.findByText("Address").siblings(".Icon-add").click();
 
       // The result automatically load when adding new fields but two requests are fired.
-      // Please see: https://github.com/metabase/metabase/pull/21338#discussion_r842816687
+      // Please see: https://github.com/dataman/dataman/pull/21338#discussion_r842816687
       cy.wait(["@dataset", "@dataset"]);
 
       findColumnAtIndex("User → Address", -1).as("user-address");
@@ -163,7 +163,7 @@ describe("scenarios > question > settings", () => {
       }
     });
 
-    it("should change to column formatting when sidebar is already open (metabase#16043)", () => {
+    it("should change to column formatting when sidebar is already open (dataman#16043)", () => {
       visitQuestionAdhoc({
         dataset_query: {
           type: "query",
@@ -185,7 +185,7 @@ describe("scenarios > question > settings", () => {
       cy.findByText("Date style"); // shows created_at column settings
     });
 
-    it.skip("should respect renamed column names in the settings sidebar (metabase#18476)", () => {
+    it.skip("should respect renamed column names in the settings sidebar (dataman#18476)", () => {
       const newColumnTitle = "Pre-tax";
 
       const questionDetails = {

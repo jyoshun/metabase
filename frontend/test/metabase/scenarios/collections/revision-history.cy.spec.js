@@ -26,7 +26,7 @@ describe("revision history", () => {
       cy.signInAsAdmin();
     });
 
-    it("shouldn't render revision history steps when there was no diff (metabase#1926)", () => {
+    it("shouldn't render revision history steps when there was no diff (dataman#1926)", () => {
       cy.createDashboard().then(({ body }) => {
         visitAndEditDashboard(body.id);
       });
@@ -43,7 +43,7 @@ describe("revision history", () => {
       cy.findAllByText("Revert").should("not.exist");
     });
 
-    it.skip("dashboard should update properly on revert (metabase#6884)", () => {
+    it.skip("dashboard should update properly on revert (dataman#6884)", () => {
       visitAndEditDashboard(1);
       // Add another question without changing its size or moving it afterwards
       cy.icon("add").last().click();
@@ -84,7 +84,7 @@ describe("revision history", () => {
               }
             });
 
-            it("should be able to revert a dashboard (metabase#15237)", () => {
+            it("should be able to revert a dashboard (dataman#15237)", () => {
               visitDashboard(1);
               openRevisionHistory();
               clickRevert(/created this/);
@@ -148,7 +148,7 @@ describe("revision history", () => {
 
         onlyOn(permission === "view", () => {
           describe(`${user} user`, () => {
-            it("should not see question nor dashboard revert buttons (metabase#13229)", () => {
+            it("should not see question nor dashboard revert buttons (dataman#13229)", () => {
               cy.signIn(user);
 
               visitDashboard(1);

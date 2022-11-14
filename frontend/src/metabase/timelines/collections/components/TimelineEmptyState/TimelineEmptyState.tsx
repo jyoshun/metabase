@@ -66,8 +66,8 @@ const TimelineEmptyState = ({
         </EmptyStateThread>
         <EmptyStateMessage>
           {canWrite
-            ? t`Add events to Metabase to show important milestones, launches, or anything else, right alongside your data.`
-            : t`Events in Metabase let you see important milestones, launches, or anything else, right alongside your data.`}
+            ? t`Add events to DataMan to show important milestones, launches, or anything else, right alongside your data.`
+            : t`Events in DataMan let you see important milestones, launches, or anything else, right alongside your data.`}
         </EmptyStateMessage>
         {canWrite && (
           <Link className="Button Button--primary" to={link}>

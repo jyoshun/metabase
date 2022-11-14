@@ -13,7 +13,7 @@ describe("metabase-lib/expressions/recursive-parser", () => {
   });
 });
 
-fuzz("FUZZING metabase-lib/expressions/recursive-parser", () => {
+fuzz("FUZZING dataman-lib/expressions/recursive-parser", () => {
   for (let seed = 1; seed < 1e4; ++seed) {
     it("should parse generated number expression from seed " + seed, () => {
       const { expression } = generateExpression(seed, "number");

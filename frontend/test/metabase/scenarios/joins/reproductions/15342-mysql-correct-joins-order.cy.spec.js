@@ -15,7 +15,7 @@ describe.skip("issue 15342", { tags: "@external" }, () => {
     cy.viewport(4000, 1200); // huge width required so three joined tables can fit
   });
 
-  it("should correctly order joins for MySQL queries (metabase#15342)", () => {
+  it("should correctly order joins for MySQL queries (dataman#15342)", () => {
     startNewQuestion();
     cy.findByText(MYSQL_DB_NAME).click();
     cy.findByText("People").click();

@@ -49,7 +49,7 @@ describe("issue 21559", { tags: "@external" }, () => {
     });
   });
 
-  it("should respect dashboard card visualization (metabase#21559)", () => {
+  it("should respect dashboard card visualization (dataman#21559)", () => {
     cy.findByTestId("add-series-button").click({ force: true });
 
     cy.findByText(q2Details.name).click();

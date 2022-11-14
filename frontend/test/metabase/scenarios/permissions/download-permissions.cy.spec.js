@@ -74,7 +74,7 @@ describeEE("scenarios > admin > permissions > data > downloads", () => {
     );
   });
 
-  it("respects 'no download' permissions when 'All users' group data permissions are set to `Block` (metabase#22408)", () => {
+  it("respects 'no download' permissions when 'All users' group data permissions are set to `Block` (dataman#22408)", () => {
     cy.visit(`/admin/permissions/data/database/${SAMPLE_DB_ID}`);
 
     modifyPermission("All Users", DATA_ACCESS_PERMISSION_INDEX, "Block");

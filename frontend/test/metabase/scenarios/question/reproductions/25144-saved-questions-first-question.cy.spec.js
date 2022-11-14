@@ -8,7 +8,7 @@ describe("issue 25144", () => {
     cy.intercept("PUT", `/api/card/*`).as("updateCard");
   });
 
-  it("should show Saved Questions section after creating the first question (metabase#25144)", () => {
+  it("should show Saved Questions section after creating the first question (dataman#25144)", () => {
     cy.visit("/");
 
     cy.findByText("New").click();
@@ -26,7 +26,7 @@ describe("issue 25144", () => {
     popover().findByText("Orders question").should("be.visible");
   });
 
-  it("should show Models section after creation the first model (metabase#24878)", () => {
+  it("should show Models section after creation the first model (dataman#24878)", () => {
     cy.visit("/");
 
     cy.findByText("New").click();

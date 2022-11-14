@@ -48,7 +48,7 @@ describe("Legacy Q_DEPRECATED library", () => {
   });
 
   describe("cleanQuery", () => {
-    it("should pass for a query created with metabase-lib", () => {
+    it("should pass for a query created with dataman-lib", () => {
       const datasetQuery = ORDERS.query().aggregate(["count"]).datasetQuery();
 
       // We have to take a copy because the original object isn't extensible

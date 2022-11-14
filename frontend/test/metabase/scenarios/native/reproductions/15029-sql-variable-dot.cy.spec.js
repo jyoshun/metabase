@@ -6,7 +6,7 @@ describe("issue 15029", () => {
     cy.signInAsNormalUser();
   });
 
-  it("should allow dots in the variable reference (metabase#15029)", () => {
+  it("should allow dots in the variable reference (dataman#15029)", () => {
     openNativeEditor().type(
       "select * from products where RATING = {{number.of.stars}}",
       {

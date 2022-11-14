@@ -24,7 +24,7 @@ describe("scenarios > question > trendline", () => {
     cy.createQuestion(questionDetails, { visitQuestion: true });
   });
 
-  it("displays trendline when there are multiple numeric outputs (for simple question) (metabase#12781)", () => {
+  it("displays trendline when there are multiple numeric outputs (for simple question) (dataman#12781)", () => {
     // Change settings to trendline
     cy.findByText("Visualization").click();
     sidebar().within(() => {

@@ -19,7 +19,7 @@ describe("scenarios > admin > datamodel > metrics", () => {
     cy.viewport(1400, 860);
   });
 
-  it("should be possible to sort by metric (metabase#8283)", () => {
+  it("should be possible to sort by metric (dataman#8283)", () => {
     cy.request("POST", "/api/metric", {
       name: "Revenue",
       description: "Sum of orders subtotal",
@@ -85,7 +85,7 @@ describe("scenarios > admin > datamodel > metrics", () => {
       cy.findByText("Learn how to create metrics");
     });
 
-    it("custom expression aggregation should work in metrics (metabase#22700)", () => {
+    it("custom expression aggregation should work in metrics (dataman#22700)", () => {
       cy.intercept("POST", "/api/dataset").as("dataset");
 
       const customExpression = "Count / Distinct([Product ID])";
@@ -225,7 +225,7 @@ describe("scenarios > admin > datamodel > metrics", () => {
   });
 
   describe("custom metrics", () => {
-    it("should save the metric using custom expressions (metabase#13022)", () => {
+    it("should save the metric using custom expressions (dataman#13022)", () => {
       cy.request("POST", "/api/metric", {
         name: "13022_Metric",
         desription: "desc",
@@ -261,7 +261,7 @@ describe("scenarios > admin > datamodel > metrics", () => {
       cy.findByText("Orders, CE"); // Definition
     });
 
-    it("should show CE that uses 'AND/OR' (metabase#13069, metabase#13070)", () => {
+    it("should show CE that uses 'AND/OR' (dataman#13069, dataman#13070)", () => {
       cy.visit("/admin/datamodel/metrics");
       cy.findByText("New metric").click();
 

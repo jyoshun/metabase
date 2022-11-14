@@ -31,7 +31,7 @@ describe("issue 24922", () => {
     cy.request("POST", "/api/segment", segmentDetails);
   });
 
-  it("should allow segments in case custom expressions (metabase#24922)", () => {
+  it("should allow segments in case custom expressions (dataman#24922)", () => {
     openOrdersTable({ mode: "notebook" });
 
     cy.findByText("Custom column").click();

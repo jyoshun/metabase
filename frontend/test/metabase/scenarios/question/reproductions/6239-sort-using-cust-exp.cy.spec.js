@@ -25,7 +25,7 @@ describe("issue 6239", () => {
     popover().contains("Created At").first().click();
   });
 
-  it("should be possible to sort by using custom expression (metabase#6239)", () => {
+  it("should be possible to sort by using custom expression (dataman#6239)", () => {
     cy.findByText("Sort").click();
     popover().contains(/^CE$/).click();
 

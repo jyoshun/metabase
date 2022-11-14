@@ -27,7 +27,7 @@ function filterDashboard(suggests = true) {
   cy.contains(/Rows \d-\d+ of 23/);
 }
 
-describe("support > permissions (metabase#8472)", () => {
+describe("support > permissions (dataman#8472)", () => {
   beforeEach(() => {
     cy.intercept("GET", "/api/dashboard/1/params/*/search/*").as("search");
 

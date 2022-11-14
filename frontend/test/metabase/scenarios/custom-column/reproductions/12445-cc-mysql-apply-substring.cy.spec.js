@@ -8,7 +8,7 @@ describe.skip("issue 12445", { tags: "@external" }, () => {
     cy.signInAsAdmin();
   });
 
-  it("should correctly apply substring for a custom column (metabase#12445)", () => {
+  it("should correctly apply substring for a custom column (dataman#12445)", () => {
     withDatabase(2, ({ PEOPLE, PEOPLE_ID }) => {
       cy.log("Create a question with `Source` column and abbreviated CC");
       cy.createQuestion(

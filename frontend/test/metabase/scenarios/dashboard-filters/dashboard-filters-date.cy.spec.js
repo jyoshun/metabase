@@ -82,7 +82,7 @@ describe("scenarios > dashboard > filters > date", () => {
     cy.findByText("33.9");
   });
 
-  it("should show sub-day resolutions in relative date filter (metabase#6660)", () => {
+  it("should show sub-day resolutions in relative date filter (dataman#6660)", () => {
     visitDashboard(1);
     cy.icon("pencil").click();
     cy.icon("filter").click();

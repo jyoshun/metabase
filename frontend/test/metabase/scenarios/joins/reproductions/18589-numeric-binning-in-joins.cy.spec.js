@@ -13,7 +13,7 @@ describe("issue 18589", () => {
     cy.intercept("POST", "/api/dataset").as("dataset");
   });
 
-  it("should not bin numeric fields in join condition by default (metabase#18589)", () => {
+  it("should not bin numeric fields in join condition by default (dataman#18589)", () => {
     openOrdersTable({ mode: "notebook" });
 
     joinTable("Reviews");

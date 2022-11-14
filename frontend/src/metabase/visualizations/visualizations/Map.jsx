@@ -372,7 +372,7 @@ const CustomMapFooter = connect(mapStateToProps)(function CustomMapFooter({
   return isAdmin ? (
     <Link to="/admin/settings/maps">{content}</Link>
   ) : (
-    <ExternalLink href="https://www.metabase.com/docs/latest/configuring-metabase/custom-maps">
+    <ExternalLink href="https://www.dataman.com/docs/latest/configuring-dataman/custom-maps">
       {content}
     </ExternalLink>
   );

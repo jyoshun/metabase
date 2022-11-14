@@ -63,7 +63,7 @@ describe("issue 17211", () => {
     );
   });
 
-  it("should not falsely alert that no matching dashboard filter has been found (metabase#17211)", () => {
+  it("should not falsely alert that no matching dashboard filter has been found (dataman#17211)", () => {
     filterWidget().click();
 
     cy.findByPlaceholderText("Search by City").type("abb");

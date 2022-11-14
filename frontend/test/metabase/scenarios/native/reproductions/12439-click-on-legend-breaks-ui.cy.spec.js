@@ -28,7 +28,7 @@ describe("issue 12439", () => {
     visitQuestionAdhoc(questionDetails);
   });
 
-  it("should allow clicking on a legend in a native question without breaking the UI (metabase#12439)", () => {
+  it("should allow clicking on a legend in a native question without breaking the UI (dataman#12439)", () => {
     cy.get(".Visualization").within(() => {
       cy.findByText("Gizmo").click();
 

@@ -35,7 +35,7 @@ PLUGIN_ADMIN_SETTINGS_UPDATES.push(sections =>
       getProps: (setting, settings) => ({
         authType: "google",
         authName: t`Sign in with Google`,
-        authDescription: t`Allows users with existing Metabase accounts to login with a Google account that matches their email address in addition to their Metabase username and password.`,
+        authDescription: t`Allows users with existing DataMan accounts to login with a Google account that matches their email address in addition to their DataMan username and password.`,
         authConfigured: Boolean(settings["google-auth-client-id"]),
       }),
     },

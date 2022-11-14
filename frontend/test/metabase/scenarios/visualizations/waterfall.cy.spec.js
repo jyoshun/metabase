@@ -54,7 +54,7 @@ describe("scenarios > visualizations > waterfall", () => {
     verifyWaterfallRendering("PRODUCT", "PROFIT");
   });
 
-  it("should work with ordinal series and numeric X-axis (metabase#15550)", () => {
+  it("should work with ordinal series and numeric X-axis (dataman#15550)", () => {
     openNativeEditor().type(
       "select 1 as X, 20 as Y union select 2 as X, -10 as Y",
     );
@@ -131,7 +131,7 @@ describe("scenarios > visualizations > waterfall", () => {
     });
   });
 
-  it("should show error for multi-series questions (metabase#15152)", () => {
+  it("should show error for multi-series questions (dataman#15152)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "query",
@@ -185,7 +185,7 @@ describe("scenarios > visualizations > waterfall", () => {
     cy.findByText(/Add another/).should("not.exist");
   });
 
-  it("should work for unaggregated data (metabase#15465)", () => {
+  it("should work for unaggregated data (dataman#15465)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "native",
@@ -201,7 +201,7 @@ describe("scenarios > visualizations > waterfall", () => {
     cy.get(".Visualization .bar");
   });
 
-  it("should display correct values when one of them is 0 (metabase#16246)", () => {
+  it("should display correct values when one of them is 0 (dataman#16246)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "native",
@@ -223,7 +223,7 @@ describe("scenarios > visualizations > waterfall", () => {
     cy.get("@labels").last().invoke("text").should("eq", "0.1");
   });
 
-  it("should now display null values (metabase#16246)", () => {
+  it("should now display null values (dataman#16246)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "native",

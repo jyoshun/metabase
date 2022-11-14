@@ -165,7 +165,7 @@ describe("scenarios > organization > timelines > question", () => {
         events: [
           {
             name: "RC1",
-            description: "[Release notes](https://metabase.test)",
+            description: "[Release notes](https://dataman.test)",
           },
         ],
       });
@@ -266,7 +266,7 @@ describe("scenarios > organization > timelines > question", () => {
       cy.findByText("Created At").should("be.visible");
 
       cy.icon("calendar").click();
-      cy.findByText(/Events in Metabase/);
+      cy.findByText(/Events in DataMan/);
       cy.findByText("Add an event").should("not.exist");
     });
 

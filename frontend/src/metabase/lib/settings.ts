@@ -108,7 +108,7 @@ export type SettingName =
   | "enable-query-caching"
   | "start-of-week";
 
-type SettingsMap = Record<SettingName, any>; // provides access to Metabase application settings
+type SettingsMap = Record<SettingName, any>; // provides access to DataMan application settings
 
 type SettingListener = (value: any) => void;
 
@@ -293,19 +293,19 @@ class Settings {
       anchor = `#${anchor}`;
     }
 
-    return `https://www.metabase.com/docs/${tag}/${page}${anchor}`;
+    return `https://www.dataman.com/docs/${tag}/${page}${anchor}`;
   }
 
   storeUrl(path = "") {
-    return `https://store.metabase.com/${path}`;
+    return `https://store.dataman.com/${path}`;
   }
 
   upgradeUrl() {
-    return "https://www.metabase.com/upgrade/";
+    return "https://www.dataman.com/upgrade/";
   }
 
   migrateToCloudGuideUrl() {
-    return "https://www.metabase.com/cloud/docs/migrate/guide";
+    return "https://www.dataman.com/cloud/docs/migrate/guide";
   }
 
   newVersionAvailable() {

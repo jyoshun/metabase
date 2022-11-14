@@ -14,7 +14,7 @@ describe("issue 18148", () => {
     openNativeEditor();
   });
 
-  it("should not offer to save the question before it is actually possible to save it (metabase#18148)", () => {
+  it("should not offer to save the question before it is actually possible to save it (dataman#18148)", () => {
     cy.findByText("Select a database");
     cy.findByText("Save").should("have.attr", "aria-disabled", "true");
 

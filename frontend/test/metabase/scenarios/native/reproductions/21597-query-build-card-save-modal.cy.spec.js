@@ -21,7 +21,7 @@ describe("issue 21597", { tags: "@external" }, () => {
     cy.signInAsAdmin();
   });
 
-  it("display the relevant error message in save question modal (metabase#21597)", () => {
+  it("display the relevant error message in save question modal (dataman#21597)", () => {
     cy.intercept("POST", "/api/card").as("saveNativeQuestion");
 
     // Second DB (copy)

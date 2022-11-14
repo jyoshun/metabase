@@ -70,7 +70,7 @@ describe("scenarios > visualizations > drillthroughs > chart drill", () => {
   });
 
   ["month", "month-of-year"].forEach(granularity => {
-    it(`brush filter should work post-aggregation for ${granularity} granularity (metabase#18011)`, () => {
+    it(`brush filter should work post-aggregation for ${granularity} granularity (dataman#18011)`, () => {
       // TODO: Remove this line when the issue is fixed!
       cy.skipOn(granularity === "month-of-year");
 
@@ -108,7 +108,7 @@ describe("scenarios > visualizations > drillthroughs > chart drill", () => {
     });
   });
 
-  it("should correctly drill through on a card with multiple series (metabase#11442)", () => {
+  it("should correctly drill through on a card with multiple series (dataman#11442)", () => {
     cy.createQuestion({
       name: "11442_Q1",
       query: {
@@ -189,7 +189,7 @@ describe("scenarios > visualizations > drillthroughs > chart drill", () => {
     });
   });
 
-  it("should allow drill-through on combined cards with different amount of series (metabase#13457)", () => {
+  it("should allow drill-through on combined cards with different amount of series (dataman#13457)", () => {
     cy.createQuestion({
       name: "13457_Q1",
       query: {
@@ -303,7 +303,7 @@ describe("scenarios > visualizations > drillthroughs > chart drill", () => {
     cy.contains("Dominique Leffler");
   });
 
-  it.skip("should drill through a with date filter (metabase#12496)", () => {
+  it.skip("should drill through a with date filter (dataman#12496)", () => {
     cy.createQuestion({
       name: "Orders by Created At: Week",
       query: {
@@ -331,7 +331,7 @@ describe("scenarios > visualizations > drillthroughs > chart drill", () => {
     cy.contains("Created At between").click();
   });
 
-  it.skip("should drill-through on filtered aggregated results (metabase#13504)", () => {
+  it.skip("should drill-through on filtered aggregated results (dataman#13504)", () => {
     openOrdersTable({ mode: "notebook" });
     summarize({ mode: "notebook" });
     cy.findByText("Count of rows").click();
@@ -370,7 +370,7 @@ describe("scenarios > visualizations > drillthroughs > chart drill", () => {
     cy.findByText("There was a problem with your question").should("not.exist");
   });
 
-  it("should display correct value in a tooltip for unaggregated data (metabase#11907)", () => {
+  it("should display correct value in a tooltip for unaggregated data (dataman#11907)", () => {
     cy.createNativeQuestion(
       {
         name: "11907",
@@ -397,7 +397,7 @@ describe("scenarios > visualizations > drillthroughs > chart drill", () => {
     });
   });
 
-  it("should display correct value in a tooltip for unaggregated data with breakouts (metabase#15785)", () => {
+  it("should display correct value in a tooltip for unaggregated data with breakouts (dataman#15785)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "native",
@@ -418,7 +418,7 @@ describe("scenarios > visualizations > drillthroughs > chart drill", () => {
     popover().findByText("12");
   });
 
-  it.skip("should drill-through a custom question that joins a native SQL question (metabase#14495)", () => {
+  it.skip("should drill-through a custom question that joins a native SQL question (dataman#14495)", () => {
     // Restrict "normal user" (belongs to the DATA_GROUP) from writing native queries
     cy.log("Fetch permissions graph");
     cy.request("GET", "/api/permissions/graph", {}).then(
@@ -490,7 +490,7 @@ describe("scenarios > visualizations > drillthroughs > chart drill", () => {
     });
   });
 
-  it.skip("count of rows from drill-down on binned results should match the number of records (metabase#15324)", () => {
+  it.skip("count of rows from drill-down on binned results should match the number of records (dataman#15324)", () => {
     visitQuestionAdhoc({
       name: "15324",
       dataset_query: {
@@ -545,7 +545,7 @@ describe("scenarios > visualizations > drillthroughs > chart drill", () => {
     cy.get(".TableInteractive-cellWrapper").contains("0");
   });
 
-  it("should parse value on click through on the first row of pie chart (metabase#15250)", () => {
+  it("should parse value on click through on the first row of pie chart (dataman#15250)", () => {
     cy.createQuestion({
       name: "15250",
       query: {

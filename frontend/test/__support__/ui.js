@@ -21,7 +21,7 @@ function getUser(user = {}) {
     id: 1,
     first_name: "Bobby",
     last_name: "Tables",
-    email: "bobby@metabase.test",
+    email: "bobby@dataman.test",
     is_superuser: true,
     ...user,
   };

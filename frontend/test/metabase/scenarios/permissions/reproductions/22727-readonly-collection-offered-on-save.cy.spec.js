@@ -18,7 +18,7 @@ describe("issue 22727", () => {
     cy.signIn("nocollection");
   });
 
-  it("should not offer to save question in view only collection (metabase#22727, metabase#20717)", () => {
+  it("should not offer to save question in view only collection (dataman#22727, dataman#20717)", () => {
     // It is important to start from a saved question and to alter it.
     // We already have a reproduction that makes sure "Our analytics" is not offered when starting from an ad-hoc question (table).
     visitQuestion(1);
@@ -30,10 +30,10 @@ describe("issue 22727", () => {
     cy.findByText("Save").click();
 
     cy.get(".Modal").within(() => {
-      // This part reproduces https://github.com/metabase/metabase/issues/20717
+      // This part reproduces https://github.com/dataman/dataman/issues/20717
       cy.findByText(/^Replace original qeustion/).should("not.exist");
 
-      // This part is an actual repro for https://github.com/metabase/metabase/issues/22727
+      // This part is an actual repro for https://github.com/dataman/dataman/issues/22727
       cy.findByTestId("select-button-content")
         .invoke("text")
         .should("not.eq", "Our analytics");

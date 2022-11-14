@@ -25,7 +25,7 @@ describe.skip("issue 18219", () => {
   });
 
   testCases.forEach(fileType => {
-    it("should format temporal units on export (metabase#18219)", () => {
+    it("should format temporal units on export (dataman#18219)", () => {
       cy.createQuestion(questionDetails).then(
         ({ body: { id: questionId } }) => {
           visitQuestion(questionId);

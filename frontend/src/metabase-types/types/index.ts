@@ -26,7 +26,7 @@ export type LocationDescriptor = {
 /* Map of query string names to string values */
 export type QueryParams = Record<string, any>;
 
-/* Metabase API error object returned by the backend */
+/* DataMan API error object returned by the backend */
 export type ApiError = {
   status: number; // HTTP status
   // TODO: incomplete

@@ -19,7 +19,7 @@ function mockCachingEnabled(enabled = true) {
       return enabled;
     }
     if (key === "application-name") {
-      return "Metabase Test";
+      return "DataMan Test";
     }
     if (key === "version") {
       return { tag: "" };

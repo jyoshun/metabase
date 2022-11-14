@@ -85,7 +85,7 @@ describe("scenarios > dashboard > filters > SQL > field filter > required ", () 
 
     cy.reload();
 
-    // This part confirms that the issue metabase#13960 has been fixed
+    // This part confirms that the issue dataman#13960 has been fixed
     cy.location("search").should("eq", "?category=");
 
     cy.get("@dashboardCard").within(() => {

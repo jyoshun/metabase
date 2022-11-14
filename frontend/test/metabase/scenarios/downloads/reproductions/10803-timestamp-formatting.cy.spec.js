@@ -26,7 +26,7 @@ describe("issue 10803", () => {
   });
 
   testCases.forEach(fileType => {
-    it(`should format the date properly for ${fileType} in saved questions (metabase#10803)`, () => {
+    it(`should format the date properly for ${fileType} in saved questions (dataman#10803)`, () => {
       cy.get("@questionId").then(questionId => {
         downloadAndAssert(
           { fileType, questionId, logResults: true, raw: true },

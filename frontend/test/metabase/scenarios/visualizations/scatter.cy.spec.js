@@ -27,7 +27,7 @@ describe("scenarios > visualizations > scatter", () => {
     cy.signInAsNormalUser();
   });
 
-  it("should show correct labels in tooltip (metabase#15150)", () => {
+  it("should show correct labels in tooltip (dataman#15150)", () => {
     visitQuestionAdhoc({
       dataset_query: testQuery,
       display: "scatter",
@@ -45,7 +45,7 @@ describe("scenarios > visualizations > scatter", () => {
     });
   });
 
-  it("should show correct labels in tooltip when display name has manually set (metabase#11395)", () => {
+  it("should show correct labels in tooltip when display name has manually set (dataman#11395)", () => {
     visitQuestionAdhoc({
       dataset_query: testQuery,
       display: "scatter",
@@ -71,7 +71,7 @@ describe("scenarios > visualizations > scatter", () => {
     });
   });
 
-  it("should not display data points even when enabled in settings (metabase#13247)", () => {
+  it("should not display data points even when enabled in settings (dataman#13247)", () => {
     visitQuestionAdhoc({
       display: "scatter",
       dataset_query: testQuery,
@@ -86,7 +86,7 @@ describe("scenarios > visualizations > scatter", () => {
     cy.findAllByText("79").should("not.exist");
   });
 
-  it("should respect circle size in a visualization (metabase#22929)", () => {
+  it("should respect circle size in a visualization (dataman#22929)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "native",
@@ -126,7 +126,7 @@ select 10 as size, 2 as x, 5 as y`,
 
 function triggerPopoverForBubble(index = 13) {
   // Hack that is needed because of the flakiness caused by adding throttle to the ExplicitSize component
-  // See: https://github.com/metabase/metabase/pull/15235
+  // See: https://github.com/dataman/dataman/pull/15235
   cy.findByTestId("view-footer").within(() => {
     cy.findByLabelText("Switch to data").click(); // Switch to the tabular view...
     cy.findByLabelText("Switch to visualization").click(); // ... and then back to the scatter visualization (that now seems to be stable enough to make assertions about)

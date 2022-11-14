@@ -20,8 +20,8 @@ describeEE("issue 22695 ", () => {
     });
   });
 
-  // https://github.com/metabase/metaboat/issues/159
-  it("should not expose database names to which the user has no access permissions (metabase#22695)", () => {
+  // https://github.com/dataman/metaboat/issues/159
+  it("should not expose database names to which the user has no access permissions (dataman#22695)", () => {
     // Nocollection user belongs to a "data" group which we blocked for this repro,
     // but they have access to data otherwise (as name suggests)
     cy.signIn("nocollection");

@@ -176,8 +176,8 @@ const clojure = ({
 }) =>
   `(require '[buddy.sign.jwt :as jwt])
 
-(def metabase-site-url   ${JSON.stringify(siteUrl)})
-(def metabase-secret-key ${JSON.stringify(secretKey)})
+(def dataman-site-url   ${JSON.stringify(siteUrl)})
+(def dataman-secret-key ${JSON.stringify(secretKey)})
 
 (def payload
   {:resource {:${resourceType} ${resourceId}}
@@ -186,9 +186,9 @@ const clojure = ({
      .join(",\n              ")}}
    :exp      (+ (int (/ (System/currentTimeMillis) 1000)) (* 60 10))}) ; 10 minute expiration
 
-(def token (jwt/sign payload metabase-secret-key))
+(def token (jwt/sign payload dataman-secret-key))
 
-(def iframe-url (str metabase-site-url "/embed/${resourceType}/" token${
+(def iframe-url (str dataman-site-url "/embed/${resourceType}/" token${
     optionsToHashParams(displayOptions)
       ? " " + JSON.stringify(optionsToHashParams(displayOptions))
       : ""

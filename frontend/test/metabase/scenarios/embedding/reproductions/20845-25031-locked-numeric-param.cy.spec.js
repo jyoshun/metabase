@@ -66,7 +66,7 @@ defaultFilterValues.forEach(value => {
       });
     });
 
-    it(`QUESTION: locked parameter should work with numeric values ${conditionalPartOfTestTitle} (metabase#20845)`, () => {
+    it(`QUESTION: locked parameter should work with numeric values ${conditionalPartOfTestTitle} (dataman#20845)`, () => {
       cy.get("@questionId").then(questionId => {
         cy.request("PUT", `/api/card/${questionId}`, {
           enable_embedding: true,
@@ -95,7 +95,7 @@ defaultFilterValues.forEach(value => {
       });
     });
 
-    it.skip(`DASHBOARD: locked parameter should work with numeric values ${conditionalPartOfTestTitle} (metabase#25031)`, () => {
+    it.skip(`DASHBOARD: locked parameter should work with numeric values ${conditionalPartOfTestTitle} (dataman#25031)`, () => {
       cy.get("@dashboardId").then(dashboardId => {
         visitDashboard(dashboardId);
         cy.request("PUT", `/api/dashboard/${dashboardId}`, {

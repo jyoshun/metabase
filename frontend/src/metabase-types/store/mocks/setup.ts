@@ -17,7 +17,7 @@ export const createMockLocale = (opts?: Partial<Locale>): Locale => ({
 export const createMockUserInfo = (opts?: Partial<UserInfo>): UserInfo => ({
   first_name: "Test",
   last_name: "Testy",
-  email: "testy@metabase.test",
+  email: "testy@dataman.test",
   site_name: "Epic Team",
   password: "",
   password_confirm: "",
@@ -29,7 +29,7 @@ export const createMockInviteInfo = (
 ): InviteInfo => ({
   first_name: "Test",
   last_name: "Testy",
-  email: "testy@metabase.test",
+  email: "testy@dataman.test",
   ...opts,
 });
 
@@ -52,7 +52,7 @@ export const createMockDatabaseInfo = (
 export const createMockSubscribeInfo = (
   opts?: Partial<SubscribeInfo>,
 ): SubscribeInfo => ({
-  email: "testy@metabase.test",
+  email: "testy@dataman.test",
   ...opts,
 });
 

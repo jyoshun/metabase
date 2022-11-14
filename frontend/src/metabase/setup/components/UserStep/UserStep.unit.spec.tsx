@@ -42,7 +42,7 @@ const getProps = (opts?: Partial<UserStepProps>): UserStepProps => ({
 const getUserInfo = (opts?: Partial<UserInfo>): UserInfo => ({
   first_name: "Testy",
   last_name: "McTestface",
-  email: "testy@metabase.test",
+  email: "testy@dataman.test",
   site_name: "Epic Team",
   password: "metasample123",
   password_confirm: "metasample123",

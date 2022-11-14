@@ -4,7 +4,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
-"Project-Id-Version: Metabase\n"
+"Project-Id-Version: DataMan\n"
 "Language: zh-Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -46,8 +46,8 @@ msgid "Save"
 msgstr "保存"
 
 #: frontend/src/metabase/admin/databases/components/DatabaseSchedulingForm.jsx:122
-msgid "To do some of its magic, Metabase needs to scan your database. We will also rescan it periodically to keep the metadata up-to-date. You can control when the periodic rescans happen below."
-msgstr "为了做一些神奇的事情，Metabase 需要扫描你的数据库。我们将会定期扫描，来保持源数据是最新的。你也可以在周期的扫描之前，手工来控制扫描。"
+msgid "To do some of its magic, DataMan needs to scan your database. We will also rescan it periodically to keep the metadata up-to-date. You can control when the periodic rescans happen below."
+msgstr "为了做一些神奇的事情，DataMan 需要扫描你的数据库。我们将会定期扫描，来保持源数据是最新的。你也可以在周期的扫描之前，手工来控制扫描。"
 
 #: frontend/src/metabase/entities/databases/big-query-fields.js:155
 #: metabase/driver/common.clj:152
@@ -71,15 +71,15 @@ msgid "Scanning for Filter Values"
 msgstr "扫描筛选器用到值"
 
 #: frontend/src/metabase/admin/databases/components/DatabaseSchedulingForm.jsx:153
-msgid "Metabase can scan the values present in each\n"
+msgid "DataMan can scan the values present in each\n"
 "field in this database to enable checkbox filters in dashboards and questions. This\n"
 "can be a somewhat resource-intensive process, particularly if you have a very large\n"
 "database."
-msgstr "Metabase 可以扫描数据库中每个字段的值，用来启用查询或仪表板中的选择框筛选器。当你的数据库很大时，它将可能是一个消耗大量系统资源的处理过程."
+msgstr "DataMan 可以扫描数据库中每个字段的值，用来启用查询或仪表板中的选择框筛选器。当你的数据库很大时，它将可能是一个消耗大量系统资源的处理过程."
 
 #: frontend/src/metabase/entities/databases/big-query-fields.js:167
-msgid "When should Metabase automatically scan and cache field values?"
-msgstr "Metabase 应该在什么时候自动扫描缓存的字段值？"
+msgid "When should DataMan automatically scan and cache field values?"
+msgstr "DataMan 应该在什么时候自动扫描缓存的字段值？"
 
 #: frontend/src/metabase/admin/databases/components/widgets/CacheFieldValuesScheduleWidget.jsx:26
 msgid "Regularly, on a schedule"
@@ -90,9 +90,9 @@ msgid "Only when adding a new filter widget"
 msgstr "只有当你在添加一个新的筛选控件时"
 
 #: frontend/src/metabase/admin/databases/components/widgets/CacheFieldValuesScheduleWidget.jsx:55
-msgid "When a user adds a new filter to a dashboard or a SQL question, Metabase will\n"
+msgid "When a user adds a new filter to a dashboard or a SQL question, DataMan will\n"
 "scan the field(s) mapped to that filter in order to show the list of selectable values."
-msgstr "当用户向仪表板或 SQL 查询器添加一个新的筛选器，Metabase 会扫描筛选器对应的字段来显示一个可选值列表。"
+msgstr "当用户向仪表板或 SQL 查询器添加一个新的筛选器，DataMan 会扫描筛选器对应的字段来显示一个可选值列表。"
 
 #: frontend/src/metabase/admin/databases/components/widgets/CacheFieldValuesScheduleWidget.jsx:63
 msgid "Never, I'll do this manually if I need to"
@@ -631,8 +631,8 @@ msgid "{0} – Field Settings"
 msgstr "{0} - 字段设置"
 
 #: frontend/src/metabase/admin/datamodel/containers/FieldApp.jsx:280
-msgid "Where this field will appear throughout Metabase"
-msgstr "该字段将在整个Metabase中出现的位置"
+msgid "Where this field will appear throughout DataMan"
+msgstr "该字段将在整个DataMan中出现的位置"
 
 #: frontend/src/metabase/admin/datamodel/containers/FieldApp.jsx:332
 msgid "Filtering on this field"
@@ -713,8 +713,8 @@ msgid "Cached field values"
 msgstr "缓存字段值"
 
 #: frontend/src/metabase/admin/datamodel/containers/FieldApp.jsx:368
-msgid "Metabase can scan the values for this field to enable checkbox filters in dashboards and questions."
-msgstr "Metabase 通过扫描该字段，以启用仪表板和问题中的多选框筛选。"
+msgid "DataMan can scan the values for this field to enable checkbox filters in dashboards and questions."
+msgstr "DataMan 通过扫描该字段，以启用仪表板和问题中的多选框筛选。"
 
 #: frontend/src/metabase/admin/datamodel/components/UpdateCachedFieldValues.jsx:15
 msgid "Re-scan this field"
@@ -877,8 +877,8 @@ msgid "Settings"
 msgstr "设置"
 
 #: frontend/src/metabase/admin/datamodel/containers/TableSettingsApp.jsx:96
-msgid "Metabase can scan the values in this table to enable checkbox filters in dashboards and questions."
-msgstr "Metabase扫描此表中的值，用以启用仪表板和问题中的复选框筛选器。"
+msgid "DataMan can scan the values in this table to enable checkbox filters in dashboards and questions."
+msgstr "DataMan扫描此表中的值，用以启用仪表板和问题中的复选框筛选器。"
 
 #: frontend/src/metabase/admin/datamodel/containers/TableSettingsApp.jsx:101
 msgid "Re-scan this table"
@@ -916,17 +916,17 @@ msgstr "设置这个用户成为管理员"
 
 #: frontend/src/metabase/admin/people/components/GroupDetail.jsx:32
 msgid "All users belong to the {0} group and can't be removed from it. Setting permissions for this group is a great way to\n"
-"make sure you know what new Metabase users will be able to see."
-msgstr "所有用户都属于{0}组，不能从该组中删除。为这个组设置权限是一个很好的方法，可以确保你知道新的Metabase用户将能够看到哪些。"
+"make sure you know what new DataMan users will be able to see."
+msgstr "所有用户都属于{0}组，不能从该组中删除。为这个组设置权限是一个很好的方法，可以确保你知道新的DataMan用户将能够看到哪些。"
 
 #: frontend/src/metabase/admin/people/components/GroupDetail.jsx:41
-msgid "This is a special group whose members can see everything in the Metabase instance, and who can access and make changes to the\n"
+msgid "This is a special group whose members can see everything in the DataMan instance, and who can access and make changes to the\n"
 "settings in the Admin Panel, including changing permissions! So, add people to this group with care."
-msgstr "这是一个特殊的组，其成员可以看到Metabase实例中的所有内容，并且可以访问和修改管理面板中的设置，包括改变权限！因此，请慎重将人们添加到这个组。"
+msgstr "这是一个特殊的组，其成员可以看到DataMan实例中的所有内容，并且可以访问和修改管理面板中的设置，包括改变权限！因此，请慎重将人们添加到这个组。"
 
 #: frontend/src/metabase/admin/people/components/GroupDetail.jsx:45
-msgid "To make sure you don't get locked out of Metabase, there always has to be at least one user in this group."
-msgstr "为了确保你不会被Metabase锁在外面，必须需要至少一个用户在这个群组里。"
+msgid "To make sure you don't get locked out of DataMan, there always has to be at least one user in this group."
+msgstr "为了确保你不会被DataMan锁在外面，必须需要至少一个用户在这个群组里。"
 
 #: frontend/src/metabase/admin/people/components/GroupsListing.jsx:219
 msgid "Members"
@@ -1285,16 +1285,16 @@ msgid "Sorry, an error occurred."
 msgstr "对不起，发生了一个错误。"
 
 #: frontend/src/metabase/admin/permissions/constants/messages.js:3
-msgid "Administrators always have the highest level of access to everything in Metabase."
-msgstr "管理员总是对Metabase中的一切有最高级别的访问权。"
+msgid "Administrators always have the highest level of access to everything in DataMan."
+msgstr "管理员总是对DataMan中的一切有最高级别的访问权。"
 
 #: frontend/src/metabase/admin/permissions/selectors.js:70
-msgid "Every Metabase user belongs to the All Users group. If you want to limit or restrict a group's access to something, make sure the All Users group has an equal or lower level of access."
-msgstr "每个Metabase用户都属于“所有用户”组。如果要限制一个用户组对某些内容的访问权限，请确保“所有用户”组具有相同或更低级别的访问权限。"
+msgid "Every DataMan user belongs to the All Users group. If you want to limit or restrict a group's access to something, make sure the All Users group has an equal or lower level of access."
+msgstr "每个DataMan用户都属于“所有用户”组。如果要限制一个用户组对某些内容的访问权限，请确保“所有用户”组具有相同或更低级别的访问权限。"
 
 #: frontend/src/metabase/admin/permissions/selectors.js:72
-msgid "MetaBot is Metabase's Slack bot. You can choose what it has access to here."
-msgstr "MetaBot是Metabase的Slack机器人，你可以在此处选择访问权限。"
+msgid "MetaBot is DataMan's Slack bot. You can choose what it has access to here."
+msgstr "MetaBot是DataMan的Slack机器人，你可以在此处选择访问权限。"
 
 #: frontend/src/metabase/admin/permissions/selectors/confirmations.ts:41
 msgid "The \"{0}\" group may have access to a different set of {1} than this group, which may give this group additional access to some {2}."
@@ -1418,8 +1418,8 @@ msgstr "Google账号登录"
 
 #: frontend/src/metabase/admin/settings/components/SettingsGoogleForm.jsx:51
 #: frontend/src/metabase/plugins/builtin/auth/google.js:32
-msgid "Allows users with existing Metabase accounts to login with a Google account that matches their email address in addition to their Metabase username and password."
-msgstr "允许拥有现有Metabase账户的用户在Metabase用户名和密码的基础上，用与他们的电子邮件地址相匹配的谷歌账户登录。"
+msgid "Allows users with existing DataMan accounts to login with a Google account that matches their email address in addition to their DataMan username and password."
+msgstr "允许拥有现有DataMan账户的用户在DataMan用户名和密码的基础上，用与他们的电子邮件地址相匹配的谷歌账户登录。"
 
 #: frontend/src/metabase/admin/settings/components/widgets/AuthenticationOption.jsx:25
 #: frontend/src/metabase/components/ChannelSetupMessage.jsx:32
@@ -1432,8 +1432,8 @@ msgid "LDAP"
 msgstr "LDAP"
 
 #: frontend/src/metabase/plugins/builtin/auth/ldap.js:19
-msgid "Allows users within your LDAP directory to log in to Metabase with their LDAP credentials, and allows automatic mapping of LDAP groups to Metabase groups."
-msgstr "允许你的LDAP目录中的用户用他们的LDAP凭证登录到Metabase，并允许LDAP组自动映射到Metabase组。"
+msgid "Allows users within your LDAP directory to log in to DataMan with their LDAP credentials, and allows automatic mapping of LDAP groups to DataMan groups."
+msgstr "允许你的LDAP目录中的用户用他们的LDAP凭证登录到DataMan，并允许LDAP组自动映射到DataMan组。"
 
 #: frontend/src/metabase/admin/settings/components/SettingsBatchForm.jsx:20
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:61
@@ -1507,8 +1507,8 @@ msgid "Getting set up"
 msgstr "着手准备"
 
 #: frontend/src/metabase/admin/settings/components/SettingsSetupList.jsx:112
-msgid "A few things you can do to get the most out of Metabase."
-msgstr "你可以做几件事情来获得Metabase的最大收益。"
+msgid "A few things you can do to get the most out of DataMan."
+msgstr "你可以做几件事情来获得DataMan的最大收益。"
 
 #: frontend/src/metabase/admin/settings/components/SettingsSetupList.jsx:121
 msgid "Recommended next step"
@@ -1519,8 +1519,8 @@ msgid "Google Sign-In"
 msgstr "Google登录"
 
 #: frontend/src/metabase/admin/settings/components/SettingsSingleSignOnForm.jsx:123
-msgid "To allow users to sign in with Google you'll need to give Metabase a Google Developers console application client ID. It only takes a few steps and instructions on how to create a key can be found {0}"
-msgstr "为了允许用户使用Google登录，你需要给Metabase一个Google开发者应用端ID，在如何创建一个可以被找到的密钥上{0}，它只需要几步和一些指导。"
+msgid "To allow users to sign in with Google you'll need to give DataMan a Google Developers console application client ID. It only takes a few steps and instructions on how to create a key can be found {0}"
+msgstr "为了允许用户使用Google登录，你需要给DataMan一个Google开发者应用端ID，在如何创建一个可以被找到的密钥上{0}，它只需要几步和一些指导。"
 
 #: frontend/src/metabase/admin/settings/components/SettingsSingleSignOnForm.jsx:140
 msgid "Your Google client ID"
@@ -1539,16 +1539,16 @@ msgid "Create a Slack Bot User for MetaBot"
 msgstr "为MetaBot创建一个Slack Bot用户"
 
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:256
-msgid "Once you're there, give it a name and click {0}. Then copy and paste the Bot API Token into the field below. Once you are done, create a \"metabase_files\" channel in Slack. Metabase needs this to upload graphs."
-msgstr "一旦你到了那里，给它一个名字，然后点击{0}。然后复制并粘贴Bot API Token到下面的字段中。一旦你完成了，在Slack中创建一个 \"metabase_files \"频道。Metabase需要这个来上传图表。"
+msgid "Once you're there, give it a name and click {0}. Then copy and paste the Bot API Token into the field below. Once you are done, create a \"metabase_files\" channel in Slack. DataMan needs this to upload graphs."
+msgstr "一旦你到了那里，给它一个名字，然后点击{0}。然后复制并粘贴Bot API Token到下面的字段中。一旦你完成了，在Slack中创建一个 \"metabase_files \"频道。DataMan需要这个来上传图表。"
 
 #: frontend/src/metabase/admin/settings/components/SettingsUpdatesForm/VersionUpdateNotice/VersionUpdateNotice.jsx:53
-msgid "You're running Metabase {0} which is the latest and greatest!"
-msgstr "你正在运行 Metabase {0}，已经是最新版本！"
+msgid "You're running DataMan {0} which is the latest and greatest!"
+msgstr "你正在运行 DataMan {0}，已经是最新版本！"
 
 #: frontend/src/metabase/admin/settings/components/SettingsUpdatesForm.jsx:100
-msgid "Metabase {0} is available.  You're running {1}"
-msgstr "Metabase {0}可更新。你正在运行是{1}"
+msgid "DataMan {0} is available.  You're running {1}"
+msgstr "DataMan {0}可更新。你正在运行是{1}"
 
 #: enterprise/frontend/src/metabase-enterprise/audit_app/components/AuditNotificationEditModal/AuditNotificationEditModal.jsx:76
 #: frontend/src/metabase/admin/settings/components/SettingsUpdatesForm/VersionUpdateNotice/VersionUpdateNotice.jsx:86
@@ -1663,8 +1663,8 @@ msgid "By enabling embedding you're agreeing to the embedding license located at
 msgstr "通过启用嵌入功能，你同意位于以下网址的嵌入许可："
 
 #: frontend/src/metabase/admin/settings/components/widgets/EmbeddingLegalese.jsx:23
-msgid "In plain English, when you embed charts or dashboards from Metabase in your own application, that application isn't subject to the Affero General Public License that covers the rest of Metabase, provided you keep the Metabase logo and the \"Powered by Metabase\" visible on those embeds. You should, however, read the license text linked above as that is the actual license that you will be agreeing to by enabling this feature."
-msgstr "简单地说，当你在自己的应用程序中嵌入Metabase的图表或仪表板时，该应用程序不受涵盖Metabase其他部分的Affero通用公共许可证的约束，只要你在这些嵌入物上保持Metabase标志和 \"Powered by Metabase \"可见。但是，你应该阅读上面链接的许可证文本，因为这是你在启用此功能时将同意的实际许可证。"
+msgid "In plain English, when you embed charts or dashboards from DataMan in your own application, that application isn't subject to the Affero General Public License that covers the rest of DataMan, provided you keep the DataMan logo and the \"Powered by DataMan\" visible on those embeds. You should, however, read the license text linked above as that is the actual license that you will be agreeing to by enabling this feature."
+msgstr "简单地说，当你在自己的应用程序中嵌入DataMan的图表或仪表板时，该应用程序不受涵盖DataMan其他部分的Affero通用公共许可证的约束，只要你在这些嵌入物上保持DataMan标志和 \"Powered by DataMan \"可见。但是，你应该阅读上面链接的许可证文本，因为这是你在启用此功能时将同意的实际许可证。"
 
 #: frontend/src/metabase/admin/settings/components/widgets/EmbeddingLegalese/EmbeddingLegalese.tsx:69
 msgid "Enable"
@@ -1675,12 +1675,12 @@ msgid "Premium embedding enabled"
 msgstr "启用高级嵌入功能"
 
 #: frontend/src/metabase/admin/settings/components/widgets/EmbeddingLevel.jsx:30
-msgid "Enter the token you bought from the Metabase Store"
-msgstr "输入你从Metabase商店购买的代币"
+msgid "Enter the token you bought from the DataMan Store"
+msgstr "输入你从DataMan商店购买的代币"
 
 #: frontend/src/metabase/admin/settings/components/widgets/EmbeddingLevel.jsx:57
-msgid "Premium embedding lets you disable \"Powered by Metabase\" on your embedded dashboards and questions."
-msgstr "高级嵌入让你在嵌入的仪表板和问题上禁用 \"Powered by Metabase\"。"
+msgid "Premium embedding lets you disable \"Powered by DataMan\" on your embedded dashboards and questions."
+msgstr "高级嵌入让你在嵌入的仪表板和问题上禁用 \"Powered by DataMan\"。"
 
 #: frontend/src/metabase/admin/settings/components/widgets/EmbeddingLevel.jsx:64
 msgid "Buy a token"
@@ -1703,10 +1703,10 @@ msgid "Create a mapping"
 msgstr "创建一个映射"
 
 #: frontend/src/metabase/admin/settings/components/widgets/GroupMappingsWidget.jsx:145
-msgid "Mappings allow Metabase to automatically add and remove users from groups based on the membership information provided by the\n"
+msgid "Mappings allow DataMan to automatically add and remove users from groups based on the membership information provided by the\n"
 "directory server. Membership to the Admin group can be granted through mappings, but will not be automatically removed as a\n"
 "failsafe measure."
-msgstr "映射允许Metabase根据目录服务器提供的成员资格信息自动添加和删除组中的用户。Admin组的成员身份可以通过映射授予，但作为故障保护措施并不会被自动删除。"
+msgstr "映射允许DataMan根据目录服务器提供的成员资格信息自动添加和删除组中的用户。Admin组的成员身份可以通过映射授予，但作为故障保护措施并不会被自动删除。"
 
 #: frontend/src/metabase/plugins/builtin/auth/ldap.js:109
 msgid "Distinguished Name"
@@ -1979,8 +1979,8 @@ msgid "Map tile server URL"
 msgstr "地图瓦片服务器URL"
 
 #: frontend/src/metabase/admin/settings/selectors.js:239
-msgid "Metabase uses OpenStreetMaps by default."
-msgstr "Metabase默认使用OpenStreet地图"
+msgid "DataMan uses OpenStreetMaps by default."
+msgstr "DataMan默认使用OpenStreet地图"
 
 #: frontend/src/metabase/admin/settings/selectors.js:244
 msgid "Custom Maps"
@@ -2011,8 +2011,8 @@ msgid "Embedding in other Applications"
 msgstr "嵌入在其他的应用中"
 
 #: frontend/src/metabase/admin/settings/selectors.js:332
-msgid "Enable Embedding Metabase in other Applications"
-msgstr "启用在其他应用程序中嵌入 Metabase"
+msgid "Enable Embedding DataMan in other Applications"
+msgstr "启用在其他应用程序中嵌入 DataMan"
 
 #: frontend/src/metabase/admin/settings/selectors.js:416
 msgid "Embedding secret key"
@@ -2074,12 +2074,12 @@ msgid "Back to login"
 msgstr "返回登录"
 
 #: frontend/src/metabase/auth/components/GoogleNoAccount.jsx:15
-msgid "No Metabase account exists for this Google account."
-msgstr "这个谷歌账户不存在Metabase账户。"
+msgid "No DataMan account exists for this Google account."
+msgstr "这个谷歌账户不存在DataMan账户。"
 
 #: metabase/integrations/google.clj:21
-msgid "You'll need an administrator to create a Metabase account before you can use Google to log in."
-msgstr "你需要一个管理员来创建Metabase账户，然后才能使用谷歌登录。"
+msgid "You'll need an administrator to create a DataMan account before you can use Google to log in."
+msgstr "你需要一个管理员来创建DataMan账户，然后才能使用谷歌登录。"
 
 #: frontend/src/metabase/auth/components/AuthProviderButton.jsx:24
 msgid "Sign in with {0}"
@@ -2094,8 +2094,8 @@ msgid "Forgot password"
 msgstr "忘记密码"
 
 #: frontend/src/metabase/entities/users/forms.js:184
-msgid "The email you use for your Metabase account"
-msgstr "你用于Metabase账户的电子邮件"
+msgid "The email you use for your DataMan account"
+msgstr "你用于DataMan账户的电子邮件"
 
 #: frontend/src/metabase/auth/components/ForgotPassword/ForgotPassword.tsx:82
 msgid "Send password reset email"
@@ -2106,8 +2106,8 @@ msgid "Check your email for instructions on how to reset your password."
 msgstr "请查看你的电子邮件，了解如何重设密码的说明。"
 
 #: frontend/src/metabase/auth/components/Login/Login.tsx:27
-msgid "Sign in to Metabase"
-msgstr "登录到Metabase"
+msgid "Sign in to DataMan"
+msgstr "登录到DataMan"
 
 #: frontend/src/metabase/auth/containers/LoginApp.jsx:165
 msgid "OR"
@@ -2410,13 +2410,13 @@ msgstr "一些数据库安装只有通过SSH通道访问的服务器有权访问
 "启用这个选项，通常比直接连接速度更慢。"
 
 #: frontend/src/metabase/entities/databases/forms.js:349
-msgid "This is a large database, so let me choose when Metabase syncs and scans"
-msgstr "这是一个大型数据库，所以让我选择Metabase同步和扫描的时间"
+msgid "This is a large database, so let me choose when DataMan syncs and scans"
+msgstr "这是一个大型数据库，所以让我选择DataMan同步和扫描的时间"
 
 #: frontend/src/metabase/components/DatabaseDetailsForm.jsx:296
-msgid "By default, Metabase does a lightweight hourly sync and an intensive daily scan of field values.\n"
+msgid "By default, DataMan does a lightweight hourly sync and an intensive daily scan of field values.\n"
 "If you have a large database, we recommend turning this on and reviewing when and how often the field value scans happen."
-msgstr "默认情况下，Metabase每小时执行一次轻量级同步，每天执行一次密集扫描。\n"
+msgstr "默认情况下，DataMan每小时执行一次轻量级同步，每天执行一次密集扫描。\n"
 "如果你有一个大型数据库，我们建议启用此功能并查看字段值扫描的发生时间和频率。"
 
 #: frontend/src/metabase/entities/databases/forms.js:180
@@ -2441,8 +2441,8 @@ msgid "with Google Drive permissions"
 msgstr "使用Google Driver权限"
 
 #: frontend/src/metabase/entities/databases/forms.js:248
-msgid "To use Metabase with this data you must enable API access in the Google Developers Console."
-msgstr "要将Metabase用于此数据，你必须在Google Developers Console中启用API访问权限。"
+msgid "To use DataMan with this data you must enable API access in the Google Developers Console."
+msgstr "要将DataMan用于此数据，你必须在Google Developers Console中启用API访问权限。"
 
 #: frontend/src/metabase/entities/databases/forms.js:249
 msgid "{0} to go to the console if you haven't already done so."
@@ -2712,8 +2712,8 @@ msgid "Loading..."
 msgstr "正在加载..."
 
 #: frontend/src/metabase/setup/components/NewsletterForm/NewsletterForm.tsx:43
-msgid "Metabase Newsletter"
-msgstr "Metabase新闻"
+msgid "DataMan Newsletter"
+msgstr "DataMan新闻"
 
 #: frontend/src/metabase/setup/components/NewsletterForm/NewsletterForm.tsx:47
 msgid "Get infrequent emails about new releases and feature updates."
@@ -2724,8 +2724,8 @@ msgid "Subscribe"
 msgstr "订阅"
 
 #: frontend/src/metabase/setup/components/NewsletterForm/NewsletterForm.tsx:72
-msgid "You're subscribed. Thanks for using Metabase!"
-msgstr "你已经订阅了。谢谢你使用Metabase!"
+msgid "You're subscribed. Thanks for using DataMan!"
+msgstr "你已经订阅了。谢谢你使用DataMan!"
 
 #: frontend/src/metabase/containers/ErrorPages.jsx:33
 msgid "We're a little lost..."
@@ -2825,8 +2825,8 @@ msgid "Calendar Day"
 msgstr "日历"
 
 #: frontend/src/metabase/components/SchedulePicker.jsx:257
-msgid "your Metabase timezone"
-msgstr "你的Metabase时区"
+msgid "your DataMan timezone"
+msgstr "你的DataMan时区"
 
 #: frontend/src/metabase/components/SearchHeader.jsx:21
 msgid "Filter this list..."
@@ -3264,8 +3264,8 @@ msgid "Hello World!"
 msgstr "Hello World!"
 
 #: frontend/src/metabase/home/components/Activity.jsx:265
-msgid "Metabase is up and running."
-msgstr "Metabase正在运行"
+msgid "DataMan is up and running."
+msgstr "DataMan正在运行"
 
 #: frontend/src/metabase/home/components/Activity.jsx:271
 #: frontend/src/metabase/home/components/Activity.jsx:301
@@ -3639,8 +3639,8 @@ msgid "Do Not Include"
 msgstr "不包括"
 
 #: frontend/src/metabase/lib/core.js:260
-msgid "Metabase will never retrieve this field. Use this for sensitive or irrelevant information."
-msgstr "Metabase永远不会获取此字段。将此用于敏感或不相关的信息。"
+msgid "DataMan will never retrieve this field. Use this for sensitive or irrelevant information."
+msgstr "DataMan永远不会获取此字段。将此用于敏感或不相关的信息。"
 
 #: frontend/src/metabase/lib/query/description.js:77
 #: frontend/src/metabase/lib/query/description.js:269
@@ -4252,8 +4252,8 @@ msgid "Help"
 msgstr "帮助"
 
 #: frontend/src/metabase/nav/components/ProfileLink.jsx:78
-msgid "About Metabase"
-msgstr "关于Metabase"
+msgid "About DataMan"
+msgstr "关于DataMan"
 
 #: frontend/src/metabase/nav/components/ProfileLink.jsx:84
 msgid "Sign out"
@@ -4280,8 +4280,8 @@ msgid "and is built with care in San Francisco, CA"
 msgstr "并在加利福尼亚州的旧金山精心打造。"
 
 #: frontend/src/metabase/nav/components/AdminNavbar/AdminNavbar.tsx:37
-msgid "Metabase Admin"
-msgstr "Metabase管理后台"
+msgid "DataMan Admin"
+msgstr "DataMan管理后台"
 
 #: frontend/src/metabase/reference/databases/TableQuestions.jsx:35
 #: frontend/src/metabase/reference/metrics/MetricQuestions.jsx:36
@@ -4587,8 +4587,8 @@ msgid "Public link"
 msgstr "公共链接"
 
 #: frontend/src/metabase/public/components/widgets/SharingPane.tsx:114
-msgid "Share this {0} with people who don't have a Metabase account using the URL below:"
-msgstr "使用下面的URL与没有Metabase账户的人分享这个{0}。"
+msgid "Share this {0} with people who don't have a DataMan account using the URL below:"
+msgstr "使用下面的URL与没有DataMan账户的人分享这个{0}。"
 
 #: frontend/src/metabase/public/components/widgets/SharingPane.tsx:146
 msgid "Public embed"
@@ -4807,8 +4807,8 @@ msgid "Help everyone on your team stay in sync with your data."
 msgstr "帮助你团队中的每个人与你的数据保持同步。"
 
 #: frontend/src/metabase/pulse/components/WhatsAPulse.jsx:32
-msgid "Pulses let you send data from Metabase to email or Slack on the schedule of your choice."
-msgstr "定时让你按照你选择的时间表从Metabase发送数据到电子邮件或Slack。"
+msgid "Pulses let you send data from DataMan to email or Slack on the schedule of your choice."
+msgstr "定时让你按照你选择的时间表从DataMan发送数据到电子邮件或Slack。"
 
 #: frontend/src/metabase/modes/components/TimeseriesFilterWidget.jsx:72
 msgid "After {0}"
@@ -6048,8 +6048,8 @@ msgid "X-ray this field"
 msgstr "透视这个字段"
 
 #: frontend/src/metabase/reference/databases/NoDatabasesEmptyState.jsx:8
-msgid "Metabase is no fun without any data"
-msgstr "Metabase没有任何数据的话一点都不好玩"
+msgid "DataMan is no fun without any data"
+msgstr "DataMan没有任何数据的话一点都不好玩"
 
 #: frontend/src/metabase/reference/databases/NoDatabasesEmptyState.jsx:9
 msgid "Your databases will appear here once you connect one"
@@ -6189,8 +6189,8 @@ msgid "Contact {0}"
 msgstr "联系{0}"
 
 #: frontend/src/metabase/reference/guide/GettingStartedGuideEditForm.jsx:253
-msgid "Help new Metabase users find their way around."
-msgstr "帮助Metabase的新用户找到他们的方法。"
+msgid "Help new DataMan users find their way around."
+msgstr "帮助DataMan的新用户找到他们的方法。"
 
 #: frontend/src/metabase/reference/guide/GettingStartedGuideEditForm.jsx:256
 msgid "The Getting Started guide highlights the dashboard, metrics, segments, and tables that matter most, and informs your users of important things they should know before digging into the data."
@@ -6404,7 +6404,7 @@ msgid "Connecting to {0}"
 msgstr "连接到{0}。"
 
 #: frontend/src/metabase/setup/components/DatabaseConnectionStep.jsx:132
-msgid "You’ll need some info about your database, like the username and password. If you don’t have that right now, Metabase also comes with a sample dataset you can get started with."
+msgid "You’ll need some info about your database, like the username and password. If you don’t have that right now, DataMan also comes with a sample dataset you can get started with."
 msgstr "在开始之前需要配置数据库信息（如：用户名、密码）。如果暂时没有这些信息metabase也提供了一个简单数据源供学习使用。"
 
 #: frontend/src/metabase/setup/components/DatabaseStep/DatabaseStep.tsx:160
@@ -6428,20 +6428,20 @@ msgid "We won't collect any usage events"
 msgstr "我们不会收集任何使用事件"
 
 #: frontend/src/metabase/setup/components/PreferencesStep.jsx:90
-msgid "In order to help us improve Metabase, we'd like to collect certain data about usage through Google Analytics."
-msgstr "为了提升Metabase的用户体验，可能需要通过Google Analytics收集特定的使用数据。"
+msgid "In order to help us improve DataMan, we'd like to collect certain data about usage through Google Analytics."
+msgstr "为了提升DataMan的用户体验，可能需要通过Google Analytics收集特定的使用数据。"
 
 #: frontend/src/metabase/setup/components/PreferencesStep.jsx:95
 msgid "Here's a full list of everything we track and why."
 msgstr "以下是我们跟踪的所有内容和原因的完整清单。"
 
 #: frontend/src/metabase/setup/components/PreferencesStep/PreferencesStep.tsx:79
-msgid "Allow Metabase to anonymously collect usage events"
-msgstr "允许Metabase匿名收集使用事件"
+msgid "Allow DataMan to anonymously collect usage events"
+msgstr "允许DataMan匿名收集使用事件"
 
 #: frontend/src/metabase/setup/components/PreferencesStep/PreferencesStep.tsx:84
-msgid "Metabase {0} collects anything about your data or question results."
-msgstr "Metabase{0}收集任何事情关于你的数据或者提问结果"
+msgid "DataMan {0} collects anything about your data or question results."
+msgstr "DataMan{0}收集任何事情关于你的数据或者提问结果"
 
 #: frontend/src/metabase/lib/settings.ts:255
 #: frontend/src/metabase/setup/components/PreferencesStep/PreferencesStep.tsx:85
@@ -6469,8 +6469,8 @@ msgid "is just a click away."
 msgstr "只需点击一下就可以了。"
 
 #: frontend/src/metabase/setup/components/WelcomePage/WelcomePage.tsx:39
-msgid "Welcome to Metabase"
-msgstr "欢迎来到Metabase"
+msgid "Welcome to DataMan"
+msgstr "欢迎来到DataMan"
 
 #: frontend/src/metabase/setup/components/Setup.jsx:132
 msgid "Looks like everything is working. Now let’s get to know you, connect to your data, and start finding you some answers!"
@@ -6485,8 +6485,8 @@ msgid "You're all set up!"
 msgstr "都准备好了!"
 
 #: frontend/src/metabase/setup/components/CompletedStep/CompletedStep.tsx:32
-msgid "Take me to Metabase"
-msgstr "带我到Metabase"
+msgid "Take me to DataMan"
+msgstr "带我到DataMan"
 
 #: frontend/src/metabase/setup/components/UserStep/UserStep.tsx:110
 msgid "What should we call you?"
@@ -6558,8 +6558,8 @@ msgid "We’ll show you some interesting explorations of your data in\n"
 msgstr "我们很快将会展示给你一些关于你的数据的有趣的探索结果。"
 
 #: frontend/src/metabase/setup/containers/PostSetupApp.jsx:69
-msgid "This seems to be taking a while. In the meantime, you can check out one of these example explorations to see what Metabase can do for you."
-msgstr "这似乎需要一些时间。在此期间，你可以查看其中一个例子的探索，看看Metabase能为你做什么。"
+msgid "This seems to be taking a while. In the meantime, you can check out one of these example explorations to see what DataMan can do for you."
+msgstr "这似乎需要一些时间。在此期间，你可以查看其中一个例子的探索，看看DataMan能为你做什么。"
 
 #: frontend/src/metabase/setup/containers/PostSetupApp.jsx:83
 msgid "I took a look at the data you just connected, and I have some explorations of interesting things I found. Hope you like them!"
@@ -7669,8 +7669,8 @@ msgid "Email is not verified."
 msgstr "电子邮件没有得到验证。"
 
 #: src/metabase/integrations/google.clj
-msgid "You''ll need an administrator to create a Metabase account before you can use Google to log in."
-msgstr "你需要一个管理员创建一个Metabase账户，然后才能使用谷歌登录。"
+msgid "You''ll need an administrator to create a DataMan account before you can use Google to log in."
+msgstr "你需要一个管理员创建一个DataMan账户，然后才能使用谷歌登录。"
 
 #: target/classes/metabase/integrations/google.clj
 msgid "Successfully authenticated Google Auth token for: {0} {1}"
@@ -7736,7 +7736,7 @@ msgstr "有很多保存在{0}的问题？创建集合来帮助管理它们，并
 
 #. This is the very first log message that will get printed.
 #. It's here because this is one of the very first namespaces that gets loaded, and the first that has access to the logger
-#. It shows up a solid 10-15 seconds before the "Starting Metabase in STANDALONE mode" message because so many other namespaces need to get loaded
+#. It shows up a solid 10-15 seconds before the "Starting DataMan in STANDALONE mode" message because so many other namespaces need to get loaded
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:225
 #: frontend/src/metabase/home/components/Activity.jsx:87
 #: frontend/src/metabase/nav/components/ProfileLink.jsx:101
@@ -7744,8 +7744,8 @@ msgstr "有很多保存在{0}的问题？创建集合来帮助管理它们，并
 #: frontend/src/metabase/routes-public.jsx:13
 #: frontend/src/metabase/routes.jsx:151 metabase/api/setup.clj:242
 #: metabase/email/messages.clj:47
-msgid "Metabase"
-msgstr "Metabase"
+msgid "DataMan"
+msgstr "DataMan"
 
 #: metabase/api/setup.clj:250
 msgid "Create metrics"
@@ -8119,20 +8119,20 @@ msgid "FAIL [[[{0}]]]"
 msgstr "失败 [[[{0}]]]"
 
 #: metabase/core.clj:60
-msgid "Please use the following URL to setup your Metabase installation:"
-msgstr "请使用以下网址来设置你的Metabase安装。"
+msgid "Please use the following URL to setup your DataMan installation:"
+msgstr "请使用以下网址来设置你的DataMan安装。"
 
 #: metabase/core.clj:74
-msgid "Metabase Shutting Down ..."
-msgstr "Metabase正在关闭……"
+msgid "DataMan Shutting Down ..."
+msgstr "DataMan正在关闭……"
 
 #: metabase/core.clj:79
-msgid "Metabase Shutdown COMPLETE"
-msgstr "Metabase关闭完成"
+msgid "DataMan Shutdown COMPLETE"
+msgstr "DataMan关闭完成"
 
 #: metabase/core.clj:84
-msgid "Starting Metabase version {0} ..."
-msgstr "启动Metabase版本{0} ..."
+msgid "Starting DataMan version {0} ..."
+msgstr "启动DataMan版本{0} ..."
 
 #: src/metabase/core.clj
 msgid "System timezone is ''{0}'' ..."
@@ -8140,7 +8140,7 @@ msgstr "系统时区是“{0}”"
 
 #. startup database.  validates connection & runs any necessary migrations
 #: metabase/core.clj:97
-msgid "Setting up and migrating Metabase DB. Please sit tight, this may take a minute..."
+msgid "Setting up and migrating DataMan DB. Please sit tight, this may take a minute..."
 msgstr "Metabse数据库设置、迁移中。坐稳了，这个可能要花一分钟……"
 
 #: metabase/core.clj:114
@@ -8148,8 +8148,8 @@ msgid "Looks like this is a new installation ... preparing setup wizard"
 msgstr "看起来这是一个全新安装......开始启动设置向导"
 
 #: metabase/core.clj:131
-msgid "Metabase Initialization COMPLETE"
-msgstr "Metabase初始化完成"
+msgid "DataMan Initialization COMPLETE"
+msgstr "DataMan初始化完成"
 
 #: metabase/server.clj:45
 msgid "Launching Embedded Jetty Webserver with config:"
@@ -8160,12 +8160,12 @@ msgid "Shutting Down Embedded Jetty Webserver"
 msgstr "关闭嵌入式Jetty Webserver"
 
 #: metabase/core.clj:145
-msgid "Starting Metabase in STANDALONE mode"
-msgstr "在STANDALONE模式下启动Metabase"
+msgid "Starting DataMan in STANDALONE mode"
+msgstr "在STANDALONE模式下启动DataMan"
 
 #: metabase/core.clj:155
-msgid "Metabase Initialization FAILED"
-msgstr "Metabase初始化失败"
+msgid "DataMan Initialization FAILED"
+msgstr "DataMan初始化失败"
 
 #: metabase/db/liquibase.clj:126
 msgid "Database has migration lock; cannot run migrations."
@@ -8325,8 +8325,8 @@ msgstr "成功地将metabase.driver.FixedHiveDriver与JDBC注册。"
 #. CONFIG
 #. TODO - smtp-port should be switched to type :integer
 #: src/metabase/email.clj target/classes/metabase/email.clj
-msgid "Email address you want to use as the sender of Metabase."
-msgstr "你想用来作为Metabase的发件人的电子邮件地址。"
+msgid "Email address you want to use as the sender of DataMan."
+msgstr "你想用来作为DataMan的发件人的电子邮件地址。"
 
 #: metabase/email.clj:30
 msgid "The address of the SMTP server that handles your emails."
@@ -8418,8 +8418,8 @@ msgstr "组的搜索基础，如果你的LDAP目录提供了''memberOf''覆盖�
 
 #. Should be in the form: {"cn=Some Group,dc=...": [1, 2, 3]} where keys are LDAP groups and values are lists of MB groups IDs
 #: metabase/integrations/ldap.clj:81
-msgid "JSON containing LDAP to Metabase group mappings."
-msgstr "JSON包含LDAP到Metabase 组映射"
+msgid "JSON containing LDAP to DataMan group mappings."
+msgstr "JSON包含LDAP到DataMan 组映射"
 
 #. Define a setting which captures our Slack api token
 #: target/classes/metabase/integrations/slack.clj
@@ -8637,8 +8637,8 @@ msgid "Storing FieldValues for Field {0}..."
 msgstr "储存字段{0}的字段值..."
 
 #: src/metabase/models/humanization.clj
-msgid "Metabase can attempt to transform your table and field names into more sensible, human-readable versions, e.g. \"somehorriblename\" becomes \"Some Horrible Name\"."
-msgstr "Metabase 会尝试将数据表名称和表中字段名称转换为适合阅读的版本，例如：将somehorriblename转换为 Some Horrible Name。"
+msgid "DataMan can attempt to transform your table and field names into more sensible, human-readable versions, e.g. \"somehorriblename\" becomes \"Some Horrible Name\"."
+msgstr "DataMan 会尝试将数据表名称和表中字段名称转换为适合阅读的版本，例如：将somehorriblename转换为 Some Horrible Name。"
 
 #: src/metabase/models/humanization.clj
 msgid "This doesn’t work all that well if the names are in a language other than English, however."
@@ -8787,12 +8787,12 @@ msgid "Loading plugin {0}... "
 msgstr "正在加载插件{0}... "
 
 #: src/metabase/plugins.clj
-msgid "It looks like you have some external dependencies in your Metabase plugins directory."
-msgstr "看起来你的Metabase插件目录里有一些外部依赖。"
+msgid "It looks like you have some external dependencies in your DataMan plugins directory."
+msgstr "看起来你的DataMan插件目录里有一些外部依赖。"
 
 #: src/metabase/plugins.clj
-msgid "With Java 9 or higher, Metabase cannot automatically add them to your classpath."
-msgstr "对于Java 9或更高版本，Metabase不能自动将它们添加到你的classpath中。"
+msgid "With Java 9 or higher, DataMan cannot automatically add them to your classpath."
+msgstr "对于Java 9或更高版本，DataMan不能自动将它们添加到你的classpath中。"
 
 #: src/metabase/plugins.clj
 msgid "Instead, you should include them at launch with the -cp option. For example:"
@@ -8803,28 +8803,28 @@ msgid "See https://metabase.com/docs/latest/operations-guide/start.html#java-ver
 msgstr "更多细节见https://metabase.com/docs/latest/operations-guide/start.html#java-versions。"
 
 #: src/metabase/plugins.clj
-msgid "(If you're already running Metabase this way, you can ignore this message.)"
-msgstr "(如果你已经以这种方式运行Metabase，你可以忽略这条信息）。"
+msgid "(If you're already running DataMan this way, you can ignore this message.)"
+msgstr "(如果你已经以这种方式运行DataMan，你可以忽略这条信息）。"
 
 #: metabase/public_settings.clj:43
-msgid "Identify when new versions of Metabase are available."
-msgstr "确定新版本的Metabase何时可用。"
+msgid "Identify when new versions of DataMan are available."
+msgstr "确定新版本的DataMan何时可用。"
 
 #: metabase/public_settings.clj:48
-msgid "Information about available versions of Metabase."
-msgstr "关于Metabase的可用版本的信息。"
+msgid "Information about available versions of DataMan."
+msgstr "关于DataMan的可用版本的信息。"
 
 #: metabase/public_settings.clj:65
-msgid "The name used for this instance of Metabase."
-msgstr "用于Metabase的这个实例的名称。"
+msgid "The name used for this instance of DataMan."
+msgstr "用于DataMan的这个实例的名称。"
 
 #: src/metabase/public_settings.clj
-msgid "The base URL of this Metabase instance, e.g. \"http://metabase.my-company.com\"."
-msgstr "这个Metabase实例的基本URL，例如 \"http://metabase.my-company.com\"。"
+msgid "The base URL of this DataMan instance, e.g. \"http://metabase.my-company.com\"."
+msgstr "这个DataMan实例的基本URL，例如 \"http://metabase.my-company.com\"。"
 
 #: src/metabase/public_settings.clj
-msgid "The default language for this Metabase instance."
-msgstr "这个Metabase实例的默认语言。"
+msgid "The default language for this DataMan instance."
+msgstr "这个DataMan实例的默认语言。"
 
 #: src/metabase/public_settings.clj
 msgid "This only applies to emails, Pulses, etc. Users'' browsers will specify the language used in the user interface."
@@ -8835,8 +8835,8 @@ msgid "The email address users should be referred to if they encounter a problem
 msgstr "如果用户遇到问题，应该参考的电子邮件地址。"
 
 #: metabase/public_settings.clj:155
-msgid "Enable the collection of anonymous usage data in order to help Metabase improve."
-msgstr "启用匿名使用数据的收集，以帮助Metabase改进。"
+msgid "Enable the collection of anonymous usage data in order to help DataMan improve."
+msgstr "启用匿名使用数据的收集，以帮助DataMan改进。"
 
 #: metabase/public_settings.clj:173
 msgid "The map tile server URL template used in map visualizations, for example from OpenStreetMaps or MapBox."
@@ -8867,8 +8867,8 @@ msgid "The absolute maximum time to keep any cached query results, in seconds."
 msgstr "保留任何缓存查询结果的绝对最大时间，单位是秒。"
 
 #: metabase/public_settings.clj:256
-msgid "Metabase will cache all saved questions with an average query execution time longer than this many seconds:"
-msgstr "Metabase会捕捉所有平均查询时间大于这么多秒的已保存问题"
+msgid "DataMan will cache all saved questions with an average query execution time longer than this many seconds:"
+msgstr "DataMan会捕捉所有平均查询时间大于这么多秒的已保存问题"
 
 #: src/metabase/public_settings.clj target/classes/metabase/public_settings.clj
 msgid "To determine how long each saved question''s cached result should stick around, we take the query''s average execution time and multiply that by whatever you input here."
@@ -9078,10 +9078,10 @@ msgstr "job已存在"
 
 #. This is the very first log message that will get printed.  It's here because this is one of the very first
 #. namespaces that gets loaded, and the first that has access to the logger It shows up a solid 10-15 seconds before
-#. the "Starting Metabase in STANDALONE mode" message because so many other namespaces need to get loaded
+#. the "Starting DataMan in STANDALONE mode" message because so many other namespaces need to get loaded
 #: src/metabase/util.clj
-msgid "Loading Metabase..."
-msgstr "正在加载Metabase..."
+msgid "Loading DataMan..."
+msgstr "正在加载DataMan..."
 
 #: src/metabase/util/date.clj
 msgid "Possible timezone conflict found on database {0}."
@@ -9104,12 +9104,12 @@ msgid "MB_ENCRYPTION_SECRET_KEY must be at least 16 characters."
 msgstr "MB_ENCRYPTION_SECRET_KEY至少要16个字符"
 
 #: metabase/util/encryption.clj:41
-msgid "Saved credentials encryption is ENABLED for this Metabase instance."
-msgstr "保存的凭证加密对这个Metabase实例来说是ENABLED。"
+msgid "Saved credentials encryption is ENABLED for this DataMan instance."
+msgstr "保存的凭证加密对这个DataMan实例来说是ENABLED。"
 
 #: metabase/util/encryption.clj:42
-msgid "Saved credentials encryption is DISABLED for this Metabase instance."
-msgstr "对于这个Metabase实例，保存的凭证加密是禁用的。"
+msgid "Saved credentials encryption is DISABLED for this DataMan instance."
+msgstr "对于这个DataMan实例，保存的凭证加密是禁用的。"
 
 #: src/metabase/util/encryption.clj
 msgid "nFor more information, see"
@@ -9343,8 +9343,8 @@ msgid "No results"
 msgstr "没有结果"
 
 #: frontend/src/metabase/home/containers/SearchApp.jsx:42
-msgid "Metabase couldn't find any results for your search."
-msgstr "Metabase无法找到你的搜索结果。"
+msgid "DataMan couldn't find any results for your search."
+msgstr "DataMan无法找到你的搜索结果。"
 
 #: frontend/src/metabase/new_query/containers/MetricSearch.jsx:115
 msgid "No metrics"
@@ -9727,8 +9727,8 @@ msgid "Troubleshooting logs"
 msgstr "故障处理日志"
 
 #: frontend/src/metabase/admin/tasks/containers/TasksApp.jsx:47
-msgid "Trying to get to the bottom of something? This section shows logs of Metabase's background tasks, which can help shed light on what's going on."
-msgstr "Trying to get to the bottom of something? This section shows logs of Metabase's background tasks, which can help shed light on what's going on."
+msgid "Trying to get to the bottom of something? This section shows logs of DataMan's background tasks, which can help shed light on what's going on."
+msgstr "Trying to get to the bottom of something? This section shows logs of DataMan's background tasks, which can help shed light on what's going on."
 
 #: frontend/src/metabase/admin/tasks/containers/TasksApp.jsx:71
 msgid "Task"
@@ -11599,44 +11599,44 @@ msgid "We’d love your feedback."
 msgstr "我们欢迎您反馈。"
 
 #: metabase/email/messages.clj:107
-msgid "It looks like Metabase wasn’t quite a match for you."
-msgstr "看起来似乎Metabase不太适合你。"
+msgid "It looks like DataMan wasn’t quite a match for you."
+msgstr "看起来似乎DataMan不太适合你。"
 
 #: metabase/email/messages.clj:109
-msgid "Would you mind taking a fast 5 question survey to help the Metabase team understand why and make things better in the future?"
-msgstr "为了帮助Metabase团队改进产品，请参与完成包含5个简单问题的调查，谢谢。"
+msgid "Would you mind taking a fast 5 question survey to help the DataMan team understand why and make things better in the future?"
+msgstr "为了帮助DataMan团队改进产品，请参与完成包含5个简单问题的调查，谢谢。"
 
 #: metabase/email/messages.clj:113
-msgid "We hope you''ve been enjoying Metabase."
-msgstr "我们希望你一直喜欢Metabase。"
+msgid "We hope you''ve been enjoying DataMan."
+msgstr "我们希望你一直喜欢DataMan。"
 
 #: metabase/email/messages.clj:114
 msgid "Would you mind taking a fast 6 question survey to tell us how it’s going?"
 msgstr "您是否愿意帮助我们来快速填写一个有着6个问题的调查问卷？"
 
 #: src/metabase/email/messages.clj
-msgid "{0} created a Metabase account"
-msgstr "{0}创建了一个Metabase账号"
+msgid "{0} created a DataMan account"
+msgstr "{0}创建了一个DataMan账号"
 
 #: src/metabase/email/messages.clj
-msgid "{0} accepted their Metabase invite"
-msgstr "{0}接受了Metabase的邀请"
+msgid "{0} accepted their DataMan invite"
+msgstr "{0}接受了DataMan的邀请"
 
 #: src/metabase/email/messages.clj
-msgid "[Metabase] Password Reset Request"
-msgstr "[Metabase] 重置密码请求"
+msgid "[DataMan] Password Reset Request"
+msgstr "[DataMan] 重置密码请求"
 
 #: src/metabase/email/messages.clj
-msgid "[Metabase] Notification"
-msgstr "[Metabase] 通知"
+msgid "[DataMan] Notification"
+msgstr "[DataMan] 通知"
 
 #: src/metabase/email/messages.clj
-msgid "[Metabase] Help make Metabase better."
-msgstr "[Metabase] 帮助Metabase变得更好"
+msgid "[DataMan] Help make DataMan better."
+msgstr "[DataMan] 帮助DataMan变得更好"
 
 #: src/metabase/email/messages.clj
-msgid "[Metabase] Tell us how things are going."
-msgstr "[Metabase] 使用反馈"
+msgid "[DataMan] Tell us how things are going."
+msgstr "[DataMan] 使用反馈"
 
 #: metabase/mbql/util.cljc:319
 msgid "Error: query''s source query has not been resolved. You probably need to `preprocess` the query first."
@@ -11914,16 +11914,16 @@ msgid "You may need to add `?sslmode=require` to your application DB connection 
 msgstr "你可能需要在你的应用程序DB连接字符串中添加`?sslmode=require`。"
 
 #: target/classes/metabase/db/env.clj
-msgid "If Metabase fails to launch, please add it and try again."
-msgstr "如果Metabase不能启动，请添加它并重新尝试。"
+msgid "If DataMan fails to launch, please add it and try again."
+msgstr "如果DataMan不能启动，请添加它并重新尝试。"
 
 #: target/classes/metabase/db/env.clj
 msgid "See https://github.com/metabase/metabase/issues/8908 for more details."
 msgstr "更多细节见https://github.com/metabase/metabase/issues/8908。"
 
 #: src/metabase/db.clj
-msgid "WARNING: Using Metabase with an H2 application database is not recomended for production deployments."
-msgstr "警告：不建议在生产部署中使用Metabase与H2应用数据库。"
+msgid "WARNING: Using DataMan with an H2 application database is not recomended for production deployments."
+msgstr "警告：不建议在生产部署中使用DataMan与H2应用数据库。"
 
 #: target/classes/metabase/db/env.clj
 msgid "For production deployments, we highly recommend using Postgres, MySQL, or MariaDB instead."
@@ -11938,8 +11938,8 @@ msgid "See https://metabase.com/docs/latest/operations-guide/start.html#migratin
 msgstr "更多信息见https://metabase.com/docs/latest/operations-guide/start.html#migrating-from-using-the-h2-database-to-mysql-or-postgres。"
 
 #: metabase/db/setup.clj:96
-msgid "Unable to connect to Metabase {0} DB."
-msgstr " 不能连接到 Metabase {0} 数据库。"
+msgid "Unable to connect to DataMan {0} DB."
+msgstr " 不能连接到 DataMan {0} 数据库。"
 
 #: target/classes/metabase/db/data_migrations.clj
 msgid "Error adding legacy SQL directive to BigQuery saved Question"
@@ -12052,32 +12052,32 @@ msgid "Could not find matching Field ID for target:"
 msgstr "{0} {1}前"
 
 #: metabase/plugins.clj:29
-msgid "Metabase does not have permissions to write to plugins directory {0}"
+msgid "DataMan does not have permissions to write to plugins directory {0}"
 msgstr "{0} {1}从现在开始"
 
 #: metabase/plugins.clj:36
-msgid "Metabase cannot use the plugins directory {0}"
-msgstr "Metabase不能使用plugins路径下的{0}文件"
+msgid "DataMan cannot use the plugins directory {0}"
+msgstr "DataMan不能使用plugins路径下的{0}文件"
 
 #: metabase/plugins.clj:38
-msgid "Please make sure the directory exists and that Metabase has permission to write to it."
-msgstr "请确保该目录存在，并且Metabase有权限写入该目录。"
+msgid "Please make sure the directory exists and that DataMan has permission to write to it."
+msgstr "请确保该目录存在，并且DataMan有权限写入该目录。"
 
 #: metabase/plugins.clj:39
-msgid "You can change the directory Metabase uses for modules by setting the environment variable MB_PLUGINS_DIR."
-msgstr "你可以通过设置环境变量MB_PLUGINS_DIR来改变Metabase用于模块的目录。"
+msgid "You can change the directory DataMan uses for modules by setting the environment variable MB_PLUGINS_DIR."
+msgstr "你可以通过设置环境变量MB_PLUGINS_DIR来改变DataMan用于模块的目录。"
 
 #: metabase/plugins.clj:40
 msgid "Falling back to a temporary directory for now."
 msgstr "暂时回落到一个临时目录。"
 
 #: metabase/plugins.clj:45
-msgid "Metabase cannot write to temporary directory. Please set MB_PLUGINS_DIR to a writable directory and restart Metabase."
-msgstr "Metabase无法写入临时目录。请将MB_PLUGINS_DIR设置为可写目录并重新启动Metabase。"
+msgid "DataMan cannot write to temporary directory. Please set MB_PLUGINS_DIR to a writable directory and restart DataMan."
+msgstr "DataMan无法写入临时目录。请将MB_PLUGINS_DIR设置为可写目录并重新启动DataMan。"
 
 #: src/metabase/plugins.clj
-msgid "spark-deps.jar is no longer needed by Metabase 1.0+. You can delete it from the plugins directory."
-msgstr "Metabase 1.0+以上版本不再需要spark-deps.jar。你可以从plugins目录中删除它。"
+msgid "spark-deps.jar is no longer needed by DataMan 1.0+. You can delete it from the plugins directory."
+msgstr "DataMan 1.0+以上版本不再需要spark-deps.jar。你可以从plugins目录中删除它。"
 
 #: metabase/plugins.clj:155
 msgid "Failied to initialize plugin {0}"
@@ -12108,16 +12108,16 @@ msgid "Added URL {0} to classpath"
 msgstr "添加URL {0}到classpath中"
 
 #: metabase/plugins/dependencies.clj:26
-msgid "Plugin {0} declares a dependency that Metabase does not understand: {1}"
-msgstr "插件{0}声明了一个Metabase不理解的依赖关系。{1}"
+msgid "Plugin {0} declares a dependency that DataMan does not understand: {1}"
+msgstr "插件{0}声明了一个DataMan不理解的依赖关系。{1}"
 
 #: metabase/plugins/dependencies.clj:27
 msgid "Refer to the plugin manifest reference for a complete list of valid plugin dependencies:"
 msgstr "请参阅插件清单参考，以获得有效插件依赖的完整列表。"
 
 #: metabase/plugins/dependencies.clj:48
-msgid "Metabase cannot initialize plugin {0} due to required dependencies."
-msgstr "由于需要依赖性，Metabase无法初始化插件{0}。"
+msgid "DataMan cannot initialize plugin {0} due to required dependencies."
+msgstr "由于需要依赖性，DataMan无法初始化插件{0}。"
 
 #: metabase/plugins/dependencies.clj:57
 msgid "Class not found: {0}"
@@ -12180,7 +12180,7 @@ msgstr "无法初始化插件：缺少必要的属性`driver-name`。"
 msgid "Warning: plugin manifest for {0} does not include connection properties"
 msgstr "警告：{0}的插件清单不包括连接属性"
 
-#. finally, register the Metabase driver
+#. finally, register the DataMan driver
 #: metabase/plugins/lazy_loaded_driver.clj:90
 msgid "Registering lazy loading driver {0}..."
 msgstr "注册懒惰的加载驱动程序{0}..."
@@ -12271,7 +12271,7 @@ msgstr "停止Quartz Scheduler {0}"
 
 #: src/metabase/task.clj
 msgid "Starting Quartz Scheduler {0}"
-msgstr "Metabase无权写入插件目录{0}"
+msgstr "DataMan无权写入插件目录{0}"
 
 #: metabase/task.clj:74
 msgid "Error loading tasks namespace {0}"
@@ -12328,8 +12328,8 @@ msgid "Task history cleanup successful, no rows were deleted"
 msgstr "任务历史清理成功，没有删除任何行"
 
 #: metabase/task/upgrade_checks.clj:25
-msgid "Checking for new Metabase version info."
-msgstr "检查新发布的Metabase版本信息。"
+msgid "Checking for new DataMan version info."
+msgstr "检查新发布的DataMan版本信息。"
 
 #: src/metabase/task/upgrade_checks.clj
 msgid "Error fetching version info"
@@ -12662,16 +12662,16 @@ msgid "Request canceled before finishing."
 msgstr "请求在完成前被取消。"
 
 #: src/metabase/middleware/json.clj
-msgid "Metabase only supports JSON requests."
-msgstr "Metabase仅支持JSON请求"
+msgid "DataMan only supports JSON requests."
+msgstr "DataMan仅支持JSON请求"
 
 #: src/metabase/middleware/json.clj
 msgid "Make sure you set a 'Content-Type: application/json' header."
 msgstr "确定你设置了一个'Content-Type：application / json'报头。"
 
 #: metabase/server/middleware/misc.clj:48
-msgid "Setting Metabase site URL to {0}"
-msgstr "将Metabase网站的URL设置为{0}。"
+msgid "Setting DataMan site URL to {0}"
+msgstr "将DataMan网站的URL设置为{0}。"
 
 #: metabase/models/database.clj:33
 msgid "Error scheduling tasks for DB"
@@ -12777,8 +12777,8 @@ msgid "Automatically run queries when doing simple filtering and summarizing"
 msgstr "在进行简单的筛选和聚合时自动运行查询"
 
 #: frontend/src/metabase/components/DatabaseDetailsForm.jsx:320
-msgid "When this is on Metabase will automatically run queries when users do simple explorations with the Summarize and Filter buttons when viewing a table or chart. You can turn this off if querying this database is slow. This setting doesn’t affect drill-throughs or SQL queries."
-msgstr "这个选项开启时，当用户在查看表格或图表时使用“汇总”和“筛选”按钮进行简单数据探索时，Metabase将自动运行查询。 如果查询此数据库的速度很慢，可以将该选项关闭。 此设置不会影响数据钻探或SQL查询。"
+msgid "When this is on DataMan will automatically run queries when users do simple explorations with the Summarize and Filter buttons when viewing a table or chart. You can turn this off if querying this database is slow. This setting doesn’t affect drill-throughs or SQL queries."
+msgstr "这个选项开启时，当用户在查看表格或图表时使用“汇总”和“筛选”按钮进行简单数据探索时，DataMan将自动运行查询。 如果查询此数据库的速度很慢，可以将该选项关闭。 此设置不会影响数据钻探或SQL查询。"
 
 #: frontend/src/metabase/containers/Overworld.jsx:313
 msgid "Learn about this database"
@@ -13130,12 +13130,12 @@ msgid "Request canceled, canceling future."
 msgstr "请求被取消，取消了未来。"
 
 #: src/metabase/cmd/load_from_h2.clj
-msgid "Metabase can only transfer data from H2 to Postgres or MySQL/MariaDB."
-msgstr "Metabase只能将数据从H2传输到Postgres或MySQL / MariaDB。"
+msgid "DataMan can only transfer data from H2 to Postgres or MySQL/MariaDB."
+msgstr "DataMan只能将数据从H2传输到Postgres或MySQL / MariaDB。"
 
 #: target/classes/metabase/db/env.clj
-msgid "WARNING: Using Metabase with an H2 application database is not recommended for production deployments."
-msgstr "警告：不建议在生产部署中使用Metabase与H2应用数据库。"
+msgid "WARNING: Using DataMan with an H2 application database is not recommended for production deployments."
+msgstr "警告：不建议在生产部署中使用DataMan与H2应用数据库。"
 
 #: src/metabase/db.clj
 msgid "Application database setup"
@@ -13196,8 +13196,8 @@ msgid "Error saving task history"
 msgstr "保存任务历史记录错误"
 
 #: metabase/plugins.clj:105
-msgid "spark-deps.jar is no longer needed by Metabase 0.32.0+. You can delete it from the plugins directory."
-msgstr "0.32.0 及以上版本的Metabase不再需要spark-deps.jar了. 您可以从插件目录中删除它."
+msgid "spark-deps.jar is no longer needed by DataMan 0.32.0+. You can delete it from the plugins directory."
+msgstr "0.32.0 及以上版本的DataMan不再需要spark-deps.jar了. 您可以从插件目录中删除它."
 
 #: src/metabase/plugins/classloader.clj
 msgid "Using NEWLY CREATED classloader as shared context classloader: {0}"
@@ -13229,8 +13229,8 @@ msgid "We were unable to display this Pulse."
 msgstr "我们无法显示这个定时。"
 
 #: metabase/pulse/render/body.clj:864
-msgid "Please view this card in Metabase."
-msgstr "请在Metabase中查看此卡。"
+msgid "Please view this card in DataMan."
+msgstr "请在DataMan中查看此卡。"
 
 #: metabase/pulse/render/body.clj:50
 msgid "An error occurred while displaying this card."
@@ -13429,8 +13429,8 @@ msgid "Failed to fetch Field {0}: Field does not exist, or belongs to a differen
 msgstr "获取字段{0}失败。字段不存在，或属于另一个数据库。"
 
 #: metabase/server/routes/index.clj:70
-msgid "Failed to load template ''{0}''. Did you remember to build the Metabase frontend?"
-msgstr "载入模板'{0}'失败。你是否记得建立了Metabase的前端？"
+msgid "Failed to load template ''{0}''. Did you remember to build the DataMan frontend?"
+msgstr "载入模板'{0}'失败。你是否记得建立了DataMan的前端？"
 
 #: target/classes/metabase/sample_data.clj
 msgid "Sample dataset DB file ''{0}'' cannot be found."
@@ -13487,8 +13487,8 @@ msgid "Pick the columns you want to include"
 msgstr "选择需要包含的列"
 
 #: frontend/src/metabase/entities/databases/forms.js:343
-msgid "When this is on, Metabase will automatically run queries when users do simple explorations with the Summarize and Filter buttons when viewing a table or chart. You can turn this off if querying this database is slow. This setting doesn’t affect drill-throughs or SQL queries."
-msgstr "这个选项开启时，当用户在查看表格或图表时使用“汇总”和“过滤”按钮进行简单数据探索时，Metabase将自动运行查询。 如果查询此数据库的速度很慢，可以将该选项关闭。 此设置不会影响数据钻探或SQL查询。"
+msgid "When this is on, DataMan will automatically run queries when users do simple explorations with the Summarize and Filter buttons when viewing a table or chart. You can turn this off if querying this database is slow. This setting doesn’t affect drill-throughs or SQL queries."
+msgstr "这个选项开启时，当用户在查看表格或图表时使用“汇总”和“过滤”按钮进行简单数据探索时，DataMan将自动运行查询。 如果查询此数据库的速度很慢，可以将该选项关闭。 此设置不会影响数据钻探或SQL查询。"
 
 #: frontend/src/metabase/query_builder/components/notebook/steps/JoinStep.jsx:480
 msgid "Change join type"
@@ -13529,12 +13529,12 @@ msgid "Diagnostic Info"
 msgstr "诊断信息"
 
 #: frontend/src/metabase/admin/tasks/containers/Logs.jsx:124
-msgid "Select Metabase process:"
-msgstr "选择Metabase过程："
+msgid "Select DataMan process:"
+msgstr "选择DataMan过程："
 
 #: frontend/src/metabase/admin/tasks/containers/Logs.jsx:134
-msgid "All Metabase processes"
-msgstr "所有Metabase进程"
+msgid "All DataMan processes"
+msgstr "所有DataMan进程"
 
 #: frontend/src/metabase/lib/auth.js:18
 msgid "The window was closed before completing Google Authentication."
@@ -13553,8 +13553,8 @@ msgid "Using this option requires that provided host is a FQDN.  If connecting t
 msgstr "使用此选项要求提供的主机是FQDN。 如果连接到Atlas群集，则可能需要启用此选项。 如果您不知道这意味着什么，请禁用此功能。"
 
 #: frontend/src/metabase/entities/databases/forms.js:350
-msgid "By default, Metabase does a lightweight hourly sync and an intensive daily scan of field values. If you have a large database, we recommend turning this on and reviewing when and how often the field value scans happen."
-msgstr "默认情况下，Metabase每小时执行一次轻量级同步，每天执行一次密集扫描。 如果您有一个大型数据库，我们建议启用此功能并查看字段值扫描的发生时间和频率。"
+msgid "By default, DataMan does a lightweight hourly sync and an intensive daily scan of field values. If you have a large database, we recommend turning this on and reviewing when and how often the field value scans happen."
+msgstr "默认情况下，DataMan每小时执行一次轻量级同步，每天执行一次密集扫描。 如果您有一个大型数据库，我们建议启用此功能并查看字段值扫描的发生时间和频率。"
 
 #: frontend/src/metabase/home/homepage/components/XraySection/XraySection.tsx:45
 msgid "Remove these suggestions"
@@ -13885,8 +13885,8 @@ msgid "Sending Alert ({0}: {1}) via email"
 msgstr "通过邮箱发送告警（{0}：{1}）"
 
 #: target/classes/metabase/pulse.clj
-msgid "Metabase alert: {0} has {1}"
-msgstr "Metabase 告警: {0} 有 {1}"
+msgid "DataMan alert: {0} has {1}"
+msgstr "DataMan 告警: {0} 有 {1}"
 
 #: metabase/pulse.clj:329
 msgid "Sending Alert ({0}: {1}) via Slack"
@@ -13970,16 +13970,16 @@ msgid "OK"
 msgstr "认可"
 
 #: frontend/src/metabase/admin/settings/components/SettingsGoogleForm.jsx:54
-msgid "To allow users to sign in with Google you'll need to give Metabase a Google Developers console application client ID. It only takes a few steps and instructions on how to create a key can be found {0}."
-msgstr "为了让用户通过谷歌账户登录，你需要给Metabase一个谷歌开发端用户ID。只需要较少的步骤和指示即可知道如何创建一个可被寻找的钥匙"
+msgid "To allow users to sign in with Google you'll need to give DataMan a Google Developers console application client ID. It only takes a few steps and instructions on how to create a key can be found {0}."
+msgstr "为了让用户通过谷歌账户登录，你需要给DataMan一个谷歌开发端用户ID。只需要较少的步骤和指示即可知道如何创建一个可被寻找的钥匙"
 
 #: frontend/src/metabase/admin/settings/components/SettingsSingleSignOnForm.jsx:134
 msgid "Be sure to include the full client ID, including the apps.googleusercontent.com suffix."
 msgstr "确保包括完整的客户端ID，包括apps.googleusercontent.com后缀。"
 
 #: frontend/src/metabase/admin/settings/components/SettingsUpdatesForm/VersionUpdateNotice/VersionUpdateNotice.jsx:72
-msgid "Metabase {0} is available."
-msgstr "Metabase {0} 可用。"
+msgid "DataMan {0} is available."
+msgstr "DataMan {0} 可用。"
 
 #: frontend/src/metabase/admin/settings/components/SettingsUpdatesForm/VersionUpdateNotice/VersionUpdateNotice.jsx:73
 msgid "You're running {0}"
@@ -14006,20 +14006,20 @@ msgid "No mappable groups"
 msgstr "没有可映射的分组"
 
 #: frontend/src/metabase/admin/tasks/containers/Help.jsx:109
-msgid "Metabase Documentation"
-msgstr "Metabase 文档"
+msgid "DataMan Documentation"
+msgstr "DataMan 文档"
 
 #: frontend/src/metabase/admin/tasks/containers/Help.jsx:110
 msgid "Includes a troubleshooting guide"
 msgstr "包括一个故障排除指南"
 
 #: frontend/src/metabase/admin/tasks/containers/Help.jsx:114
-msgid "Post on the Metabase support forum"
-msgstr "在Metabase支持论坛上发帖"
+msgid "Post on the DataMan support forum"
+msgstr "在DataMan支持论坛上发帖"
 
 #: frontend/src/metabase/admin/tasks/containers/Help.jsx:115
-msgid "A community forum for all things Metabase"
-msgstr "一个关于Metabase所有事情的社区论坛"
+msgid "A community forum for all things DataMan"
+msgstr "一个关于DataMan所有事情的社区论坛"
 
 #: frontend/src/metabase/admin/tasks/containers/Help.jsx:121
 msgid "File a bug report"
@@ -14097,8 +14097,8 @@ msgid "This is a lightweight process that checks for updates to this database’
 msgstr "这是一个轻量级的过程，用于检查对该数据库架构的更新。在大多数情况下，最好将此设置保持为每小时同步。"
 
 #: frontend/src/metabase/entities/databases/big-query-fields.js:165
-msgid "Metabase can scan the values present in each field in this database to enable checkbox filters in dashboards and questions. This can be a somewhat resource-intensive process, particularly if you have a very large database."
-msgstr "Metabase可以扫描此数据库中每个字段中存在的值，以启用仪表板和问题中的复选框筛选器。这可能会占用一些资源，特别是如果您的数据库很大。"
+msgid "DataMan can scan the values present in each field in this database to enable checkbox filters in dashboards and questions. This can be a somewhat resource-intensive process, particularly if you have a very large database."
+msgstr "DataMan可以扫描此数据库中每个字段中存在的值，以启用仪表板和问题中的复选框筛选器。这可能会占用一些资源，特别是如果您的数据库很大。"
 
 #: frontend/src/metabase/components/NewItemMenu/NewItemMenu.tsx:92
 #: frontend/src/metabase/entities/questions/forms.js:21
@@ -14652,8 +14652,8 @@ msgid "must be {0} characters or less"
 msgstr "必须是{0}个字符或更少"
 
 #: frontend/src/metabase/nav/components/ProfileLink.jsx:125
-msgid "Thanks for using Metabase!"
-msgstr "感谢你使用Metabase!"
+msgid "Thanks for using DataMan!"
+msgstr "感谢你使用DataMan!"
 
 #: frontend/src/metabase/public/components/LogoBadge.jsx:16
 msgid "Powered by {0}"
@@ -14803,8 +14803,8 @@ msgstr "Google身份验证令牌似乎不正确。 "
 
 #: src/metabase/integrations/google.clj
 #: target/classes/metabase/integrations/google.clj
-msgid "Double check that it matches in Google and Metabase."
-msgstr "仔细检查它在谷歌和Metabase中是否匹配。"
+msgid "Double check that it matches in Google and DataMan."
+msgstr "仔细检查它在谷歌和DataMan中是否匹配。"
 
 #: frontend/src/metabase/lib/saved-questions/saved-questions.js:5
 #: frontend/src/metabase/query_builder/components/saved-question-picker/SavedQuestionPicker.jsx:42
@@ -14821,8 +14821,8 @@ msgid "Database Upgrade Required"
 msgstr "需要数据库升级"
 
 #: metabase/db/setup.clj:30
-msgid "NOTICE: Your database requires updates to work with this version of Metabase."
-msgstr "注意：您的数据库需要更新才能使用此版本的Metabase。"
+msgid "NOTICE: Your database requires updates to work with this version of DataMan."
+msgstr "注意：您的数据库需要更新才能使用此版本的DataMan。"
 
 #: metabase/db/setup.clj:32
 msgid "Please execute the following sql commands on your database before proceeding."
@@ -14864,12 +14864,12 @@ msgid "The sub-query from referenced question #{0} failed with the following err
 msgstr "引用的问题#{0}的子查询失败，错误如下。{1}"
 
 #: metabase/driver/mysql.clj:79
-msgid "WARNING: Metabase only officially supports MySQL {0}/MariaDB {1} and above."
-msgstr "警告：Metabase只正式支持MySQL {0}/MariaDB {1}及以上版本。"
+msgid "WARNING: DataMan only officially supports MySQL {0}/MariaDB {1} and above."
+msgstr "警告：DataMan只正式支持MySQL {0}/MariaDB {1}及以上版本。"
 
 #: metabase/driver/mysql.clj:83
-msgid "All Metabase features may not work properly when using an unsupported version."
-msgstr "使用不受支持的版本时，所有 Metabase 功能可能无法正常工作。"
+msgid "All DataMan features may not work properly when using an unsupported version."
+msgstr "使用不受支持的版本时，所有 DataMan 功能可能无法正常工作。"
 
 #: target/classes/metabase/driver/sql/parameters/substitute.clj
 msgid "Unable to substitute parameters"
@@ -15163,8 +15163,8 @@ msgid "Service Accounts"
 msgstr "服务账户"
 
 #: frontend/src/metabase/entities/databases/big-query-fields.js:30
-msgid "Metabase connects to Big Query via {0}."
-msgstr "Metabase通过{0}连接到Big Query。"
+msgid "DataMan connects to Big Query via {0}."
+msgstr "DataMan通过{0}连接到Big Query。"
 
 #: frontend/src/metabase/entities/databases/big-query-fields.js:33
 msgid "Continue using an OAuth application to connect"
@@ -15298,8 +15298,8 @@ msgid "What's your preferred language?"
 msgstr "你的首选语言是什么？"
 
 #: frontend/src/metabase/setup/components/LanguageStep/LanguageStep.tsx:57
-msgid "This language will be used throughout Metabase and will be the default for new users."
-msgstr "这种语言将在整个Metabase中使用，并将成为新用户的默认语言。"
+msgid "This language will be used throughout DataMan and will be the default for new users."
+msgstr "这种语言将在整个DataMan中使用，并将成为新用户的默认语言。"
 
 #: frontend/src/metabase/visualizations/components/PinMap.jsx:143
 msgid "We filtered out {0} row(s) containing null values."
@@ -15450,8 +15450,8 @@ msgid "Error fetching value of Setting"
 msgstr "获取设置值的错误"
 
 #: src/metabase/public_settings.clj
-msgid "The language that should be used for Metabase's UI, system emails, pulses, and alerts."
-msgstr "Metabase的UI界面，系统电子邮件，定时和警报应使用的语言。"
+msgid "The language that should be used for DataMan's UI, system emails, pulses, and alerts."
+msgstr "DataMan的UI界面，系统电子邮件，定时和警报应使用的语言。"
 
 #: src/metabase/public_settings.clj
 msgid "This is also the default language for all users, which they can change from their own account settings."
@@ -15470,8 +15470,8 @@ msgid "Cannot redirect requests to HTTPS unless `site-url` is HTTPS."
 msgstr "不能将请求重定向到HTTPS，除非`site-url`是HTTPS。"
 
 #: metabase/pulse/render/png.clj:38
-msgid "Error registering fonts: Metabase will not be able to send Pulses."
-msgstr "注册字体时出错：Metabase无法发送Pulse。"
+msgid "Error registering fonts: DataMan will not be able to send Pulses."
+msgstr "注册字体时出错：DataMan无法发送Pulse。"
 
 #: metabase/pulse/render/png.clj:40
 msgid "This is a known issue with certain JVMs. See {0} and for more details."
@@ -15604,8 +15604,8 @@ msgid "Configure your identity provider (IdP)"
 msgstr "配置你的身份提供者（IdP）。"
 
 #: enterprise/frontend/src/metabase-enterprise/auth/components/SettingsSAMLForm.jsx:71
-msgid "Your identity provider will need the following info about Metabase."
-msgstr "你的身份提供者将需要关于Metabase的以下信息。"
+msgid "Your identity provider will need the following info about DataMan."
+msgstr "你的身份提供者将需要关于DataMan的以下信息。"
 
 #: enterprise/frontend/src/metabase-enterprise/auth/components/SettingsSAMLForm.jsx:74
 msgid "URL the IdP should redirect back to"
@@ -15640,12 +15640,12 @@ msgid "User's last name attribute"
 msgstr "用户的姓氏属性"
 
 #: enterprise/frontend/src/metabase-enterprise/auth/components/SettingsSAMLForm.jsx:102
-msgid "Tell Metabase about your identity provider"
-msgstr "告诉Metabase关于你的身份提供者"
+msgid "Tell DataMan about your identity provider"
+msgstr "告诉DataMan关于你的身份提供者"
 
 #: enterprise/frontend/src/metabase-enterprise/auth/components/SettingsSAMLForm.jsx:103
-msgid "Metabase will need the following info about your provider."
-msgstr "Metabase将需要以下关于你的供应商的信息。"
+msgid "DataMan will need the following info about your provider."
+msgstr "DataMan将需要以下关于你的供应商的信息。"
 
 #: enterprise/frontend/src/metabase-enterprise/auth/components/SettingsSAMLForm.jsx:106
 msgid "SAML Identity Provider URL"
@@ -15690,9 +15690,9 @@ msgid "Synchronize group membership with your SSO"
 msgstr "将群组成员与你的SSO同步化"
 
 #: enterprise/frontend/src/metabase-enterprise/auth/components/SettingsSAMLForm.jsx:150
-msgid "To enable this, you'll need to create mappings to tell Metabase which group(s) your users should\n"
+msgid "To enable this, you'll need to create mappings to tell DataMan which group(s) your users should\n"
 "be added to based on the SSO group they're in."
-msgstr "要启用此功能，你需要创建映射来告诉Metabase你的用户应该使用哪些组根据它们所在的SSO组添加到。"
+msgstr "要启用此功能，你需要创建映射来告诉DataMan你的用户应该使用哪些组根据它们所在的SSO组添加到。"
 
 #: enterprise/frontend/src/metabase-enterprise/auth/components/SettingsSAMLForm.jsx:166
 #: enterprise/frontend/src/metabase-enterprise/auth/components/SettingsSAMLForm.jsx:167
@@ -15711,8 +15711,8 @@ msgid "Note:"
 msgstr "注："
 
 #: enterprise/frontend/src/metabase-enterprise/auth/components/SettingsSAMLForm.jsx:186
-msgid "If you change any of the settings of an existing SAML active setup, then you will need to restart Metabase for them to take effect."
-msgstr "如果你改变了现有的SAML活动设置的任何设置，那么你将需要重新启动Metabase以使其生效。"
+msgid "If you change any of the settings of an existing SAML active setup, then you will need to restart DataMan for them to take effect."
+msgstr "如果你改变了现有的SAML活动设置的任何设置，那么你将需要重新启动DataMan以使其生效。"
 
 #: enterprise/frontend/src/metabase-enterprise/auth/index.js:30
 msgid "Allows users to login via a SAML Identity Provider."
@@ -15763,12 +15763,12 @@ msgid "String used by the JWT signing key"
 msgstr "JWT签名密钥使用的字符串"
 
 #: enterprise/frontend/src/metabase-enterprise/embedding/index.js:16
-msgid "Embedding the entire Metabase app"
-msgstr "嵌入整个Metabase应用"
+msgid "Embedding the entire DataMan app"
+msgstr "嵌入整个DataMan应用"
 
 #: enterprise/frontend/src/metabase-enterprise/embedding/index.js:16
-msgid "If you want to embed all of Metabase, enter the origins of the websites or web apps where you want to allow embedding in an iframe, separated by a space. Here are the {0} for what can be entered."
-msgstr "如果你想嵌入所有的Metabase，请在iframe中输入你想允许嵌入的网站或网络应用的origin，用空格隔开。下面是可以输入的内容的{0}。"
+msgid "If you want to embed all of DataMan, enter the origins of the websites or web apps where you want to allow embedding in an iframe, separated by a space. Here are the {0} for what can be entered."
+msgstr "如果你想嵌入所有的DataMan，请在iframe中输入你想允许嵌入的网站或网络应用的origin，用空格隔开。下面是可以输入的内容的{0}。"
 
 #: enterprise/frontend/src/metabase-enterprise/sandboxes/components/GTAPModal.jsx:146
 msgid "Grant sandboxed access to this table"
@@ -15890,20 +15890,20 @@ msgid "We're having trouble validating your token"
 msgstr "我们在验证你的标记时遇到困难"
 
 #: enterprise/frontend/src/metabase-enterprise/store/containers/StoreAccount.jsx:89
-msgid "Please double-check that your instance can connect to Metabase's servers"
-msgstr "请仔细检查你的实例是否可以连接到Metabase的服务器上"
+msgid "Please double-check that your instance can connect to DataMan's servers"
+msgstr "请仔细检查你的实例是否可以连接到DataMan的服务器上"
 
 #: enterprise/frontend/src/metabase-enterprise/store/containers/StoreAccount.jsx:94
 msgid "Get help"
 msgstr "获得帮助"
 
 #: enterprise/frontend/src/metabase-enterprise/store/containers/StoreAccount.jsx:101
-msgid "Get even more out of Metabase with the Enterprise Edition"
-msgstr "使用企业版从Metabase中获得更多的好处。"
+msgid "Get even more out of DataMan with the Enterprise Edition"
+msgstr "使用企业版从DataMan中获得更多的好处。"
 
 #: enterprise/frontend/src/metabase-enterprise/store/containers/StoreAccount.jsx:103
-msgid "All the tools you need to quickly and easily provide reports for your customers, or to help you run and monitor Metabase in a large organization"
-msgstr "你需要的所有工具，以快速和轻松地为你的客户提供报告，或帮助你在一个大型组织中运行和监控Metabase。"
+msgid "All the tools you need to quickly and easily provide reports for your customers, or to help you run and monitor DataMan in a large organization"
+msgstr "你需要的所有工具，以快速和轻松地为你的客户提供报告，或帮助你在一个大型组织中运行和监控DataMan。"
 
 #: enterprise/frontend/src/metabase-enterprise/store/containers/StoreAccount.jsx:115
 #: enterprise/frontend/src/metabase-enterprise/store/containers/StoreAccount.jsx:137
@@ -16002,8 +16002,8 @@ msgid "White labeling"
 msgstr "白色标签"
 
 #: enterprise/frontend/src/metabase-enterprise/store/lib/features.js:17
-msgid "Match Metabase to your brand with custom colors, your own logo and more."
-msgstr "使用自定义颜色、您自己的徽标等，使Metabase与您的品牌相匹配。"
+msgid "Match DataMan to your brand with custom colors, your own logo and more."
+msgstr "使用自定义颜色、您自己的徽标等，使DataMan与您的品牌相匹配。"
 
 #: enterprise/frontend/src/metabase-enterprise/store/lib/features.js:26
 msgid "Auditing"
@@ -16101,8 +16101,8 @@ msgid "at"
 msgstr "于"
 
 #: frontend/src/metabase/dashboard/components/ClickBehaviorSidebar.jsx:47
-msgid "Open the Metabase actions menu"
-msgstr "打开Metabase行动菜单"
+msgid "Open the DataMan actions menu"
+msgstr "打开DataMan行动菜单"
 
 #: frontend/src/metabase/dashboard/components/ClickBehaviorSidebar.jsx:48
 #: frontend/src/metabase/dashboard/components/ClickBehaviorSidebar.jsx:371
@@ -16767,8 +16767,8 @@ msgid "Send it to Slack"
 msgstr "发送到Slack"
 
 #: frontend/src/metabase/sharing/components/NewPulseSidebar.jsx:102
-msgid "Pick a channel and a schedule, and Metabase will do the rest."
-msgstr "选择一个频道和时间表，Metabase将做其余的工作。"
+msgid "Pick a channel and a schedule, and DataMan will do the rest."
+msgstr "选择一个频道和时间表，DataMan将做其余的工作。"
 
 #: frontend/src/metabase/sharing/components/AddEditSidebar/AddEditEmailSidebar.jsx:53
 msgid "Email this dashboard"
@@ -16825,24 +16825,24 @@ msgid "Invalid Slack token."
 msgstr "无效的Slack令牌。"
 
 #: metabase/cmd.clj:138
-msgid "The ''{0}'' command is only available in Metabase Enterprise Edition."
-msgstr "''{0}''命令仅在Metabase企业版中可用。"
+msgid "The ''{0}'' command is only available in DataMan Enterprise Edition."
+msgstr "''{0}''命令仅在DataMan企业版中可用。"
 
 #: metabase/core.clj:41
-msgid "Metabase Enterprise Edition extensions are PRESENT."
-msgstr "Metabase企业版扩展是存在的。"
+msgid "DataMan Enterprise Edition extensions are PRESENT."
+msgstr "DataMan企业版扩展是存在的。"
 
 #: metabase/core.clj:43
-msgid "Usage of Metabase Enterprise Edition features are subject to the Metabase Commercial License."
-msgstr "Metabase企业版功能的使用受Metabase商业许可的约束。"
+msgid "Usage of DataMan Enterprise Edition features are subject to the DataMan Commercial License."
+msgstr "DataMan企业版功能的使用受DataMan商业许可的约束。"
 
 #: metabase/core.clj:45
 msgid "See {0} for details."
 msgstr "详见{0}。"
 
 #: metabase/core.clj:46
-msgid "Metabase Enterprise Edition extensions are NOT PRESENT."
-msgstr "Metabase企业版扩展不存在。"
+msgid "DataMan Enterprise Edition extensions are NOT PRESENT."
+msgstr "DataMan企业版扩展不存在。"
 
 #: metabase/email/messages.clj:137
 msgid "You''re invited to join {0}''s {1}"
@@ -16995,8 +16995,8 @@ msgid "login attribute keys must be a keyword or string"
 msgstr "登录属性键必须是一个关键词或字符串"
 
 #: src/metabase/public_settings.clj target/classes/metabase/public_settings.clj
-msgid "The default language for all users across the Metabase UI, system emails, pulses, and alerts."
-msgstr "Metabase用户界面、系统邮件、定时和警报中所有用户的默认语言。"
+msgid "The default language for all users across the DataMan UI, system emails, pulses, and alerts."
+msgstr "DataMan用户界面、系统邮件、定时和警报中所有用户的默认语言。"
 
 #: src/metabase/public_settings.clj target/classes/metabase/public_settings.clj
 msgid "Users can individually override this default language from their own account settings."
@@ -17007,20 +17007,20 @@ msgid "Default page to show the user"
 msgstr "向用户显示的默认页面"
 
 #: metabase/public_settings.clj:196
-msgid "Allow this origin to embed the full Metabase application"
-msgstr "允许这个orgin嵌入完整的Metabase应用程序"
+msgid "Allow this origin to embed the full DataMan application"
+msgstr "允许这个orgin嵌入完整的DataMan应用程序"
 
 #: metabase/public_settings.clj:245
 msgid "Values greater than {0} ({1}) are not allowed."
 msgstr "不允许大于{0}（{1}）的值。"
 
 #: metabase/public_settings.clj:279
-msgid "This will replace the word \"Metabase\" wherever it appears."
-msgstr "这将取代所有出现的 \"Metabase \"一词。"
+msgid "This will replace the word \"DataMan\" wherever it appears."
+msgstr "这将取代所有出现的 \"DataMan \"一词。"
 
 #: metabase/public_settings.clj:306
-msgid "These are the primary colors used in charts and throughout Metabase. You might need to refresh your browser to see your changes take effect."
-msgstr "这些是在图表和整个Metabase中使用的主要颜色。你可能需要刷新你的浏览器才能看到你的变化生效。"
+msgid "These are the primary colors used in charts and throughout DataMan. You might need to refresh your browser to see your changes take effect."
+msgstr "这些是在图表和整个DataMan中使用的主要颜色。你可能需要刷新你的浏览器才能看到你的变化生效。"
 
 #: metabase/public_settings.clj:355
 msgid "For best results, use an SVG file with a transparent background."
@@ -17153,8 +17153,8 @@ msgid "Include User ID and query hash in queries"
 msgstr "在查询中包括用户ID和查询哈希值"
 
 #: frontend/src/metabase/entities/databases/forms.js:24
-msgid "When on, Metabase User ID and query hash get appended to queries on this database, which can be useful for auditing and debugging. However, this causes each query to look distinct, preventing BigQuery from returning cached results, which may increase your costs."
-msgstr "当打开时，Metabase用户ID和查询哈希会被附加到该数据库的查询中，这对审计和调试很有用。然而，这导致每个查询看起来是不同的，防止BigQuery返回缓存的结果，这可能会增加你的成本。"
+msgid "When on, DataMan User ID and query hash get appended to queries on this database, which can be useful for auditing and debugging. However, this causes each query to look distinct, preventing BigQuery from returning cached results, which may increase your costs."
+msgstr "当打开时，DataMan用户ID和查询哈希会被附加到该数据库的查询中，这对审计和调试很有用。然而，这导致每个查询看起来是不同的，防止BigQuery返回缓存的结果，这可能会增加你的成本。"
 
 #: frontend/src/metabase/entities/databases/big-query-fields.js:173
 #: metabase/driver/common.clj:185
@@ -17162,8 +17162,8 @@ msgid "Periodically refingerprint tables"
 msgstr "定期修改指纹表"
 
 #: frontend/src/metabase/entities/databases/forms.js:357
-msgid "When syncing with this database, Metabase will scan a subset of values of fields to gather statistics that enable things like improved binning behavior in charts, and to generally make your Metabase instance smarter."
-msgstr "当与该数据库同步时，Metabase将扫描字段值的一个子集，以收集统计数据，从而实现改进图表中的分选行为，并使你的Metabase实例更加智能。"
+msgid "When syncing with this database, DataMan will scan a subset of values of fields to gather statistics that enable things like improved binning behavior in charts, and to generally make your DataMan instance smarter."
+msgstr "当与该数据库同步时，DataMan将扫描字段值的一个子集，以收集统计数据，从而实现改进图表中的分选行为，并使你的DataMan实例更加智能。"
 
 #: frontend/src/metabase/lib/core.js:245
 msgid "Updated date"
@@ -17416,8 +17416,8 @@ msgid "invalid context seed value"
 msgstr "无效的上下文种子值"
 
 #: metabase_enterprise/serialization/cmd.clj:45
-msgid "Dump was produced using a different version of Metabase. Things may break!"
-msgstr "Dump是用不同版本的Metabase制作的。事情可能会被打破!"
+msgid "Dump was produced using a different version of DataMan. Things may break!"
+msgstr "Dump是用不同版本的DataMan制作的。事情可能会被打破!"
 
 #: enterprise/backend/src/metabase_enterprise/serialization/cmd.clj
 msgid "Error loading dump: {0}"
@@ -17579,8 +17579,8 @@ msgid "Password for opening the keystore"
 msgstr "打开钥匙库的密码"
 
 #: metabase_enterprise/sso/integrations/sso_settings.clj:63
-msgid "Alias for the key that Metabase should use for signing SAML requests"
-msgstr "Metabase应该用来签署SAML请求的密钥的别名。"
+msgid "Alias for the key that DataMan should use for signing SAML requests"
+msgstr "DataMan应该用来签署SAML请求的密钥的别名。"
 
 #: metabase_enterprise/sso/integrations/sso_settings.clj:67
 msgid "SAML attribute for the user''s email address"
@@ -17604,8 +17604,8 @@ msgstr "用于群组同步的SAML属性"
 
 #. Should be in the form: {"groupName": [1, 2, 3]} where keys are SAML groups and values are lists of MB groups IDs
 #: metabase_enterprise/sso/integrations/sso_settings.clj:89
-msgid "JSON containing SAML to Metabase group mappings."
-msgstr "包含SAML到Metabase组的映射的JSON。"
+msgid "JSON containing SAML to DataMan group mappings."
+msgstr "包含SAML到DataMan组的映射的JSON。"
 
 #: metabase_enterprise/sso/integrations/sso_settings.clj:102
 msgid "Enable JWT based authentication"
@@ -17641,8 +17641,8 @@ msgstr "启用与JWT同步的群组成员。"
 
 #. Should be in the form: {"groupName": [1, 2, 3]} where keys are JWT groups and values are lists of MB groups IDs
 #: metabase_enterprise/sso/integrations/sso_settings.clj:138
-msgid "JSON containing JWT to Metabase group mappings."
-msgstr "包含JWT到Metabase组的映射的JSON。"
+msgid "JSON containing JWT to DataMan group mappings."
+msgstr "包含JWT到DataMan组的映射的JSON。"
 
 #: metabase_enterprise/sso/integrations/sso_settings.clj:151
 msgid "Should new email notifications be sent to admins, for all new SSO users?"
@@ -18120,12 +18120,12 @@ msgstr "想让人帮你解决升级的问题吗？"
 
 #: frontend/src/metabase/admin/settings/components/SettingsUpdatesForm/VersionUpdateNotice/VersionUpdateNotice.jsx:126
 #: frontend/src/metabase/admin/settings/components/widgets/MarginHostingCTA.jsx:17
-msgid "Migrate to Metabase Cloud."
-msgstr "迁移到 Metabase Cloud。"
+msgid "Migrate to DataMan Cloud."
+msgstr "迁移到 DataMan Cloud。"
 
 #: frontend/src/metabase/nav/components/ProfileLink.jsx:50
-msgid "Manage Metabase Cloud"
-msgstr "管理 Metabase Cloud"
+msgid "Manage DataMan Cloud"
+msgstr "管理 DataMan Cloud"
 
 #: frontend/src/metabase/visualizations/components/settings/ChartSettingFieldsPartition.jsx:45
 msgid "Show totals"
@@ -18491,8 +18491,8 @@ msgid "Invalid cell format"
 msgstr "无效的单元格格式"
 
 #: metabase/search/config.clj:9
-msgid "Enable typeahead search in the Metabase navbar?"
-msgstr "启用Metabase导航栏中的typeahead搜索？"
+msgid "Enable typeahead search in the DataMan navbar?"
+msgstr "启用DataMan导航栏中的typeahead搜索？"
 
 #: target/classes/metabase/server/request/util.clj
 msgid "Login in request is missing device ID information"
@@ -18883,8 +18883,8 @@ msgstr "无效字段{0}{1}：回落到{2}。"
 
 #: src/metabase/models/humanization.clj
 #: target/classes/metabase/models/humanization.clj
-msgid "To make table and field names more human-friendly, Metabase will replace dashes and underscores in them with spaces."
-msgstr "为了使表和字段的名称更加人性化，Metabase将用空格替换其中的破折号和下划线。"
+msgid "To make table and field names more human-friendly, DataMan will replace dashes and underscores in them with spaces."
+msgstr "为了使表和字段的名称更加人性化，DataMan将用空格替换其中的破折号和下划线。"
 
 #: src/metabase/models/humanization.clj
 #: target/classes/metabase/models/humanization.clj
@@ -18897,8 +18897,8 @@ msgid "Setting names in would collide: {0} and {1}"
 msgstr "设置名称在会发生碰撞。{0}和{1}"
 
 #: metabase/public_settings.clj:53
-msgid "Indicates when Metabase last checked for new versions."
-msgstr "表示Metabase最后一次检查新版本的时间。"
+msgid "Indicates when DataMan last checked for new versions."
+msgstr "表示DataMan最后一次检查新版本的时间。"
 
 #: src/metabase/public_settings.clj target/classes/metabase/public_settings.clj
 msgid "This URL is used for things like creating links in emails, auth redirects,"
@@ -18997,8 +18997,8 @@ msgid "Enter the token you received from the store"
 msgstr "输入你从商店收到的令牌"
 
 #: frontend/src/metabase/admin/settings/components/SettingsUpdatesForm/VersionUpdateNotice/VersionUpdateNotice.jsx:38
-msgid "Metabase Cloud keeps your instance up-to-date. You're currently on version {0}. Thanks for being a customer!"
-msgstr "Metabase Cloud使您的实例保持最新。您当前使用的是版本{0}。感谢您成为我们的客户！"
+msgid "DataMan Cloud keeps your instance up-to-date. You're currently on version {0}. Thanks for being a customer!"
+msgstr "DataMan Cloud使您的实例保持最新。您当前使用的是版本{0}。感谢您成为我们的客户！"
 
 #: frontend/src/metabase/admin/settings/components/SettingsUpdatesForm/VersionUpdateNotice/VersionUpdateNotice.jsx:32
 msgid "No successful checks yet."
@@ -19153,14 +19153,14 @@ msgid "Make all sub-collections {0}, too."
 msgstr "也将所有子集合设为 {0}。"
 
 #: frontend/src/metabase/plugins/components/SettingsCloudStoreLink/SettingsCloudStoreLink.jsx:10
-msgid "Manage your Cloud account, including billing preferences and technical settings about this instance in your Metabase Store account."
+msgid "Manage your Cloud account, including billing preferences and technical settings about this instance in your DataMan Store account."
 msgstr "管理你的云帐户，包括元数据库存储帐户中有关此实例的计费首选项和技术设置。\n"
 ""
 
 #: enterprise/frontend/src/metabase-enterprise/license/components/LicenseAndBillingSettings/LicenseAndBillingSettings.tsx:119
 #: frontend/src/metabase/plugins/components/SettingsCloudStoreLink/SettingsCloudStoreLink.jsx:12
-msgid "Go to the Metabase Store"
-msgstr "跳转到 Metabase 商店"
+msgid "Go to the DataMan Store"
+msgstr "跳转到 DataMan 商店"
 
 #: metabase/driver/presto_jdbc.clj:310
 msgid "Running statement in describe-schema: {0}"
@@ -19283,8 +19283,8 @@ msgid "Ensure users can’t ever see the data from this database regardless of t
 msgstr "确保用户永远不能看到这个数据库的数据，不管他们在集合级别的权限如何。请记住，如果一个用户属于另一个有数据访问权的组，该设置将优先考虑，而该用户的访问权将不会被阻止。"
 
 #: frontend/src/metabase/admin/permissions/components/DataPermissionsHelp/DataPermissionsHelp.jsx:51
-msgid "Only available in certain Metabase plans."
-msgstr "只适用于某些Metabase计划。"
+msgid "Only available in certain DataMan plans."
+msgstr "只适用于某些DataMan计划。"
 
 #: frontend/src/metabase/admin/permissions/components/DataPermissionsHelp/DataPermissionsHelp.jsx:62
 msgid "Learn more about permissions"
@@ -19417,8 +19417,8 @@ msgid "Unsubscribe from all subscriptions / alerts"
 msgstr "退订所有的订阅/提示信息"
 
 #: enterprise/frontend/src/metabase-enterprise/caching/index.js:21
-msgid "How long to keep question results. By default, Metabase will use the value you supply on the {0}, but if this database has other factors that influence the freshness of data, it could make sense to set a custom duration. You can also choose custom durations on individual questions or dashboards to help improve performance."
-msgstr "保留问题结果的时间。默认情况下，Metabase将使用你在{0}上提供的值，但如果这个数据库有其他影响数据新鲜度程度的因素，设置一个自定义的持续时间可能是有意义的。为了提高性能你也可以在个别问题或仪表板上选择自定义持续时间。"
+msgid "How long to keep question results. By default, DataMan will use the value you supply on the {0}, but if this database has other factors that influence the freshness of data, it could make sense to set a custom duration. You can also choose custom durations on individual questions or dashboards to help improve performance."
+msgstr "保留问题结果的时间。默认情况下，DataMan将使用你在{0}上提供的值，但如果这个数据库有其他影响数据新鲜度程度的因素，设置一个自定义的持续时间可能是有意义的。为了提高性能你也可以在个别问题或仪表板上选择自定义持续时间。"
 
 #: enterprise/frontend/src/metabase-enterprise/caching/index.js:26
 msgid "cache settings page"
@@ -19635,8 +19635,8 @@ msgid "This will delete any dashboard subscriptions or alerts {0} has created, a
 msgstr "这将删除{0}创建的任何仪表板订阅或警报，并从任何其他订阅或警报中移除他们作为接收者。"
 
 #: enterprise/frontend/src/metabase-enterprise/audit_app/components/UnsubscribeUserForm/UnsubscribeUserForm.jsx:45
-msgid "This does not affect email distribution lists that are managed outside of Metabase."
-msgstr "这并不影响在Metabase之外管理的电子邮件分发列表。"
+msgid "This does not affect email distribution lists that are managed outside of DataMan."
+msgstr "这并不影响在DataMan之外管理的电子邮件分发列表。"
 
 #: enterprise/frontend/src/metabase-enterprise/audit_app/components/AuditSidebar.jsx:53
 msgid "Team members"
@@ -19683,8 +19683,8 @@ msgid "Not seeing something listed here?"
 msgstr "没有看到这里列出的东西？"
 
 #: frontend/src/metabase/account/notifications/components/HelpModal/HelpModal.jsx:29
-msgid "It’s possible you may also receive emails from Metabase if you’re a member of an email distribution list, like “team@mycompany.com” and that list is used as the recipient for an alert or dashboard subscription instead of your individual email."
-msgstr "如果你是一个电子邮件分发列表的成员，如 \"team@mycompany.com\"，并且该列表被用作警报或仪表板订阅的收件人，而不是你的个人电子邮件，你也有可能收到Metabase的电子邮件。"
+msgid "It’s possible you may also receive emails from DataMan if you’re a member of an email distribution list, like “team@mycompany.com” and that list is used as the recipient for an alert or dashboard subscription instead of your individual email."
+msgstr "如果你是一个电子邮件分发列表的成员，如 \"team@mycompany.com\"，并且该列表被用作警报或仪表板订阅的收件人，而不是你的个人电子邮件，你也有可能收到DataMan的电子邮件。"
 
 #: frontend/src/metabase/account/notifications/components/HelpModal/HelpModal.jsx:33
 msgid "Hopefully they’ll be able to help you out!"
@@ -19695,8 +19695,8 @@ msgid "your instance administrator"
 msgstr "你的实例管理员"
 
 #: frontend/src/metabase/account/notifications/components/HelpModal/HelpModal.jsx:47
-msgid "Metabase doesn’t manage those lists, so we’d recommend contacting {0}. "
-msgstr "Metabase并不管理这些名单，所以我们建议联系{0}。 "
+msgid "DataMan doesn’t manage those lists, so we’d recommend contacting {0}. "
+msgstr "DataMan并不管理这些名单，所以我们建议联系{0}。 "
 
 #: frontend/src/metabase/account/notifications/components/NotificationCard/NotificationCard.jsx:100
 msgid "Created by you"
@@ -19952,8 +19952,8 @@ msgid "Navigation bar color"
 msgstr "导航栏颜色"
 
 #: enterprise/frontend/src/metabase-enterprise/whitelabel/components/ColorSchemeWidget.jsx:25
-msgid "The top nav bar of Metabase. Defaults to the Primary Color if not set."
-msgstr "Metabase的顶部导航栏。如果没有设置，则默认为主色。"
+msgid "The top nav bar of DataMan. Defaults to the Primary Color if not set."
+msgstr "DataMan的顶部导航栏。如果没有设置，则默认为主色。"
 
 #: enterprise/frontend/src/metabase-enterprise/whitelabel/components/ColorSchemeWidget.jsx:23
 msgid "Accent 1"
@@ -20005,8 +20005,8 @@ msgid "Service account JSON file"
 msgstr "服务账户JSON文件"
 
 #: frontend/src/metabase/entities/databases/big-query-fields.js:93
-msgid "This JSON file contains the credentials Metabase needs to read and query your dataset."
-msgstr "这个JSON文件包含Metabase读取和查询你的数据集所需的证书。"
+msgid "This JSON file contains the credentials DataMan needs to read and query your dataset."
+msgstr "这个JSON文件包含DataMan读取和查询你的数据集所需的证书。"
 
 #: frontend/src/metabase/entities/databases/big-query-fields.js:142
 #: metabase/driver/common.clj:134
@@ -20025,13 +20025,13 @@ msgstr "选择同步和扫描的时间"
 
 #: frontend/src/metabase/entities/databases/big-query-fields.js:150
 #: metabase/driver/common.clj:145
-msgid "By default, Metabase does a lightweight hourly sync and an intensive daily scan of field values. If you have a large database, turn this on to make changes."
-msgstr "默认情况下，Metabase每小时进行一次轻量级的同步，每天对字段值进行一次密集扫描。如果你有一个大数据库，请打开这个功能来进行修改。"
+msgid "By default, DataMan does a lightweight hourly sync and an intensive daily scan of field values. If you have a large database, turn this on to make changes."
+msgstr "默认情况下，DataMan每小时进行一次轻量级的同步，每天对字段值进行一次密集扫描。如果你有一个大数据库，请打开这个功能来进行修改。"
 
 #: frontend/src/metabase/entities/databases/big-query-fields.js:174
 #: metabase/driver/common.clj:186
-msgid "This enables Metabase to scan for additional field values during syncs allowing smarter behavior, like improved auto-binning on your bar charts."
-msgstr "这使Metabase能够在同步过程中扫描更多的字段值，从而实现更智能的行为，比如在你的柱状图上改进自动排序。"
+msgid "This enables DataMan to scan for additional field values during syncs allowing smarter behavior, like improved auto-binning on your bar charts."
+msgstr "这使DataMan能够在同步过程中扫描更多的字段值，从而实现更智能的行为，比如在你的柱状图上改进自动排序。"
 
 #: frontend/src/metabase/entities/users/forms.js:108
 msgid "Company or team name"
@@ -20147,8 +20147,8 @@ msgid "Our {0}"
 msgstr "我们的{0}"
 
 #: frontend/src/metabase/entities/databases/forms.js:344
-msgid "Choose what this data will be called in Metabase."
-msgstr "选择这个数据在Metabase中的名称。"
+msgid "Choose what this data will be called in DataMan."
+msgstr "选择这个数据在DataMan中的名称。"
 
 #: frontend/src/metabase/admin/settings/selectors.js:520
 #: frontend/src/metabase/home/containers/SearchApp.jsx:47
@@ -20569,8 +20569,8 @@ msgid "DB {0} had hardcoded dataset-id; changing to an inclusion pattern and upd
 msgstr "DB {0}有硬编码的数据集-ID；改变为包含模式并更新表模式"
 
 #: src/metabase/analytics/snowplow.clj
-msgid "Unique identifier to be used in Snowplow analytics, to identify this instance of Metabase."
-msgstr "在Snowplow分析中使用的唯一标识符，以识别Metabase的这个实例。"
+msgid "Unique identifier to be used in Snowplow analytics, to identify this instance of DataMan."
+msgstr "在Snowplow分析中使用的唯一标识符，以识别DataMan的这个实例。"
 
 #: src/metabase/analytics/snowplow.clj
 msgid "This is a public setting since some analytics events are sent prior to initial setup."
@@ -20601,8 +20601,8 @@ msgid "Error sending Snowplow analytics event {0}"
 msgstr "发送Snowplow分析事件{0}时出错"
 
 #: metabase/analytics/snowplow.clj:67
-msgid "The approximate timestamp at which this instance of Metabase was created, for inclusion in analytics."
-msgstr "创建这个Metabase实例的大致时间戳，用于分析。"
+msgid "The approximate timestamp at which this instance of DataMan was created, for inclusion in analytics."
+msgstr "创建这个DataMan实例的大致时间戳，用于分析。"
 
 #: metabase/api/card.clj:502
 msgid "Unverified due to edit"
@@ -20721,8 +20721,8 @@ msgid "In most cases, you should be fine leaving this set to sync hourly."
 msgstr "在大多数情况下，你应该把这个设置为每小时同步一次就可以了。"
 
 #: src/metabase/driver/common.clj
-msgid "If your database is behind a firewall, you may need to allow connections from our Metabase Cloud IP addresses:"
-msgstr "如果你的数据库在防火墙后面，你可能需要允许从我们的Metabase Cloud IP地址进行连接。"
+msgid "If your database is behind a firewall, you may need to allow connections from our DataMan Cloud IP addresses:"
+msgstr "如果你的数据库在防火墙后面，你可能需要允许从我们的DataMan Cloud IP地址进行连接。"
 
 #: metabase/driver/common.clj:328
 msgid "Error querying database {0} for current time: {1}"
@@ -20733,8 +20733,8 @@ msgid "Error: multiple values specified for parameter; non-Field Filter paramete
 msgstr "错误：为参数指定多个值；非字段筛选器参数只能有一个值。"
 
 #: metabase/driver/h2.clj:40
-msgid "The local path relative to where Metabase is running from. Your string should not include the .mv.db extension."
-msgstr "相对于Metabase运行地点的本地路径。你的字符串不应该包括.mv.db的扩展名。"
+msgid "The local path relative to where DataMan is running from. Your string should not include the .mv.db extension."
+msgstr "相对于DataMan运行地点的本地路径。你的字符串不应该包括.mv.db的扩展名。"
 
 #: metabase/driver/postgres.clj:126
 msgid "SSL Mode"
@@ -20827,16 +20827,16 @@ msgid "All except..."
 msgstr "所有除了..."
 
 #: metabase/driver/util.clj:293
-msgid "Comma separated names of {0} that <strong>should</strong> appear in Metabase"
-msgstr "<strong>应该</strong>出现在Metabase中的{0}的逗号分隔名称"
+msgid "Comma separated names of {0} that <strong>should</strong> appear in DataMan"
+msgstr "<strong>应该</strong>出现在DataMan中的{0}的逗号分隔名称"
 
 #: metabase/driver/util.clj:295 metabase/driver/util.clj:302
 msgid "You can use patterns like <strong>auth*</strong> to match multiple {0}"
 msgstr "你可以使用<strong>auth*</strong>等模式来匹配多个{0}。"
 
 #: metabase/driver/util.clj:300
-msgid "Comma separated names of {0} that <strong>should NOT</strong> appear in Metabase"
-msgstr "逗号分隔的{0}名称，<strong>不应该</strong>出现在Metabase中。"
+msgid "Comma separated names of {0} that <strong>should NOT</strong> appear in DataMan"
+msgstr "逗号分隔的{0}名称，<strong>不应该</strong>出现在DataMan中。"
 
 #: metabase/email/messages.clj:714
 msgid "Your Slack connection stopped working"
@@ -20863,20 +20863,20 @@ msgid "Successfully authenticated Google Sign-In token for: {0} {1}"
 msgstr "成功地验证了谷歌登录令牌。{0} {1}"
 
 #: src/metabase/integrations/slack.clj
-msgid "Deprecated Slack API token for connecting the Metabase Slack bot."
-msgstr "用于连接Metabase Slack机器人的已废弃的Slack API令牌。"
+msgid "Deprecated Slack API token for connecting the DataMan Slack bot."
+msgstr "用于连接DataMan Slack机器人的已废弃的Slack API令牌。"
 
 #: src/metabase/integrations/slack.clj
 msgid "Please use a new Slack app integration instead."
 msgstr "请使用新的Slack应用集成来代替。"
 
 #: src/metabase/integrations/slack.clj
-msgid "Bot user OAuth token for connecting the Metabase Slack app."
-msgstr "用于连接Metabase Slack应用程序的Bot用户OAuth令牌。"
+msgid "Bot user OAuth token for connecting the DataMan Slack app."
+msgstr "用于连接DataMan Slack应用程序的Bot用户OAuth令牌。"
 
 #: src/metabase/integrations/slack.clj
-msgid "This should be used for all new Slack integrations starting in Metabase v0.42.0."
-msgstr "从Metabase v0.42.0开始，这应该用于所有新的Slack集成。"
+msgid "This should be used for all new Slack integrations starting in DataMan v0.42.0."
+msgstr "从DataMan v0.42.0开始，这应该用于所有新的Slack集成。"
 
 #: src/metabase/integrations/slack.clj
 msgid "Whether the current Slack app token, if set, is valid."
@@ -20887,8 +20887,8 @@ msgid "Set to 'false' if a Slack API request returns an auth error."
 msgstr "如果Slack API请求返回auth错误，则设置为'false'。"
 
 #: metabase/integrations/slack.clj:55
-msgid "The name of the channel to which Metabase files should be initially uploaded"
-msgstr "最初应上传Metabase文件的通道的名称"
+msgid "The name of the channel to which DataMan files should be initially uploaded"
+msgstr "最初应上传DataMan文件的通道的名称"
 
 #: metabase/integrations/slack.clj:95
 msgid "🔒 Your Slack authorization token is invalid or has been revoked. Please update your integration in Admin Settings -> Slack."
@@ -20947,8 +20947,8 @@ msgid "{0} points to non-existent file: {1}"
 msgstr "{0}指向不存在的文件。{1}"
 
 #: metabase/models/secret.clj:147
-msgid "{0} (a local file path) cannot be used in Metabase hosted environment"
-msgstr "{0}（一个本地文件路径）不能在Metabase托管环境中使用"
+msgid "{0} (a local file path) cannot be used in DataMan hosted environment"
+msgstr "{0}（一个本地文件路径）不能在DataMan托管环境中使用"
 
 #: metabase/models/setting.clj:469
 msgid "Error parsing Setting {0}: {1}"
@@ -20959,8 +20959,8 @@ msgid "Site-wide values are not allowed for Setting {0}"
 msgstr "设置{0}不允许使用全站的值。"
 
 #: metabase/models/setting.clj:614
-msgid "Setting {0} is deprecated as of Metabase {1} and may be removed in a future version."
-msgstr "从Metabase {1}开始，设置{0}已被废弃，并可能在未来的版本中被删除。"
+msgid "Setting {0} is deprecated as of DataMan {1} and may be removed in a future version."
+msgstr "从DataMan {1}开始，设置{0}已被废弃，并可能在未来的版本中被删除。"
 
 #: metabase/models/setting.clj:784
 msgid "Setting name ''{0}'' is retired; use a different name instead"
@@ -20971,8 +20971,8 @@ msgid "Boolean indicating whether analytics data should be sent to Google Analyt
 msgstr "表示是否应将分析数据发送到前端的谷歌分析的布尔值"
 
 #: metabase/public_settings.clj:275
-msgid "Metabase version for which a notice about usage of deprecated features has been shown."
-msgstr "已显示关于使用已废弃功能的 Metabase 版本通知。"
+msgid "DataMan version for which a notice about usage of deprecated features has been shown."
+msgstr "已显示关于使用已废弃功能的 DataMan 版本通知。"
 
 #: metabase/public_settings.clj:425
 msgid "Whether or not to display a message about pinning dashboards. It will also be hidden if any dashboards are pinned. Admins might hide this to direct users to better content than raw data"
@@ -20991,12 +20991,12 @@ msgid " although it is used to set the WEEK_START session variable in Snowflake.
 msgstr "尽管它被用来设置Snowflake的WEEK_START会话变量。"
 
 #: metabase/public_settings.clj:547
-msgid "Error fetching Metabase Cloud gateway IP addresses:"
-msgstr "在获取Metabase Cloud网关IP地址时出错。"
+msgid "Error fetching DataMan Cloud gateway IP addresses:"
+msgstr "在获取DataMan Cloud网关IP地址时出错。"
 
 #: metabase/public_settings.clj:551
-msgid "Metabase Cloud gateway IP addresses, to configure connections to DBs behind firewalls"
-msgstr "Metabase云网关的IP地址，以配置与防火墙后的数据库的连接"
+msgid "DataMan Cloud gateway IP addresses, to configure connections to DBs behind firewalls"
+msgstr "DataMan云网关的IP地址，以配置与防火墙后的数据库的连接"
 
 #: src/metabase/public_settings.clj
 msgid "Whether an introductory modal should be shown after the next database connection is added."
@@ -21123,8 +21123,8 @@ msgid "This token doesn't seem to be valid. Double-check it, then contact suppor
 msgstr "这个令牌似乎无效。仔细检查一下，如果你认为它应该是有效的，请联系支持。"
 
 #: frontend/src/metabase/admin/settings/hooks/use-license.ts:8
-msgid "We're having trouble validating your token. Please double-check that your instance can connect to Metabase's servers."
-msgstr "我们在验证您的令牌时遇到困难。请仔细检查您的实例是否可以连接到Metabase的服务器。"
+msgid "We're having trouble validating your token. Please double-check that your instance can connect to DataMan's servers."
+msgstr "我们在验证您的令牌时遇到困难。请仔细检查您的实例是否可以连接到DataMan的服务器。"
 
 #: frontend/src/metabase/lib/expressions/pratt/compiler.ts:48
 #: frontend/src/metabase/lib/expressions/pratt/compiler.ts:221
@@ -21199,8 +21199,8 @@ msgid "Billing"
 msgstr "账单"
 
 #: enterprise/frontend/src/metabase-enterprise/license/components/LicenseAndBillingSettings/LicenseAndBillingSettings.tsx:112
-msgid "Manage your Cloud account, including billing preferences, in your Metabase Store account."
-msgstr "在你的Metabase商店账户中管理你的云账户，包括计费偏好。"
+msgid "Manage your Cloud account, including billing preferences, in your DataMan Store account."
+msgstr "在你的DataMan商店账户中管理你的云账户，包括计费偏好。"
 
 #: enterprise/frontend/src/metabase-enterprise/license/components/LicenseAndBillingSettings/LicenseAndBillingSettings.tsx:126
 msgid "To manage your billing preferences, please email {0}"
@@ -21260,8 +21260,8 @@ msgid "Sample Database"
 msgstr "样本数据库"
 
 #: frontend/src/metabase/components/SyncingModal/SyncingModal.tsx:35
-msgid "Have a look around your Metabase in the meantime if you want to get a head start."
-msgstr "如果你想先下手为强，请在你的Metabase中查看一下。"
+msgid "Have a look around your DataMan in the meantime if you want to get a head start."
+msgstr "如果你想先下手为强，请在你的DataMan中查看一下。"
 
 #: frontend/src/metabase/components/SyncingModal/SyncingModal.tsx:39
 msgid "Explore sample data"
@@ -21338,8 +21338,8 @@ msgid "I'll invite a teammate to connect the database"
 msgstr "我将邀请一个队友来连接数据库"
 
 #: frontend/src/metabase/setup/components/PreferencesStep/PreferencesStep.tsx:66
-msgid "In order to help us improve Metabase, we'd like to collect certain data about product usage."
-msgstr "为了帮助我们改进Metabase，我们希望收集关于产品使用的某些数据。"
+msgid "In order to help us improve DataMan, we'd like to collect certain data about product usage."
+msgstr "为了帮助我们改进DataMan，我们希望收集关于产品使用的某些数据。"
 
 #: frontend/src/metabase/setup/components/PreferencesStep/PreferencesStep.tsx:69
 msgid "Here's a full list of what we track and why."
@@ -21444,13 +21444,13 @@ msgid "Your Premium Embedding license is active until {0}."
 msgstr "你的高级嵌入许可证在{0}之前是有效的。"
 
 #: frontend/src/metabase/admin/settings/containers/PremiumEmbeddingLicensePage/PremiumEmbeddingLicensePage.tsx:100
-msgid "Enter the token you bought from the Metabase Store below."
-msgstr "在下面输入你从Metabase商店购买的代币。"
+msgid "Enter the token you bought from the DataMan Store below."
+msgstr "在下面输入你从DataMan商店购买的代币。"
 
 #: frontend/src/metabase/admin/settings/components/widgets/EmbeddingCustomizationInfo.tsx:12
-msgid "Looking to remove the “Powered by Metabase” logo, customize colors\n"
+msgid "Looking to remove the “Powered by DataMan” logo, customize colors\n"
 "and make it your own? {0}"
-msgstr "想去掉 \"Powered by Metabase \"标识，自定义颜色\n"
+msgstr "想去掉 \"Powered by DataMan \"标识，自定义颜色\n"
 "并使其成为你自己的？{0}"
 
 #: frontend/src/metabase/admin/settings/slack/components/SlackDeleteModal/SlackDeleteModal.tsx:23
@@ -21486,8 +21486,8 @@ msgid "invite a teammate"
 msgstr "邀请队友"
 
 #: frontend/src/metabase/home/homepage/components/StartSection/StartSection.tsx:117
-msgid "Connect your data to get the most out of Metabase"
-msgstr "连接你的数据以获得Metabase的最大效益"
+msgid "Connect your data to get the most out of DataMan"
+msgstr "连接你的数据以获得DataMan的最大效益"
 
 #: frontend/src/metabase/home/homepage/components/StartSection/StartSection.tsx:119
 msgid "If you need help, you can {0} or {1}."
@@ -21539,8 +21539,8 @@ msgid "Use the tab key to navigate through settings and columns."
 msgstr "使用Tab键在设置和栏目中导航。"
 
 #: frontend/src/metabase/admin/settings/components/SettingsLicense/SettingsLicense.tsx:15
-msgid "Metabase is open source and will be free forever – but by upgrading you can have priority support, more tools to help you share your insights with your teams and powerful options to help you create seamless, interactive data experiences for your customers."
-msgstr "Metabase是开源的，并将永远免费 - 但通过升级，你可以获得优先支持，有更多的工具帮助你与你的团队分享你的洞察力，并有强大的选项帮助你为你的客户创造无缝、互动的数据体验。"
+msgid "DataMan is open source and will be free forever – but by upgrading you can have priority support, more tools to help you share your insights with your teams and powerful options to help you create seamless, interactive data experiences for your customers."
+msgstr "DataMan是开源的，并将永远免费 - 但通过升级，你可以获得优先支持，有更多的工具帮助你与你的团队分享你的洞察力，并有强大的选项帮助你为你的客户创造无缝、互动的数据体验。"
 
 #: frontend/src/metabase/admin/settings/components/SettingsLicense/SettingsLicense.tsx:24
 msgid "Want to know more?"
@@ -21572,8 +21572,8 @@ msgstr "Slack应用程序无法工作。"
 
 #: frontend/src/metabase/admin/settings/slack/components/SlackSetup/SlackSetup.tsx:48
 #: frontend/src/metabase/admin/settings/slack/components/SlackStatus/SlackStatus.tsx:50
-msgid "Metabase on Slack"
-msgstr "Slack上的Metabase"
+msgid "DataMan on Slack"
+msgstr "Slack上的DataMan"
 
 #: frontend/src/metabase/admin/settings/slack/components/SlackStatus/SlackStatus.tsx:55
 msgid "Need help? {0}."
@@ -21600,8 +21600,8 @@ msgid "We recommend you {0}, see the instructions below:"
 msgstr "我们建议你{0}，见以下说明。"
 
 #: frontend/src/metabase/admin/settings/slack/components/SlackSetup/SlackSetup.tsx:58
-msgid "Bring the power of Metabase to your Slack #channels."
-msgstr "将Metabase的力量带到你的Slack #频道。"
+msgid "Bring the power of DataMan to your Slack #channels."
+msgstr "将DataMan的力量带到你的Slack #频道。"
 
 #: frontend/src/metabase/admin/settings/slack/components/SlackSetup/SlackSetup.tsx:59
 msgid "Follow these steps to connect to Slack:"
@@ -21612,8 +21612,8 @@ msgid "1. Create your Slack App"
 msgstr "1.创建你的Slack应用程序"
 
 #: frontend/src/metabase/admin/settings/slack/components/SlackSetup/SlackSetup.tsx:101
-msgid "To create your Metabase integration on Slack you’ll need to set up some things."
-msgstr "要在Slack上创建你的Metabase集成，你需要设置一些东西。"
+msgid "To create your DataMan integration on Slack you’ll need to set up some things."
+msgstr "要在Slack上创建你的DataMan集成，你需要设置一些东西。"
 
 #: frontend/src/metabase/admin/settings/slack/components/SlackSetup/SlackSetup.tsx:102
 msgid "First, go to {0}, hit “{1}” and pick “{2}”"
@@ -21632,8 +21632,8 @@ msgid "From an app manifest."
 msgstr "来自一个应用程序清单。"
 
 #: frontend/src/metabase/admin/settings/slack/components/SlackSetup/SlackSetup.tsx:128
-msgid "2. Copy the Metabase manifest"
-msgstr "2.复制Metabase清单"
+msgid "2. Copy the DataMan manifest"
+msgstr "2.复制DataMan清单"
 
 #: frontend/src/metabase/admin/settings/slack/components/SlackSetup/SlackSetup.tsx:130
 msgid "Select your workspace and then copy our {0} below and paste it in to create the app. In the following screen, click “{1}” and authorize it."
@@ -21916,12 +21916,12 @@ msgid "Delete {0}?"
 msgstr "删除{0}？"
 
 #: frontend/src/metabase/components/DriverWarning/DriverWarning.tsx:117
-msgid "This is a community-developed driver and not supported by Metabase. "
-msgstr "这是一个社区开发的驱动程序，不受Metabase支持。 "
+msgid "This is a community-developed driver and not supported by DataMan. "
+msgstr "这是一个社区开发的驱动程序，不受DataMan支持。 "
 
 #: frontend/src/metabase/components/DriverWarning/DriverWarning.tsx:145
-msgid "This is a partner-developed driver. Though Metabase can’t provide support for it, if you need help you can contact the fine folks at "
-msgstr "这是一个合作伙伴开发的驱动程序。虽然Metabase不能为它提供支持，但如果你需要帮助，你可以联系以下的优秀人士 "
+msgid "This is a partner-developed driver. Though DataMan can’t provide support for it, if you need help you can contact the fine folks at "
+msgstr "这是一个合作伙伴开发的驱动程序。虽然DataMan不能为它提供支持，但如果你需要帮助，你可以联系以下的优秀人士 "
 
 #: frontend/src/metabase/components/Toaster/Toaster.tsx:24
 msgid "Turn on"
@@ -22041,8 +22041,8 @@ msgid "Good to see you, {0}"
 msgstr "很高兴见到你，{0}。"
 
 #: frontend/src/metabase/home/homepage/components/HomeHelpCard/HomeHelpCard.tsx:9
-msgid "Metabase tips"
-msgstr "Metabase 提示"
+msgid "DataMan tips"
+msgstr "DataMan 提示"
 
 #: frontend/src/metabase/home/homepage/components/HomePopularSection/HomePopularSection.tsx:41
 #: frontend/src/metabase/home/homepage/components/HomePopularSection/HomePopularSection.tsx:54
@@ -22070,8 +22070,8 @@ msgid "Pick up where you left off"
 msgstr "从你离开的地方继续"
 
 #: frontend/src/metabase/home/homepage/components/HomeXraySection/HomeXraySection.tsx:41
-msgid "Try out these sample x-rays to see what Metabase can do."
-msgstr "试试这些X射线样本，看看Metabase能做什么。"
+msgid "Try out these sample x-rays to see what DataMan can do."
+msgstr "试试这些X射线样本，看看DataMan能做什么。"
 
 #: frontend/src/metabase/home/homepage/components/HomeXraySection/HomeXraySection.tsx:45
 msgid "Here are some explorations of the"
@@ -22208,12 +22208,12 @@ msgid "Launch of v2.0"
 msgstr "推出v2.0版"
 
 #: frontend/src/metabase/timelines/collections/components/TimelineEmptyState/TimelineEmptyState.tsx:69
-msgid "Add events to Metabase to show important milestones, launches, or anything else, right alongside your data."
-msgstr "在Metabase中添加事件，在你的数据旁边显示重要的里程碑、发布或其他任何事情。"
+msgid "Add events to DataMan to show important milestones, launches, or anything else, right alongside your data."
+msgstr "在DataMan中添加事件，在你的数据旁边显示重要的里程碑、发布或其他任何事情。"
 
 #: frontend/src/metabase/timelines/collections/components/TimelineEmptyState/TimelineEmptyState.tsx:70
-msgid "Events in Metabase let you see important milestones, launches, or anything else, right alongside your data."
-msgstr "Metabase中的事件让你看到重要的里程碑、启动或其他任何事情，就在你的数据旁边。"
+msgid "Events in DataMan let you see important milestones, launches, or anything else, right alongside your data."
+msgstr "DataMan中的事件让你看到重要的里程碑、启动或其他任何事情，就在你的数据旁边。"
 
 #: frontend/src/metabase/timelines/collections/components/TimelineCard/TimelineCard.tsx:49
 #: frontend/src/metabase/timelines/common/components/TimelinePicker/TimelinePicker.tsx:64
@@ -22239,20 +22239,20 @@ msgid "Move {0}"
 msgstr "移动 {0}"
 
 #: frontend/src/metabase/timelines/questions/components/TimelineEmptyState/TimelineEmptyState.tsx:31
-msgid "Add events to Metabase to show helpful context alongside your data."
-msgstr "将事件添加到Metabase中，以显示与你的数据有关的有用背景。"
+msgid "Add events to DataMan to show helpful context alongside your data."
+msgstr "将事件添加到DataMan中，以显示与你的数据有关的有用背景。"
 
 #: frontend/src/metabase/timelines/questions/components/TimelineEmptyState/TimelineEmptyState.tsx:32
-msgid "Events in Metabase let you see helpful context alongside your data."
-msgstr "Metabase中的事件功能，为您在数据周围显示有用的上下文信息。"
+msgid "Events in DataMan let you see helpful context alongside your data."
+msgstr "DataMan中的事件功能，为您在数据周围显示有用的上下文信息。"
 
 #: frontend/src/metabase/admin/datamodel/components/database/MetadataTable/MetadataTable.tsx:140
 msgid "Original schema"
 msgstr "原始模式"
 
 #: frontend/src/metabase/admin/settings/slack/components/SlackSetup/SlackSetup.tsx:98
-msgid "Click the button below to begin creating your Slack App using the Metabase configuration."
-msgstr "点击下面的按钮，开始使用Metabase配置创建你的Slack应用程序。"
+msgid "Click the button below to begin creating your Slack App using the DataMan configuration."
+msgstr "点击下面的按钮，开始使用DataMan配置创建你的Slack应用程序。"
 
 #: frontend/src/metabase/admin/settings/slack/components/SlackSetup/SlackSetup.tsx:99
 msgid "Once created, click “{0}” to authorize it."
@@ -22514,9 +22514,9 @@ msgid "Switch to visualization"
 msgstr "切换到可视化"
 
 #: frontend/src/metabase/admin/settings/components/widgets/GroupMappingsWidget.jsx:140
-msgid "Mappings allow Metabase to automatically add and remove users from groups based on the membership information provided by the\n"
+msgid "Mappings allow DataMan to automatically add and remove users from groups based on the membership information provided by the\n"
 "directory server. Users are only ever added to or removed from mapped groups."
-msgstr "映射允许Metabase根据目录服务器提供的成员信息，自动从组中添加和删除用户。\n"
+msgstr "映射允许DataMan根据目录服务器提供的成员信息，自动从组中添加和删除用户。\n"
 "目录服务器提供的成员信息。用户只被添加到映射的组中或从组中删除。"
 
 #: metabase_enterprise/advanced_config/models/pulse_channel.clj:9
@@ -22878,8 +22878,8 @@ msgid "Saved questions"
 msgstr "保存的问题"
 
 #: frontend/src/metabase/admin/settings/selectors.js:521
-msgid "Enabling cache will create tables for your models in a dedicated schema and Metabase will refresh them on a schedule. Questions based on your models will query these tables. {0}."
-msgstr "启用缓存将在一个专门的模式中为你的模型创建表，Metabase将按计划刷新它们。基于你的模型的问题将查询这些表。{0}."
+msgid "Enabling cache will create tables for your models in a dedicated schema and DataMan will refresh them on a schedule. Questions based on your models will query these tables. {0}."
+msgstr "启用缓存将在一个专门的模式中为你的模型创建表，DataMan将按计划刷新它们。基于你的模型的问题将查询这些表。{0}."
 
 #: frontend/src/metabase/admin/settings/selectors.js:439
 msgid "Refresh every"
@@ -23110,7 +23110,7 @@ msgstr "从自托管的主机迁移？"
 
 #: frontend/src/metabase/setup/containers/CloudMigrationHelp/CloudMigrationHelp.tsx:32
 msgid "Check out our docs for how to migrate your self-hosted instance to Cloud."
-msgstr "查看我们的文档，看如何从你自托管的主机迁移到Metabase云上。"
+msgstr "查看我们的文档，看如何从你自托管的主机迁移到DataMan云上。"
 
 #: frontend/src/metabase/components/TextWidget/TextWidget.tsx:99
 #: frontend/src/metabase/parameters/components/ParameterValueWidget.jsx:143
@@ -23160,8 +23160,8 @@ msgid "Move, archive, and more..."
 msgstr "移动、归档和其他..."
 
 #: frontend/src/metabase/sharing/components/SlackChannelField/SlackChannelField.tsx:71
-msgid "In order to send subscriptions and alerts to private Slack channels, you must first add the Metabase bot to them."
-msgstr "想要发送订阅和报警到私人Slack频道，你需要首先添加Metabase bot。"
+msgid "In order to send subscriptions and alerts to private Slack channels, you must first add the DataMan bot to them."
+msgstr "想要发送订阅和报警到私人Slack频道，你需要首先添加DataMan bot。"
 
 #: enterprise/frontend/src/metabase-enterprise/whitelabel/components/ColorResetModal/ColorResetModal.tsx:22
 msgid "Are you sure you want to reset to default colors?"
@@ -23270,8 +23270,8 @@ msgid "Display our little friend on the homepage"
 msgstr "在主页上显示我们的小伙伴"
 
 #: frontend/src/metabase/admin/settings/components/widgets/EmbeddingCustomizationInfo.tsx:9
-msgid "In order to remove the Metabase logo from embeds, you can always upgrade to {0}"
-msgstr "想要移除嵌入的Metabase商标，你可以升级到 {0}"
+msgid "In order to remove the DataMan logo from embeds, you can always upgrade to {0}"
+msgstr "想要移除嵌入的DataMan商标，你可以升级到 {0}"
 
 #: frontend/src/metabase/admin/settings/components/widgets/EmbeddingCustomizationInfo.tsx:11
 msgid "one of our paid plans."
@@ -23282,8 +23282,8 @@ msgid "embedding the entire metabase app"
 msgstr "嵌入整个metabase应用"
 
 #: frontend/src/metabase/admin/settings/components/widgets/PremiumEmbeddingLinkWidget/PremiumEmbeddingLinkWidget.tsx:11
-msgid "With {0} you can embed the full Metabase app and enable your users to drill-through to charts, browse collections, and use the graphical query builder. You can also get priority support, more tools to help you share your insights with your teams and powerful options to help you create seamless, interactive data experiences for your customers."
-msgstr "通过{0}，您可以嵌入完整的Metabase应用程序，并使用户能够钻取图表、浏览集合和使用图形查询生成器。您还可以获得优先支持、更多帮助您与团队分享见解的工具，以及帮助您为客户创造无缝、交互式数据体验的强大选项。"
+msgid "With {0} you can embed the full DataMan app and enable your users to drill-through to charts, browse collections, and use the graphical query builder. You can also get priority support, more tools to help you share your insights with your teams and powerful options to help you create seamless, interactive data experiences for your customers."
+msgstr "通过{0}，您可以嵌入完整的DataMan应用程序，并使用户能够钻取图表、浏览集合和使用图形查询生成器。您还可以获得优先支持、更多帮助您与团队分享见解的工具，以及帮助您为客户创造无缝、交互式数据体验的强大选项。"
 
 #: frontend/src/metabase/admin/settings/components/widgets/PremiumEmbeddingLinkWidget/PremiumEmbeddingLinkWidget.tsx:13
 msgid "some of our paid plans,"
@@ -23331,8 +23331,8 @@ msgid "Embedding"
 msgstr "嵌入"
 
 #: frontend/src/metabase/admin/settings/components/widgets/EmbeddingLegalese/EmbeddingLegalese.tsx:25
-msgid "Embed dashboards, questions, or the entire Metabase app into your application. Integrate with your server code to create a secure environment, limited to specific users or organizations."
-msgstr "将仪表板、问题或整个Metabase应用程序嵌入到应用程序中。可与你自己的服务器代码集成，创建一个安全的环境，限制于特定用户或组织使用。"
+msgid "Embed dashboards, questions, or the entire DataMan app into your application. Integrate with your server code to create a secure environment, limited to specific users or organizations."
+msgstr "将仪表板、问题或整个DataMan应用程序嵌入到应用程序中。可与你自己的服务器代码集成，创建一个安全的环境，限制于特定用户或组织使用。"
 
 #: frontend/src/metabase/admin/settings/components/widgets/EmbeddingLegalese/EmbeddingLegalese.tsx:29
 msgid "By enabling embedding you're agreeing to"
@@ -23347,13 +23347,13 @@ msgid "More details"
 msgstr "更多细节"
 
 #: frontend/src/metabase/admin/settings/components/widgets/EmbeddingLegalese/EmbeddingLegalese.tsx:44
-msgid "When you embed charts or dashboards from Metabase in your own\n"
+msgid "When you embed charts or dashboards from DataMan in your own\n"
 "application, that application isn't subject to the Affero General Public\n"
-"License that covers the rest of Metabase, provided you keep the Metabase\n"
-"logo and the \"Powered by Metabase\" visible on those embeds."
-msgstr "当您将Metabase中的图表或仪表板嵌入到自己的数据库中时应用程序，that application isn't subject to the Affero General Public\n"
-"License that covers the rest of Metabase, provided you keep the Metabase\n"
-"logo and the \"Powered by Metabase\" visible on those embeds."
+"License that covers the rest of DataMan, provided you keep the DataMan\n"
+"logo and the \"Powered by DataMan\" visible on those embeds."
+msgstr "当您将DataMan中的图表或仪表板嵌入到自己的数据库中时应用程序，that application isn't subject to the Affero General Public\n"
+"License that covers the rest of DataMan, provided you keep the DataMan\n"
+"logo and the \"Powered by DataMan\" visible on those embeds."
 
 #: frontend/src/metabase/admin/settings/components/widgets/EmbeddingLegalese/EmbeddingLegalese.tsx:50
 msgid "Your should, however, read the license text linked above as that is the\n"
@@ -23395,8 +23395,8 @@ msgid "1. Click the button below and create your Slack App"
 msgstr "1.点击下面的按钮开始创建你的Slack应用"
 
 #: frontend/src/metabase/admin/settings/slack/components/SlackSetup/SlackSetup.tsx:100
-msgid "First, {0} using the Metabase configuration. Once created, click “${ 1 }” to authorize it."
-msgstr "首先，{0}使用Metabase配置。一旦创建，点击 “${ 1 }”  授权。"
+msgid "First, {0} using the DataMan configuration. Once created, click “${ 1 }” to authorize it."
+msgstr "首先，{0}使用DataMan配置。一旦创建，点击 “${ 1 }”  授权。"
 
 #: frontend/src/metabase/admin/settings/slack/components/SlackSetup/SlackSetup.tsx:101
 msgid "click the button below to create your Slack App"
@@ -23538,8 +23538,8 @@ msgid "Heavy"
 msgstr "黑体"
 
 #: enterprise/frontend/src/metabase-enterprise/embedding/index.js:19
-msgid "With this Pro/Enterprise feature you can embed the full Metabase app. Enable your users to drill-through to charts, browse collections, and use the graphical query builder. {0}"
-msgstr "通过这个 Pro/Enterprise 特性，你可以嵌入完整的 Metabase 应用程序。允许用户钻取图表、浏览集合和使用图形查询生成器。{0}"
+msgid "With this Pro/Enterprise feature you can embed the full DataMan app. Enable your users to drill-through to charts, browse collections, and use the graphical query builder. {0}"
+msgstr "通过这个 Pro/Enterprise 特性，你可以嵌入完整的 DataMan 应用程序。允许用户钻取图表、浏览集合和使用图形查询生成器。{0}"
 
 #: enterprise/frontend/src/metabase-enterprise/embedding/index.js:25
 msgid "Authorized origins"
@@ -23629,8 +23629,8 @@ msgstr "全应用嵌入"
 
 #: frontend/src/metabase/admin/settings/selectors.js:391
 #, fuzzy
-msgid "With this Pro/Enterprise feature you can embed the full Metabase app. Enable your users to drill-through to charts, browse collections, and use the graphical query builder."
-msgstr "通过这个专业/企业版功能，你可以嵌入完整的Metabase应用程序。使你的用户能够深入到图表中，浏览集合，并使用可视化查询生成器。"
+msgid "With this Pro/Enterprise feature you can embed the full DataMan app. Enable your users to drill-through to charts, browse collections, and use the graphical query builder."
+msgstr "通过这个专业/企业版功能，你可以嵌入完整的DataMan应用程序。使你的用户能够深入到图表中，浏览集合，并使用可视化查询生成器。"
 
 #: frontend/src/metabase/admin/settings/selectors.js:417
 msgid "Standalone Embed Secret Key used to sign JSON Web Tokens for requests to /api/embed endpoints. This lets you create a secure environment limited to specific users or organizations."
@@ -23798,8 +23798,8 @@ msgid "Boolean indicating whether a Snowplow collector is available to receive a
 msgstr "表示Snowplow收集器是否可以接收分析事件的布尔值。应通过Cypress测试中的环境变量或在本地开发期间设置。"
 
 #: metabase/analytics/snowplow.clj:23
-msgid "Unique identifier to be used in Snowplow analytics, to identify this instance of Metabase. This is a public setting since some analytics events are sent prior to initial setup."
-msgstr "唯一的身份标识被使用 Snowplow analytics中识别 Metabase实例.这是一个公共设置，因为一些分析事件在初始设置之前发送。"
+msgid "Unique identifier to be used in Snowplow analytics, to identify this instance of DataMan. This is a public setting since some analytics events are sent prior to initial setup."
+msgstr "唯一的身份标识被使用 Snowplow analytics中识别 DataMan实例.这是一个公共设置，因为一些分析事件在初始设置之前发送。"
 
 #: metabase/api/database.clj:530 metabase/driver/util.clj:59
 #: metabase/driver/util.clj:31 metabase/driver/util.clj:47
@@ -23854,12 +23854,12 @@ msgstr "系统信息：\n"
 "{0}"
 
 #: metabase/driver/common.clj:163
-msgid "Metabase can scan the values present in each field in this database to enable checkbox filters in dashboards and questions. This can be a somewhat resource-intensive process, particularly if you have a very large database. When should Metabase automatically scan and cache field values?"
-msgstr "Metabase可以扫描此数据库中每个字段中的值，以启用仪表板和问题中的复选框过滤器。这可能是一个资源密集型的过程，特别是如果您有一个非常大的数据库。Metabase何时应自动扫描和缓存字段值？"
+msgid "DataMan can scan the values present in each field in this database to enable checkbox filters in dashboards and questions. This can be a somewhat resource-intensive process, particularly if you have a very large database. When should DataMan automatically scan and cache field values?"
+msgstr "DataMan可以扫描此数据库中每个字段中的值，以启用仪表板和问题中的复选框过滤器。这可能是一个资源密集型的过程，特别是如果您有一个非常大的数据库。DataMan何时应自动扫描和缓存字段值？"
 
 #: metabase/driver/common.clj:223
-msgid "If your database is behind a firewall, you may need to allow connections from our Metabase [Cloud IP addresses](https://www.metabase.com/cloud/docs/ip-addresses-to-whitelist.html):"
-msgstr "如果您的数据库位于防火墙之后，您可能需要允许来自我们的Metabase[Cloud IP addresses]的连接。\n"
+msgid "If your database is behind a firewall, you may need to allow connections from our DataMan [Cloud IP addresses](https://www.metabase.com/cloud/docs/ip-addresses-to-whitelist.html):"
+msgstr "如果您的数据库位于防火墙之后，您可能需要允许来自我们的DataMan[Cloud IP addresses]的连接。\n"
 "(https://www.metabase.com/cloud/docs/ip-addresses-to-whitelist.html):"
 
 #: metabase/driver/common.clj:173
@@ -23985,17 +23985,17 @@ msgid "[{0}] Model cache refresh failed for {1}"
 msgstr "[{0}] 模型缓存刷新失败 {1}"
 
 #: metabase/integrations/google.clj:56
-msgid "Google Sign-In token appears to be incorrect. Double check that it matches in Google and Metabase."
-msgstr "Google 登录 token 显示不正确。请确认在 Google 和 Metabase是否一致。"
+msgid "Google Sign-In token appears to be incorrect. Double check that it matches in Google and DataMan."
+msgstr "Google 登录 token 显示不正确。请确认在 Google 和 DataMan是否一致。"
 
 #: metabase/integrations/slack.clj:18
 #, fuzzy
-msgid "Deprecated Slack API token for connecting the Metabase Slack bot. Please use a new Slack app integration instead."
-msgstr "用于连接Metabase Slack机器人的Slack API令牌功能已经废弃。请使用新的Slack应用集成功能代替。"
+msgid "Deprecated Slack API token for connecting the DataMan Slack bot. Please use a new Slack app integration instead."
+msgstr "用于连接DataMan Slack机器人的Slack API令牌功能已经废弃。请使用新的Slack应用集成功能代替。"
 
 #: metabase/integrations/slack.clj:24
-msgid "Bot user OAuth token for connecting the Metabase Slack app. This should be used for all new Slack integrations starting in Metabase v0.42.0."
-msgstr "Bot 使用 OAuth token 连接 Metabase Slack app。在Metabase v0.42.0后将用在新的Slack integrations 。"
+msgid "Bot user OAuth token for connecting the DataMan Slack app. This should be used for all new Slack integrations starting in DataMan v0.42.0."
+msgstr "Bot 使用 OAuth token 连接 DataMan Slack app。在DataMan v0.42.0后将用在新的Slack integrations 。"
 
 #: metabase/integrations/slack.clj:29
 #, fuzzy
@@ -24048,8 +24048,8 @@ msgstr "不能更新FieldValues的类型或hash_key。"
 
 #: metabase/models/humanization.clj:107
 #, fuzzy
-msgid "To make table and field names more human-friendly, Metabase will replace dashes and underscores in them with spaces. We’ll capitalize each word while at it, so ‘last_visited_at’ will become ‘Last Visited At’."
-msgstr "为了使表和字段的名称更加人性化，Metabase将用空格代替其中的破折号和下划线。我们将大写每个单词，所以'last_visited_at'将变成'Last Visited At'。"
+msgid "To make table and field names more human-friendly, DataMan will replace dashes and underscores in them with spaces. We’ll capitalize each word while at it, so ‘last_visited_at’ will become ‘Last Visited At’."
+msgstr "为了使表和字段的名称更加人性化，DataMan将用空格代替其中的破折号和下划线。我们将大写每个单词，所以'last_visited_at'将变成'Last Visited At'。"
 
 #: metabase/models/params.clj:24
 #, fuzzy
@@ -24096,8 +24096,8 @@ msgstr "告诉我们在哪里可以找到每种字体重量的文件。你不需
 
 #: metabase/public_settings.clj:139
 #, fuzzy
-msgid "The default language for all users across the Metabase UI, system emails, pulses, and alerts. Users can individually override this default language from their own account settings."
-msgstr "所有用户在Metabase用户界面、系统邮件、pulses和警报中的默认语言。用户可以从自己的账户设置中单独设置自己默认语言。"
+msgid "The default language for all users across the DataMan UI, system emails, pulses, and alerts. Users can individually override this default language from their own account settings."
+msgstr "所有用户在DataMan用户界面、系统邮件、pulses和警报中的默认语言。用户可以从自己的账户设置中单独设置自己默认语言。"
 
 #: metabase/public_settings.clj:560
 #, fuzzy

@@ -13,7 +13,7 @@ describe("ForgotPassword", () => {
   });
 
   it("should show a success message when the form is submitted", async () => {
-    const email = "user@metabase.test";
+    const email = "user@dataman.test";
     const props = getProps({
       canResetPassword: true,
       onResetPassword: jest.fn().mockResolvedValue({}),

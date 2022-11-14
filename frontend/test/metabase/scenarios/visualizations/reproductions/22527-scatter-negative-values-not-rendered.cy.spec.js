@@ -20,7 +20,7 @@ describe.skip("issue 22527", () => {
     cy.createNativeQuestion(questionDetails, { visitQuestion: true });
   });
 
-  it("should render negative values in a scatter visualziation (metabase#22527)", () => {
+  it("should render negative values in a scatter visualziation (dataman#22527)", () => {
     assertion();
 
     cy.findByText("Settings").click();

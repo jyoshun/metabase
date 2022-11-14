@@ -8,7 +8,7 @@ describe("issue 11580", () => {
     cy.signInAsAdmin();
   });
 
-  it("shouldn't reorder template tags when updated (metabase#11580)", () => {
+  it("shouldn't reorder template tags when updated (dataman#11580)", () => {
     openNativeEditor();
     SQLFilter.enterParameterizedQuery("{{foo}} {{bar}}");
 

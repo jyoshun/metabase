@@ -13,7 +13,7 @@ describe("issue 20625", () => {
     );
   });
 
-  it("should continue to request more prefix matches (metabase#20625)", () => {
+  it("should continue to request more prefix matches (dataman#20625)", () => {
     openNativeEditor().type("s");
 
     // autocomplete_suggestions?prefix=s

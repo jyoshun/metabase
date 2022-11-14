@@ -73,7 +73,7 @@ describe("scenarios > admin > datamodel > metadata", () => {
     });
   });
 
-  it("should not include date when metric is binned by hour of day (metabase#14124)", () => {
+  it("should not include date when metric is binned by hour of day (dataman#14124)", () => {
     cy.request("PUT", `/api/field/${ORDERS.CREATED_AT}`, {
       semantic_type: null,
     });
@@ -98,7 +98,7 @@ describe("scenarios > admin > datamodel > metadata", () => {
     cy.findByText(/^3:00 AM$/);
   });
 
-  it("should not display multiple 'Created At' fields when they are remapped to PK/FK (metabase#15563)", () => {
+  it("should not display multiple 'Created At' fields when they are remapped to PK/FK (dataman#15563)", () => {
     // Remap fields
     cy.request("PUT", `/api/field/${ORDERS.CREATED_AT}`, {
       semantic_type: "type/PK",
@@ -118,7 +118,7 @@ describe("scenarios > admin > datamodel > metadata", () => {
       .should("have.length", 1);
   });
 
-  it("display value 'custom mapping' should be available regardless of the chosen filtering type (metabase#16322)", () => {
+  it("display value 'custom mapping' should be available regardless of the chosen filtering type (dataman#16322)", () => {
     cy.visit(
       `/admin/datamodel/database/${SAMPLE_DB_ID}/table/${REVIEWS_ID}/${REVIEWS.RATING}/general`,
     );

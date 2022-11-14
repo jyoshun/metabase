@@ -29,7 +29,7 @@ describe("scenarios > visualizations > line chart", () => {
     cy.signInAsNormalUser();
   });
 
-  it("should be able to change y axis position (metabase#13487)", () => {
+  it("should be able to change y axis position (dataman#13487)", () => {
     visitQuestionAdhoc({
       dataset_query: testQuery,
       display: "line",
@@ -41,7 +41,7 @@ describe("scenarios > visualizations > line chart", () => {
     cy.get(Y_AXIS_RIGHT_SELECTOR);
   });
 
-  it("should be able to format data point values style independently on multi-series chart (metabase#13095)", () => {
+  it("should be able to format data point values style independently on multi-series chart (dataman#13095)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "query",
@@ -99,7 +99,7 @@ describe("scenarios > visualizations > line chart", () => {
     );
   });
 
-  it("should correctly display tooltip values when X-axis is numeric and style is 'Ordinal' (metabase#15998)", () => {
+  it("should correctly display tooltip values when X-axis is numeric and style is 'Ordinal' (dataman#15998)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         database: SAMPLE_DB_ID,
@@ -137,7 +137,7 @@ describe("scenarios > visualizations > line chart", () => {
     });
   });
 
-  it("should be possible to update/change label for an empty row value (metabase#12128)", () => {
+  it("should be possible to update/change label for an empty row value (dataman#12128)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "native",
@@ -178,7 +178,7 @@ describe("scenarios > visualizations > line chart", () => {
       .and("contain", "cat3");
   });
 
-  it("should interpolate null value by not rendering a data point (metabase#4122)", () => {
+  it("should interpolate null value by not rendering a data point (dataman#4122)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "native",
@@ -200,11 +200,11 @@ describe("scenarios > visualizations > line chart", () => {
     cy.get(`.sub._0`).find("circle").should("have.length", 2);
   });
 
-  describe("tooltip of combined dashboard cards (multi-series) should show the correct column title (metabase#16249", () => {
+  describe("tooltip of combined dashboard cards (multi-series) should show the correct column title (dataman#16249", () => {
     const RENAMED_FIRST_SERIES = "Foo";
     const RENAMED_SECOND_SERIES = "Bar";
 
-    it("custom expression names (metabase#16249-1)", () => {
+    it("custom expression names (dataman#16249-1)", () => {
       createOrdersQuestionWithAggregation({
         name: "16249_Q1",
         aggregation: [
@@ -258,7 +258,7 @@ describe("scenarios > visualizations > line chart", () => {
       });
     });
 
-    it("regular column names (metabase#16249-2)", () => {
+    it("regular column names (dataman#16249-2)", () => {
       createOrdersQuestionWithAggregation({
         name: "16249_Q3",
         aggregation: [["sum", ["field", ORDERS.TOTAL, null]]],
@@ -390,7 +390,7 @@ describe("scenarios > visualizations > line chart", () => {
     }
   });
 
-  describe("problems with the labels when showing only one row in the results (metabase#12782, metabase#4995)", () => {
+  describe("problems with the labels when showing only one row in the results (dataman#12782, dataman#4995)", () => {
     beforeEach(() => {
       visitQuestionAdhoc({
         dataset_query: {
@@ -411,11 +411,11 @@ describe("scenarios > visualizations > line chart", () => {
       cy.findByText("Category is Doohickey");
     });
 
-    it.skip("should not drop the chart legend (metabase#4995)", () => {
+    it.skip("should not drop the chart legend (dataman#4995)", () => {
       cy.findAllByTestId("legend-item").should("contain", "Doohickey");
     });
 
-    it("should display correct axis labels (metabase#12782)", () => {
+    it("should display correct axis labels (dataman#12782)", () => {
       cy.get(".x-axis-label").invoke("text").should("eq", "Created At");
       cy.get(".y-axis-label").invoke("text").should("eq", "Average of Price");
     });

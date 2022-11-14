@@ -71,7 +71,7 @@ export function stripRemarks(error) {
    * but the whole error contains these remarks that MB added in. Confusing!
    */
   return error.replace(
-    /-- Metabase:: userID: \d+ queryType: native queryHash: \w+\n/,
+    /-- DataMan:: userID: \d+ queryType: native queryHash: \w+\n/,
     "",
   );
 }
@@ -149,7 +149,7 @@ class VisualizationError extends Component {
             <Icon name="warning" size="40" />
           </QueryErrorIcon>
           <QueryErrorMessage>{processedError}</QueryErrorMessage>
-          <QueryLink href="https://www.metabase.com/learn/debugging-sql/sql-syntax.html">{t`Learn how to debug SQL errors`}</QueryLink>
+          <QueryLink href="https://www.dataman.com/learn/debugging-sql/sql-syntax.html">{t`Learn how to debug SQL errors`}</QueryLink>
         </QueryError>
       );
     } else {

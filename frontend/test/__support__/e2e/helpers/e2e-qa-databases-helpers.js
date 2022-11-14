@@ -30,7 +30,7 @@ function addQADatabase(engine, db_display_name, port) {
       dbname: "sample",
       host: "localhost",
       port: port,
-      user: "metabase",
+      user: "dataman",
       [PASS_KEY]: "metasample123", // NOTE: we're inconsistent in where we use `pass` vs `password` as a key
       authdb: AUTH_DB,
       "additional-options": OPTIONS,

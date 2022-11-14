@@ -16,7 +16,7 @@ export default [
         schema: "PUBLIC",
         db: {
           description:
-            "Some example data for you to play around with as you embark on your Metabase journey.",
+            "Some example data for you to play around with as you embark on your DataMan journey.",
           features: [
             "basic-aggregations",
             "standard-deviation-aggregations",
@@ -171,7 +171,7 @@ export default [
         schema: "PUBLIC",
         db: {
           description:
-            "Some example data for you to play around with as you embark on your Metabase journey.",
+            "Some example data for you to play around with as you embark on your DataMan journey.",
           features: [
             "basic-aggregations",
             "standard-deviation-aggregations",

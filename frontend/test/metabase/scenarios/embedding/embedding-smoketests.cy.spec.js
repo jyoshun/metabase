@@ -8,13 +8,13 @@ import {
 } from "__support__/e2e/helpers";
 
 const embeddingPage = "/admin/settings/embedding-in-other-applications";
-const licenseUrl = "https://metabase.com/license/embedding";
-const upgradeUrl = "https://www.metabase.com/upgrade/";
+const licenseUrl = "https://dataman.com/license/embedding";
+const upgradeUrl = "https://www.dataman.com/upgrade/";
 const learnEmbeddingUrl =
-  "https://www.metabase.com/learn/embedding/embedding-charts-and-dashboards.html";
+  "https://www.dataman.com/learn/embedding/embedding-charts-and-dashboards.html";
 
 const licenseExplanations = [
-  `When you embed charts or dashboards from Metabase in your own application, that application isn't subject to the Affero General Public License that covers the rest of Metabase, provided you keep the Metabase logo and the "Powered by Metabase" visible on those embeds.`,
+  `When you embed charts or dashboards from DataMan in your own application, that application isn't subject to the Affero General Public License that covers the rest of DataMan, provided you keep the DataMan logo and the "Powered by DataMan" visible on those embeds.`,
   `Your should, however, read the license text linked above as that is the actual license that you will be agreeing to by enabling this feature.`,
 ];
 
@@ -64,7 +64,7 @@ describe("scenarios > embedding > smoke tests", () => {
       cy.findByText("Standalone embeds").click();
       if (isOSS) {
         cy.contains(
-          "In order to remove the Metabase logo from embeds, you can always upgrade to one of our paid plans.",
+          "In order to remove the DataMan logo from embeds, you can always upgrade to one of our paid plans.",
         );
 
         assertLinkMatchesUrl("one of our paid plans.", upgradeUrl);
@@ -92,9 +92,9 @@ describe("scenarios > embedding > smoke tests", () => {
           cy.findByText("Embedding").click();
         });
         cy.findByText("Full-app embedding").click();
-        cy.findByText(/Embedding the entire Metabase app/i);
+        cy.findByText(/Embedding the entire DataMan app/i);
         cy.contains(
-          "With this Pro/Enterprise feature you can embed the full Metabase app. Enable your users to drill-through to charts, browse collections, and use the graphical query builder. Learn more.",
+          "With this Pro/Enterprise feature you can embed the full DataMan app. Enable your users to drill-through to charts, browse collections, and use the graphical query builder. Learn more.",
         );
         cy.contains(
           "Enter the origins for the websites or web apps where you want to allow embedding, separated by a space. Here are the exact specifications for what can be entered.",
@@ -159,12 +159,12 @@ describe("scenarios > embedding > smoke tests", () => {
         cy.contains("37.65");
 
         if (isOSS) {
-          cy.contains("Powered by Metabase")
+          cy.contains("Powered by DataMan")
             .closest("a")
             .should("have.attr", "href")
-            .and("eq", "https://metabase.com/");
+            .and("eq", "https://dataman.com/");
         } else {
-          cy.contains("Powered by Metabase").should("not.exist");
+          cy.contains("Powered by DataMan").should("not.exist");
         }
 
         cy.signInAsAdmin();
@@ -205,7 +205,7 @@ describe("scenarios > embedding > smoke tests", () => {
     });
   });
 
-  it("should not offer to share or embed models (metabase#20815)", () => {
+  it("should not offer to share or embed models (dataman#20815)", () => {
     cy.intercept("POST", "/api/dataset").as("dataset");
 
     cy.request("PUT", "/api/card/1", { dataset: true });

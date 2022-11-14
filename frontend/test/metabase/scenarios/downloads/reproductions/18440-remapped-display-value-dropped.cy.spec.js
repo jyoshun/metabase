@@ -38,7 +38,7 @@ describe("issue 18440", () => {
   });
 
   testCases.forEach(fileType => {
-    it(`export should include a column with remapped values for ${fileType} (metabase#18440-1)`, () => {
+    it(`export should include a column with remapped values for ${fileType} (dataman#18440-1)`, () => {
       visitQuestionAdhoc(questionDetails);
 
       cy.findByText("Product ID");
@@ -47,7 +47,7 @@ describe("issue 18440", () => {
       downloadAndAssert({ fileType }, assertion);
     });
 
-    it(`export should include a column with remapped values for ${fileType} for a saved question (metabase#18440-2)`, () => {
+    it(`export should include a column with remapped values for ${fileType} for a saved question (dataman#18440-2)`, () => {
       cy.createQuestion({ query }).then(({ body: { id } }) => {
         visitQuestion(id);
 

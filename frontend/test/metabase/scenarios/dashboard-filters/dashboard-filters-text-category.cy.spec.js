@@ -47,7 +47,7 @@ describe("scenarios > dashboard > filters > text/category", () => {
     );
   });
 
-  it(`should work when set as the default filter which (if cleared) should not be preserved on reload (metabase#13960)`, () => {
+  it(`should work when set as the default filter which (if cleared) should not be preserved on reload (dataman#13960)`, () => {
     setFilter("Text or Category", "Dropdown");
 
     cy.findByText("Select…").click();
@@ -57,7 +57,7 @@ describe("scenarios > dashboard > filters > text/category", () => {
 
     applyFilterByType("Dropdown", "Organic");
 
-    // We need to add another filter only to reproduce metabase#13960
+    // We need to add another filter only to reproduce dataman#13960
     setFilter("ID");
     cy.findByText("Select…").click();
     popover().contains("User ID").click();
@@ -70,7 +70,7 @@ describe("scenarios > dashboard > filters > text/category", () => {
       cy.contains("39.58");
     });
 
-    // This part reproduces metabase#13960
+    // This part reproduces dataman#13960
     // Remove default filter (category)
     cy.get("fieldset .Icon-close").click();
     cy.wait("@dashcardQuery1");

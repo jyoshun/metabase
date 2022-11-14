@@ -19,7 +19,7 @@ describe("issue 18512", () => {
     cy.signInAsAdmin();
   });
 
-  it("should join two saved questions with the same implicit/explicit grouped field (metabase#18512)", () => {
+  it("should join two saved questions with the same implicit/explicit grouped field (dataman#18512)", () => {
     cy.intercept("/api/table/card__*/query_metadata").as("cardQueryMetadata");
 
     cy.createQuestion(question1);

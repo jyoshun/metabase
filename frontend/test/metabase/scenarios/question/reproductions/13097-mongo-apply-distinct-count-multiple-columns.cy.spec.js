@@ -28,7 +28,7 @@ describe("issue 13097", { tags: "@external" }, () => {
     });
   });
 
-  it("should correctly apply distinct count on multiple columns (metabase#13097)", () => {
+  it("should correctly apply distinct count on multiple columns (dataman#13097)", () => {
     summarize({ mode: "notebook" });
 
     cy.findByText("Number of distinct values of ...").click();

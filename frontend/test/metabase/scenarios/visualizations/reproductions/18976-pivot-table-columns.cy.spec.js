@@ -24,7 +24,7 @@ describe("issue 18976", () => {
     cy.signInAsAdmin();
   });
 
-  it("should display a pivot table as regular one when pivot columns are missing (metabase#18976)", () => {
+  it("should display a pivot table as regular one when pivot columns are missing (dataman#18976)", () => {
     visitQuestionAdhoc(questionDetails);
 
     cy.findByText("Showing 1 row");

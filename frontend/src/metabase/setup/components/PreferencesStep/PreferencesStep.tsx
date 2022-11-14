@@ -63,7 +63,7 @@ const PreferencesStep = ({
       label={4}
     >
       <StepDescription>
-        {t`In order to help us improve Metabase, we'd like to collect certain data about product usage.`}{" "}
+        {t`In order to help us improve DataMan, we'd like to collect certain data about product usage.`}{" "}
         <ExternalLink
           href={Settings.docsUrl("information-collection")}
         >{t`Here's a full list of what we track and why.`}</ExternalLink>
@@ -76,12 +76,12 @@ const PreferencesStep = ({
           aria-labelledby="anonymous-usage-events-label"
         />
         <StepToggleLabel id="anonymous-usage-events-label">
-          {t`Allow Metabase to anonymously collect usage events`}
+          {t`Allow DataMan to anonymously collect usage events`}
         </StepToggleLabel>
       </StepToggleContainer>
       {isTrackingAllowed && (
         <StepInfoList>
-          <li>{jt`Metabase ${(
+          <li>{jt`DataMan ${(
             <strong key="message">{t`never`}</strong>
           )} collects anything about your data or question results.`}</li>
           <li>{t`All collection is completely anonymous.`}</li>

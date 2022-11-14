@@ -60,7 +60,7 @@ describe("scenarios > dashboard > dashboard drill", () => {
     cy.location("pathname").should("eq", "/foo/111/param-value");
   });
 
-  it("should insert values from hidden column on custom destination URL click through (metabase#13927)", () => {
+  it("should insert values from hidden column on custom destination URL click through (dataman#13927)", () => {
     const questionDetails = {
       name: "13927",
       native: { query: "SELECT PEOPLE.STATE, PEOPLE.CITY from PEOPLE;" },
@@ -112,7 +112,7 @@ describe("scenarios > dashboard > dashboard drill", () => {
     cy.location("pathname").should("eq", "/test/CO");
   });
 
-  it("should insert data from the correct row in the URL for pivot tables (metabase#17920)", () => {
+  it("should insert data from the correct row in the URL for pivot tables (dataman#17920)", () => {
     const query =
       "SELECT STATE, SOURCE, COUNT(*) AS CNT from PEOPLE GROUP BY STATE, SOURCE";
     const questionSettings = {
@@ -238,7 +238,7 @@ describe("scenarios > dashboard > dashboard drill", () => {
       });
   });
 
-  it("should open the same dashboard when a custom URL click behavior points to the same dashboard (metabase#22702)", () => {
+  it("should open the same dashboard when a custom URL click behavior points to the same dashboard (dataman#22702)", () => {
     createDashboardWithQuestion({}, dashboardId => visitDashboard(dashboardId));
     cy.icon("pencil").click();
     showDashboardCardActions();
@@ -294,7 +294,7 @@ describe("scenarios > dashboard > dashboard drill", () => {
       .within(() => cy.findByText("foo"));
   });
 
-  describe("should pass multiple filters for numeric column on drill-through (metabase#13062)", () => {
+  describe("should pass multiple filters for numeric column on drill-through (dataman#13062)", () => {
     const questionDetails = {
       name: "13062Q",
       query: {
@@ -350,7 +350,7 @@ describe("scenarios > dashboard > dashboard drill", () => {
       );
     });
 
-    it("when clicking on the field value (metabase#13062-1)", () => {
+    it("when clicking on the field value (dataman#13062-1)", () => {
       cy.findByText("xavier").click();
       cy.findByText("=").click();
 
@@ -359,7 +359,7 @@ describe("scenarios > dashboard > dashboard drill", () => {
       cy.contains("Reprehenderit non error"); // xavier's review
     });
 
-    it("when clicking on the card title (metabase#13062-2)", () => {
+    it("when clicking on the card title (dataman#13062-2)", () => {
       cy.findByText(questionDetails.name).click();
       cy.findByText("Rating is 2 selections");
       cy.contains("Ad perspiciatis quis et consectetur."); // 5 star review
@@ -427,7 +427,7 @@ describe("scenarios > dashboard > dashboard drill", () => {
     cy.url().should("match", pattern);
   });
 
-  it("should drill-through on a foreign key (metabase#8055)", () => {
+  it("should drill-through on a foreign key (dataman#8055)", () => {
     // In this test we're using already present dashboard ("Orders in a dashboard")
     const FILTER_ID = "7c9ege62";
 
@@ -486,7 +486,7 @@ describe("scenarios > dashboard > dashboard drill", () => {
     cy.findByTestId("object-detail").findByText("Fantastic Wool Shirt");
   });
 
-  it("should apply correct date range on a graph drill-through (metabase#13785)", () => {
+  it("should apply correct date range on a graph drill-through (dataman#13785)", () => {
     cy.log("Create a question");
 
     cy.createQuestion({
@@ -582,7 +582,7 @@ describe("scenarios > dashboard > dashboard drill", () => {
     });
   });
 
-  it("should not hide custom formatting when click behavior is enabled (metabase#14597)", () => {
+  it("should not hide custom formatting when click behavior is enabled (dataman#14597)", () => {
     const columnKey = JSON.stringify(["name", "MY_NUMBER"]);
     const questionSettings = {
       column_settings: {
@@ -617,7 +617,7 @@ describe("scenarios > dashboard > dashboard drill", () => {
     cy.location("pathname").should("eq", "/it/worked");
   });
 
-  it("should not remove click behavior on 'reset to defaults' (metabase#14919)", () => {
+  it("should not remove click behavior on 'reset to defaults' (dataman#14919)", () => {
     const LINK_NAME = "Home";
 
     cy.createQuestion({
@@ -676,7 +676,7 @@ describe("scenarios > dashboard > dashboard drill", () => {
     });
   });
 
-  it('should drill-through on PK/FK to the "object detail" when filtered by explicit joined column (metabase#15331)', () => {
+  it('should drill-through on PK/FK to the "object detail" when filtered by explicit joined column (dataman#15331)', () => {
     cy.intercept("POST", "/api/dataset").as("dataset");
 
     cy.createQuestion({
@@ -761,7 +761,7 @@ describe("scenarios > dashboard > dashboard drill", () => {
     cy.findAllByText("37.65");
   });
 
-  it("should display correct tooltip value for multiple series charts on dashboard (metabase#15612)", () => {
+  it("should display correct tooltip value for multiple series charts on dashboard (dataman#15612)", () => {
     cy.createNativeQuestion({
       name: "15612_1",
       native: { query: "select 1 as axis, 5 as value" },
@@ -826,7 +826,7 @@ describe("scenarios > dashboard > dashboard drill", () => {
     });
   });
 
-  describe("should preserve dashboard filter and apply it to the question on a drill-through (metabase#11503)", () => {
+  describe("should preserve dashboard filter and apply it to the question on a drill-through (dataman#11503)", () => {
     const ordersIdFilter = {
       name: "Orders ID",
       slug: "orders_id",
@@ -891,7 +891,7 @@ describe("scenarios > dashboard > dashboard drill", () => {
       visitDashboard(1);
     });
 
-    it("should correctly drill-through on Orders filter (metabase#11503-1)", () => {
+    it("should correctly drill-through on Orders filter (dataman#11503-1)", () => {
       setFilterValue(ordersIdFilter.name);
 
       drillThroughCardTitle("Orders");
@@ -904,7 +904,7 @@ describe("scenarios > dashboard > dashboard drill", () => {
       postDrillAssertion();
     });
 
-    it("should correctly drill-through on Products filter (metabase#11503-2)", () => {
+    it("should correctly drill-through on Products filter (dataman#11503-2)", () => {
       setFilterValue(productsIdFilter.name);
 
       drillThroughCardTitle("Orders");

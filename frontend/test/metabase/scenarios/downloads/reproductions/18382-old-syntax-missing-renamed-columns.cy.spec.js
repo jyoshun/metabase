@@ -12,7 +12,7 @@ const { REVIEWS, REVIEWS_ID, PRODUCTS, PRODUCTS_ID } = SAMPLE_DATABASE;
 /**
  * This question might seem a bit overwhelming at the first sight.
  * The whole point of this repro was to try to cover as much of the old syntax as possible.
- * We want to make sure it still works when loaded into a new(er) Metabase version.
+ * We want to make sure it still works when loaded into a new(er) DataMan version.
  */
 
 const questionDetails = {
@@ -101,7 +101,7 @@ testCases.forEach(fileType => {
       visitQuestionAdhoc(questionDetails);
     });
 
-    it(`should handle the old syntax in downloads for ${fileType} (metabase#18382)`, () => {
+    it(`should handle the old syntax in downloads for ${fileType} (dataman#18382)`, () => {
       downloadAndAssert({ fileType }, assertion);
     });
   });

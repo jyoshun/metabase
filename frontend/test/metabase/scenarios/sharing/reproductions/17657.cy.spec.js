@@ -13,7 +13,7 @@ describe("issue 17657", () => {
     createSubscriptionWithoutRecipients();
   });
 
-  it("frontend should gracefully handle the case of a subscription without a recipient (metabase#17657)", () => {
+  it("frontend should gracefully handle the case of a subscription without a recipient (dataman#17657)", () => {
     visitDashboard(1);
 
     cy.icon("subscription").click();
@@ -56,7 +56,7 @@ function createSubscriptionWithoutRecipients() {
       {
         channel_type: "email",
         enabled: true,
-        // Since the fix (https://github.com/metabase/metabase/pull/17668), this is not even possible to do in the UI anymore.
+        // Since the fix (https://github.com/dataman/dataman/pull/17668), this is not even possible to do in the UI anymore.
         // Backend still doesn't do this validation so we're making sure the FE handles the case of missing recipients gracefully.
         recipients: [],
         details: {},

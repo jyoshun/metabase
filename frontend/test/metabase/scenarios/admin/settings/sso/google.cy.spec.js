@@ -10,7 +10,7 @@ describe("scenarios > admin > settings > SSO > Google", () => {
     cy.intercept("PUT", "/api/google/settings").as("updateGoogleSettings");
   });
 
-  it("should save the client id on subsequent tries (metabase#15974)", () => {
+  it("should save the client id on subsequent tries (dataman#15974)", () => {
     cy.visit("/admin/settings/authentication/google");
 
     typeAndBlurUsingLabel("Client ID", "example1.apps.googleusercontent.com");
@@ -25,7 +25,7 @@ describe("scenarios > admin > settings > SSO > Google", () => {
     cy.findByText("Success").should("be.visible");
   });
 
-  it("should disable google auth (metabase#20442)", () => {
+  it("should disable google auth (dataman#20442)", () => {
     setupGoogleAuth();
     cy.visit("/admin/settings/authentication");
 
@@ -37,7 +37,7 @@ describe("scenarios > admin > settings > SSO > Google", () => {
     cy.findByText("Saved").should("exist");
   });
 
-  it("should show an error message if the client id does not end with the correct suffix (metabase#15975)", () => {
+  it("should show an error message if the client id does not end with the correct suffix (dataman#15975)", () => {
     cy.visit("/admin/settings/authentication/google");
 
     typeAndBlurUsingLabel("Client ID", "fake-client-id");

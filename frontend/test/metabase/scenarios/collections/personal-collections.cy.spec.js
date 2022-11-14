@@ -42,7 +42,7 @@ describe("personal collections", () => {
       });
     });
 
-    it("cannot edit details for personal collections nor change permissions for personal collections or sub-collections (metabase#8406)", () => {
+    it("cannot edit details for personal collections nor change permissions for personal collections or sub-collections (dataman#8406)", () => {
       // Let's use the API to create a sub-collection "Foo" in admin's personal collection
       cy.request("POST", "/api/collection", {
         name: "Foo",
@@ -93,7 +93,7 @@ describe("personal collections", () => {
       });
     });
 
-    it.skip("should be able view other users' personal sub-collections (metabase#15339)", () => {
+    it.skip("should be able view other users' personal sub-collections (dataman#15339)", () => {
       cy.visit("/collection/5");
       openNewCollectionItemFlowFor("collection");
       cy.findByLabelText("Name").type("Foo");
@@ -128,7 +128,7 @@ describe("personal collections", () => {
           cy.get("@sidebar").findByText("Bar1");
 
           cy.log(
-            "should be able to archive collection(s) inside personal collection (metabase#15343)",
+            "should be able to archive collection(s) inside personal collection (dataman#15343)",
           );
 
           openCollectionMenu();

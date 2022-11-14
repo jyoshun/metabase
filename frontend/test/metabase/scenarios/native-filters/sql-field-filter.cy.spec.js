@@ -80,14 +80,14 @@ describe("scenarios > filters > sql filters > field filter", () => {
       filterWidget().should("not.exist");
     });
 
-    it("should be runnable with the None filter being ignored (metabase#20643)", () => {
+    it("should be runnable with the None filter being ignored (dataman#20643)", () => {
       cy.get(".RunButton").first().click();
 
       cy.wait("@dataset");
       cy.findByText("Hudson Borer");
     });
 
-    it("should let you change the field filter type to something else and restore the filter widget (metabase#13825)", () => {
+    it("should let you change the field filter type to something else and restore the filter widget (dataman#13825)", () => {
       cy.findByText("Longitude").click();
       cy.findByText("Address").click();
 

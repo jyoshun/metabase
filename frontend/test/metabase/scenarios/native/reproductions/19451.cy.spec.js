@@ -30,7 +30,7 @@ describe("issue 19451", () => {
     cy.createNativeQuestion(question, { visitQuestion: true });
   });
 
-  it("question field filter shows all tables from a selected database (metabase#19451)", () => {
+  it("question field filter shows all tables from a selected database (dataman#19451)", () => {
     cy.findByText("Open Editor").click();
     cy.icon("variable").click();
     cy.findByText("Products").click();

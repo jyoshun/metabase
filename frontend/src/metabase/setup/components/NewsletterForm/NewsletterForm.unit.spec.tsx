@@ -5,7 +5,7 @@ import NewsletterForm from "./NewsletterForm";
 
 describe("NewsletterForm", () => {
   it("should allow to submit the form with the provided email", async () => {
-    const email = "user@metabase.test";
+    const email = "user@dataman.test";
     const onSubscribe = jest.fn().mockResolvedValue({});
 
     render(<NewsletterForm initialEmail={email} onSubscribe={onSubscribe} />);

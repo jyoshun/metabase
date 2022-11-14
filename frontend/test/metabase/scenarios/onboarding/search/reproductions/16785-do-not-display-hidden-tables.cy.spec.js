@@ -14,7 +14,7 @@ describe.skip("issue 16785", () => {
     });
   });
 
-  it("should not display hidden tables (metabase#16785)", () => {
+  it("should not display hidden tables (dataman#16785)", () => {
     cy.visit("/");
     cy.findByPlaceholderText("Search…").type("Reviews");
 

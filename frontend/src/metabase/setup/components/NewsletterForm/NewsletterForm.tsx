@@ -49,7 +49,7 @@ const NewsletterForm = ({
       <EmailFormLabel>
         <EmailFormLabelCard>
           <EmailFormLabelIcon name="mail" />
-          <EmailFormLabelText>{t`Metabase Newsletter`}</EmailFormLabelText>
+          <EmailFormLabelText>{t`DataMan Newsletter`}</EmailFormLabelText>
         </EmailFormLabelCard>
       </EmailFormLabel>
       <EmailFormHeader>
@@ -76,7 +76,7 @@ const NewsletterForm = ({
         <EmailFormSuccessContainer>
           <EmailFormSuccessIcon name="check" />
           <EmailFormSuccessText>
-            {t`You're subscribed. Thanks for using Metabase!`}
+            {t`You're subscribed. Thanks for using DataMan!`}
           </EmailFormSuccessText>
         </EmailFormSuccessContainer>
       )}

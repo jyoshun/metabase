@@ -23,7 +23,7 @@ describe("issue 21135", () => {
     switchToNotebookView();
   });
 
-  it("should handle cc with the same name as the table column (metabase#21135)", () => {
+  it("should handle cc with the same name as the table column (dataman#21135)", () => {
     cy.findAllByTestId("notebook-cell-item").contains("Price").click();
     cy.button("Update").click();
 

@@ -32,7 +32,7 @@ describe("issue 8030", () => {
     cy.signInAsAdmin();
   });
 
-  it("should not reload dashboard cards not connected to a filter (metabase#8030)", () => {
+  it("should not reload dashboard cards not connected to a filter (dataman#8030)", () => {
     createQuestionsAndDashboard().then(
       ({ dashboard_id, card1_id, card2_id }) => {
         interceptRequests({ dashboard_id, card1_id, card2_id });

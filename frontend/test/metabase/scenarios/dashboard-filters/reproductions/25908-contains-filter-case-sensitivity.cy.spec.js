@@ -68,7 +68,7 @@ describe.skip("issue 25908", () => {
     );
   });
 
-  it("`contains` dashboard filter should respect case insensitivity on a title-drill-through (metabase#25908)", () => {
+  it("`contains` dashboard filter should respect case insensitivity on a title-drill-through (dataman#25908)", () => {
     cy.findByText(questionDetails.name).click();
     cy.wait("@dataset");
 

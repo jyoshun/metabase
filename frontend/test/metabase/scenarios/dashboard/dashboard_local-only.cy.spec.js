@@ -11,7 +11,7 @@ describe("LOCAL TESTING ONLY > dashboard", () => {
 
   /**
    * WARNING:
-   *    https://github.com/metabase/metabase/issues/15656
+   *    https://github.com/dataman/dataman/issues/15656
    *    - We are currently not able to test translations in CI
    *    - DO NOT unskip this test even after the issue is fixed
    *    - To be used for local testing only
@@ -20,7 +20,7 @@ describe("LOCAL TESTING ONLY > dashboard", () => {
    *        - Then start the server and Cypress tests
    */
 
-  it.skip("dashboard filter should not show placeholder for translated languages (metabase#15694)", () => {
+  it.skip("dashboard filter should not show placeholder for translated languages (dataman#15694)", () => {
     cy.request("GET", "/api/user/current").then(({ body: { id: USER_ID } }) => {
       cy.request("PUT", `/api/user/${USER_ID}`, { locale: "fr" });
     });

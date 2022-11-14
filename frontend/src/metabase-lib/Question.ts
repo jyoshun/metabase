@@ -96,7 +96,7 @@ export type QuestionCreatorOpts = {
 
 class QuestionInner {
   /**
-   * The plain object presentation of this question, equal to the format that Metabase REST API understands.
+   * The plain object presentation of this question, equal to the format that DataMan REST API understands.
    * It is called `card` for both historical reasons and to make a clear distinction to this class.
    */
   _card: CardObject;
@@ -1064,7 +1064,7 @@ class QuestionInner {
    * Runs the query and returns an array containing results for each single query.
    *
    * If we have a saved and clean single-query question, we use `CardApi.query` instead of a ad-hoc dataset query.
-   * This way we benefit from caching and query optimizations done by Metabase backend.
+   * This way we benefit from caching and query optimizations done by DataMan backend.
    */
   async apiGetResults({
     cancelDeferred,

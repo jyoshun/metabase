@@ -588,7 +588,7 @@ describeEE("scenarios > admin > permissions", () => {
     ]);
   });
 
-  it("'block' data permission should not have editable 'native query editing' option (metabase#17738)", () => {
+  it("'block' data permission should not have editable 'native query editing' option (dataman#17738)", () => {
     cy.visit(`/admin/permissions/data/database/${SAMPLE_DB_ID}`);
 
     cy.findByText("All Users")

@@ -13,7 +13,7 @@ describe("issue 19603", () => {
     });
   });
 
-  it("archived subcollection should not show up in permissions (metabase#19603)", () => {
+  it("archived subcollection should not show up in permissions (dataman#19603)", () => {
     cy.visit("/admin/permissions/collections");
 
     cy.findByText("First collection").click();

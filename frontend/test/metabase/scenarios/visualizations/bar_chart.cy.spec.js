@@ -37,7 +37,7 @@ describe("scenarios > visualizations > bar chart", () => {
       };
     }
 
-    it("should not show a bar for null values (metabase#12138)", () => {
+    it("should not show a bar for null values (dataman#12138)", () => {
       visitQuestionAdhoc(
         getQuestion({
           "graph.dimensions": ["a"],
@@ -48,7 +48,7 @@ describe("scenarios > visualizations > bar chart", () => {
       cy.findByText("(empty)").should("not.exist");
     });
 
-    it("should show an (empty) bar for null values when X axis is ordinal (metabase#12138)", () => {
+    it("should show an (empty) bar for null values when X axis is ordinal (dataman#12138)", () => {
       visitQuestionAdhoc(
         getQuestion({
           "graph.dimensions": ["a"],
@@ -62,7 +62,7 @@ describe("scenarios > visualizations > bar chart", () => {
   });
 
   describe("with binned dimension (histogram)", () => {
-    it("should filter out null values (metabase#16049)", () => {
+    it("should filter out null values (dataman#16049)", () => {
       visitQuestionAdhoc({
         dataset_query: {
           type: "query",

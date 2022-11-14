@@ -16,7 +16,7 @@ describeEE("scenarios > question > snippets", () => {
   });
 
   ["admin", "normal"].forEach(user => {
-    it(`${user} user can create a snippet (metabase#21581)`, () => {
+    it(`${user} user can create a snippet (dataman#21581)`, () => {
       cy.intercept("POST", "/api/native-query-snippet").as("snippetCreated");
 
       cy.signIn(user);
@@ -105,14 +105,14 @@ describeEE("scenarios > question > snippets", () => {
       });
     });
 
-    it("should not display snippet folder as part of collections (metabase#14907)", () => {
+    it("should not display snippet folder as part of collections (dataman#14907)", () => {
       cy.visit("/collection/root");
 
       cy.wait("@collections");
       cy.findByText("Snippet Folder").should("not.exist");
     });
 
-    it("shouldn't update root permissions when changing permissions on a created folder (metabase#17268)", () => {
+    it("shouldn't update root permissions when changing permissions on a created folder (dataman#17268)", () => {
       cy.intercept("PUT", "/api/collection/graph").as("updatePermissions");
 
       openNativeEditor();

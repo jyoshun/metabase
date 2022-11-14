@@ -53,7 +53,7 @@ describe.skip(
           .and("eq", TOOLS_ERRORS_URL);
       });
 
-      it("should disable search input fields (metabase#18050)", () => {
+      it("should disable search input fields (dataman#18050)", () => {
         cy.visit(TOOLS_ERRORS_URL);
 
         cy.findByText("No results");

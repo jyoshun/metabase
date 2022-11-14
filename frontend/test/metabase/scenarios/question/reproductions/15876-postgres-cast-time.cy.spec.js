@@ -47,7 +47,7 @@ describe("issue 15876", { tags: "@external" }, () => {
     cy.signInAsAdmin();
   });
 
-  it("should correctly cast to `TIME` (metabase#15876)", () => {
+  it("should correctly cast to `TIME` (dataman#15876)", () => {
     cy.createNativeQuestion(questionDetails, { visitQuestion: true });
 
     cy.get(".Visualization").within(() => {

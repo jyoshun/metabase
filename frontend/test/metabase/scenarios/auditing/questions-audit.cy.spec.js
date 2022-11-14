@@ -63,7 +63,7 @@ describeEE("audit > auditing > questions", () => {
       cy.findByText("My question");
     });
 
-    it("should display total runtime correctly (metabase#18317)", () => {
+    it("should display total runtime correctly (dataman#18317)", () => {
       const runtimeIndex = 7;
 
       cy.visit("/admin/audit/questions/all");

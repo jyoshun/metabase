@@ -22,7 +22,7 @@ function mockCachingEnabled(enabled = true) {
       return enabled;
     }
     if (key === "application-name") {
-      return "Metabase Test";
+      return "DataMan Test";
     }
     if (key === "version") {
       return { tag: "" };
@@ -498,7 +498,7 @@ describe("SaveQuestionModal", () => {
       );
     });
 
-    it("should allow to replace the question if new question form is invalid (metabase#13817)", async () => {
+    it("should allow to replace the question if new question form is invalid (dataman#13817)", async () => {
       const originalQuestion = getQuestion({ isSaved: true });
       await setup(getDirtyQuestion(originalQuestion), originalQuestion);
 
@@ -513,7 +513,7 @@ describe("SaveQuestionModal", () => {
       expect(await screen.getByRole("button", { name: "Save" })).toBeEnabled();
     });
 
-    it("should not allow overwriting when user does not have curate permission on collection (metabase#20717)", async () => {
+    it("should not allow overwriting when user does not have curate permission on collection (dataman#20717)", async () => {
       const originalQuestion = getQuestion({
         isSaved: true,
         name: "Beautiful Orders",

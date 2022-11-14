@@ -43,7 +43,7 @@ function mockCachingSettings({ enabled = true } = {}) {
     const settings = {
       "enable-query-caching": enabled,
       "query-caching-min-ttl": 10000,
-      "application-name": "Metabase Test",
+      "application-name": "DataMan Test",
       version: { tag: "" },
       "is-hosted?": false,
       "enable-enhancements?": false,

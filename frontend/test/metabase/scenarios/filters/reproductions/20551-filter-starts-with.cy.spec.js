@@ -6,7 +6,7 @@ describe("issue 20551", () => {
     cy.signInAsAdmin();
   });
 
-  it("should allow filtering with includes, rather than starts with (metabase#20551)", () => {
+  it("should allow filtering with includes, rather than starts with (dataman#20551)", () => {
     openProductsTable({ mode: "notebook" });
     filter({ mode: "notebook" });
     cy.findByText("Category").click();

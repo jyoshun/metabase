@@ -7,7 +7,7 @@ describe("issue 16661", () => {
     openProductsTable({ limit: 3 });
   });
 
-  it("should be possible to create multiple filter that start with the same value (metabase#16621)", () => {
+  it("should be possible to create multiple filter that start with the same value (dataman#16621)", () => {
     cy.findByText("Category").click();
     cy.findByText("Filter by this column").click();
     cy.findByPlaceholderText("Search the list").type("Doo{enter}");

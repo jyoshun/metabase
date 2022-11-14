@@ -7,7 +7,7 @@ describe("issue 24664", () => {
     openProductsTable({ limit: 3 });
   });
 
-  it("should be possible to create multiple filter that start with the same value (metabase#24664)", () => {
+  it("should be possible to create multiple filter that start with the same value (dataman#24664)", () => {
     cy.findByText("Category").click();
     cy.findByText("Filter by this column").click();
     cy.findByTestId("Doohickey-filter-value").click();

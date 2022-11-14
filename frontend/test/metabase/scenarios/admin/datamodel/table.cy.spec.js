@@ -31,7 +31,7 @@ describe("scenarios > admin > databases > table", () => {
     );
   });
 
-  it("should show 404 if database does not exist (metabase#14652)", () => {
+  it("should show 404 if database does not exist (dataman#14652)", () => {
     cy.visit("/admin/datamodel/database/54321");
     cy.get(".AdminList-item").should("have.length", 0);
     cy.findByText("The page you asked for couldn't be found.");
@@ -65,14 +65,14 @@ describe("scenarios > admin > databases > table", () => {
     });
   });
 
-  describe.skip("turning table visibility off shouldn't prevent editing related question (metabase#15947)", () => {
-    it("simple question (metabase#15947-1)", () => {
+  describe.skip("turning table visibility off shouldn't prevent editing related question (dataman#15947)", () => {
+    it("simple question (dataman#15947-1)", () => {
       turnTableVisibilityOff(ORDERS_ID);
       visitQuestion(1);
       filter();
     });
 
-    it("question with joins (metabase#15947-2)", () => {
+    it("question with joins (dataman#15947-2)", () => {
       cy.createQuestion({
         name: "15947",
         query: {

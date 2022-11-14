@@ -81,7 +81,7 @@ describe("issue 17514", () => {
       });
     });
 
-    it("should not show the run overlay when we apply dashboard filter on a question with removed column and then click through its title (metabase#17514-1)", () => {
+    it("should not show the run overlay when we apply dashboard filter on a question with removed column and then click through its title (dataman#17514-1)", () => {
       editDashboard();
 
       openVisualizationOptions();
@@ -132,7 +132,7 @@ describe("issue 17514", () => {
       });
     });
 
-    it("should not show the run overlay because of the references to the orphaned fields (metabase#17514-2)", () => {
+    it("should not show the run overlay because of the references to the orphaned fields (dataman#17514-2)", () => {
       openNotebookMode();
 
       cy.findByText("Join data").click();

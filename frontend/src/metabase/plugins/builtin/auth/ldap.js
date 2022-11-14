@@ -22,7 +22,7 @@ PLUGIN_ADMIN_SETTINGS_UPDATES.push(
         getProps: (setting, settings) => ({
           authType: "ldap",
           authName: t`LDAP`,
-          authDescription: t`Allows users within your LDAP directory to log in to Metabase with their LDAP credentials, and allows automatic mapping of LDAP groups to Metabase groups.`,
+          authDescription: t`Allows users within your LDAP directory to log in to DataMan with their LDAP credentials, and allows automatic mapping of LDAP groups to DataMan groups.`,
           authConfigured: settings["ldap-configured?"],
         }),
       },
@@ -113,7 +113,7 @@ PLUGIN_ADMIN_SETTINGS_UPDATES.push(
           props: {
             mappingSetting: "ldap-group-mappings",
             groupHeading: t`Distinguished Name`,
-            groupPlaceholder: "cn=People,ou=Groups,dc=metabase,dc=com",
+            groupPlaceholder: "cn=People,ou=Groups,dc=dataman,dc=com",
           },
         },
         {

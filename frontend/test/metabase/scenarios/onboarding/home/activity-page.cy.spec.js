@@ -13,7 +13,7 @@ import { USERS } from "__support__/e2e/cypress_data";
 
 const { normal } = USERS;
 
-describe("metabase > scenarios > home > activity-page", () => {
+describe("dataman > scenarios > home > activity-page", () => {
   beforeEach(() => {
     restore();
     cy.signInAsAdmin();
@@ -22,7 +22,7 @@ describe("metabase > scenarios > home > activity-page", () => {
   it("should show test startup activity ", () => {
     cy.visit("/activity");
     cy.findByText("Activity");
-    cy.findByText("Metabase is up and running.");
+    cy.findByText("DataMan is up and running.");
     cy.contains("added a question to the dashboard - Orders in a dashboard");
   });
 
@@ -58,7 +58,7 @@ describe("metabase > scenarios > home > activity-page", () => {
     cy.findByText("Products, Filtered by Rating");
   });
 
-  it("should respect the (added to dashboard) card id in the link (metabase#18547)", () => {
+  it("should respect the (added to dashboard) card id in the link (dataman#18547)", () => {
     cy.intercept("GET", `/api/dashboard/1`).as("dashboard");
 
     visitDashboard(1);

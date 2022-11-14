@@ -20,8 +20,8 @@ describe("issue 16739", () => {
   });
 
   ["normal", "nodata"].forEach(user => {
-    //Very related to the metabase#15981, only this time the issue happens with the "Field Filter" without the value being set.
-    it(`filter feature flag shouldn't cause run-overlay of results in native editor for ${user} user (metabase#16739)`, () => {
+    //Very related to the dataman#15981, only this time the issue happens with the "Field Filter" without the value being set.
+    it(`filter feature flag shouldn't cause run-overlay of results in native editor for ${user} user (dataman#16739)`, () => {
       cy.createNativeQuestion({
         native: {
           query: "select * from PRODUCTS where {{ filter }}",

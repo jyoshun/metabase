@@ -24,7 +24,7 @@ describe("SlackSetup", () => {
   it("should render the page when there is no existing bot", () => {
     render(<SlackSetup Form={FormMock} isBot={false} />);
 
-    expect(screen.getByText(/Metabase to your Slack/)).toBeInTheDocument();
+    expect(screen.getByText(/DataMan to your Slack/)).toBeInTheDocument();
   });
 
   it("should render the page when there is an existing bot", () => {

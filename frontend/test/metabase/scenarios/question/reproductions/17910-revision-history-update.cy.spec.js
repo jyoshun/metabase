@@ -12,7 +12,7 @@ describe("issue 17910", () => {
     cy.signInAsNormalUser();
   });
 
-  it("revisions should work after creating a question without reloading (metabase#17910)", () => {
+  it("revisions should work after creating a question without reloading (dataman#17910)", () => {
     openOrdersTable();
     cy.intercept("POST", `/api/card`).as("card");
     cy.findByText("Save").click();

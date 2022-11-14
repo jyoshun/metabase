@@ -14,7 +14,7 @@ describe("issue 17160", () => {
     cy.signInAsAdmin();
   });
 
-  it("should pass multiple filter values to questions and dashboards (metabase#17160-1)", () => {
+  it("should pass multiple filter values to questions and dashboards (dataman#17160-1)", () => {
     setup();
 
     // 1. Check click behavior connected to a question
@@ -46,7 +46,7 @@ describe("issue 17160", () => {
     assertMultipleValuesFilterState();
   });
 
-  it.skip("should pass multiple filter values to public questions and dashboards (metabase#17160-2)", () => {
+  it.skip("should pass multiple filter values to public questions and dashboards (dataman#17160-2)", () => {
     // FIXME: setup public dashboards
     setup();
 

@@ -1,6 +1,6 @@
 {
-    "name": "Metabase",
-    "short_name": "Metabase",
+    "name": "DataMan",
+    "short_name": "DataMan",
     "icons": [
         {
             "src": "/app/assets/img/android-chrome-192x192.png",

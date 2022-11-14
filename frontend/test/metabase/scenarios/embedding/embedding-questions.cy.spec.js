@@ -167,7 +167,7 @@ describe("scenarios > embedding > questions ", () => {
     cy.contains("October 7, 2017, 1:34 AM");
   });
 
-  it("should display according to `locale` parameter metabase#22561", () => {
+  it("should display according to `locale` parameter dataman#22561", () => {
     const CARD_ID = 1;
     cy.request("PUT", `/api/card/${CARD_ID}`, { enable_embedding: true });
 

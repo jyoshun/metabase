@@ -35,7 +35,7 @@ describe("issue 12581", () => {
     cy.createNativeQuestion(nativeQuery, { visitQuestion: true });
   });
 
-  it("should correctly display a revision state after a restore (metabase#12581)", () => {
+  it("should correctly display a revision state after a restore (dataman#12581)", () => {
     // Start with the original version of the question made with API
     cy.findByText(/Open Editor/i).click();
     cy.findByText(/Open Editor/i).should("not.exist");

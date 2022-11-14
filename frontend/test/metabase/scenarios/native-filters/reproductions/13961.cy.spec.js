@@ -41,7 +41,7 @@ describe.skip("issue 13961", () => {
     cy.createNativeQuestion(nativeQuery, { visitQuestion: true });
   });
 
-  it("should clear default filter value in native questions (metabase#13961)", () => {
+  it("should clear default filter value in native questions (dataman#13961)", () => {
     cy.findAllByText("Small Marble Shoes"); // Product ID 2, Doohickey
 
     cy.location("search").should("eq", "?category=Doohickey");

@@ -76,7 +76,7 @@ describe("managing dashboard from the dashboard's edit menu", () => {
               cy.findByText(`Orders in a dashboard - Duplicate`);
             });
 
-            it("should be able to move/undo move a dashboard (metabase#13059)", () => {
+            it("should be able to move/undo move a dashboard (dataman#13059)", () => {
               cy.findByTestId("app-bar").contains("Our analytics");
 
               popover().within(() => {
@@ -91,7 +91,7 @@ describe("managing dashboard from the dashboard's edit menu", () => {
 
               assertOnRequest("updateDashboard");
               cy.contains("37.65");
-              // it should update dashboard's collection after the move without the page reload (metabase#13059)
+              // it should update dashboard's collection after the move without the page reload (dataman#13059)
               cy.findByTestId("app-bar").contains("First collection");
 
               // Why do we use "Dashboard moved to" here (without its location, btw) vs. "Moved dashboard" for the same action?
@@ -130,7 +130,7 @@ describe("managing dashboard from the dashboard's edit menu", () => {
             });
           });
 
-          it("should not be offered to edit dashboard details or archive the dashboard for dashboard in collections they have `read` access to (metabase#15280)", () => {
+          it("should not be offered to edit dashboard details or archive the dashboard for dashboard in collections they have `read` access to (dataman#15280)", () => {
             popover().findByText("Edit dashboard details").should("not.exist");
 
             popover().findByText("Archive").should("not.exist");

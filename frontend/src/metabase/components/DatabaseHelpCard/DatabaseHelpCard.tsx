@@ -29,7 +29,7 @@ const DatabaseHelpCard = ({
       {isHosted && (
         <p>
           {jt`Docs weren't enough? ${(
-            <ExternalLink key="link" href="https://www.metabase.com/help/cloud">
+            <ExternalLink key="link" href="https://www.dataman.com/help/cloud">
               {t`Write us.`}
             </ExternalLink>
           )}`}

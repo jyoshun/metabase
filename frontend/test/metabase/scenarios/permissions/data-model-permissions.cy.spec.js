@@ -98,7 +98,7 @@ describeEE("scenarios > admin > permissions", () => {
     cy.findByText("Reviews");
   });
 
-  it("shows `Field access denied` for foreign keys from tables user does not have access to (metabase#21762)", () => {
+  it("shows `Field access denied` for foreign keys from tables user does not have access to (dataman#21762)", () => {
     cy.visit(`/admin/permissions/data/database/${SAMPLE_DB_ID}`);
 
     // Change data model permission

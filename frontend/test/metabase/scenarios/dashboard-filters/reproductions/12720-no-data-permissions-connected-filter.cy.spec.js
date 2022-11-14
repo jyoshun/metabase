@@ -88,7 +88,7 @@ describe("issue 12720", () => {
     );
   });
 
-  it("should show QB question on a dashboard with filter connected to card without data-permission (metabase#12720)", () => {
+  it("should show QB question on a dashboard with filter connected to card without data-permission (dataman#12720)", () => {
     cy.signIn("readonly");
 
     clickThrough("12720_SQL");

@@ -24,14 +24,14 @@ describe("scenarios > admin > settings", () => {
       cy.onlyOn(isOSS);
       cy.visit("/admin/settings/setup");
       cy.findByText("Have your server maintained for you.");
-      cy.findByText("Migrate to Metabase Cloud.");
+      cy.findByText("Migrate to DataMan Cloud.");
       cy.findAllByRole("link", { name: "Learn more" })
         .should("have.attr", "href")
         .and("include", "/migrate/");
     },
   );
 
-  it("should surface an error when validation for any field fails (metabase#4506)", () => {
+  it("should surface an error when validation for any field fails (dataman#4506)", () => {
     const BASE_URL = Cypress.config().baseUrl;
     const DOMAIN_AND_PORT = BASE_URL.replace("http://", "");
 
@@ -82,13 +82,13 @@ describe("scenarios > admin > settings", () => {
       .type("abc", { delay: 50 })
       .clear()
       .click()
-      .type("other.email@metabase.test")
+      .type("other.email@dataman.test")
       .blur();
     cy.wait("@saveSettings");
 
     cy.visit("/admin/settings/general");
     // after we refreshed, the field should still be "other.email"
-    emailInput().should("have.value", "other.email@metabase.test");
+    emailInput().should("have.value", "other.email@dataman.test");
   });
 
   it("should check for working https before enabling a redirect", () => {
@@ -132,7 +132,7 @@ describe("scenarios > admin > settings", () => {
     cy.contains("It looks like HTTPS is not properly configured");
   });
 
-  it("should correctly apply the globalized date formats (metabase#11394) and update the formatting", () => {
+  it("should correctly apply the globalized date formats (dataman#11394) and update the formatting", () => {
     cy.intercept("PUT", "**/custom-formatting").as("saveFormatting");
 
     cy.request("PUT", `/api/field/${ORDERS.CREATED_AT}`, {
@@ -186,7 +186,7 @@ describe("scenarios > admin > settings", () => {
     cy.contains("US/Central");
   });
 
-  it("'General' admin settings should handle setup via `MB_SITE_URL` environment variable (metabase#14900)", () => {
+  it("'General' admin settings should handle setup via `MB_SITE_URL` environment variable (dataman#14900)", () => {
     // 1. Get the array of ALL available settings
     cy.request("GET", "/api/setting").then(({ body }) => {
       // 2. Create a stubbed version of that array by passing modified "site-url" settings
@@ -216,7 +216,7 @@ describe("scenarios > admin > settings", () => {
   });
 
   it(
-    "should display the order of the settings items consistently between OSS/EE versions (metabase#15441)",
+    "should display the order of the settings items consistently between OSS/EE versions (dataman#15441)",
     { tags: "@OSS" },
     () => {
       const lastItem = isEE ? "Appearance" : "Caching";
@@ -231,7 +231,7 @@ describe("scenarios > admin > settings", () => {
   );
 
   // Unskip when mocking Cloud in Cypress is fixed (#18289)
-  it.skip("should hide self-hosted settings when running Metabase Cloud", () => {
+  it.skip("should hide self-hosted settings when running DataMan Cloud", () => {
     setupMetabaseCloud();
     cy.visit("/admin/settings/general");
 
@@ -243,11 +243,11 @@ describe("scenarios > admin > settings", () => {
   });
 
   // Unskip when mocking Cloud in Cypress is fixed (#18289)
-  it.skip("should hide the store link when running Metabase Cloud", () => {
+  it.skip("should hide the store link when running DataMan Cloud", () => {
     setupMetabaseCloud();
     cy.visit("/admin/settings/general");
 
-    cy.findByText("Metabase Admin");
+    cy.findByText("DataMan Admin");
     cy.findByLabelText("store icon").should("not.exist");
   });
 
@@ -255,7 +255,7 @@ describe("scenarios > admin > settings", () => {
     it("should present the form and display errors", () => {
       cy.visit("/admin/settings/slack");
 
-      cy.findByText("Metabase on Slack");
+      cy.findByText("DataMan on Slack");
       cy.findByLabelText("Slack Bot User OAuth Token").type("xoxb");
       cy.findByLabelText("Public channel to store image files").type(
         "metabase_files",
@@ -274,10 +274,10 @@ describe("scenarios > admin > settings (OSS)", { tags: "@OSS" }, () => {
     cy.signInAsAdmin();
   });
 
-  it("should show the store link when running Metabase OSS", () => {
+  it("should show the store link when running DataMan OSS", () => {
     cy.visit("/admin/settings/general");
 
-    cy.findByText("Metabase Admin");
+    cy.findByText("DataMan Admin");
     cy.findByLabelText("store icon");
   });
 });
@@ -289,7 +289,7 @@ describeEE("scenarios > admin > settings (EE)", () => {
   });
 
   // Unskip when mocking Cloud in Cypress is fixed (#18289)
-  it.skip("should hide Enterprise page when running Metabase Cloud", () => {
+  it.skip("should hide Enterprise page when running DataMan Cloud", () => {
     setupMetabaseCloud();
     cy.visit("/admin/settings/general");
 
@@ -297,10 +297,10 @@ describeEE("scenarios > admin > settings (EE)", () => {
     cy.findByText("Enterprise").should("not.exist");
   });
 
-  it("should hide the store link when running Metabase EE", () => {
+  it("should hide the store link when running DataMan EE", () => {
     cy.visit("/admin/settings/general");
 
-    cy.findByText("Metabase Admin");
+    cy.findByText("DataMan Admin");
     cy.findByLabelText("store icon").should("not.exist");
   });
 });

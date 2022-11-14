@@ -12,7 +12,7 @@ describe("issue 21513", () => {
     cy.signInAsAdmin();
   });
 
-  it("should handle cc with the same name as an aggregation function (metabase#21513)", () => {
+  it("should handle cc with the same name as an aggregation function (dataman#21513)", () => {
     openProductsTable({ mode: "notebook" });
     summarize({ mode: "notebook" });
     popover().findByText("Count of rows").click();

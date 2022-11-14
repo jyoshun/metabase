@@ -22,7 +22,7 @@ describe("issue 20627", () => {
     renameTable(PRODUCTS_ID, newTableName);
   });
 
-  it("nested queries should handle long column and/or table names (metabase#20627)", () => {
+  it("nested queries should handle long column and/or table names (dataman#20627)", () => {
     openOrdersTable({ mode: "notebook" });
 
     cy.findByText("Join data").click();

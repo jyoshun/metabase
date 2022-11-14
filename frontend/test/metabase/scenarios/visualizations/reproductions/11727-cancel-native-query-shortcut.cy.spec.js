@@ -24,7 +24,7 @@ describe("issue 11727", { tags: "@external" }, () => {
     cy.intercept("GET", "/api/database").as("getDatabases");
   });
 
-  it("should cancel the native query via the keyboard shortcut (metabase#11727)", () => {
+  it("should cancel the native query via the keyboard shortcut (dataman#11727)", () => {
     withDatabase(PG_DB_ID, () => {
       cy.visit(`/question#` + adhocQuestionHash(questionDetails));
       cy.wait("@getDatabases");

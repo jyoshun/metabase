@@ -6,7 +6,7 @@ describe("issue 16108", () => {
     cy.signInAsAdmin();
   });
 
-  it("should display a tooltip for CTA icons on an individual question (metabase#16108)", () => {
+  it("should display a tooltip for CTA icons on an individual question (dataman#16108)", () => {
     visitQuestion(1);
     cy.icon("download").realHover();
     cy.findByText("Download full results");

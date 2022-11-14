@@ -13,7 +13,7 @@ describe("postgres > user > query", { tags: "@external" }, () => {
     visualize();
   });
 
-  it("should show row details when clicked on its entity key (metabase#13263)", () => {
+  it("should show row details when clicked on its entity key (dataman#13263)", () => {
     // We're clicking on ID: 1 (the first order) => do not change!
     // It is tightly coupled to the assertion ("37.65"), which is "Subtotal" value for that order.
     cy.get(".Table-ID").eq(0).click();

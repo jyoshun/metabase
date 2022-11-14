@@ -12,7 +12,7 @@ describe.skip("issue 15946", { tags: "@external" }, () => {
     cy.findByText("Orders").click();
   });
 
-  it("converting a question to the native query should pre-select a table (metabase#15946)", () => {
+  it("converting a question to the native query should pre-select a table (dataman#15946)", () => {
     cy.get(".QueryBuilder .Icon-sql").click();
 
     modal().findByText("Convert this question to a native query").click();

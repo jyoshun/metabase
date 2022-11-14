@@ -41,7 +41,7 @@ describe("issue 23023", () => {
     cy.signInAsAdmin();
   });
 
-  it("should show only selected columns in a step preview (metabase#23023)", () => {
+  it("should show only selected columns in a step preview (dataman#23023)", () => {
     visitQuestionAdhoc(questionDetails);
 
     openNotebook();

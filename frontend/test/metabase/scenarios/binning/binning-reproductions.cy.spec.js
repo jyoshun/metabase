@@ -21,7 +21,7 @@ describe("binning related reproductions", () => {
     cy.signInAsAdmin();
   });
 
-  it("shouldn't render double binning options when question is based on the saved native question (metabase#16327)", () => {
+  it("shouldn't render double binning options when question is based on the saved native question (dataman#16327)", () => {
     cy.createNativeQuestion({
       name: "16327",
       native: { query: "select * from products limit 5" },
@@ -42,7 +42,7 @@ describe("binning related reproductions", () => {
     cy.findByText("Month");
   });
 
-  it("should be able to update the bucket size / granularity on a field that has sorting applied to it (metabase#16770)", () => {
+  it("should be able to update the bucket size / granularity on a field that has sorting applied to it (dataman#16770)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         database: SAMPLE_DB_ID,
@@ -78,7 +78,7 @@ describe("binning related reproductions", () => {
     cy.findByText("2018");
   });
 
-  it("should not remove order-by (sort) when changing the breakout field on an SQL saved question (metabase#17975)", () => {
+  it("should not remove order-by (sort) when changing the breakout field on an SQL saved question (dataman#17975)", () => {
     cy.createNativeQuestion(
       {
         name: "17975",
@@ -109,7 +109,7 @@ describe("binning related reproductions", () => {
     cy.findByText("CREATED_AT");
   });
 
-  it("should render binning options when joining on the saved native question (metabase#18646)", () => {
+  it("should render binning options when joining on the saved native question (dataman#18646)", () => {
     cy.createNativeQuestion(
       {
         name: "18646",
@@ -152,7 +152,7 @@ describe("binning related reproductions", () => {
     cy.get("circle");
   });
 
-  it("should display date granularity on Summarize when opened from saved question (metabase#11439)", () => {
+  it("should display date granularity on Summarize when opened from saved question (dataman#11439)", () => {
     // save "Orders" as question
     cy.createQuestion({
       name: "11439",
@@ -173,7 +173,7 @@ describe("binning related reproductions", () => {
       .within(() => {
         cy.log("Reported failing since v0.33.5.1");
         cy.log(
-          "**Marked as regression of [#10441](https://github.com/metabase/metabase/issues/10441)**",
+          "**Marked as regression of [#10441](https://github.com/dataman/dataman/issues/10441)**",
         );
 
         cy.findAllByText("Created At")
@@ -188,7 +188,7 @@ describe("binning related reproductions", () => {
     cy.findByText("Hour of Day");
   });
 
-  it("shouldn't duplicate the breakout field (metabase#22382)", () => {
+  it("shouldn't duplicate the breakout field (dataman#22382)", () => {
     const questionDetails = {
       name: "22382",
       query: {
@@ -234,7 +234,7 @@ describe("binning related reproductions", () => {
     });
   });
 
-  describe("binning should work on nested question based on question that has aggregation (metabase#16379)", () => {
+  describe("binning should work on nested question based on question that has aggregation (dataman#16379)", () => {
     beforeEach(() => {
       cy.createQuestion(
         {
@@ -307,7 +307,7 @@ describe("binning related reproductions", () => {
       summarize();
     });
 
-    it("should render number auto binning correctly (metabase#16670)", () => {
+    it("should render number auto binning correctly (dataman#16670)", () => {
       cy.findByTestId("sidebar-right").within(() => {
         cy.findByText("TOTAL").click();
       });
@@ -320,14 +320,14 @@ describe("binning related reproductions", () => {
       cy.findByText("-60");
     });
 
-    it("should render time series auto binning default bucket correctly (metabase#16671)", () => {
+    it("should render time series auto binning default bucket correctly (dataman#16671)", () => {
       getBinningButtonForDimension({ name: "CREATED_AT" }).should(
         "have.text",
         "by month",
       );
     });
 
-    it("should work for longitude (metabase#16672)", () => {
+    it("should work for longitude (dataman#16672)", () => {
       cy.findByTestId("sidebar-right").within(() => {
         cy.findByText("LONGITUDE").click();
       });

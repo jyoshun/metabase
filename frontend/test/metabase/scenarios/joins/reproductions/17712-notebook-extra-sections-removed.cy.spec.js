@@ -7,7 +7,7 @@ describe("issue 17712", () => {
     cy.signInAsAdmin();
   });
 
-  it("doesn't remove extra sections when removing a single section (metabase#17712)", () => {
+  it("doesn't remove extra sections when removing a single section (dataman#17712)", () => {
     openOrdersTable({ mode: "notebook" });
 
     cy.findByText("Join data").click();

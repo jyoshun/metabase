@@ -28,8 +28,8 @@ const TimelineEmptyState = ({
       <EmptyStateIcon name="star" />
       <EmptyStateText>
         {canWrite
-          ? t`Add events to Metabase to show helpful context alongside your data.`
-          : t`Events in Metabase let you see helpful context alongside your data.`}
+          ? t`Add events to DataMan to show helpful context alongside your data.`
+          : t`Events in DataMan let you see helpful context alongside your data.`}
       </EmptyStateText>
       {canWrite && (
         <EmptyStateButton primary onClick={onNewEvent}>

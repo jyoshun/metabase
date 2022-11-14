@@ -29,7 +29,7 @@ describe("issue 17019", () => {
     });
   });
 
-  it("question filters should work for embedding/public sharing scenario (metabase#17019)", () => {
+  it("question filters should work for embedding/public sharing scenario (dataman#17019)", () => {
     cy.icon("share").click();
 
     cy.findByDisplayValue(/^http/)

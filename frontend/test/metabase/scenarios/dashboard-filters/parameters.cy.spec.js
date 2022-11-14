@@ -74,8 +74,8 @@ describe("scenarios > dashboard > parameters", () => {
     cy.get(".DashCard").last().should("contain", "4,939");
   });
 
-  it("should remove parameter name or the whole parameter (metabase#10829, metabase#17933)", () => {
-    // Mirrored issue in metabase-enterprise#275
+  it("should remove parameter name or the whole parameter (dataman#10829, dataman#17933)", () => {
+    // Mirrored issue in dataman-enterprise#275
 
     const questionDetails = {
       query: {
@@ -160,7 +160,7 @@ describe("scenarios > dashboard > parameters", () => {
     cy.findByPlaceholderText("Enter some text").type("G");
     // Make sure the dropdown list with values is not populated,
     // because it makes no sense for non-exact parameter string operators.
-    // See: https://github.com/metabase/metabase/pull/15477
+    // See: https://github.com/dataman/dataman/pull/15477
     cy.findByText("Gizmo").should("not.exist");
     cy.findByText("Gadget").should("not.exist");
 
@@ -174,7 +174,7 @@ describe("scenarios > dashboard > parameters", () => {
     cy.findByPlaceholderText("Enter some text").type("zmo");
     // Make sure the dropdown list with values is not populated,
     // because it makes no sense for non-exact parameter string operators.
-    // See: https://github.com/metabase/metabase/pull/15477
+    // See: https://github.com/dataman/dataman/pull/15477
     cy.findByText("Gizmo").should("not.exist");
 
     cy.button("Add filter").click();
@@ -183,14 +183,14 @@ describe("scenarios > dashboard > parameters", () => {
     cy.location("search").should("eq", `?${startsWithSlug}&${endsWithSlug}`);
     cy.findByText("52.72").should("not.exist");
 
-    // Remove filter (metabase#17933)
+    // Remove filter (dataman#17933)
     cy.icon("pencil").click();
     cy.findByText(startsWith.name).find(".Icon-gear").click();
 
     cy.findByText("Remove").click();
     cy.location("search").should("eq", `?${endsWithSlug}`);
 
-    // Remove filter name (metabase#10829)
+    // Remove filter name (dataman#10829)
     cy.findByText(endsWith.name).find(".Icon-gear").click();
     cy.findByDisplayValue(endsWith.name).clear().blur();
 
@@ -208,7 +208,7 @@ describe("scenarios > dashboard > parameters", () => {
     cy.findByText("37.65");
   });
 
-  it("should handle mismatch between filter types (metabase#9299, metabase#16181)", () => {
+  it("should handle mismatch between filter types (dataman#9299, dataman#16181)", () => {
     const questionDetails = {
       name: "16181",
       native: {
@@ -268,7 +268,7 @@ describe("scenarios > dashboard > parameters", () => {
       visitDashboard(dashboard_id);
       cy.get(".ScalarValue").invoke("text").should("eq", "53");
 
-      // Confirm you can't map wrong parameter type the native question's field filter (metabase#16181)
+      // Confirm you can't map wrong parameter type the native question's field filter (dataman#16181)
       cy.icon("pencil").click();
       cy.icon("filter").click();
       cy.findByText("ID").click();
@@ -299,7 +299,7 @@ describe("scenarios > dashboard > parameters", () => {
       // But the question should display the new value and is not affected by the filter
       cy.get(".ScalarValue").invoke("text").should("eq", "1");
 
-      // Confirm that it is not possible to connect filter to the updated question anymore (metabase#9299)
+      // Confirm that it is not possible to connect filter to the updated question anymore (dataman#9299)
       cy.icon("pencil").click();
       cy.findByText(matchingFilterType.name).find(".Icon-gear").click();
       cy.findByText(/Add a string variable to this question/).should(
@@ -308,7 +308,7 @@ describe("scenarios > dashboard > parameters", () => {
     });
   });
 
-  it("should handle multiple filters and allow multiple filter values without sending superfluous queries or limiting results (metabase#13150, metabase#15689, metabase#15695, metabase#16103, metabase#17139)", () => {
+  it("should handle multiple filters and allow multiple filter values without sending superfluous queries or limiting results (dataman#13150, dataman#15689, dataman#15695, dataman#16103, dataman#17139)", () => {
     const questionDetails = {
       name: "13150 (Products)",
       query: { "source-table": PRODUCTS_ID },
@@ -395,7 +395,7 @@ describe("scenarios > dashboard > parameters", () => {
     );
 
     cy.wait("@cardQuery");
-    // Multiple filters shouldn't affect the number of card query requests (metabase#13150)
+    // Multiple filters shouldn't affect the number of card query requests (dataman#13150)
     cy.get("@cardQueryRequest").should("have.been.calledOnce");
 
     // Open category dropdown
@@ -406,7 +406,7 @@ describe("scenarios > dashboard > parameters", () => {
     popover().within(() => {
       // Widget should be selected by default
       isFilterSelected("Widget", true);
-      // Select one more filter (metabase#15689)
+      // Select one more filter (dataman#15689)
       cy.findByText("Gizmo").click();
       isFilterSelected("Gizmo", true);
 
@@ -419,7 +419,7 @@ describe("scenarios > dashboard > parameters", () => {
     cy.button("Update filter").click();
     cy.findByText("2 selections").click();
 
-    // Even after we reopen the dropdown, it shouldn't send additional requests for values (metabase#16103)
+    // Even after we reopen the dropdown, it shouldn't send additional requests for values (dataman#16103)
     cy.get("@fetchAllCategories").should("have.been.calledOnce");
 
     // As a sanity check, make sure we can deselect the filter by clicking on it
@@ -433,7 +433,7 @@ describe("scenarios > dashboard > parameters", () => {
     filterWidget().contains("Widget");
 
     filterWidget().contains("Awesome Concrete Shoes").click();
-    // Do not limit number of results (metabase#15695)
+    // Do not limit number of results (dataman#15695)
     // Prior to the issue being fixed, the cap was 100 results
     cy.findByPlaceholderText("Search the list").type("Syner");
     cy.findByText("Synergistic Wool Coat");
@@ -444,7 +444,7 @@ describe("scenarios > dashboard > parameters", () => {
     );
     cy.findAllByTestId("table-row").should("have.length", 1);
 
-    // It should not reset previously defined filters when exiting 'edit' mode without making any changes (metabase#5332, metabase#17139)
+    // It should not reset previously defined filters when exiting 'edit' mode without making any changes (dataman#5332, dataman#17139)
     editDashboard();
     cy.findByText("Cancel").click();
     cy.findByText("You're editing this dashboard.").should("not.exist");

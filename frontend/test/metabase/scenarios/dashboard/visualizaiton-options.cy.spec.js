@@ -6,7 +6,7 @@ describe("scenarios > dashboard > visualization options", () => {
     cy.signInAsAdmin();
   });
 
-  it("column reordering should work (metabase#16229)", () => {
+  it("column reordering should work (dataman#16229)", () => {
     visitDashboard(1);
     cy.icon("pencil").click();
     cy.get(".Card").realHover();

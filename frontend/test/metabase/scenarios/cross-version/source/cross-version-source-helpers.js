@@ -20,8 +20,8 @@ export function setupInstance(version) {
 
   cy.findByLabelText("First name").type("Superuser");
   cy.findByLabelText("Last name").type("Tableton");
-  cy.findByLabelText("Email").type("admin@metabase.test");
-  cy.findByLabelText(companyLabel).type("Metabase");
+  cy.findByLabelText("Email").type("admin@dataman.test");
+  cy.findByLabelText(companyLabel).type("DataMan");
   cy.findByLabelText("Create a password").type("12341234");
   cy.findByLabelText("Confirm your password").type("12341234");
   cy.button("Next").click();
@@ -34,11 +34,11 @@ export function setupInstance(version) {
   cy.findByText("All collection is completely anonymous.");
   // turn collection off, which hides data collection description
   cy.findByLabelText(
-    "Allow Metabase to anonymously collect usage events",
+    "Allow DataMan to anonymously collect usage events",
   ).click();
   cy.findByText("All collection is completely anonymous.").should("not.exist");
   cy.findByText(finalSetupButton).click();
-  cy.findByText("Take me to Metabase").click();
+  cy.findByText("Take me to DataMan").click();
 
   cy.location("pathname").should("eq", "/");
   cy.contains("Reviews");

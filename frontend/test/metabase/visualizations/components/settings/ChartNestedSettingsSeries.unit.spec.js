@@ -52,7 +52,7 @@ describe("ChartNestedSettingSeries", () => {
     expect(getByRole("img", { name: /bar/i })).toBeInTheDocument();
   });
 
-  it("should show and open 'More options' on visualizations with multiple lines (metabase#17619)", async () => {
+  it("should show and open 'More options' on visualizations with multiple lines (dataman#17619)", async () => {
     const { getByDisplayValue, getAllByRole, getByText, queryByText } = setup(
       "line",
       3,

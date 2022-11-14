@@ -18,7 +18,7 @@
   }
 
   if (actualRoot !== configuredRoot) {
-    console.warn("Warning: the Metabase site URL basename \"" + configuredRoot + "\" does not match the actual basename \"" + actualRoot + "\".");
+    console.warn("Warning: the DataMan site URL basename \"" + configuredRoot + "\" does not match the actual basename \"" + actualRoot + "\".");
     console.warn("You probably want to update the Site URL setting to \"" + window.location.origin + actualRoot + "\"");
     document.getElementsByTagName("base")[0].href = actualRoot;
   }

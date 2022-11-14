@@ -63,7 +63,7 @@ describe("issue 22859 - multiple levels of nesting", () => {
     getJoinedTableColumnHeader();
   });
 
-  it("model based on multi-level nested saved question should work (metabase#22859-1)", () => {
+  it("model based on multi-level nested saved question should work (dataman#22859-1)", () => {
     cy.get("@q2Id").then(id => {
       // Convert the second question to a model
       cy.request("PUT", `/api/card/${id}`, { dataset: true });
@@ -75,7 +75,7 @@ describe("issue 22859 - multiple levels of nesting", () => {
     getJoinedTableColumnHeader();
   });
 
-  it("third level of nesting with joins should result in proper column aliasing (metabase#22859-2)", () => {
+  it("third level of nesting with joins should result in proper column aliasing (dataman#22859-2)", () => {
     startNewQuestion();
     cy.findByText("Saved Questions").click();
     cy.findByText("22859-Q2").click();

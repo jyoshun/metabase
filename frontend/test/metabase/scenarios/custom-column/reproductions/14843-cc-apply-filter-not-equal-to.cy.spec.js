@@ -24,7 +24,7 @@ describe("issue 14843", () => {
     cy.signInAsAdmin();
   });
 
-  it("should correctly filter custom column by 'Not equal to' (metabase#14843)", () => {
+  it("should correctly filter custom column by 'Not equal to' (dataman#14843)", () => {
     cy.createQuestion(questionDetails, { visitQuestion: true });
 
     cy.icon("notebook").click();

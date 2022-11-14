@@ -23,7 +23,7 @@ describe("issue 15353", () => {
     cy.createQuestion(questionDetails, { visitQuestion: true });
   });
 
-  it("should be able to change field name used for values (metabase#15353)", () => {
+  it("should be able to change field name used for values (dataman#15353)", () => {
     cy.findByTestId("viz-settings-button").click();
     sidebar().contains("Count").siblings(".Icon-ellipsis").click();
 

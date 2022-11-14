@@ -120,7 +120,7 @@ describe("visual tests > visualizations > line", () => {
     cy.createPercySnapshot();
   });
 
-  it("with multiple series and different display types (metabase#11216)", () => {
+  it("with multiple series and different display types (dataman#11216)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "query",
@@ -160,7 +160,7 @@ describe("visual tests > visualizations > line", () => {
     cy.createPercySnapshot();
   });
 
-  it("with missing values and duplicate x (metabase#11076)", () => {
+  it("with missing values and duplicate x (dataman#11076)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "native",

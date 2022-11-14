@@ -32,7 +32,7 @@ describe("issue 17060", () => {
     });
   });
 
-  it("should not render duplicated columns (metabase#17060)", () => {
+  it("should not render duplicated columns (dataman#17060)", () => {
     cy.get("@editor").type(
       moveCursorToBeginning +
         moveCursorAfterSection +

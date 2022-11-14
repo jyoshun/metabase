@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import CompletedStep, { CompletedStepProps } from "./CompletedStep";
 
-const NewsletterFormMock = () => <div>Metabase Newsletter</div>;
+const NewsletterFormMock = () => <div>DataMan Newsletter</div>;
 jest.mock("../../containers/NewsletterForm", () => NewsletterFormMock);
 
 describe("CompletedStep", () => {
@@ -23,8 +23,8 @@ describe("CompletedStep", () => {
 
     render(<CompletedStep {...props} />);
 
-    expect(screen.getByText("Metabase Newsletter"));
-    expect(screen.getByText("Take me to Metabase"));
+    expect(screen.getByText("DataMan Newsletter"));
+    expect(screen.getByText("Take me to DataMan"));
   });
 });
 

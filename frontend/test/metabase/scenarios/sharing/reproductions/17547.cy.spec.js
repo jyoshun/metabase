@@ -27,7 +27,7 @@ describe("issue 17547", () => {
     });
   });
 
-  it("editing an alert should not delete it (metabase#17547)", () => {
+  it("editing an alert should not delete it (dataman#17547)", () => {
     cy.icon("bell").click();
     popover().within(() => {
       cy.findByText("Daily, 12:00 PM");

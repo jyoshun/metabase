@@ -6,7 +6,7 @@ export const component = Visualization;
 export const category = "visualization";
 
 export const description = `
-A component to render a Metabase visualization
+A component to render a DataMan visualization
 `;
 
 const PROPS = {

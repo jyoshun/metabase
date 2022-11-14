@@ -41,7 +41,7 @@ describe("scenarios > collection defaults", () => {
         cy.location("pathname").should("eq", "/collection/root");
 
         cy.log(
-          "should expand/collapse collection tree by clicking on parent collection name (metabase#17339)",
+          "should expand/collapse collection tree by clicking on parent collection name (dataman#17339)",
         );
 
         // 1. Clicking on the collection name for the first time should navigate to that collection and expand its children
@@ -104,7 +104,7 @@ describe("scenarios > collection defaults", () => {
       popover().contains("Fifth collection with a very long name");
     });
 
-    it("should be usable on mobile screen sizes (metabase#15006)", () => {
+    it("should be usable on mobile screen sizes (dataman#15006)", () => {
       cy.viewport(480, 800);
 
       visitRootCollection();
@@ -155,7 +155,7 @@ describe("scenarios > collection defaults", () => {
                 id: 1,
                 last_name: null,
                 first_name: null,
-                email: "admin@metabase.test",
+                email: "admin@dataman.test",
                 timestamp: "2022-07-05T07:31:09.054-07:00",
               }),
             );
@@ -163,7 +163,7 @@ describe("scenarios > collection defaults", () => {
         },
       );
       visitRootCollection();
-      cy.findByText("admin@metabase.test").trigger("mouseenter");
+      cy.findByText("admin@dataman.test").trigger("mouseenter");
       cy.findByRole("tooltip").should("not.exist");
     });
 
@@ -199,7 +199,7 @@ describe("scenarios > collection defaults", () => {
       cy.signInAsAdmin();
     });
 
-    it.skip("should show list of collection items even if one question has invalid parameters (metabase#25543)", () => {
+    it.skip("should show list of collection items even if one question has invalid parameters (dataman#25543)", () => {
       const questionDetails = {
         native: { query: "select 1 --[[]]", "template-tags": {} },
       };
@@ -210,7 +210,7 @@ describe("scenarios > collection defaults", () => {
       cy.findByText("Orders in a dashboard");
     });
 
-    it("should be able to drag an item to the root collection (metabase#16498)", () => {
+    it("should be able to drag an item to the root collection (dataman#16498)", () => {
       moveItemToCollection("Orders", "First collection");
 
       getCollectionIdFromSlug("first_collection", id => {
@@ -270,7 +270,7 @@ describe("scenarios > collection defaults", () => {
         cy.signIn("nocollection");
       });
 
-      it("should see a child collection in a sidebar even with revoked access to its parents (metabase#14114, metabase#16555, metabase#20716)", () => {
+      it("should see a child collection in a sidebar even with revoked access to its parents (dataman#14114, dataman#16555, dataman#20716)", () => {
         cy.visit("/");
 
         navigationSidebar().within(() => {
@@ -285,7 +285,7 @@ describe("scenarios > collection defaults", () => {
         cy.findByText("You don't have permissions to do that.");
       });
 
-      it("should be able to choose a child collection when saving a question (metabase#14052)", () => {
+      it("should be able to choose a child collection when saving a question (dataman#14052)", () => {
         openOrdersTable();
         cy.findByText("Save").click();
         // Click to choose which collection should this question be saved to
@@ -300,7 +300,7 @@ describe("scenarios > collection defaults", () => {
       });
     });
 
-    it("sub-collection should be available in save and move modals (metabase#14122)", () => {
+    it("sub-collection should be available in save and move modals (dataman#14122)", () => {
       const COLLECTION = "14122C";
 
       // Create Parent collection within admin's personal collection
@@ -329,7 +329,7 @@ describe("scenarios > collection defaults", () => {
       });
     });
 
-    it("moving collections should update the UI (metabase#14280, metabase#14482)", () => {
+    it("moving collections should update the UI (dataman#14280, dataman#14482)", () => {
       const NEW_COLLECTION = "New collection";
 
       // Create New collection within `Our analytics`
@@ -339,7 +339,7 @@ describe("scenarios > collection defaults", () => {
       });
 
       cy.log(
-        "when nested child collection is moved to the root collection (metabase#14482)",
+        "when nested child collection is moved to the root collection (dataman#14482)",
       );
 
       getCollectionIdFromSlug("second_collection", id => {
@@ -358,7 +358,7 @@ describe("scenarios > collection defaults", () => {
       });
 
       cy.log(
-        "should show moved collection inside a folder tree structure (metabase#14280)",
+        "should show moved collection inside a folder tree structure (dataman#14280)",
       );
 
       moveOpenedCollectionTo(NEW_COLLECTION);
@@ -374,11 +374,11 @@ describe("scenarios > collection defaults", () => {
 
     describe("bulk actions", () => {
       describe("selection", () => {
-        it("should be possible to apply bulk selection to all items (metabase#14705)", () => {
+        it("should be possible to apply bulk selection to all items (dataman#14705)", () => {
           bulkSelectDeselectWorkflow();
         });
 
-        it("should clean up selection when opening another collection (metabase#16491)", () => {
+        it("should clean up selection when opening another collection (dataman#16491)", () => {
           cy.request("PUT", "/api/card/1", {
             collection_id: 1,
           });
@@ -413,7 +413,7 @@ describe("scenarios > collection defaults", () => {
       });
 
       describe("archive", () => {
-        it("should be possible to bulk archive items (metabase#16496)", () => {
+        it("should be possible to bulk archive items (dataman#16496)", () => {
           cy.visit("/collection/root");
           selectItemUsingCheckbox("Orders");
 
@@ -446,7 +446,7 @@ describe("scenarios > collection defaults", () => {
       });
     });
 
-    it("collections list on the home page shouldn't depend on the name of the first 50 objects (metabase#16784)", () => {
+    it("collections list on the home page shouldn't depend on the name of the first 50 objects (dataman#16784)", () => {
       // Although there are already some objects in the default snapshot (3 questions, 1 dashboard, 3 collections),
       // let's create 50 more dashboards with the letter of alphabet `D` coming before the first letter of the existing collection `F`.
       Cypress._.times(50, i => cy.createDashboard({ name: `Dashboard ${i}` }));

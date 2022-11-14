@@ -53,7 +53,7 @@ describe("scenarios > question > object details", () => {
     assertOrderDetailView({ id: FIRST_ORDER_ID });
   });
 
-  it("handles browsing records by FKs (metabase#21756)", () => {
+  it("handles browsing records by FKs (dataman#21756)", () => {
     openOrdersTable();
 
     drillFK({ id: 1 });
@@ -85,7 +85,7 @@ describe("scenarios > question > object details", () => {
     });
   });
 
-  it("should allow to browse linked entities by FKs (metabase#21757)", () => {
+  it("should allow to browse linked entities by FKs (dataman#21757)", () => {
     const PRODUCT_ID = 7;
     const EXPECTED_LINKED_ORDERS_COUNT = 92;
     const EXPECTED_LINKED_REVIEWS_COUNT = 8;
@@ -118,7 +118,7 @@ describe("scenarios > question > object details", () => {
     cy.findByText(`Showing ${EXPECTED_LINKED_ORDERS_COUNT} rows`);
   });
 
-  it("should not offer drill-through on the object detail records (metabase#20560)", () => {
+  it("should not offer drill-through on the object detail records (dataman#20560)", () => {
     openPeopleTable({ limit: 2 });
 
     drillPK({ id: 2 });

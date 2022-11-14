@@ -12,7 +12,7 @@ import {
 } from "./SettingsLicense.styled";
 import { ExplorePlansIllustration } from "./ExplorePlansIllustration";
 
-const description = t`Metabase is open source and will be free forever – but by upgrading you can have priority support, more tools to help you share your insights with your teams and powerful options to help you create seamless, interactive data experiences for your customers.`;
+const description = t`DataMan is open source and will be free forever – but by upgrading you can have priority support, more tools to help you share your insights with your teams and powerful options to help you create seamless, interactive data experiences for your customers.`;
 
 const SettingsLicense = () => {
   return (

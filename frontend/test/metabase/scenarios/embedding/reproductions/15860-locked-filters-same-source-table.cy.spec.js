@@ -139,7 +139,7 @@ describe.skip("issue 15860", () => {
     });
   });
 
-  it("should work for locked linked filters connected to different cards with the same source table (metabase#15860)", () => {
+  it("should work for locked linked filters connected to different cards with the same source table (dataman#15860)", () => {
     cy.icon("share").click();
     cy.findByText("Embed in your application").click();
 

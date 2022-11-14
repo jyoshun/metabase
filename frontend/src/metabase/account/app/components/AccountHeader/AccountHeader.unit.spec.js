@@ -7,7 +7,7 @@ const getUser = () => ({
   id: 1,
   first_name: "John",
   last_name: "Doe",
-  email: "john@metabase.test",
+  email: "john@dataman.test",
   google_auth: true,
 });
 

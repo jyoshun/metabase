@@ -10,7 +10,7 @@ describe("issue 4482", () => {
     cy.contains("Products").click();
   });
 
-  it("should be possible to summarize min of a temporal column (metabase#4482-1)", () => {
+  it("should be possible to summarize min of a temporal column (dataman#4482-1)", () => {
     pickMetric("Minimum of");
 
     cy.contains("Created At").click();
@@ -20,7 +20,7 @@ describe("issue 4482", () => {
     cy.findByText("April 1, 2016, 12:00 AM");
   });
 
-  it("should be possible to summarize max of a temporal column (metabase#4482-2)", () => {
+  it("should be possible to summarize max of a temporal column (dataman#4482-2)", () => {
     pickMetric("Maximum of");
 
     cy.contains("Created At").click();
@@ -30,7 +30,7 @@ describe("issue 4482", () => {
     cy.findByText("April 1, 2019, 12:00 AM");
   });
 
-  it("should be not possible to average a temporal column (metabase#4482-3)", () => {
+  it("should be not possible to average a temporal column (dataman#4482-3)", () => {
     pickMetric("Average of");
 
     cy.findByText("Created At").should("not.exist");

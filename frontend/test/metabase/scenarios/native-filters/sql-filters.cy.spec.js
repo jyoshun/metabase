@@ -69,7 +69,7 @@ describe("scenarios > filters > sql filters > basic filter types", () => {
       });
     });
 
-    it("when set as the default value for a required filter (metabase#16811)", () => {
+    it("when set as the default value for a required filter (dataman#16811)", () => {
       SQLFilter.toggleRequired();
       SQLFilter.setDefaultValue("4.3");
 

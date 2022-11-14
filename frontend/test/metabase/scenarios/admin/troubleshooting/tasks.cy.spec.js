@@ -7,7 +7,7 @@ describe("scenarios > admin > troubleshooting > tasks", () => {
     cy.signInAsAdmin();
   });
 
-  it("pagination should work (metabase#14636)", () => {
+  it("pagination should work (dataman#14636)", () => {
     // Really ugly way to bump up total number of tasks (but more realistic than using fixture, or stubbing)
     // Since this happens async, that number may vary but it should always be greater than 50 [1] and less than 100 [2]
     // Note: each sync generates 6 tasks and we start with 12 tasks already for the testing sample database

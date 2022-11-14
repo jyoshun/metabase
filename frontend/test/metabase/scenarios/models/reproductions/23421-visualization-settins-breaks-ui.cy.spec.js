@@ -23,7 +23,7 @@ describe("issue 23421", () => {
     cy.createNativeQuestion(questionDetails, { visitQuestion: true });
   });
 
-  it("`visualization_settings` should not break UI (metabase#23421)", () => {
+  it("`visualization_settings` should not break UI (dataman#23421)", () => {
     openQuestionActions();
     cy.findByText("Edit query definition").click();
 

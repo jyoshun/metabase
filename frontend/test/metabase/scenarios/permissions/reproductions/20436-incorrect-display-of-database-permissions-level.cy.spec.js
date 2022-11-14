@@ -19,7 +19,7 @@ describe("issue 20436", () => {
     });
   });
 
-  it("should display correct permissions on the database level after changes on the table level (metabase#20436)", () => {
+  it("should display correct permissions on the database level after changes on the table level (dataman#20436)", () => {
     cy.visit(url);
     cy.findByText("Unrestricted");
 

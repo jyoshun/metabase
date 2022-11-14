@@ -340,7 +340,7 @@ describe("scenarios > models metadata", () => {
       });
     });
 
-    it("models metadata tab should show columns with details-only visibility (metabase#22521)", () => {
+    it("models metadata tab should show columns with details-only visibility (dataman#22521)", () => {
       cy.request("PUT", `/api/field/${PRODUCTS.VENDOR}`, {
         visibility_type: "details-only",
       });

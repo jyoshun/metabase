@@ -9,7 +9,7 @@ describe("admin > database > add > Presto", () => {
     cy.contains("Database type").closest(".Form-field").find("a").click();
   });
 
-  it("should render correctly and allow switching between the new and the old drivers (metabase#18351)", () => {
+  it("should render correctly and allow switching between the new and the old drivers (dataman#18351)", () => {
     // There should be only the new driver listed originally in the popover
     popover().within(() => {
       cy.findByText("Presto (Deprecated Driver)").should("not.exist");

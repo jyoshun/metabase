@@ -13,7 +13,7 @@ describe("issue 20044", () => {
     cy.signInAsAdmin();
   });
 
-  it("nodata user should not see 'Explore results' (metabase#20044)", () => {
+  it("nodata user should not see 'Explore results' (dataman#20044)", () => {
     cy.createNativeQuestion(questionDetails).then(({ body: { id } }) => {
       cy.signIn("nodata");
 

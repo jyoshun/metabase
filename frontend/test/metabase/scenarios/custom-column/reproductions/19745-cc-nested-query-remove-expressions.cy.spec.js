@@ -57,11 +57,11 @@ describe("issue 19745", () => {
     cy.signInAsAdmin();
   });
 
-  it("should unwrap the nested query when removing the last expression (metabase#19745)", () => {
+  it("should unwrap the nested query when removing the last expression (dataman#19745)", () => {
     updateQuestionAndSelectFilter(() => removeExpression("Custom Column"));
   });
 
-  it("should unwrap the nested query when removing all expressions (metabase#19745)", () => {
+  it("should unwrap the nested query when removing all expressions (dataman#19745)", () => {
     updateQuestionAndSelectFilter(() => removeAllExpressions());
   });
 });

@@ -10,7 +10,7 @@ describe("scenarios > visualizations > rows", () => {
   // Issue was specific to Firefox only - it is still possible to test it locally
   ["0", "null"].forEach(testValue => {
     it(
-      `should not collapse rows when last value is ${testValue} (metabase#14285)`,
+      `should not collapse rows when last value is ${testValue} (dataman#14285)`,
       { browser: "firefox" },
       () => {
         cy.createNativeQuestion(

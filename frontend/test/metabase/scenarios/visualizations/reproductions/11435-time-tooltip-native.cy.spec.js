@@ -28,7 +28,7 @@ describe("issue 11435", () => {
     cy.signInAsAdmin();
   });
 
-  it("should use time formatting settings in tooltips for native questions (metabase#11435)", () => {
+  it("should use time formatting settings in tooltips for native questions (dataman#11435)", () => {
     cy.createNativeQuestion(questionDetails, { visitQuestion: true });
     clickLineDot({ index: 1 });
     popover().findByTextEnsureVisible("March 11, 2019, 8:45:17.010 PM");

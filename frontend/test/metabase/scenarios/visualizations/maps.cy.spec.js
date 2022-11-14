@@ -48,7 +48,7 @@ describe("scenarios > visualizations > maps", () => {
     cy.get(".leaflet-container");
   });
 
-  it("should suggest map visualization regardless of the first column type (metabase#14254)", () => {
+  it("should suggest map visualization regardless of the first column type (dataman#14254)", () => {
     cy.createNativeQuestion(
       {
         name: "14254",
@@ -80,7 +80,7 @@ describe("scenarios > visualizations > maps", () => {
     });
   });
 
-  it("should not assign the full name of the state as the filter value on a drill-through (metabase#14650)", () => {
+  it("should not assign the full name of the state as the filter value on a drill-through (dataman#14650)", () => {
     cy.intercept("/app/assets/geojson/**").as("geojson");
     visitQuestionAdhoc({
       dataset_query: {
@@ -125,7 +125,7 @@ describe("scenarios > visualizations > maps", () => {
     cy.findByText("171 Olive Oyle Lane"); // Address in the first row
   });
 
-  it("should display a tooltip for a grid map without a metric column (metabase#17940)", () => {
+  it("should display a tooltip for a grid map without a metric column (dataman#17940)", () => {
     visitQuestionAdhoc({
       display: "map",
       dataset_query: {
@@ -170,7 +170,7 @@ describe("scenarios > visualizations > maps", () => {
     cy.findByText("1");
   });
 
-  it("should render grid map visualization for native questions (metabase#8362)", () => {
+  it("should render grid map visualization for native questions (dataman#8362)", () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "native",

@@ -17,7 +17,7 @@ describe("issue 22822", { tags: "@external" }, () => {
     cy.signInAsAdmin();
   });
 
-  it("should not show 'Explore Results' for databases that do not support nested queries (metabase#22822)", () => {
+  it("should not show 'Explore Results' for databases that do not support nested queries (dataman#22822)", () => {
     cy.createNativeQuestion(questionDetails, { visitQuestion: true });
 
     cy.findByTextEnsureVisible("Rustic Paper Wallet");

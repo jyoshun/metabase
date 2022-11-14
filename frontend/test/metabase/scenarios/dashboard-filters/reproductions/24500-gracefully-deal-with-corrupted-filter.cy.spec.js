@@ -50,7 +50,7 @@ describe.skip("issues 15279 and 24500", () => {
     cy.signInAsAdmin();
   });
 
-  it("corrupted dashboard filter should still appear in the UI without breaking other filters (metabase#15279, metabase#24500)", () => {
+  it("corrupted dashboard filter should still appear in the UI without breaking other filters (dataman#15279, dataman#24500)", () => {
     cy.createQuestionAndDashboard({ questionDetails, dashboardDetails }).then(
       ({ body: { id, card_id, dashboard_id } }) => {
         // Connect filters to the question

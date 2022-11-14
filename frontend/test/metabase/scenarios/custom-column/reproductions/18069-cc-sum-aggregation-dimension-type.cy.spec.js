@@ -33,7 +33,7 @@ describe("issue 18069", () => {
     });
   });
 
-  it("should not allow choosing text fields for SUM (metabase#18069)", () => {
+  it("should not allow choosing text fields for SUM (dataman#18069)", () => {
     summarize({ mode: "notebook" });
     cy.findByText("Sum of ...").click();
 

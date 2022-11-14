@@ -9,7 +9,7 @@ describe("UserAvatar", () => {
         first_name: "Testy",
         last_name: "Tableton",
         common_name: "Testy Tableton",
-        email: "user@metabase.test",
+        email: "user@dataman.test",
       };
 
       const { findByText } = render(<UserAvatar user={revisionUser} />);
@@ -21,8 +21,8 @@ describe("UserAvatar", () => {
       const revisionUser = {
         first_name: null,
         last_name: null,
-        common_name: "user@metabase.test",
-        email: "user@metabase.test",
+        common_name: "user@dataman.test",
+        email: "user@dataman.test",
       };
 
       const { findByText } = render(<UserAvatar user={revisionUser} />);
@@ -48,7 +48,7 @@ describe("UserAvatar", () => {
       const revisionUser = {
         first_name: null,
         last_name: null,
-        common_name: "user@metabase.test",
+        common_name: "user@dataman.test",
       };
 
       const { findByText } = render(<UserAvatar user={revisionUser} />);

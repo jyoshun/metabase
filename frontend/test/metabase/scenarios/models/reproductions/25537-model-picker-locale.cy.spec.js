@@ -16,7 +16,7 @@ describe("issue 25537", () => {
     cy.intercept("GET", "/api/database/*/datasets/*").as("getSchemas");
   });
 
-  it("should be able to pick a saved model when using a non-english locale (metabase#25537)", () => {
+  it("should be able to pick a saved model when using a non-english locale (dataman#25537)", () => {
     setLocale("de");
     cy.createQuestion(questionDetails);
 

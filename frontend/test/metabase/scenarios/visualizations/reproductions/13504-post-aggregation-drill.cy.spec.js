@@ -28,7 +28,7 @@ describe("issue 13504", () => {
     cy.intercept("POST", "/api/dataset").as("dataset");
   });
 
-  it("should remove post-aggregation filters from a multi-stage query (metabase#13504)", () => {
+  it("should remove post-aggregation filters from a multi-stage query (dataman#13504)", () => {
     cy.createQuestion(questionDetails, { visitQuestion: true });
 
     cy.get(".dot").eq(0).click({ force: true });

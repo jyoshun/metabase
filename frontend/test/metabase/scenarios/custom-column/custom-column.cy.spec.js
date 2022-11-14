@@ -24,7 +24,7 @@ describe("scenarios > question > custom column", () => {
     cy.signInAsNormalUser();
   });
 
-  it("can create a custom column (metabase#13241)", () => {
+  it("can create a custom column (dataman#13241)", () => {
     openOrdersTable({ mode: "notebook" });
     cy.icon("add_data").click();
 
@@ -162,7 +162,7 @@ describe("scenarios > question > custom column", () => {
     });
   });
 
-  it("should create custom column with fields from aggregated data (metabase#12762)", () => {
+  it("should create custom column with fields from aggregated data (dataman#12762)", () => {
     openOrdersTable({ mode: "notebook" });
 
     summarize({ mode: "notebook" });
@@ -204,7 +204,7 @@ describe("scenarios > question > custom column", () => {
     cy.get(".Visualization").contains(columnName);
   });
 
-  it("should not return same results for columns with the same name (metabase#12649)", () => {
+  it("should not return same results for columns with the same name (dataman#12649)", () => {
     openOrdersTable({ mode: "notebook" });
     // join with Products
     cy.findByText("Join data").click();
@@ -227,7 +227,7 @@ describe("scenarios > question > custom column", () => {
       .findByText("1");
   });
 
-  it("should be able to use custom expression after aggregation (metabase#13857)", () => {
+  it("should be able to use custom expression after aggregation (dataman#13857)", () => {
     const CE_NAME = "13857_CE";
     const CC_NAME = "13857_CC";
 
@@ -261,7 +261,7 @@ describe("scenarios > question > custom column", () => {
     cy.findByText(CC_NAME);
   });
 
-  it("should work with implicit joins (metabase#14080)", () => {
+  it("should work with implicit joins (dataman#14080)", () => {
     const CC_NAME = "OneisOne";
     cy.signInAsAdmin();
 
@@ -297,7 +297,7 @@ describe("scenarios > question > custom column", () => {
     cy.get(".Visualization .dot").should("have.length.of.at.least", 8);
   });
 
-  it.skip("should create custom column after aggregation with 'cum-sum/count' (metabase#13634)", () => {
+  it.skip("should create custom column after aggregation with 'cum-sum/count' (dataman#13634)", () => {
     cy.createQuestion(
       {
         name: "13634",
@@ -355,7 +355,7 @@ describe("scenarios > question > custom column", () => {
     cy.findByText(CC_NAME);
   });
 
-  it("should handle identical custom column and table column names (metabase#14255)", () => {
+  it("should handle identical custom column and table column names (dataman#14255)", () => {
     // Uppercase is important for this reproduction on H2
     const CC_NAME = "CATEGORY";
 
@@ -378,7 +378,7 @@ describe("scenarios > question > custom column", () => {
     cy.findByText("Gizmo2");
   });
 
-  it.skip("should drop custom column (based on a joined field) when a join is removed (metabase#14775)", () => {
+  it.skip("should drop custom column (based on a joined field) when a join is removed (dataman#14775)", () => {
     const CE_NAME = "Rounded price";
 
     cy.createQuestion({
@@ -425,7 +425,7 @@ describe("scenarios > question > custom column", () => {
     cy.contains("37.65");
   });
 
-  it("should handle using `case()` when referencing the same column names (metabase#14854)", () => {
+  it("should handle using `case()` when referencing the same column names (dataman#14854)", () => {
     const CC_NAME = "CE with case";
 
     visitQuestionAdhoc(
@@ -464,7 +464,7 @@ describe("scenarios > question > custom column", () => {
     cy.contains("37.65");
   });
 
-  it("should handle brackets in the name of the custom column (metabase#15316)", () => {
+  it("should handle brackets in the name of the custom column (dataman#15316)", () => {
     cy.createQuestion({
       name: "15316",
       query: {
@@ -487,7 +487,7 @@ describe("scenarios > question > custom column", () => {
     cy.get(".ace_line").contains("Sum([MyCC \\[2021\\]]");
   });
 
-  it.skip("should work with `isNull` function (metabase#15922)", () => {
+  it.skip("should work with `isNull` function (dataman#15922)", () => {
     openOrdersTable({ mode: "notebook" });
     cy.findByText("Custom column").click();
     enterCustomColumnDetails({
@@ -531,7 +531,7 @@ describe("scenarios > question > custom column", () => {
     cy.findByText("Showing 463 rows").should("be.visible");
   });
 
-  it("should work with relative date filter applied to a custom column (metabase#16273)", () => {
+  it("should work with relative date filter applied to a custom column (dataman#16273)", () => {
     openOrdersTable({ mode: "notebook" });
     cy.findByText("Custom column").click();
 

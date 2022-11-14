@@ -1,4 +1,4 @@
-// Migrated from frontend/test/metabase/user/UserSettings.integ.spec.js
+// Migrated from frontend/test/dataman/user/UserSettings.integ.spec.js
 import { restore, popover, getFullName } from "__support__/e2e/helpers";
 import { USERS } from "__support__/e2e/cypress_data";
 
@@ -17,7 +17,7 @@ describe("user > settings", () => {
     cy.signInAsNormalUser();
   });
 
-  it("should be able to remove first name and last name (metabase#22754)", () => {
+  it("should be able to remove first name and last name (dataman#22754)", () => {
     cy.visit("/account/profile");
     cy.findByText(fullName);
     cy.findByLabelText("First name").clear();
@@ -64,14 +64,14 @@ describe("user > settings", () => {
     cy.findByText("Password").should("exist");
   });
 
-  it("should redirect to the login page when the user has signed out but tries to visit `/account/profile` (metabase#15471)", () => {
+  it("should redirect to the login page when the user has signed out but tries to visit `/account/profile` (dataman#15471)", () => {
     cy.signOut();
     cy.visit("/account/profile");
     cy.url().should("include", "/auth/login");
-    cy.findByText("Sign in to Metabase");
+    cy.findByText("Sign in to DataMan");
   });
 
-  it("should redirect to the login page when the user has changed the password and logged out (metabase#18151)", () => {
+  it("should redirect to the login page when the user has changed the password and logged out (dataman#18151)", () => {
     cy.visit("/account/password");
 
     cy.findByLabelText("Current password").type(password);
@@ -82,10 +82,10 @@ describe("user > settings", () => {
 
     cy.findByLabelText("gear icon").click();
     cy.findByText("Sign out").click();
-    cy.findByText("Sign in to Metabase");
+    cy.findByText("Sign in to DataMan");
   });
 
-  it("should validate form values (metabase#23259)", () => {
+  it("should validate form values (dataman#23259)", () => {
     cy.signInAsNormalUser();
     cy.visit("/account/password");
 
@@ -110,7 +110,7 @@ describe("user > settings", () => {
     cy.contains("Invalid password");
   });
 
-  it("should be able to change a language (metabase#22192)", () => {
+  it("should be able to change a language (dataman#22192)", () => {
     cy.intercept("PUT", "/api/user/*").as("updateUserSettings");
 
     cy.visit("/account/profile");
@@ -128,7 +128,7 @@ describe("user > settings", () => {
     cy.icon("gear").should("exist");
   });
 
-  it("should be able to open the app with every locale from the available locales (metabase#22192)", () => {
+  it("should be able to open the app with every locale from the available locales (dataman#22192)", () => {
     cy.request("GET", "/api/user/current").then(({ body: user }) => {
       cy.intercept("GET", "/api/user/current").as("getUser");
 
@@ -171,7 +171,7 @@ describe("user > settings", () => {
       cy.findByText("Password").should("not.exist");
     });
 
-    it("should hide first name, last name, and email input (metabase#23298)", () => {
+    it("should hide first name, last name, and email input (dataman#23298)", () => {
       cy.findByLabelText("First name").should("not.exist");
       cy.findByLabelText("Last name").should("not.exist");
       cy.findByLabelText("Email").should("not.exist");
@@ -190,7 +190,7 @@ describe("user > settings", () => {
       cy.findByText("Password").should("not.exist");
     });
 
-    it("should hide first name, last name, and email input (metabase#23298)", () => {
+    it("should hide first name, last name, and email input (dataman#23298)", () => {
       cy.findByLabelText("First name").should("not.exist");
       cy.findByLabelText("Last name").should("not.exist");
       cy.findByLabelText("Email").should("not.exist");
@@ -208,7 +208,7 @@ describe("user > settings", () => {
       cy.findByText("Password").should("not.exist");
     });
 
-    it("should hide first name, last name, and email input (metabase#23298)", () => {
+    it("should hide first name, last name, and email input (dataman#23298)", () => {
       cy.findByLabelText("First name").should("not.exist");
       cy.findByLabelText("Last name").should("not.exist");
       cy.findByLabelText("Email").should("not.exist");

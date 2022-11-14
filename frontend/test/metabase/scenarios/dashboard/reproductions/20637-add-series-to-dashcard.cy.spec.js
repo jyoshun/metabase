@@ -4,13 +4,13 @@ import { SAMPLE_DATABASE } from "__support__/e2e/cypress_sample_database";
 
 const { PRODUCTS, PRODUCTS_ID } = SAMPLE_DATABASE;
 
-describe("adding an additional series to a dashcard (metabase#20637)", () => {
+describe("adding an additional series to a dashcard (dataman#20637)", () => {
   beforeEach(() => {
     restore();
     cy.signInAsAdmin();
   });
 
-  it("should use the correct query endpoints (metabase#20637)", () => {
+  it("should use the correct query endpoints (dataman#20637)", () => {
     createQuestionsAndDashboard();
     cy.wait("@dashcardQuery");
 

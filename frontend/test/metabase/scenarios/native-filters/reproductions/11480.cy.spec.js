@@ -10,7 +10,7 @@ describe("issue 11480", () => {
     cy.signInAsAdmin();
   });
 
-  it("should clear a template tag's default value when the type changes (metabase#11480)", () => {
+  it("should clear a template tag's default value when the type changes (dataman#11480)", () => {
     openNativeEditor();
     // Parameter `x` defaults to a text parameter.
     SQLFilter.enterParameterizedQuery(

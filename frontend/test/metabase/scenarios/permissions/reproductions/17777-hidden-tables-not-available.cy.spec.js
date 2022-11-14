@@ -14,7 +14,7 @@ describe.skip("issue 17777", () => {
     hideTables([ORDERS_ID, PRODUCTS_ID, PEOPLE_ID, REVIEWS_ID]);
   });
 
-  it("should still be able to set permissions on individual tables, even though they are hidden in data model (metabase#17777)", () => {
+  it("should still be able to set permissions on individual tables, even though they are hidden in data model (dataman#17777)", () => {
     cy.visit(`/admin/permissions/data/group/${ALL_USERS_GROUP}`);
 
     cy.findByText("Permissions for the All Users group");

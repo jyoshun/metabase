@@ -18,7 +18,7 @@ describeEE("audit > ad-hoc", () => {
       cy.signInAsAdmin();
     });
 
-    it("should appear in audit log (metabase#16845 metabase-enterprise#486)", () => {
+    it("should appear in audit log (dataman#16845 dataman-enterprise#486)", () => {
       cy.visit("/admin/audit/members/log");
 
       cy.findByText("Native")
@@ -32,7 +32,7 @@ describeEE("audit > ad-hoc", () => {
       cy.url().should("include", "/admin/audit/query/");
 
       cy.get(".PageTitle").contains("Query");
-      cy.findByText("Open in Metabase");
+      cy.findByText("Open in DataMan");
       cy.get(".ace_content").contains("SELECT 123");
     });
   });

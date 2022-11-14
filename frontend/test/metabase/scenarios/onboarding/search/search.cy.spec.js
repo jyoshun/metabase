@@ -4,7 +4,7 @@ describe("scenarios > auth > search", () => {
   beforeEach(restore);
 
   describe("universal search", () => {
-    it("should work for admin (metabase#20018)", () => {
+    it("should work for admin (dataman#20018)", () => {
       cy.signInAsAdmin();
 
       cy.visit("/");
@@ -24,14 +24,14 @@ describe("scenarios > auth > search", () => {
       });
     });
 
-    it("should work for user with permissions (metabase#12332)", () => {
+    it("should work for user with permissions (dataman#12332)", () => {
       cy.signInAsNormalUser();
       cy.visit("/");
       cy.findByPlaceholderText("Search…").type("product{enter}");
       cy.findByText("Products");
     });
 
-    it("should work for user without data permissions (metabase#16855)", () => {
+    it("should work for user without data permissions (dataman#16855)", () => {
       cy.signIn("nodata");
       cy.visit("/");
       cy.findByPlaceholderText("Search…").type("product{enter}");
@@ -56,7 +56,7 @@ describe("scenarios > auth > search", () => {
 
 function getProductsSearchResults() {
   cy.findByText("Products");
-  // This part about the description reproduces metabase#20018
+  // This part about the description reproduces dataman#20018
   cy.findByText(
     "Includes a catalog of all the products ever sold by the famed Sample Company.",
   );

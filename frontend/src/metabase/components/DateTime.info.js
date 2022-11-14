@@ -3,7 +3,7 @@ import DateTime, { DATE_TIME_UNITS } from "./DateTime";
 
 export const component = DateTime;
 export const description = `
-Formats date and time strings according to Metabase settings (/admin/settings/localization)
+Formats date and time strings according to DataMan settings (/admin/settings/localization)
 `;
 
 export const category = "display";

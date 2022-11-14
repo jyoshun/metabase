@@ -23,7 +23,7 @@ describe("scenarios > visualizations > scalar", () => {
   };
 
   Object.entries(SCREEN_SIZES).forEach(([size, viewport]) => {
-    it(`should render human readable numbers on ${size} screen size (metabase`, () => {
+    it(`should render human readable numbers on ${size} screen size (dataman`, () => {
       const [width, height] = viewport;
 
       cy.skipOn(size === "mobile");
@@ -63,7 +63,7 @@ describe("scenarios > visualizations > scalar", () => {
     });
   });
 
-  it(`should render date without time (metabase#7494)`, () => {
+  it(`should render date without time (dataman#7494)`, () => {
     visitQuestionAdhoc({
       dataset_query: {
         type: "native",

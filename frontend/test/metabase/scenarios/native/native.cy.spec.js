@@ -97,7 +97,7 @@ describe("scenarios > question > native", () => {
     cy.location("pathname").should("match", /\/question\/\d+/);
   });
 
-  it(`shouldn't remove rows containing NULL when using "Is not" or "Does not contain" filter (metabase#13332)`, () => {
+  it(`shouldn't remove rows containing NULL when using "Is not" or "Does not contain" filter (dataman#13332)`, () => {
     const FILTERS = ["Is not", "Does not contain"];
 
     const questionDetails = {
@@ -157,7 +157,7 @@ describe("scenarios > question > native", () => {
     });
   });
 
-  it("should be able to add new columns after hiding some (metabase#15393)", () => {
+  it("should be able to add new columns after hiding some (dataman#15393)", () => {
     openNativeEditor().type("select 1 as visible, 2 as hidden");
     cy.get(".NativeQueryEditor .Icon-play").as("runQuery").click();
     cy.findByText("Settings").click();

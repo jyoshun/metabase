@@ -16,7 +16,7 @@ describe("issue 18384", () => {
     });
   });
 
-  it("should be able to open field properties even when one of the tables is hidden (metabase#18384)", () => {
+  it("should be able to open field properties even when one of the tables is hidden (dataman#18384)", () => {
     cy.visit(`/admin/datamodel/database/${SAMPLE_DB_ID}/table/${PEOPLE_ID}`);
 
     cy.findByDisplayValue("Address").parent().find(".Icon-gear").click();

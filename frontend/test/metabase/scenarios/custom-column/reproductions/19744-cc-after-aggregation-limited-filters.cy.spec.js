@@ -44,7 +44,7 @@ describe.skip("issue 19744", () => {
     addQuestionToDashboardAndVisit();
   });
 
-  it("custom column after aggregation shouldn't limit or change the behavior of dashboard filters (metabase#19744)", () => {
+  it("custom column after aggregation shouldn't limit or change the behavior of dashboard filters (dataman#19744)", () => {
     editDashboard();
     cy.icon("filter").click();
 

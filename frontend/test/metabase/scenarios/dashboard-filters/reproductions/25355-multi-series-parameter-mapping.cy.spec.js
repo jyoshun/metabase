@@ -55,7 +55,7 @@ describe("issue 25248", () => {
     cy.signInAsAdmin();
   });
 
-  it("should allow mapping parameters to combined cards individually (metabase#25248)", () => {
+  it("should allow mapping parameters to combined cards individually (dataman#25248)", () => {
     createDashboard();
     editDashboard();
 

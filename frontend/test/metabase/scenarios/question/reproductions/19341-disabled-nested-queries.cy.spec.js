@@ -21,7 +21,7 @@ describe("issue 19341", () => {
     cy.intercept("POST", "/api/card/*/query").as("cardQuery");
   });
 
-  it("should correctly disable nested queries (metabase#19341)", () => {
+  it("should correctly disable nested queries (dataman#19341)", () => {
     // Test "Saved Questions" table is hidden in QB data selector
     startNewQuestion();
     popover().within(() => {

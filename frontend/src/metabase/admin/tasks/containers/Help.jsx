@@ -26,7 +26,7 @@ const template = `**Describe the bug**
 A clear and concise description of what the bug is.
 
 **Logs**
-Please include javascript console and server logs around the time this bug occurred. For information about how to get these, consult our [bug troubleshooting guide](https://metabase.com/docs/latest/troubleshooting-guide/bugs.html)
+Please include javascript console and server logs around the time this bug occurred. For information about how to get these, consult our [bug troubleshooting guide](https://dataman.com/docs/latest/troubleshooting-guide/bugs.html)
 
 **To Reproduce**
 Steps to reproduce the behavior:
@@ -42,18 +42,18 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Severity**
-How severe an issue is this bug to you? Is this annoying, blocking some users, blocking an upgrade or blocking your usage of Metabase entirely?
+How severe an issue is this bug to you? Is this annoying, blocking some users, blocking an upgrade or blocking your usage of DataMan entirely?
 Note: the more honest and specific you are here the more we will take you seriously.
 
 **Additional context**
 Add any other context about the problem here.
 
-**Metabase Diagnostic Info**
+**DataMan Diagnostic Info**
 `;
 
 function githubIssueLink(bugReportDetails) {
   return (
-    "https://github.com/metabase/metabase/issues/new?title=&labels=.Needs+Triage%2C+Type%3ABug&body=" +
+    "https://github.com/dataman/dataman/issues/new?title=&labels=.Needs+Triage%2C+Type%3ABug&body=" +
     encodeURIComponent(template + "\n```json\n" + bugReportDetails + "\n```")
   );
 }
@@ -113,8 +113,8 @@ export default class Help extends Component {
               description={t`Resources and support`}
               link={
                 MetabaseSettings.isPaidPlan()
-                  ? `https://www.metabase.com/help-premium?utm_source=in-product&utm_medium=troubleshooting&utm_campaign=help&instance_version=${tag}&diag=${compactDetailStringForUrl}`
-                  : `https://www.metabase.com/help?utm_source=in-product&utm_medium=troubleshooting&utm_campaign=help&instance_version=${tag}`
+                  ? `https://www.dataman.com/help-premium?utm_source=in-product&utm_medium=troubleshooting&utm_campaign=help&instance_version=${tag}&diag=${compactDetailStringForUrl}`
+                  : `https://www.dataman.com/help?utm_source=in-product&utm_medium=troubleshooting&utm_campaign=help&instance_version=${tag}`
               }
             />
             <HelpLink

@@ -15,7 +15,7 @@ describe(
       cy.intercept("PUT", "/api/ldap/settings").as("updateLdapSettings");
     });
 
-    it("should setup ldap (metabase#16173)", () => {
+    it("should setup ldap (dataman#16173)", () => {
       cy.visit("/admin/settings/authentication/ldap");
 
       enterLdapSettings();
@@ -48,7 +48,7 @@ describe(
       cy.findByText("Saved").should("exist");
     });
 
-    it("should not reset previously populated fields when validation fails for just one of them (metabase#16226)", () => {
+    it("should not reset previously populated fields when validation fails for just one of them (dataman#16226)", () => {
       cy.visit("/admin/settings/authentication/ldap");
 
       enterLdapSettings();
@@ -78,7 +78,7 @@ describe(
       cy.findByText('For input string: "123 "').should("exist");
     });
 
-    it("should show the login form when ldap is enabled but password login isn't (metabase#25661)", () => {
+    it("should show the login form when ldap is enabled but password login isn't (dataman#25661)", () => {
       setupLdap();
       cy.request("PUT", "/api/setting/enable-password-login", { value: false });
       cy.signOut();

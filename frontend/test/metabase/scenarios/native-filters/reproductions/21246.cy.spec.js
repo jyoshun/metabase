@@ -58,7 +58,7 @@ describe("issue 21246", () => {
     });
   });
 
-  it("should be able to use sub-query referencing a GUI question and date based filters (metabase#21246)", () => {
+  it("should be able to use sub-query referencing a GUI question and date based filters (dataman#21246)", () => {
     const fieldFilterValue = "filter=2018-02";
     const dateFilterValue = "datevariable=2018-02-19";
 

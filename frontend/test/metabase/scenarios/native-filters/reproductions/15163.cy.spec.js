@@ -90,7 +90,7 @@ const dashboardFilter = {
       });
     });
 
-    it(`${test.toUpperCase()} version:\n should be able to view SQL question when accessing via dashboard with filters connected to modified card without SQL permissions (metabase#15163)`, () => {
+    it(`${test.toUpperCase()} version:\n should be able to view SQL question when accessing via dashboard with filters connected to modified card without SQL permissions (dataman#15163)`, () => {
       cy.findByText("New Title").click();
 
       cy.wait("@dataset", { timeout: 5000 }).then(xhr => {

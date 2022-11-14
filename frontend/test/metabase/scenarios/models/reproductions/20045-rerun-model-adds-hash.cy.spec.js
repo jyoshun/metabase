@@ -10,7 +10,7 @@ describe("issue 20045", () => {
     cy.request("PUT", "/api/card/1", { name: "Orders Model", dataset: true });
   });
 
-  it("should not add query hash on the rerun (metabase#20045)", () => {
+  it("should not add query hash on the rerun (dataman#20045)", () => {
     cy.visit("/model/1");
 
     cy.wait("@dataset");

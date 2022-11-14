@@ -102,7 +102,7 @@ describe("SavedQuestionPicker", () => {
     ]);
   });
 
-  it("sorts saved questions case-insensitive (metabase#23693)", async () => {
+  it("sorts saved questions case-insensitive (dataman#23693)", async () => {
     await setup();
 
     expect(

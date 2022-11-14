@@ -19,7 +19,7 @@ describe("issues 15119 and 16112", () => {
     });
   });
 
-  it("user without data permissions should be able to use dashboard filters (metabase#15119, metabase#16112)", () => {
+  it("user without data permissions should be able to use dashboard filters (dataman#15119, dataman#16112)", () => {
     const questionDetails = {
       name: "15119",
       query: { "source-table": REVIEWS_ID },

@@ -22,7 +22,7 @@ describe("scenarios > x-rays", () => {
 
   const XRAY_DATASETS = 11; // enough to load most questions
 
-  it.skip("should work on questions with explicit joins (metabase#13112)", () => {
+  it.skip("should work on questions with explicit joins (dataman#13112)", () => {
     const PRODUCTS_ALIAS = "Products";
 
     cy.createQuestion(
@@ -69,7 +69,7 @@ describe("scenarios > x-rays", () => {
   });
 
   ["X-ray", "Compare to the rest"].forEach(action => {
-    it(`"${action.toUpperCase()}" should work on a nested question made from base native question (metabase#15655)`, () => {
+    it(`"${action.toUpperCase()}" should work on a nested question made from base native question (dataman#15655)`, () => {
       cy.intercept("GET", "/api/automagic-dashboards/**").as("xray");
 
       cy.createNativeQuestion({
@@ -104,7 +104,7 @@ describe("scenarios > x-rays", () => {
       cy.get(".DashCard");
     });
 
-    it(`"${action.toUpperCase()}" should not show NULL in titles of generated dashboard cards (metabase#15737)`, () => {
+    it(`"${action.toUpperCase()}" should not show NULL in titles of generated dashboard cards (dataman#15737)`, () => {
       cy.intercept("GET", "/api/automagic-dashboards/**").as("xray");
       visitQuestionAdhoc({
         name: "15737",
@@ -127,7 +127,7 @@ describe("scenarios > x-rays", () => {
     });
   });
 
-  it("should be able to save an x-ray as a dashboard and visit it immediately (metabase#18028)", () => {
+  it("should be able to save an x-ray as a dashboard and visit it immediately (dataman#18028)", () => {
     cy.intercept("GET", "/app/assets/geojson/**").as("geojson");
 
     cy.visit(`/auto/dashboard/table/${ORDERS_ID}`);
@@ -145,7 +145,7 @@ describe("scenarios > x-rays", () => {
     cy.findByText("How these transactions are distributed");
   });
 
-  it("should be able to click the title of an x-ray dashcard to see it in the query builder (metabase#19405)", () => {
+  it("should be able to click the title of an x-ray dashcard to see it in the query builder (dataman#19405)", () => {
     const timeout = { timeout: 10000 };
 
     cy.visit(`/auto/dashboard/table/${ORDERS_ID}`);

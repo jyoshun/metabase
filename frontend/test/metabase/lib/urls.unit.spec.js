@@ -331,7 +331,7 @@ describe("urls", () => {
     const testCases = [
       { slug: "33", id: 33 },
       { slug: "33-", id: 33 },
-      { slug: "33-metabase-ga", id: 33 },
+      { slug: "33-dataman-ga", id: 33 },
       { slug: "330-pricing-v2-traction", id: 330 },
       { slug: "274-queries-run-in-the-last-24-weeks", id: 274 },
       { slug: "no-id-here", id: undefined },

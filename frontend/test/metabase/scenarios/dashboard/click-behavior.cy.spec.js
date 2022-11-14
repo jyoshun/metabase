@@ -11,7 +11,7 @@ describe("scenarios > dashboard > dashboard cards > click behavior", () => {
     cy.intercept("POST", "/api/dataset").as("dataset");
   });
 
-  it("should show filters defined on a question with filter pass-thru (metabase#15993)", () => {
+  it("should show filters defined on a question with filter pass-thru (dataman#15993)", () => {
     cy.createQuestion({
       name: "15993",
       query: {
@@ -82,7 +82,7 @@ describe("scenarios > dashboard > dashboard cards > click behavior", () => {
     });
   });
 
-  it("should not change the visualization type in a targetted question with mapped filter (metabase#16334)", () => {
+  it("should not change the visualization type in a targetted question with mapped filter (dataman#16334)", () => {
     // Question 2, that we're adding to the dashboard
     const questionDetails = {
       query: {
@@ -159,7 +159,7 @@ describe("scenarios > dashboard > dashboard cards > click behavior", () => {
     });
   });
 
-  it("should navigate to a target from a gauge card (metabase#23137)", () => {
+  it("should navigate to a target from a gauge card (dataman#23137)", () => {
     const target_id = 1;
 
     cy.createQuestionAndDashboard({
@@ -177,7 +177,7 @@ describe("scenarios > dashboard > dashboard cards > click behavior", () => {
     cy.findByText("Orders");
   });
 
-  it("should navigate to a target from a progress card (metabase#23137)", () => {
+  it("should navigate to a target from a progress card (dataman#23137)", () => {
     const target_id = 1;
 
     cy.createQuestionAndDashboard({

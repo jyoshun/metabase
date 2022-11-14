@@ -4,9 +4,9 @@ import { CardIcon, CardRoot, CardTitle } from "./HomeHelpCard.styled";
 
 const HomeHelpCard = (): JSX.Element => {
   return (
-    <CardRoot href="https://www.metabase.com/learn/">
+    <CardRoot href="https://www.dataman.com/learn/">
       <CardIcon name="reference" />
-      <CardTitle>{t`Metabase tips`}</CardTitle>
+      <CardTitle>{t`DataMan tips`}</CardTitle>
     </CardRoot>
   );
 };

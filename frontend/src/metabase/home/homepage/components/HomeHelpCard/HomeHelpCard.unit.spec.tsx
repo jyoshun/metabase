@@ -6,6 +6,6 @@ describe("HomeHelpCard", () => {
   it("should render correctly", () => {
     render(<HomeHelpCard />);
 
-    expect(screen.getByText("Metabase tips")).toBeInTheDocument();
+    expect(screen.getByText("DataMan tips")).toBeInTheDocument();
   });
 });

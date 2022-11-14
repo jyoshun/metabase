@@ -7,9 +7,9 @@ export function SettingsCloudStoreLink() {
   const url = MetabaseSettings.storeUrl();
   return (
     <div>
-      <Description>{t`Manage your Cloud account, including billing preferences and technical settings about this instance in your Metabase Store account.`}</Description>
+      <Description>{t`Manage your Cloud account, including billing preferences and technical settings about this instance in your DataMan Store account.`}</Description>
       <Link href={url}>
-        {t`Go to the Metabase Store`}
+        {t`Go to the DataMan Store`}
         <LinkIcon name="external" />
       </Link>
     </div>

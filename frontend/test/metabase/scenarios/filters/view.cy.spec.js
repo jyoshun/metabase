@@ -67,7 +67,7 @@ describe("scenarios > question > view", () => {
       });
     });
 
-    it("should be able to filter Q by Category as no data user (from Q link) (metabase#12654)", () => {
+    it("should be able to filter Q by Category as no data user (from Q link) (dataman#12654)", () => {
       cy.signIn("nodata");
       visitQuestion(4);
 
@@ -91,7 +91,7 @@ describe("scenarios > question > view", () => {
       cy.findAllByText("Gizmo").should("not.exist");
     });
 
-    it("should be able to filter Q by Vendor as user (from Dashboard) (metabase#12654)", () => {
+    it("should be able to filter Q by Vendor as user (from Dashboard) (dataman#12654)", () => {
       // Navigate to Q from Dashboard
       cy.signIn("nodata");
       visitDashboard(2);

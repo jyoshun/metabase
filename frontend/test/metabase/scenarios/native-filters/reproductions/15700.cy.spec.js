@@ -11,7 +11,7 @@ describe("issue 15700", () => {
     cy.signInAsAdmin();
   });
 
-  it("should be able to select 'Field Filter' category in native query (metabase#15700)", () => {
+  it("should be able to select 'Field Filter' category in native query (dataman#15700)", () => {
     openNativeEditor();
     SQLFilter.enterParameterizedQuery("{{filter}}");
 

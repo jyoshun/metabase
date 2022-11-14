@@ -6,7 +6,7 @@ describe("issue 21532", () => {
     cy.signInAsAdmin();
   });
 
-  it("should allow navigating back from admin settings (metabase#21532)", () => {
+  it("should allow navigating back from admin settings (dataman#21532)", () => {
     cy.visit("/");
 
     cy.icon("gear").click();

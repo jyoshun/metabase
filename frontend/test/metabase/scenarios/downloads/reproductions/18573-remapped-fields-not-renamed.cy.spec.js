@@ -37,7 +37,7 @@ describe("issue 18573", () => {
     });
   });
 
-  it(`for the remapped columns, it should preserve renamed column name in exports for xlsx (metabase#18573)`, () => {
+  it(`for the remapped columns, it should preserve renamed column name in exports for xlsx (dataman#18573)`, () => {
     visitQuestionAdhoc(questionDetails);
 
     cy.findByText("Foo");

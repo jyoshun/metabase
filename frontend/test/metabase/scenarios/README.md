@@ -1,12 +1,12 @@
-# Metabase Scenarios
+# DataMan Scenarios
 
 ## Running
 
 - If you are running tests that include `alert > email_alert`, run `docker run -p 80:80 -p 25:25 maildev/maildev:1.1.0` in terminal first for setting up email through your localhost
 
-## Metabase QA DB Tests
+## DataMan QA DB Tests
 
-If you're running Cypress locally and you need to write or run tests for one of the [supported databases](https://github.com/metabase/metabase-qa), please make sure that you have `QA_DB_ENABLED` env for that session only. 
+If you're running Cypress locally and you need to write or run tests for one of the [supported databases](https://github.com/dataman/dataman-qa), please make sure that you have `QA_DB_ENABLED` env for that session only.
 
 ### Requirements
 

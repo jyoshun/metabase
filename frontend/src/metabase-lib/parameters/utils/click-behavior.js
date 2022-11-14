@@ -218,7 +218,7 @@ export function clickBehaviorIsValid(clickBehavior) {
   if (linkType === "url") {
     return (linkTemplate || "").length > 0;
   }
-  // if we're linking to a Metabase entity we just need a targetId
+  // if we're linking to a DataMan entity we just need a targetId
   if (
     linkType === "dashboard" ||
     linkType === "question" ||

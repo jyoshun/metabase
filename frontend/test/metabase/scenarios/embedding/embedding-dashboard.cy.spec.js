@@ -42,7 +42,7 @@ describe("scenarios > embedding > dashboard parameters", () => {
   });
 
   context("UI", () => {
-    it("should be disabled by default but able to be set to editable and/or locked (metabase#20357)", () => {
+    it("should be disabled by default but able to be set to editable and/or locked (dataman#20357)", () => {
       cy.get("@dashboardId").then(dashboardId => {
         visitDashboard(dashboardId);
       });

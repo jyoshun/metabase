@@ -9,7 +9,7 @@ describe("issue 21550", () => {
     cy.intercept("GET", "/api/native-query-snippet/**").as("snippet");
   });
 
-  it("should not show scrollbars for very short snippet (metabase#21550)", () => {
+  it("should not show scrollbars for very short snippet (dataman#21550)", () => {
     openNativeEditor();
 
     cy.icon("snippet").click();

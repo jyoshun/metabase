@@ -27,7 +27,7 @@ describe("issue 20229", () => {
     cy.createQuestion(questionDetails, { visitQuestion: true });
   });
 
-  it("should display custom column regardless of how many columns are selected (metabase#20229)", () => {
+  it("should display custom column regardless of how many columns are selected (dataman#20229)", () => {
     ccAssertion();
 
     // Switch to the notebook view to deselect at least one column

@@ -33,7 +33,7 @@ export const SAMPLE_DB_TABLES = {
   STATIC_INVOICES_ID: 6,
 };
 
-// All users and admin groups are the defaults that come with Metabase.
+// All users and admin groups are the defaults that come with DataMan.
 // The rest are the ones we choose the name and the order for.
 export const USER_GROUPS = {
   ALL_USERS_GROUP: 1,
@@ -57,13 +57,13 @@ export const USERS = {
   admin: {
     first_name: "Bobby",
     last_name: "Tables",
-    email: "admin@metabase.test",
+    email: "admin@dataman.test",
     password: "12341234",
   },
   normal: {
     first_name: "Robert",
     last_name: "Tableton",
-    email: "normal@metabase.test",
+    email: "normal@dataman.test",
     password: "12341234",
     user_group_memberships: [
       { id: ALL_USERS_GROUP, is_group_manager: false },
@@ -75,7 +75,7 @@ export const USERS = {
   nodata: {
     first_name: "No Data",
     last_name: "Tableton",
-    email: "nodata@metabase.test",
+    email: "nodata@dataman.test",
     password: "12341234",
     user_group_memberships: [
       { id: ALL_USERS_GROUP, is_group_manager: false },
@@ -85,7 +85,7 @@ export const USERS = {
   sandboxed: {
     first_name: "User",
     last_name: "1",
-    email: "u1@metabase.test",
+    email: "u1@dataman.test",
     password: "12341234",
     login_attributes: {
       attr_uid: "1",
@@ -99,7 +99,7 @@ export const USERS = {
   readonly: {
     first_name: "Read Only",
     last_name: "Tableton",
-    email: "readonly@metabase.test",
+    email: "readonly@dataman.test",
     password: "12341234",
     user_group_memberships: [
       { id: ALL_USERS_GROUP, is_group_manager: false },
@@ -110,7 +110,7 @@ export const USERS = {
   nocollection: {
     first_name: "No Collection",
     last_name: "Tableton",
-    email: "nocollection@metabase.test",
+    email: "nocollection@dataman.test",
     password: "12341234",
     user_group_memberships: [
       { id: ALL_USERS_GROUP, is_group_manager: false },
@@ -120,7 +120,7 @@ export const USERS = {
   nosql: {
     first_name: "No SQL",
     last_name: "Tableton",
-    email: "nosql@metabase.test",
+    email: "nosql@dataman.test",
     password: "12341234",
     user_group_memberships: [
       { id: ALL_USERS_GROUP, is_group_manager: false },
@@ -131,7 +131,7 @@ export const USERS = {
   none: {
     first_name: "None",
     last_name: "Tableton",
-    email: "none@metabase.test",
+    email: "none@dataman.test",
     password: "12341234",
     user_group_memberships: [{ id: ALL_USERS_GROUP, is_group_manager: false }],
   },

@@ -14,7 +14,7 @@ describe(
       cy.contains("Database type").closest(".Form-field").find("a").click();
     });
 
-    it("should add Postgres database and redirect to listing (metabase#12972, metabase#14334, metabase#17450)", () => {
+    it("should add Postgres database and redirect to listing (dataman#12972, dataman#14334, dataman#17450)", () => {
       cy.contains("PostgreSQL").click({ force: true });
 
       cy.findByText("Show advanced options").click();
@@ -38,7 +38,7 @@ describe(
       typeAndBlurUsingLabel("Host", "localhost  \n  ");
       typeAndBlurUsingLabel("Port", "5432");
       typeAndBlurUsingLabel("Database name", "  sample");
-      typeAndBlurUsingLabel("Username", "  metabase  ");
+      typeAndBlurUsingLabel("Username", "  dataman  ");
       typeAndBlurUsingLabel("Password", "metasample123");
 
       cy.button("Save").should("not.be.disabled").click();
@@ -46,7 +46,7 @@ describe(
       cy.wait("@createDatabase").then(({ request }) => {
         expect(request.body.details.host).to.equal("localhost");
         expect(request.body.details.dbname).to.equal("sample");
-        expect(request.body.details.user).to.equal("metabase");
+        expect(request.body.details.user).to.equal("dataman");
       });
 
       cy.url().should("match", /\/admin\/databases\?created=true$/);
@@ -81,7 +81,7 @@ describe(
       typeAndBlurUsingLabel("Host", "localhost");
       typeAndBlurUsingLabel("Port", "27017");
       typeAndBlurUsingLabel("Database name", "sample");
-      typeAndBlurUsingLabel("Username", "metabase");
+      typeAndBlurUsingLabel("Username", "dataman");
       typeAndBlurUsingLabel("Password", "metasample123");
       typeAndBlurUsingLabel("Authentication database (optional)", "admin");
 
@@ -110,7 +110,7 @@ describe(
       typeAndBlurUsingLabel("Host", "localhost");
       typeAndBlurUsingLabel("Port", "3306");
       typeAndBlurUsingLabel("Database name", "sample");
-      typeAndBlurUsingLabel("Username", "metabase");
+      typeAndBlurUsingLabel("Username", "dataman");
       typeAndBlurUsingLabel("Password", "metasample123");
 
       // Bypass the RSA public key error for MySQL database

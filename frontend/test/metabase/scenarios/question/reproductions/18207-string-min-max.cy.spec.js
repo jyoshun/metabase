@@ -18,7 +18,7 @@ describe("issue 18207", () => {
     summarize({ mode: "notebook" });
   });
 
-  it("should be possible to use MIN on a string column (metabase#18207, metabase#22155)", () => {
+  it("should be possible to use MIN on a string column (dataman#18207, dataman#22155)", () => {
     cy.contains("Minimum of").click();
     cy.findByText("Price");
     cy.findByText("Rating");
@@ -30,7 +30,7 @@ describe("issue 18207", () => {
     cy.findByText("Doohickey");
   });
 
-  it("should be possible to use MAX on a string column (metabase#18207, metabase#22155)", () => {
+  it("should be possible to use MAX on a string column (dataman#18207, dataman#22155)", () => {
     cy.contains("Maximum of").click();
     cy.findByText("Price");
     cy.findByText("Rating");
@@ -42,7 +42,7 @@ describe("issue 18207", () => {
     cy.findByText("Widget");
   });
 
-  it("should be not possible to use AVERAGE on a string column (metabase#18207, metabase#22155)", () => {
+  it("should be not possible to use AVERAGE on a string column (dataman#18207, dataman#22155)", () => {
     cy.contains("Average of").click();
     cy.findByText("Price");
     cy.findByText("Rating");
@@ -50,7 +50,7 @@ describe("issue 18207", () => {
     cy.findByText("Category").should("not.exist");
   });
 
-  it("should be possible to group by a string expression (metabase#18207)", () => {
+  it("should be possible to group by a string expression (dataman#18207)", () => {
     popover().contains("Custom Expression").click();
     popover().within(() => {
       enterCustomColumnDetails({ formula: "Max([Vendor])" });

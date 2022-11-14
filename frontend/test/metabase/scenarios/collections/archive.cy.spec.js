@@ -15,7 +15,7 @@ describe("scenarios > collections > archive", () => {
     cy.signInAsAdmin();
   });
 
-  it("should load initially hidden archived items on scroll (metabase#24213)", () => {
+  it("should load initially hidden archived items on scroll (dataman#24213)", () => {
     const stubbedItems = Array.from({ length: 50 }, (v, i) => ({
       name: "Item " + i,
       id: i + 1,
@@ -37,7 +37,7 @@ describe("scenarios > collections > archive", () => {
     cy.findByText("Item 40");
   });
 
-  it("shows correct page when visiting page of question that was in archived collection (metabase##23501)", () => {
+  it("shows correct page when visiting page of question that was in archived collection (dataman##23501)", () => {
     getCollectionIdFromSlug("first_collection", collectionId => {
       const questionDetails = getQuestionDetails(collectionId);
 

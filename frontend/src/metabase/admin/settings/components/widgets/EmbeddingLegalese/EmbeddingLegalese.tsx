@@ -22,13 +22,13 @@ const EmbeddingLegalese = ({ setting, onChange }: EmbeddingLegaleseProps) => (
   <div className="text-measure">
     <Header>{t`Embedding`}</Header>
     <Paragraph>
-      {t`Embed dashboards, questions, or the entire Metabase app into your application. Integrate with your server code to create a secure environment, limited to specific users or organizations.`}
+      {t`Embed dashboards, questions, or the entire DataMan app into your application. Integrate with your server code to create a secure environment, limited to specific users or organizations.`}
     </Paragraph>
 
     <Paragraph>
       {t`By enabling embedding you're agreeing to`}{" "}
       <ExternalLink
-        href="https://metabase.com/license/embedding"
+        href="https://dataman.com/license/embedding"
         target="_blank"
       >
         {t`our embedding license.`}
@@ -41,10 +41,10 @@ const EmbeddingLegalese = ({ setting, onChange }: EmbeddingLegaleseProps) => (
       iconPosition="right"
     >
       <Paragraph>
-        {t`When you embed charts or dashboards from Metabase in your own
+        {t`When you embed charts or dashboards from DataMan in your own
         application, that application isn't subject to the Affero General Public
-        License that covers the rest of Metabase, provided you keep the Metabase
-        logo and the "Powered by Metabase" visible on those embeds.`}
+        License that covers the rest of DataMan, provided you keep the DataMan
+        logo and the "Powered by DataMan" visible on those embeds.`}
       </Paragraph>
       <Paragraph>
         {t`Your should, however, read the license text linked above as that is the

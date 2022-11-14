@@ -181,7 +181,7 @@ describeEE("formatting > sandboxes", () => {
       cy.signInAsAdmin();
     });
 
-    it("should allow joins to the sandboxed table (metabase-enterprise#154)", () => {
+    it("should allow joins to the sandboxed table (dataman-enterprise#154)", () => {
       cy.sandboxTable({
         table_id: PEOPLE_ID,
         attribute_remappings: {
@@ -228,8 +228,8 @@ describeEE("formatting > sandboxes", () => {
       cy.findByText("11"); // Sum of orders for user with ID #1
     });
 
-    // Note: This issue was ported from EE repo - it was previously known as (metabase-enterprise#548)
-    it("SB question with `case` CC should substitute the `else` argument's table (metabase#14859)", () => {
+    // Note: This issue was ported from EE repo - it was previously known as (dataman-enterprise#548)
+    it("SB question with `case` CC should substitute the `else` argument's table (dataman#14859)", () => {
       const QUESTION_NAME = "EE_548";
       const CC_NAME = "CC_548"; // Custom column
 
@@ -272,7 +272,7 @@ describeEE("formatting > sandboxes", () => {
     });
 
     ["remapped", "default"].forEach(test => {
-      it(`${test.toUpperCase()} version:\n drill-through should work on implicit joined tables with sandboxes (metabase#13641)`, () => {
+      it(`${test.toUpperCase()} version:\n drill-through should work on implicit joined tables with sandboxes (dataman#13641)`, () => {
         const QUESTION_NAME = "13641";
 
         if (test === "remapped") {
@@ -300,7 +300,7 @@ describeEE("formatting > sandboxes", () => {
         });
 
         cy.log(
-          "Create question based on steps in [#13641](https://github.com/metabase/metabase/issues/13641)",
+          "Create question based on steps in [#13641](https://github.com/dataman/dataman/issues/13641)",
         );
         cy.createQuestion({
           name: QUESTION_NAME,
@@ -345,7 +345,7 @@ describeEE("formatting > sandboxes", () => {
       });
     });
 
-    it("should allow drill-through for sandboxed user (metabase-enterprise#535)", () => {
+    it("should allow drill-through for sandboxed user (dataman-enterprise#535)", () => {
       const PRODUCTS_ALIAS = "Products";
       const QUESTION_NAME = "EE_535";
 
@@ -365,7 +365,7 @@ describeEE("formatting > sandboxes", () => {
       });
 
       cy.log(
-        "Create question based on steps in https://github.com/metabase/metabase-enterprise/issues/535",
+        "Create question based on steps in https://github.com/dataman/dataman-enterprise/issues/535",
       );
       cy.createQuestion({
         name: QUESTION_NAME,
@@ -426,7 +426,7 @@ describeEE("formatting > sandboxes", () => {
       });
 
       /**
-       * There isn't an exact issue that this test reproduces, but it is basically a version of (metabase-enterprise#520)
+       * There isn't an exact issue that this test reproduces, but it is basically a version of (dataman-enterprise#520)
        * that uses a query builder instead of SQL based questions.
        */
       it("should be able to sandbox using query builder saved questions", () => {
@@ -482,22 +482,22 @@ describeEE("formatting > sandboxes", () => {
       });
 
       /**
-       * This issue (metabase-enterprise#520) has a peculiar quirk:
+       * This issue (dataman-enterprise#520) has a peculiar quirk:
        *  - It works ONLY if SQL question is first run (`result_metadata` builds), and then the question is saved.
        *  - In a real-world scenario it is quite possible for an admin to save that SQL question without running it first. This fails!
-       *  (more info: https://github.com/metabase/metabase-enterprise/issues/520#issuecomment-772528159)
+       *  (more info: https://github.com/dataman/dataman-enterprise/issues/520#issuecomment-772528159)
        *
        * That's why this test has 2 versions that reflect both scenarios. We'll call them "normal" and "workaround".
        * Until the underlying issue is fixed, "normal" scenario will be skipped.
        *
-       * Related issues: metabase#10474, metabase#14629
+       * Related issues: dataman#10474, dataman#14629
        */
 
       // skipping the workaround test because the function `runAndSaveQuestion`
       // relies on the existence of a save button on a saved question that is not dirty
-      // which is a bug fixed in ssue metabase#14302
+      // which is a bug fixed in ssue dataman#14302
       ["normal" /* , "workaround" */].forEach(test => {
-        it(`${test.toUpperCase()} version:\n advanced sandboxing should not ignore data model features like object detail of FK (metabase-enterprise#520)`, () => {
+        it(`${test.toUpperCase()} version:\n advanced sandboxing should not ignore data model features like object detail of FK (dataman-enterprise#520)`, () => {
           cy.intercept("POST", "/api/card/*/query").as("cardQuery");
           cy.intercept("PUT", "/api/card/*").as("questionUpdate");
 
@@ -599,7 +599,7 @@ describeEE("formatting > sandboxes", () => {
         });
       });
 
-      it("simple sandboxing should work (metabase#14629)", () => {
+      it("simple sandboxing should work (dataman#14629)", () => {
         cy.sandboxTable({
           table_id: ORDERS_ID,
           attribute_remappings: {
@@ -627,7 +627,7 @@ describeEE("formatting > sandboxes", () => {
     });
 
     ["remapped", "default"].forEach(test => {
-      it(`${test.toUpperCase()} version:\n should work on questions with joins, with sandboxed target table, where target fields cannot be filtered (metabase#13642)`, () => {
+      it(`${test.toUpperCase()} version:\n should work on questions with joins, with sandboxed target table, where target fields cannot be filtered (dataman#13642)`, () => {
         const QUESTION_NAME = "13642";
         const PRODUCTS_ALIAS = "Products";
 
@@ -702,7 +702,7 @@ describeEE("formatting > sandboxes", () => {
       });
     });
 
-    it("attempt to sandbox based on question with differently-typed columns than a sandboxed table should provide meaningful UI error (metabase#14612)", () => {
+    it("attempt to sandbox based on question with differently-typed columns than a sandboxed table should provide meaningful UI error (dataman#14612)", () => {
       const QUESTION_NAME = "Different type";
       const ERROR_MESSAGE =
         "Sandbox Questions can't return columns that have different types than the Table they are sandboxing.";
@@ -739,7 +739,7 @@ describeEE("formatting > sandboxes", () => {
       cy.findByText(ERROR_MESSAGE);
     });
 
-    it("should be able to use summarize columns from joined table based on a saved question (metabase#14766)", () => {
+    it("should be able to use summarize columns from joined table based on a saved question (dataman#14766)", () => {
       createJoinedQuestion("14766_joined");
 
       startNewQuestion();
@@ -758,7 +758,7 @@ describeEE("formatting > sandboxes", () => {
       cy.findAllByText("93");
     });
 
-    it("should be able to remove columns via QB sidebar / settings (metabase#14841)", () => {
+    it("should be able to remove columns via QB sidebar / settings (dataman#14841)", () => {
       cy.intercept("POST", "/api/dataset").as("dataset");
 
       cy.sandboxTable({
@@ -797,7 +797,7 @@ describeEE("formatting > sandboxes", () => {
       cy.contains("37.65").should("not.exist");
     });
 
-    it("should work with pivot tables (metabase#14969)", () => {
+    it("should work with pivot tables (dataman#14969)", () => {
       cy.sandboxTable({
         table_id: ORDERS_ID,
         attribute_remappings: {
@@ -862,7 +862,7 @@ describeEE("formatting > sandboxes", () => {
       cy.findByText("Row totals");
     });
 
-    it("should show dashboard subscriptions for sandboxed user (metabase#14990)", () => {
+    it("should show dashboard subscriptions for sandboxed user (dataman#14990)", () => {
       cy.sandboxTable({
         table_id: ORDERS_ID,
         attribute_remappings: {
@@ -879,7 +879,7 @@ describeEE("formatting > sandboxes", () => {
       cy.findAllByRole("link", { name: "configure Slack" });
     });
 
-    it.skip("sandboxed user should be able to send pulses to Slack (metabase#14844)", () => {
+    it.skip("sandboxed user should be able to send pulses to Slack (dataman#14844)", () => {
       cy.viewport(1400, 1000);
 
       cy.intercept("GET", "/api/collection/*").as("collection");
@@ -904,7 +904,7 @@ describeEE("formatting > sandboxes", () => {
         });
     });
 
-    it.skip("should be able to visit ad-hoc/dirty question when permission is granted to the linked table column, but not to the linked table itself (metabase#15105)", () => {
+    it.skip("should be able to visit ad-hoc/dirty question when permission is granted to the linked table column, but not to the linked table itself (dataman#15105)", () => {
       cy.sandboxTable({
         table_id: ORDERS_ID,
         attribute_remappings: {
@@ -925,7 +925,7 @@ describeEE("formatting > sandboxes", () => {
       cy.contains("37.65");
     });
 
-    it("unsaved/dirty query should work on linked table column with multiple dimensions and remapping (metabase#15106)", () => {
+    it("unsaved/dirty query should work on linked table column with multiple dimensions and remapping (dataman#15106)", () => {
       remapDisplayValueToFK({
         display_value: ORDERS.USER_ID,
         name: "User ID",

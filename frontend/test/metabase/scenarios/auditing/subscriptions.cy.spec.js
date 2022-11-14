@@ -204,7 +204,7 @@ function testEditingRecipients({ editModalHeader }) {
   });
 
   modal().within(() => {
-    cy.get("input").type("another-recipient@metabase.com{enter}"); // Add email
+    cy.get("input").type("another-recipient@dataman.com{enter}"); // Add email
     cy.button("Update").click();
   });
 

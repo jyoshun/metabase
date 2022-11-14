@@ -18,7 +18,7 @@ describe("issue 22730", () => {
     cy.intercept("POST", "/api/dataset").as("dataset");
   });
 
-  it("allows filtering by time column (metabase#22730)", () => {
+  it("allows filtering by time column (dataman#22730)", () => {
     cy.findByText("Explore results").click();
     cy.wait("@dataset");
 
